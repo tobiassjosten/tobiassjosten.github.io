@@ -1,0 +1,73 @@
+---
+layout: base
+---
+<article class="post article" itemscope itemtype="http://schema.org/BlogPosting">
+    <div itemprop="articleBody">{{ content }}</div>
+
+    <ul class="tags">
+        {% for tag in page.tags %}
+            {% if tag contains "-x-" %}
+            {% else %}
+                <li>
+                    <a class="tag" href="/{{ tag | slugize }}/" itemprop="articleSection">{{ tag }}</a>
+                    <meta itemprop="genre" content="{{ tag }}">
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <p class="published">
+        Published
+        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+    </p>
+
+    <aside class="intro" itemscope itemtype="http://schema.org/Person">
+        <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125" title="Tobias Sjösten" alt="Photo of Tobias Sjösten" class="avatar" itemprop="image">
+        <p>Written by <a href="/" rel="author" itemprop="url" itemprop="name">Tobias Sjösten</a>; a <span itemprop="jobTitle">web technician</span> and <span itemprop="jobTitle">open source aficionado</span>.</p>
+        <a href="https://twitter.com/tobiassjosten" class="button">Follow @tobiassjosten</a>
+    </aside>
+
+    {% if page.next or page.previous %}
+        <nav class="next-prev">
+            <ul>
+                {% assign next = page.next %}
+                {% for _ in site.posts %}
+                    {% if next %}
+                        {% if next.layout == "post" %}
+                            <li class="next">
+                                <a href="{{ next.url }}">{{ next.title }} →</a>
+                            </li>
+                            {% assign next = false %}
+                        {% endif %}
+                        {% assign next = next.next %}
+                    {% endif %}
+                {% endfor %}
+
+                {% assign previous = page.previous %}
+                {% for _ in site.posts %}
+                    {% if previous %}
+                        {% if previous.layout == "post" %}
+                            <li class="prev">
+                                <a href="{{ previous.url }}">← {{ previous.title }}</a>
+                            </li>
+                            {% assign previous = false %}
+                        {% endif %}
+                        {% assign previous = previous.previous %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'tobiassjosten';
+        var disqus_url = 'http://{{ site.domain }}{{ page.url }}';
+        var disqus_developer = {{ site.safe }} ? 1 : 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</article>

@@ -1,0 +1,16 @@
+---
+layout: base
+---
+{{ content }}
+
+<section class="reviews complete">
+    <ul class="books">
+        {% for post in site.posts %}
+            {% if post.layout == 'book' %}
+                <li class="book"><a href="{{ post.url }}">
+                    <img class="cover" alt="{{ post.title }}" title="{{ post.title }}" src="{{ post.image }}" itemprop="image">
+                </a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>

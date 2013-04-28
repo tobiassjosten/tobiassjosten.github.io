@@ -1,0 +1,131 @@
+<!doctype html>
+
+{% include smiley.html %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.summary }}">
+    <meta name="author" content="Tobias Sjösten">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" type="application/atom+xml" title="Tobias Sjösten" href="/feed.atom" />
+    {% if page.category %}
+        <link rel="alternate" type="application/atom+xml" title="Tobias Sjösten - {{ page.category }}" href="/{{ page.category | slugize }}/feed.atom" />
+    {% endif %}
+
+    {% assign cgiDescription = '' %}
+    {% if page.summary %}
+        {% capture cgiDescription %}{{ page.summary | cgi_escape }}{% endcapture %}
+    {% endif %}
+    {% assign cgiTags = '' %}
+    {% if page.tags %}
+        {% capture cgiTags %}{{ page.tags | join: ',' | cgi_escape }}{% endcapture %}
+    {% endif %}
+    {% capture cgiTags %}blog{% if cgiTags %}%2C{{ cgiTags }}i{% endif %}{% endcapture %}
+    <link rel="payment" type="text/html" href="https://flattr.com/submit/auto?url=http%3A%2F%2F{{ site.domain }}{{ page.url | remove: 'index.html' | cgi_escape }}&amp;user_id=tobiassjosten&amp;title={{ page.title | cgi_escape }}&amp;description={{ cgiDescription }}&amp;category=text&amp;tags={{ cgiTags }}&amp;language=en" title="Flattr this" />
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+    <link rel="canonical" href="http://vvv.tobiassjosten.net{{ page.url | remove: 'index.html' }}"/>
+    <link type="text/css" rel="stylesheet" href="/tobiassjosten.css?{{ site.assets_version }}" media="all">
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+
+        _gaq.push(["_setAccount", "UA-18939935-1"]);
+        _gaq.push(['_setSiteSpeedSampleRate', 100]);
+        {% if page.category %}
+            _gaq.push(['_setCustomVar', 1, 'Category', '{{ page.category}}', 3]);
+        {% endif %}
+        _gaq.push(["_trackPageview"]);
+
+        (function () {
+            if ('vvv.tobiassjosten.net' !== document.location.host) {
+                return;
+            }
+
+            var ga = document.createElement("script"),
+                s = document.getElementsByTagName("script")[0];
+
+            ga.type = "text/javascript";
+            ga.async = true;
+            ga.src = ("https:" === document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(ga, s);
+        }());
+    </script>
+
+    <script>
+        if ('vvv.tobiassjosten.net' == document.location.host) {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-18939935-2', 'tobiassjosten.net');
+            ga('send', 'pageview');
+        }
+    </script>
+</head>
+<body>
+    <h1 class="title">{{ page.title }}</h1>
+
+    <section id="main">
+        {% if page.notice %}
+            <blockquote class="notice">{{ page.notice | markdownify }}</blockquote>
+        {% endif %}
+
+        {{ content }}
+    </section>
+
+    <aside class="logo">
+        <a href="/">
+            T <span class="logo-title">(homepage)</span>
+        </a>
+    </aside>
+
+    <footer class="reviews teaser">
+        <h2>Recent books reviews</h2>
+
+        <ul class="books">
+            {% for post in site.posts %}
+                {% if post.layout == 'book' %}
+                    <li class="book"><a href="{{ post.url }}">
+                        <img class="cover" alt="{{ post.title }}" title="{{ post.title }}" src="{{ post.image }}" itemprop="image">
+                    </a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <p>(<a href="/books/">all book reviews</a>)</p>
+    </footer>
+
+    <footer class="contact">
+        <ul>
+            <li><a href="mailto:tobias.sjosten@gmail.com">tobias@tobiassjosten.net</a></li>
+            <li><a href="call:+46700911755">+46 (0) 70 - 091 17 55</a></li>
+            <li><a href="https://twitter.com/tobiassjosten">@tobiassjosten</a></li>
+            <li><a href="https://plus.google.com/100233423297777162838/posts" rel="me">+Tobias Sjösten</a></li>
+        </ul>
+    </footer>
+
+    <footer class="license">
+        <p>All content is, unless otherwise stated, published under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+    </footer>
+
+    <script type="text/javascript" src="/tobiassjosten.js?{{ site.assets_version }}"></script>
+
+    <script type="text/javascript">
+        window._idl = {};
+        _idl.variant = "banner";
+        (function() {
+            var idl = document.createElement('script');
+            idl.type = 'text/javascript';
+            idl.async = true;
+            idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
+            document.getElementsByTagName('body')[0].appendChild(idl);
+        })();
+    </script>
+</body>
+</html>

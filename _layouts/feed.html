@@ -1,0 +1,51 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://vvv.tobiassjosten.net/</id>
+
+  {% if page.title %}
+    <title>{{ page.title }}</title>
+  {% else %}
+    <title>Tobias Sjösten</title>
+  {% endif %}
+
+  <author>
+    <name>Tobias Sjösten</name>
+  </author>
+
+  {% if page.category %}
+    {% assign posts = site.tags[page.category] %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  <link href="http://vvv.tobiassjosten.net{{ page.url }}" rel="self" type="application/atom+xml"/>
+  <link href="http://vvv.tobiassjosten.net/" rel="alternate" type="text/html" />
+
+  {% for post in posts limit: 10 %}
+    <entry>
+      <id>http://vvv.tobiassjosten.net/{{ post.id }}</id>
+      {% if post.layout == 'book' %}
+        <title>Book: {{ post.title | xml_escape }}</title>
+      {% else %}
+        <title>{{ post.title | xml_escape }}</title>
+      {% endif %}
+      <author>
+        <name>Tobias Sjösten</name>
+      </author>
+      <link href="http://vvv.tobiassjosten.net{{ post.url }}?utm_source=mainfeed&amp;utm_campaign=feeds&amp;utm_medium=atom"/>
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <category term="{{ post.category }}" />
+      <rights type="text">Creative Commons Attribution-ShareAlike 3.0 Unported License</rights>
+      <content type="html">
+        <![CDATA[
+        {{ post.content | markdownify }}
+        ]]>
+      </content>
+    </entry>
+  {% endfor %}
+</feed>

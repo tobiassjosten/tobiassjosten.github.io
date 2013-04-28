@@ -1,0 +1,20 @@
+---
+layout: base
+---
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <div itemprop="articleBody">{{ content }}</div>
+    <meta itemprop="genre" content="{{ page.category }}">
+
+    <h2>Posts about {{ page.category}}</h2>
+
+    <ul class="posts">
+        {% for post in site.tags[page.category] %}
+        {% if post.layout == 'post' %}
+            <li>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</article>
