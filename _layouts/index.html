@@ -10,19 +10,17 @@ layout: base
 <h2>Recent blog posts</h2>
 
 <ul class="posts">
-    {% assign counter = ''0 %}
+    {% assign counter = '' %}
 
     {% for post in site.posts %}
-        {% if post.layout == 'post' %}
-            {% capture temp %}{{ counter }}*{% endcapture %}
-            {% assign counter = temp %}
+        {% capture temp %}{{ counter }}*{% endcapture %}
+        {% assign counter = temp %}
 
-            {% if counter.size < 10 %}
-                <li>
-                    <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </li>
-            {% endif %}
+        {% if counter.size < 10 %}
+            <li>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

@@ -30,31 +30,17 @@ layout: base
     {% if page.next or page.previous %}
         <nav class="next-prev">
             <ul>
-                {% assign next = page.next %}
-                {% for _ in site.posts %}
-                    {% if next %}
-                        {% if next.layout == "post" %}
-                            <li class="next">
-                                <a href="{{ next.url }}">{{ next.title }} →</a>
-                            </li>
-                            {% assign next = false %}
-                        {% endif %}
-                        {% assign next = next.next %}
-                    {% endif %}
-                {% endfor %}
+                {% if page.next %}
+                    <li class="next">
+                        <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+                    </li>
+                {% endif %}
 
-                {% assign previous = page.previous %}
-                {% for _ in site.posts %}
-                    {% if previous %}
-                        {% if previous.layout == "post" %}
-                            <li class="prev">
-                                <a href="{{ previous.url }}">← {{ previous.title }}</a>
-                            </li>
-                            {% assign previous = false %}
-                        {% endif %}
-                        {% assign previous = previous.previous %}
-                    {% endif %}
-                {% endfor %}
+                {% if page.previous %}
+                    <li class="prev">
+                        <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+                    </li>
+                {% endif %}
             </ul>
         </nav>
     {% endif %}

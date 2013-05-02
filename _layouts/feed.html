@@ -28,11 +28,7 @@ layout: nil
   {% for post in posts limit: 10 %}
     <entry>
       <id>http://vvv.tobiassjosten.net/{{ post.id }}</id>
-      {% if post.layout == 'book' %}
-        <title>Book: {{ post.title | xml_escape }}</title>
-      {% else %}
-        <title>{{ post.title | xml_escape }}</title>
-      {% endif %}
+      <title>{{ post.title | xml_escape }}</title>
       <author>
         <name>Tobias Sjösten</name>
       </author>

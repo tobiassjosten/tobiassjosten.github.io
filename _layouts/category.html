@@ -9,12 +9,10 @@ layout: base
 
     <ul class="posts">
         {% for post in site.tags[page.category] %}
-        {% if post.layout == 'post' %}
-            <li>
-                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-        {% endif %}
+        <li>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
         {% endfor %}
     </ul>
 </article>
