@@ -86,17 +86,9 @@
     </aside>
 
     <footer class="reviews teaser">
-        <h2>Recent books reviews</h2>
+        <h2>Recommended reading</h2>
 
-        <ul class="books">
-            {% for post in site.posts %}
-                {% if post.layout == 'book' %}
-                    <li class="book"><a href="{{ post.url }}">
-                        <img class="cover" alt="{{ post.title }}" title="{{ post.title }}" src="{{ post.image }}" itemprop="image">
-                    </a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {% include books.html %}
 
         <p>(<a href="/books/">all book reviews</a>)</p>
     </footer>

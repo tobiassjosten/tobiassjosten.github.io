@@ -1,0 +1,10 @@
+<ul class="books">
+    {% for page in site.pages %}
+        {% if page.layout == 'book' %}
+            {% capture url %}{{ page.url | remove: 'index.html' }}{% endcapture %}
+            <li class="book"><a href="{{ url }}">
+                <img class="cover" alt="{{ page.title }}" title="{{ page.title }}" src="{{ url }}{{ page.image }}" itemprop="image">
+            </a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
