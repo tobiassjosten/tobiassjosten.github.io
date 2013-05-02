@@ -1,6 +1,5 @@
 markdown: rdiscount
 exclude:  [README.md, CNAME, Gemfile, Gemfile.lock, Guardfile]
 permalink: /:categories/:title/
-limit_posts: 25
 assets_version: 7
 domain: vvv.tobiassjosten.net
