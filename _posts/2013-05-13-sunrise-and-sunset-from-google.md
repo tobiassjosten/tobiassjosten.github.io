@@ -16,3 +16,5 @@ Of course they can also answer when the sun will rise again.
 ![Sunrise time in Stockholm](/seo/google-sunrise-in-stockholm.png "Sun rises in Stockholm at 4:16 AM tomorrow")
 
 I have previously noted how Google also gives you [your public IP address](https://twitter.com/tobiassjosten/status/306738256517689345). What is your favorite example of these small Google widgets?
+
+**Update:** [Aaron Axelsson](https://plus.google.com/u/0/118281915654680184791) told me about Google's own [Tips & Tricks page](https://www.google.com/insidesearch/tipstricks/all.html), where they list more of these kind of widgets. They have titled it "All Tips & Tricks" but it is missing, for example, the public IP one so I suspect there are more goodies out there.
