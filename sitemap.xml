@@ -10,7 +10,7 @@
     {% for post in site.posts %}
     <url>
         <loc>http://{{ site.domain }}{{ post.url }}</loc>
-        <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+        <lastmod>{{ post.date | date: "%F" }}</lastmod>
     </url>
     {% endfor %}
 
@@ -22,7 +22,7 @@
     <url>
         <loc>http://{{ site.domain }}{{ page.url | remove: 'index.html' }}</loc>
         {% if page.date %}
-        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+        <lastmod>{{ page.date | date: "%F" }}</lastmod>
         {% endif %}
     </url>
     {% endif %}
