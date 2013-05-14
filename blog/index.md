@@ -5,7 +5,7 @@ summary: A tech blog where I usually write about problems I run into and solutio
 ---
 <ul class="tags">
     {% for category in site.categories | sort %}
-        <li>
+        <li style="font-size:{{ category | last | size | times: 100 | divided_by: site.categories.size | plus: 80 }}%">
             <a class="tag" href="/{{ category | first | slugize }}/">
                 {{ category | first }}
             </a>
