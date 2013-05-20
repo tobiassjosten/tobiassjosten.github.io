@@ -419,3 +419,23 @@
     margin: 0 -5px 0 -5px;
     text-transform: lowercase;
 }
+
+
+/**
+ * MAILCHIMP SIGNUP
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.mailchimp-signup {
+    background: url(/stripe.png) repeat top left;
+    margin: 50px 0 0 -10%;
+    padding: 20px;
+    width: 120%;
+}
+
+.mailchimp-signup h3 {
+    margin-top: 0;
+}
+
+.mailchimp-signup .mailchimp-signup-form {
+    text-align: center;
+}
