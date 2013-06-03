@@ -15,6 +15,6 @@ This comes from a requirement in [the new Icu component](https://github.com/symf
 
 Or if you are using Mac:
 
-    $ brew install icu4c
+    $ brew install php54-intl
 
 And then you are good to go!
