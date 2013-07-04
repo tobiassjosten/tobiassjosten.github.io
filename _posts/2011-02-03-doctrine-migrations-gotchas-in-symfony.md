@@ -7,7 +7,7 @@ summary: After having wrestled with Doctrine migrations I now have working code 
 ---
 After having [wrestled](http://twitter.com/tobiassjosten/status/33172676159864832) with Doctrine migrations I now have working code and my data is safe. But before I go on with my life I wanted to take a minute and post my findings, with hopes of helping future migraters.
 
-If you are a first time user of *Doctrine migrations*, I really recommend reading [Denderello's](http://www.denderello.com/about) excellent [writeup about it](http://www.denderello.com/publications/guide-to-doctrine-migrations). It really goes through all the basics you need to know and so I will only post a few gotchas here.
+If you are a first time user of *Doctrine migrations*, I really recommend reading [Dennis Benkert](http://www.denderello.com/)'s excellent [writeup about it](https://github.com/denderello/guide-to-doctrine-migrations). It really goes through all the basics you need to know and so I will only post a few gotchas here.
 
 ## Bash script for speed
 
