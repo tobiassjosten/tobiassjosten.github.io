@@ -7,5 +7,3 @@ guard 'sass', :input => '_includes/sass', :output => '_includes/css'
 guard 'livereload' do
   watch '_site/index.html'
 end
-
-# vim:ft=ruby
