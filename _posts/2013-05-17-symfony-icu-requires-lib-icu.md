@@ -15,6 +15,12 @@ This comes from a requirement in [the new Icu component](https://github.com/symf
 
 Or if you are using Mac:
 
+    (PHP 5.4)
     $ brew install php54-intl
+    
+    (PHP 5.5)
+    $ brew tap josegonzales/php
+    $ brew tap homebrew/dupes
+    $ brew install josegonzales/php/php55-intl
 
 And then you are good to go!
