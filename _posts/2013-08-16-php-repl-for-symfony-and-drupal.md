@@ -2,7 +2,7 @@
 layout: post
 title: PHP REPL for Symfony and Drupal
 category: php
-tags: [php, drupal, symfony]
+tags: [php, drupal, symfony, -x-drupal-planet]
 summary: One thing I have always missed in PHP is a useful and robust REPL. There is the built-in interactive mode (`php -a`) but it does not qualify as neither very useful nor robust.
 ---
 One thing I have always missed in [PHP](/php/) is a useful and robust REPL. A tool you could fire up, throw code at and have it evaluated in real time. There is the built-in interactive mode (`php -a`) but it does not qualify as neither very useful nor robust.
