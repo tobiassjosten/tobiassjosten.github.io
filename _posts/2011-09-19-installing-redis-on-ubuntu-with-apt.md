@@ -23,7 +23,7 @@ Then you need to authenticate these repositories using their public key.
 
 And finally, update your APT cache and *install Redis*.
 
-    $ sudo aptitude update
-    $ sudo aptitude install redis-server
+    $ sudo apt-get update
+    $ sudo apt-get install redis-server
 
 Happy key-value-storing!

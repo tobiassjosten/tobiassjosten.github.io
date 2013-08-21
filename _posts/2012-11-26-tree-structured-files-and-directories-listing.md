@@ -74,9 +74,9 @@ As with most *nix tools, `tree` is very flexible. You can for example have it si
 
 ## Installation
 
-In Ubuntu you can install `tree` with `aptitude`.
+In Ubuntu you can install `tree` with `apt-get`.
 
-    $ sudo aptitude install tree
+    $ sudo apt-get install tree
 
 If you are on Mac OSX you should use `brew` to install your *nix software.
 

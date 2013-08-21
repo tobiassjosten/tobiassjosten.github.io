@@ -16,7 +16,7 @@ Obviously installing the `rb-readline` gem did not work, or this would have been
 
 Because it would take a recompilation of Ruby, to include readline, I first had to make sure the dev packages were in place. In Ubuntu this means installing the `libreadline-dev` package.
 
-    $ sudo aptitude install libreadline-dev
+    $ sudo apt-get install libreadline-dev
 
 After that I set out to recompile Ruby. Using rbenv this is done with `rbenv install <version>` and by assigning the readline flag to `CONFIGURE_OPTS` you get the expected result.
 

@@ -23,7 +23,7 @@ However it is easy to fix and after some searching I found [a blog post](http://
 
 First you need to install `libreadline5` and `libncurses5`. I can't see why `ncurses` would be needed, but I am too lazy to uninstall it and check if it still works without the library. Using Apt on Ubuntu/Debian:
 
-    $ sudo aptitude install libreadline5-dev libncurses5-dev
+    $ sudo apt-get install libreadline5-dev libncurses5-dev
 
 Next you want to go configure and rebuild Ruby's readline extension. I am using [RVM](https://rvm.beginrescueend.com/) and so Ruby exists in `~/.rvm/src/ruby-1.9.2-p180/` for me. This can differ for you but running *which ruby* should tell you where yours is.
 

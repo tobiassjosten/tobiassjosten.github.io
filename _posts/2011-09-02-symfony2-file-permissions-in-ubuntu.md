@@ -11,9 +11,9 @@ It says to first try and use [chmod](http://en.wikipedia.org/wiki/Chmod) because
 
 ## Install and enable ACL
 
-First you need to install ACL, preferrably through your package manager; `aptitude` on Ubuntu, `pacman` on Arch, `yum` on Fedora, etc:
+First you need to install ACL, preferrably through your package manager; `apt-get` on Ubuntu, `pacman` on Arch, `yum` on Fedora, etc:
 
-    $ sudo aptitude install acl
+    $ sudo apt-get install acl
 
 Then you edit your `/etc/fstab` to enable ACL for your partition. Simply add `acl` to the list of options.
 

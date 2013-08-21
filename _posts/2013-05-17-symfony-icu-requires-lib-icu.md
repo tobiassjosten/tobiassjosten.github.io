@@ -11,7 +11,7 @@ Are you trying to install [Symfony](/symfony/) version 2.3 but get the following
 
 This comes from a requirement in [the new Icu component](https://github.com/symfony/Icu) but it is easily fixed. Just install the `intl` extension for PHP. In Ubuntu with Apt:
 
-    $ sudo aptitude install php5-intl
+    $ sudo apt-get install php5-intl
 
 Or if you are using Mac:
 
