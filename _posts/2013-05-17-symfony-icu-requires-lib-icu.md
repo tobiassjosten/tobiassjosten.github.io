@@ -19,8 +19,8 @@ Or if you are using Mac:
     $ brew install php54-intl
     
     (PHP 5.5)
-    $ brew tap josegonzales/php
+    $ brew tap josegonzalez/php
     $ brew tap homebrew/dupes
-    $ brew install josegonzales/php/php55-intl
+    $ brew install josegonzalez/php/php55-intl
 
 And then you are good to go!
