@@ -7,7 +7,7 @@ summary: Me and the rest of Symfony Sweden will be hosting a PHP conference in S
 ---
 Me and the rest of [Symfony Sweden](http://www.symfony.se/) will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for [November Camp](http://www.symfony.se/november-camp/)!
 
-If you are doing PHP professionally, you should definitely come. This whole day event will guide you through the latest and greatest of modern PHP. The PSR standards, Composer and Packagist and the SOLID principles are given topics but we will also cover essential peripherals like continous integration and monitoring.
+If you are doing PHP professionally, you should definitely come. This whole day event will guide you through the latest and greatest of modern PHP. The PSR standards, Composer and Packagist and the SOLID principles are given topics but we will also cover essential peripherals like continuous integration and monitoring.
 
 Tickets are 498 SEK a pop (~$78/€58) and that includes every session you can muster, all the cool developers you want to meet and of course as much coffee you can bear to drink.
 
