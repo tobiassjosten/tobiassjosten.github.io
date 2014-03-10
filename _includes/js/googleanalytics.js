@@ -19,6 +19,7 @@ var _gaq = _gaq || [];
         link.setAttribute('target', '_blank');
         link.addEventListener('click', function () {
             _gaq.push(['_trackEvent', category, 'Click', label]);
+            mixpanel.track('Click ' + category + ' ' + label);
         });
     }
 
