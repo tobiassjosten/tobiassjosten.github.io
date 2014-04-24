@@ -5,7 +5,8 @@ category: development
 tags: [development, php, symfony]
 amazonURL: http://amzn.to/1heHai3
 image: extending-symfony2.jpg
-summary: 
+summary: Twig extensions, compiler passes and custom authentication listeners — there is a lot of goodies in Extending Symfony2. I figured most would be healthy repetition and so I was excited when I actually picked up a few new things.
+grade: 3
 ---
 The introduction of **Extending Symfony2** (Web Application Framework, phew) explains that it's for developers *"already using Symfony2 and PHP"* and its online description says you are expected to *"have a good understanding of how Symfony works"*. I can attest to its truth — it's definitely not for newcomers to Symfony2.
 
