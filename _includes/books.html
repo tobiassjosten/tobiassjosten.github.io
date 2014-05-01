@@ -1,6 +1,6 @@
 <ul class="books">
     {% for page in site.pages %}
-        {% if page.layout == 'book' %}
+    {% if page.layout == 'book' and page.grade > bookGradeThreshold %}
             {% capture url %}{{ page.url | remove: 'index.html' }}{% endcapture %}
             <li class="book"><a href="{{ url }}">
                 <img class="cover" alt="{{ page.title }}" title="{{ page.title }}" src="{{ url }}{{ page.image }}" itemprop="image">
