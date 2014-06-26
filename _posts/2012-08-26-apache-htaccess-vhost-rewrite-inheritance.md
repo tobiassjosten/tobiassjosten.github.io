@@ -2,7 +2,7 @@
 layout: post
 title: Apache .htaccess and vhost rewrite inheritance
 category: drupal
-tags: [drupal, -x-drupal-planet]
+tags: [drupal, _drupalplanet]
 summary: Currently when you want to affect the way requests are routed into Drupal, you have two choices; either you hack the core `.htaccess` or you move all its content into your virtual host. We all know hacking core is bad but code duplication is also irky and we do not want to miss future updates to `.htaccess` when upgrading.
 ---
 Currently when you want to affect the way requests are routed into [Drupal](/drupal), you have two choices; either you hack the core `.htaccess` or you move all its content into your virtual host. We all know [hacking core is bad](http://www.flickr.com/photos/hagengraf/2802915470/) but code duplication is also irky and we do not want to miss future updates to `.htaccess` when upgrading.

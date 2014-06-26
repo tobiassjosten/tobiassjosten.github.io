@@ -6,7 +6,7 @@ layout: base
 
     <ul class="tags">
         {% for tag in page.tags %}
-            {% if tag contains "-x-" %}
+            {% if (tag|truncate:4) == "_..." %}
             {% else %}
                 <li>
                     <a class="tag" href="/{{ tag | slugize }}/" itemprop="articleSection">{{ tag }}</a>

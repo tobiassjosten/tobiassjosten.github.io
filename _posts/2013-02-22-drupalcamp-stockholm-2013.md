@@ -2,7 +2,7 @@
 layout: post
 title: DrupalCamp Stockholm 2013
 category: events
-tags: [events, php, drupal, symfony, -x-drupal-planet]
+tags: [events, php, drupal, symfony, _drupalplanet]
 summary: Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again at March 8th, just two weeks from today.
 ---
 Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again, just two weeks from today. Mark your calendars — March 8th will bring a lot of geeky fun to our capital city.

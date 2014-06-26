@@ -2,7 +2,7 @@
 layout: post
 title: Dispatching Drupal hooks
 category: drupal
-tags: [drupal, -x-drupal-planet]
+tags: [drupal, _drupalplanet]
 summary: The word *function* implies its intended scope. A function should strive to leverage exactly one functionality. If you are cramming more than that into your function, then you probably need to do some refactoring. One situation where you are often forced to go against this is when implementing hook_block() in Drupal.
 ---
 The word *function* implies its intended scope. A function should strive to leverage exactly one functionality. If you are cramming more than that into your function, then you probably need to do some refactoring. I think [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds) [hinted towards this](http://www.kernel.org/doc/Documentation/CodingStyle) quite eloquent.

@@ -2,7 +2,7 @@
 layout: post
 title: Add Drupal nodes to the front of nodequeues
 category: drupal
-tags: [drupal, -x-drupal-planet]
+tags: [drupal, _drupalplanet]
 summary: The default behaviour of Nodequeues is to append new nodes last in its queues. Recently for a client we needed to change this and it turned out to be easy, using Nodequeue's rich API. Still, someone else mightalso have this need so I wanted to share the recipe.
 ---
 The default behaviour of [Nodequeue](http://drupal.org/project/nodequeue) is to append new nodes last in its queues. Recently for a client we needed to change this and it turned out to be easy, using Nodequeue's rich API. Still, someone else might also have this need so I wanted to share the recipe.

@@ -2,7 +2,7 @@
 layout: post
 title: Get naked with Drupal
 category: drupal
-tags: [drupal, -x-drupal-planet]
+tags: [drupal, _drupalplanet]
 summary: I am a big fan of CSS Naked Day and have been participating myself the last two occasions. Earlier this year I open sourced a JavaScript project that on April 9th strips away your CSS entirely from the browser.
 ---
 I am a big fan of [CSS Naked Day](/css-naked-day/) and have been participating myself the last two occasions. Earlier this year I [open sourced a JavaScript project](/javascript/introducing-cssnakedday-js/) that on April 9th strips away your CSS entirely from the browser.
