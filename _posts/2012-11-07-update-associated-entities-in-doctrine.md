@@ -83,7 +83,7 @@ Now that we are hooked into the right place, we can make our changes. First we p
         // Make changes.
     }
 
-To make the actual changes we need to trigger a re-computation of the changeset of the affected entities. We use the *Unit of Work* to modify this changeset, through [recomputeSingleEntityChangeSet()](https://github.com/doctrine/doctrine2/blob/master/lib/Doctrine/ORM/UnitOfWork.php#L847).
+To make the actual changes we need to trigger a re-computation of the changeset of the affected entities. We use the *Unit of Work* to modify this changeset, through [recomputeSingleEntityChangeSet()](https://github.com/doctrine/doctrine2/blob/master/lib/Doctrine/ORM/UnitOfWork.php#L903).
 
     $em = $args->getEntityManager();
     $uow = $em->getUnitOfWork();
