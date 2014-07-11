@@ -117,7 +117,7 @@ But where do you draw a line? Do you only charge for when you write code? When y
 Of course you should be completely honest and not go play games on the clock. Just be a professional. Start the clock when your business hours start and stop it when they stop.
 
 >It's said that the difference between a consultancy firm that succeeds and one that fails is that the former is very careful about not working for free.  
->- [Magnus Nordlander](https://twitter.com/drrotmos) of [Ferovo](http://www.fervo.se/om-oss/medarbetare/)
+>- [Magnus Nordlander](https://twitter.com/drrotmos) of [Fervo](http://www.fervo.se/om-oss/medarbetare/)
 
 ## Touch base often
 
