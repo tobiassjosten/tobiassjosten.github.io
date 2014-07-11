@@ -2,7 +2,7 @@
 layout: post
 title: Charge your clients like a boss
 category: business
-tags: [business]
+tags: [business, _newsletter]
 summary: Being worth a certain value != being payed a certain sum. But it can be a tangent!
 ---
 There is an important distinction to be made between your [professional worth](/development/my-professional-worth/) and your *professional price*. Basically, being worth a certain value != being payed a certain sum.
@@ -17,7 +17,7 @@ Turns out; not by a long shot. My worth wasn't matched by my price. So I packed 
 
 During these last couple of years I have learned a lot about pricing my work and charging my clients. There have been quite a few hardbought lessons and there's a lot I wish I knew when I started out.
 
-So in the spirit of sharing, I wrote down some of my experiences and then I reached out to a bunch of my consulting and freelancing friends for more. This is what we think is crucial information when starting out.
+I wanted to share this experience with my new colleagues out there, in hope that it'll make life easier. So I compiled these fifteen points below and then reached out to a bunch of my consulting and freelancing friends for more. This is what I think is crucial information when starting out.
 
 ## Change your glasses
 
@@ -145,9 +145,9 @@ With bigger companies the negotiator isn't the person paying the bill. So let th
 
 ## Break a nail
 
-Definitely stand up for yourself and charge a decent price. Just don't let that attitude turn you into a primadonna. Sometimes we just have to roll up our sleeves and get to work.
+Definitely stand up for yourself and charge a decent price. But don't let that attitude turn you into a primadonna. Sometimes we just have to roll up our sleeves and get to work. Git r done!
+
+Just remember your worth and keep hustling until your price matches.
 
 >"If you think it's expensive to hire a professional to do the job, wait until you hire an amateur."  
 >- Red Adair
-
-Get it done but remember your worth and keep hustling until you have a matching price.
