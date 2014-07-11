@@ -70,8 +70,8 @@ Just starting out, it can be daunting to ask someone to pay you what sounds like
 
 There's A LOT of work out there for someone who can make a computer do their bidding and in contrast there's too few developers to meet this demand. Your skills are highly sought after and if someone doesn't want to pay your price, there's plenty else who will.
 
->Some useful replies to cheap clients includes "Good stuff costs a lot of money" and "Go ahead and buy cheap shit if you want".  
->- [Tobias Nyholm](https://twitter.com/TobiasNyholm), CTO of [HappyR](http://happyr.com/)
+>Some useful replies to cheap clients includes "Quality costs a lot of money" and "Go ahead and buy cheap shit from others, if that is what you want…".
+>- [Tobias Nyholm](https://twitter.com/TobiasNyholm), CTO of [Happyr](http://happyr.com/)
 
 ## Check your competition
 
