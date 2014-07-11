@@ -25,4 +25,4 @@ I get two free books for promoting this but even so, I'll definitely load my Kin
 
 - Dependency Injection with AngularJS
 
-Sounds good? Head on over to [Packt Publishing — 10 Years $10](http://www.packtpub.com/10years?utm_source=Packt10&utm_medium=tobiassjosten.net&utm_campaign=Packt10) and get yours before it ends on Saturday night!
+Sounds good? Head on over to [Packt Publishing — 10 Years $10](http://goo.gl/EMjzEE) and get yours before it ends on Saturday night!
