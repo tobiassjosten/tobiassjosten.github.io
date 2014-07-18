@@ -9,7 +9,11 @@ One thing I have always missed in [PHP](/php/) is a useful and robust REPL. A to
 
 [Boris](https://github.com/d11wtq/boris), from [Chris Corbyn](https://twitter.com/d11wtq), solves this. He describes it as *a tiny little, but robust REPL for PHP* and this is exactly what I have been missing all these years. Thanks, Chris!
 
-After [installing it](https://github.com/d11wtq/boris#usage) (I recommend as a globally available PHAR) you should be able to run `boris` and fire away your code at it.
+There are a couple of ways to [install it](https://github.com/d11wtq/boris#installation) but I prefer using [Composer](/composer/):
+
+    $ composer global require 'd11wtq/boris=*'0
+
+Now you should be able to run `boris` and fire away your code at it.
 
     [1] boris> 1 + 2 * 3;
      → int(7)
@@ -30,15 +34,17 @@ It properly catches errors and lets you carry on without having to restart.
 
 ## Specialized PHP REPL
 
-This is cool enough but I wanted to take Boris further, so I created a small library to load in project resources. Currently there is support for Symfony (Standard Edition) and Drupal (8).
+This is cool enough but I wanted to take Boris further, so I created a small library to load in project resources. Currently there is support for Symfony (Standard Edition), Drupal (7 and 8), eZ Publish and Composer based apps.
 
-Installation is super simple. Just download [this `.borislib` file](https://raw.github.com/tobiassjosten/boris-loader/master/borislib) to your home directory and then create or edit your `~/.borisrc` configuration file to have the following content.
+Check out [tobiassjosten/boris-loader](https://github.com/tobiassjosten/boris-loader).
+
+Installation is super simple. Just clone the repository and then add to your `~/.borisrc` configuration file the following content:
 
     <?php
-    require '.borislib';
-    loadBoris($boris, array(new DrupalLoader(), new SymfonyLoader()));
-    
-Remove either loader if you have no need of it. And that it is; your Boris instance should now be able to recognize your Symfony and Drupal projects.
+    require 'path/to/cloned/boris-loader.php';
+    \Boris\Loader\Loader::load($boris);
+
+And that it is; your Boris instance should now be able to recognize your Symfony, Drupal, eZ Publish and Composer projects.
 
 ## Symfony REPL
 
@@ -72,6 +78,6 @@ This assumes you are using Drupal 8, with some proper Symfony mojo.
 
 ## REPL for other PHP projects
 
-With Symfony SE and Drupal 8 I am covering my own immediate needs but not likely all of yours. The loader is open source though, so just send me a pull request for your favorite project!
+With Symfony, Drupal eZ Publish and generic Composer support, I am covering my own needs but not likely all of yours. The loader is open source though, so just send me a pull request for your favorite project!
 
 Check [the project out at GitHub](https://github.com/tobiassjosten/boris-loader).
