@@ -50,7 +50,9 @@ And that it is; your Boris instance should now be able to recognize your standar
 
 Tell boris-loader to use the Symfony provider by tweaking your `.borisrc` file.
 
-    \Boris\Loader\Loader::load($boris, [new \Boris\Loader\Provider\Symfony2()]);
+    \Boris\Loader\Loader::load($boris, [
+        new \Boris\Loader\Provider\Symfony2(),
+    ]);
 
 Now, starting Boris within a Symfony project will take care of autoloading and build a Symfony kernel for you. Both the kernel and its container will be available in Boris and you can tell it has loaded by the `symfony>` prompt.
 
