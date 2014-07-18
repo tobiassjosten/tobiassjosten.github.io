@@ -44,11 +44,15 @@ Installation is super simple. Just clone the repository and then add to your `~/
     require 'path/to/cloned/boris-loader.php';
     \Boris\Loader\Loader::load($boris);
 
-And that it is; your Boris instance should now be able to recognize your Symfony, Drupal, eZ Publish and Composer projects.
+And that it is; your Boris instance should now be able to recognize your standard Composer based projects. For more specialized projects you will need to load their providers explicitly.
 
 ## Symfony REPL
 
-Starting Boris within a Symfony project will take care of autoloading and build a Symfony kernel for you. Both the kernel and its container will be available in Boris and you can tell it has loaded by the `symfony>` prompt.
+Tell boris-loader to use the Symfony provider by tweaking your `.borisrc` file.
+
+    \Boris\Loader\Loader::load($boris, [new \Boris\Loader\Provider\Symfony2()]);
+
+Now, starting Boris within a Symfony project will take care of autoloading and build a Symfony kernel for you. Both the kernel and its container will be available in Boris and you can tell it has loaded by the `symfony>` prompt.
 
     [1] symfony> $container->get('doctrine');
      → class Doctrine\Bundle\DoctrineBundle\Registry#332 (7) {
@@ -62,7 +66,14 @@ For Symfony I am assuming you are using the Standard Edition, with `app/bootstra
 
 ## Drupal REPL
 
-If you are standing in a Drupal project when firing up Boris with my loaders, you will land in a fully bootstrapped Drupal instance. As with the Symfony loader you have access to Drupal's `$kernel` and `$container` and of course also the entire Drupal API.
+Have boris-loader use the Drupal providers adding them to your `.borisrc` file.
+
+    \Boris\Loader\Loader::load($boris, [
+        new \Boris\Loader\Provider\Drupal7(),
+        new \Boris\Loader\Provider\Drupal8()
+    ]);
+
+If you are standing in a Drupal project when firing up Boris with those providers, you will land in a fully bootstrapped Drupal instance. As with the Symfony provider you have access to Drupal's `$kernel` and `$container` and of course also the entire Drupal API.
 
     [1] drupal> node_load(1);
      → class Drupal\Core\Entity\EntityBCDecorator#1158 (2) {
@@ -74,10 +85,8 @@ If you are standing in a Drupal project when firing up Boris with my loaders, yo
         array(21) {
     // …
 
-This assumes you are using Drupal 8, with some proper Symfony mojo.
-
 ## REPL for other PHP projects
 
-With Symfony, Drupal eZ Publish and generic Composer support, I am covering my own needs but not likely all of yours. The loader is open source though, so just send me a pull request for your favorite project!
+With Symfony, Drupal, eZ Publish and generic Composer support, I am covering my own needs but not likely all of yours. The loader is open source though, so just send me a pull request for your favorite project!
 
 Check [the project out at GitHub](https://github.com/tobiassjosten/boris-loader).
