@@ -23,7 +23,7 @@ I wanted to share this experience with my new colleagues out there, in hope that
 
 The thing about worth is that it's very subjective. You have to stop thinking "what can I charge my client?" and instead go "what value am I providing for this person?".
 
-What I charge my clients today might is lucrative to them, because they can turn it around and make even more money from what I provide. Were I to offer the same deal to a random guy on the street they would probably look at me like I'm crazy — my craft just isn't worth that kind of money for most people.
+What I charge my clients today might be lucrative to them, because they can turn it around and make even more money from what I provide. Were I to offer the same deal to a random guy on the street they would probably look at me like I'm crazy — my craft just isn't worth that kind of money for most people.
 
 It's my job to find the ones where I can provide the highest value and then charge accordingly.
 
@@ -45,7 +45,7 @@ Do you keep working for free? Do they continue to pay until it's done? Maybe you
 
 Ultimately you need to decide on this together with your client and I highly recommend doing so before potential shit hits the proverbial fan.
 
->Fixed price projects can be split up and charge half the price before starting and the rest when the project is done.  
+>Fixed price projects can be split up, for instance charge half the price before starting and the rest when the project is done.  
 >- [Adam Nybäck](https://twitter.com/nadam9) of [Anyro](http://anyro.se/)
 
 ## Calculate your minimum price
@@ -60,7 +60,7 @@ If you sell your time for less than this minimum price, keep in mind that you ne
 
 ## Determine your comfortable price
 
-No one enjoys living on a existential minimum for very long. With that in place though, you can start thinking about existential comfortability. What does it take for you to not only survive but to thrive and live life?
+No one enjoys living on a existential minimum for very long. With that in place though, you can start thinking about existential comfortability. What does it take for you to not only survive but to thrive and live life fully?
 
 Sit down and actually do the exercise. Get a concrete number — "this is what I want to make". It's much, much easier to reach a defined goal than something vague.
 
@@ -68,7 +68,7 @@ Sit down and actually do the exercise. Get a concrete number — "this is what I
 
 Just starting out, it can be daunting to ask someone to pay you what sounds like a lot of money. But again, look at it from the other side.
 
-There's A LOT of work out there for someone who can make a computer do their bidding and in contrast there's too few developers to meet this demand. Your skills are highly sought after and if someone doesn't want to pay your price, there's plenty else who will.
+There's A LOT of work out there for someone who can make a computer do their bidding and in contrast there's too few developers to meet this demand. Your skills are highly sought after and if someone doesn't want to pay your price, there are plenty of others who will.
 
 >Some useful replies to cheap clients includes "Quality costs a lot of money" and "Go ahead and buy cheap shit from others, if that is what you want…".
 >- [Tobias Nyholm](https://twitter.com/TobiasNyholm), CTO of [Happyr](http://happyr.com/)
@@ -87,7 +87,7 @@ You are selling your time and if you deliver on that, with expected quality, it'
 
 Make it a habit to send invoices the first thing every month, for work done previous month. I still struggle with this myself sometimes, thinking I will just add another day or two to complete what I'm working on and then invoice for everything. But more often than not it just leads to me being payed later than I would have to be.
 
-Monthly invoices also helps mitigate some risk with long running projects (especially if you don't know it'll be one from the start), where you naturally break it down in to manageble size.
+Monthly invoices also helps mitigate some risk with long running projects (especially if you don't know it'll be one from the start), where you naturally break it down into manageable size.
 
 ## Keep cranking
 
