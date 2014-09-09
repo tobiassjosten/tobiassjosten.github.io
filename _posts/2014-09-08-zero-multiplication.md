@@ -2,7 +2,7 @@
 layout: post
 title: Zero multiplication
 category: business
-tags: [business]
+tags: [business, _newsletter]
 summary: I often describe myself as analytical and one who works systematically but that's just CV code for saying I'm a world class procrastrinator.
 ---
 I often describe myself as highly analytical and as someone who works very systematically. To be honest that's just CV code for saying I'm a world class procrastrinator. If something needs to be done you can trust me to find a way to work hard doing anything but the actual thing. Often accompanied by the words "if something is worth doing, it's worth doing correctly".
