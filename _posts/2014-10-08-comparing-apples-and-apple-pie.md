@@ -9,7 +9,7 @@ I have been doing CrossFit for about four months now and I feel myself getting s
 
 ## Asskicked
 
-All this time there's been one woman who have kept kicking my ass. As I complete my workout; drenched in sweat, gasping for air and feeling ready to crawl into a coffin, she merrily skipped around to put away her gear, having completed the workout way before me.
+All this time there's been one woman who has kept kicking my ass. As I complete my workout; drenched in sweat, gasping for air and feeling ready to crawl into a coffin, she merrily skipped around to put away her gear, having completed the workout way before me.
 
 It's been quite demoralizing to never seem to be able to close this gap.
 
