@@ -24,3 +24,9 @@ There are two ways to solve this. Either you assign the variable in the ternary 
 Or pick from one of two references using a dynamic variable name.
 
     $name = &${isAuthor() ? 'authorName' : 'otherName'};
+
+## Video
+
+The people over at [Webucator](https://www.webucator.com/) have put together [a short video](https://www.youtube.com/watch?v=DojE8Cz9znc) where they go over this solution. They asked if I could link to their [PHP training course](https://www.webucator.com/webdev/php.cfm) and I feel this is good enough SEO work that I'll bite. :)
+
+<iframe width="600" height="337" src="//www.youtube.com/embed/DojE8Cz9znc" frameborder="0" allowfullscreen></iframe>
