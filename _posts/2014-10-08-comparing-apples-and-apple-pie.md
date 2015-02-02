@@ -5,7 +5,7 @@ category: business
 tags: [business, _newsletter]
 summary: Ask yourself; whas was X doing when I lay in my sofa, binge watching Breaking Bad?
 ---
-I have been doing CrossFit for about four months now and I feel myself getting stronger for every passing week. I can tell from the weights and repetitions but also from the fact that every workout is timed, so to give you a way to compare yourself to others and your previous workouts.
+I have been doing [CrossFit here in Edinburgh](http://www.crgcrossfit.com/) for about four months now and I feel myself getting stronger for every passing week. I can tell from the weights and repetitions but also from the fact that every workout is timed, so to give you a way to compare yourself to others and your previous workouts.
 
 ## Asskicked
 
