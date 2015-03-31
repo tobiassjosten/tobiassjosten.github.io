@@ -41,3 +41,9 @@ I had to configure Assetic to use another Compass file. I am showing the Ruby bi
                 bin: /home/tobias/.rbenv/versions/1.9.3-p392/bin/compass
 
 Obviously you will want to move these to parameters instead, because the path will most likely vary between machines. But that works!
+
+**Update:** As [Frederik Schubert](https://twitter.com/ferdynator) pointed out to me, this can actually be entirely configured using parameters.
+
+    parameters:
+        assetic.ruby: /home/tobias/.rbenv/versions/1.9.3-p392/bin/ruby
+        assetic.compass.bin: /home/tobias/.rbenv/versions/1.9.3-p392/bin/compass
