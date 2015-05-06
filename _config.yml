@@ -1,5 +1,5 @@
 markdown: rdiscount
-exclude:  [README.md, CNAME, Gemfile, Gemfile.lock, Guardfile]
+exclude:  [README.md, CNAME, Gemfile, Gemfile.lock, Guardfile, divshot.json]
 permalink: /:categories/:title/
 assets_version: 7
 domain: vvv.tobiassjosten.net
