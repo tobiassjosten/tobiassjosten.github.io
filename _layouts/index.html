@@ -1,28 +1,6 @@
 ---
 layout: base
 ---
-{{content}}
-
 <aside class="twitter-follow">
     <a href="https://twitter.com/tobiassjosten" class="button">Follow @tobiassjosten</a>
 </aside>
-
-<h2>Recent blog posts</h2>
-
-<ul class="posts">
-    {% assign counter = '' %}
-
-    {% for post in site.posts %}
-        {% capture temp %}{{ counter }}*{% endcapture %}
-        {% assign counter = temp %}
-
-        {% if counter.size < 10 %}
-            <li>
-                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
-
-<p>(<a href="/blog/">all blog posts</a>)</p>
