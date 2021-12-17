@@ -84,13 +84,6 @@
             ga('send', 'pageview');
         }
     </script>
-
-    <!-- start Mixpanel -->
-    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
-b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-mixpanel.init("29402675f46aee36f5461bd190a3fe6b");</script>
-    <!-- end Mixpanel -->
 </head>
 <body>
     <h1 class="title">{{ page.title }}</h1>
@@ -103,46 +96,6 @@ mixpanel.init("29402675f46aee36f5461bd190a3fe6b");</script>
         {{ content }}
     </section>
 
-    <aside class="logo">
-        <a href="/">
-            T <span class="logo-title">(homepage)</span>
-        </a>
-    </aside>
-
-    <footer class="reviews teaser">
-        <h2>Recommended reading</h2>
-
-        {% assign bookGradeThreshold = 3 %}
-        {% include books.html %}
-
-        <p>(<a href="/books/">all book reviews</a>)</p>
-    </footer>
-
-    <footer class="contact">
-        <ul>
-            <li><a href="mailto:tobias@tobiassjosten.net">tobias@tobiassjosten.net</a></li>
-            <li><a href="call:+46855924996">+46855924996</a></li>
-            <li><a href="https://twitter.com/tobiassjosten">@tobiassjosten</a></li>
-            <li><a href="https://plus.google.com/100233423297777162838/posts" rel="me">+Tobias Sjösten</a></li>
-        </ul>
-    </footer>
-
-    <footer class="license">
-        <p>All content is, unless otherwise stated, published under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-    </footer>
-
     <script type="text/javascript" src="/tobiassjosten.js?{{ site.assets_version }}"></script>
-
-    <script type="text/javascript">
-        window._idl = {};
-        _idl.variant = "banner";
-        (function() {
-            var idl = document.createElement('script');
-            idl.type = 'text/javascript';
-            idl.async = true;
-            idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
-            document.getElementsByTagName('body')[0].appendChild(idl);
-        })();
-    </script>
 </body>
 </html>
