@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    {{ partial "head.html" . }}
+    {{ partial "analytics.html" . }}
+</head>
+<body class="home">
+    {{ partial "header.html" . }}
+
+    <main id="main">
+        <section class="hero">
+            <h1>{{ .Site.Params.author }}</h1>
+            <p class="tagline">{{ .Site.Params.description }}</p>
+            {{ .Content }}
+        </section>
+
+        {{ $featuredProjects := where .Site.Pages "Params.featured" true }}
+        {{ if $featuredProjects }}
+        <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                {{ range $featuredProjects }}
+                <article class="project-card">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Params.summary }}</p>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+
+        <section class="recent-writing">
+            <h2>Recent Writing</h2>
+            {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "blog" "archive") }}
+            {{ range first 3 $blogPosts }}
+            <article class="post-summary">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+                {{ with .Params.summary }}
+                <p>{{ . }}</p>
+                {{ end }}
+            </article>
+            {{ end }}
+            <p class="archive-link">
+                <a href="/archive/">View archive of technical articles (2010-2015) →</a>
+            </p>
+        </section>
+
+        <section class="contact">
+            <h2>Connect</h2>
+            <ul class="social-links">
+                <li><a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a></li>
+                <li><a href="https://github.com/tobiassjosten">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    {{ partial "footer.html" . }}
+</body>
+</html>

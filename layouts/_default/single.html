@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="post article" itemscope itemtype="http://schema.org/BlogPosting">
+    <div itemprop="articleBody">{{ .Content }}</div>
+
+    <ul class="tags">
+        {{ range .Params.tags }}
+            {{ if not (hasPrefix . "_") }}
+                <li>
+                    <a class="tag" href="{{ printf "/tags/%s/" (. | urlize) }}" itemprop="articleSection">{{ . }}</a>
+                    <meta itemprop="genre" content="{{ . }}">
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+
+    <p class="published">
+        Published
+        <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </p>
+
+    <aside class="intro" itemscope itemtype="http://schema.org/Person">
+        <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125" title="{{ .Site.Params.author }}" alt="Photo of {{ .Site.Params.author }}" class="avatar" itemprop="image">
+        <p>Written by <a href="/" rel="author" itemprop="url" itemprop="name">{{ .Site.Params.author }}</a>; a <span itemprop="jobTitle">web technician</span> and <span itemprop="jobTitle">open source aficionado</span>.</p>
+        <a href="https://twitter.com/{{ .Site.Params.twitter }}" class="button">Follow @{{ .Site.Params.twitter }}</a>
+    </aside>
+
+    {{ with .NextInSection }}
+        <nav class="next-prev">
+            <ul>
+                <li class="next">
+                    <a href="{{ .Permalink }}">{{ .Title }} →</a>
+                </li>
+            </ul>
+        </nav>
+    {{ end }}
+    {{ with .PrevInSection }}
+        <nav class="next-prev">
+            <ul>
+                <li class="prev">
+                    <a href="{{ .Permalink }}">← {{ .Title }}</a>
+                </li>
+            </ul>
+        </nav>
+    {{ end }}
+</article>
+{{ end }}

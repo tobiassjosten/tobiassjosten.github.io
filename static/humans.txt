@@ -1,0 +1,17 @@
+/* TEAM */
+
+	Tobias Sjösten — @tobiassjosten
+	http://vvv.tobiassjosten.net/
+
+/* THANKS */
+
+	Per Sanström — @persand
+	http://www.helloper.com/
+
+	Viktor Miranda — @Vikom
+	http://www.viktormiranda.com/
+
+/* SITE */
+
+	Doctype: HTML5
+	Tools: Jekyll, GitHub, Vim

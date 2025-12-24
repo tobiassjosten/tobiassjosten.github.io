@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    {{ partial "head.html" . }}
+    {{ partial "analytics.html" . }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+
+    <main id="main">
+        {{ if .Params.notice }}
+            <blockquote class="notice">{{ .Params.notice | markdownify }}</blockquote>
+        {{ end }}
+
+        <h1 class="title">{{ .Title }}</h1>
+
+        {{ block "main" . }}
+        {{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+</body>
+</html>

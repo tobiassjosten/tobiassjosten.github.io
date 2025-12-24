@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="archive">
+    {{ .Content }}
+
+    {{ range .Pages.GroupByDate "2006" }}
+    <section class="year-group">
+        <h2>{{ .Key }}</h2>
+        <ul class="archive-list">
+            {{ range .Pages }}
+            <li>
+                <time>{{ .Date.Format "Jan 02" }}</time>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ with .Params.tags }}
+                <span class="tags-inline">
+                    {{ range first 3 . }}
+                        {{ if not (hasPrefix . "_") }}
+                        <a href="{{ printf "/tags/%s/" (. | urlize) }}">{{ . }}</a>
+                        {{ end }}
+                    {{ end }}
+                </span>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+</article>
+{{ end }}

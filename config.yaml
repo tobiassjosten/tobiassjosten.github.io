@@ -1,0 +1,40 @@
+baseURL: "https://vvv.tobiassjosten.net"
+languageCode: "en-us"
+title: "Tobias Sjösten"
+
+taxonomies:
+  tag: tags
+  category: categories
+
+outputs:
+  home: ["HTML", "RSS"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss+xml"
+    baseName: "feed"
+
+menu:
+  main:
+    - name: "About"
+      url: "/about/"
+      weight: 1
+    - name: "Projects"
+      url: "/projects/"
+      weight: 2
+    - name: "Books"
+      url: "/books/"
+      weight: 3
+    # Blog intentionally hidden from nav
+
+params:
+  description: "Web technician and open source aficionado"
+  author: "Tobias Sjösten"
+  twitter: "tobiassjosten"
+  ga_tracking_id: "UA-18939935-1"
+  ga_tracking_id_secondary: "UA-18939935-2"
+  domain: "vvv.tobiassjosten.net"
+  show_recent_posts: 3

@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "feed.xml" | absURL }}" />
+{{ if .Params.categories }}
+  {{ range .Params.categories }}
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} - {{ . }}" href="{{ printf "categories/%s/feed.xml" (. | urlize) | absURL }}" />
+  {{ end }}
+{{ end }}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}"/>
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
+<meta name="twitter:domain" content="{{ .Site.Params.domain }}">
+
+<!-- License -->
+<link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+
+<!-- Stylesheets -->
+<link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" media="all">

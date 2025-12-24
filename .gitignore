@@ -1,2 +1,4 @@
-/_site
-/.sass-cache
+/public
+
+settings.personal.json
+settings.local.json
