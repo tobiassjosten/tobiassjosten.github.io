@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="tags-overview">
+    <h1>All Tags</h1>
+
+    <p>Browse posts by topic. {{ len .Data.Terms }} tags total.</p>
+
+    <div class="tags-grid">
+        {{ range .Data.Terms.Alphabetical }}
+        <div class="tag-card">
+            <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+            <p class="post-count">{{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}</p>
+            {{ with index $.Site.Data.tags (.Page.Title | urlize) }}
+                {{ with .description }}
+                <p class="tag-preview">{{ . | plainify | truncate 100 }}</p>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</article>
+{{ end }}

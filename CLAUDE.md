@@ -5,6 +5,7 @@
 - Hugo generates the website
 - Plain HTML/CSS/JS for frontend
 - GitHub Pages hosts the site
+- Cloudflare as CDN and reverse proxy
 - Go for utility scripts
 
 ## Development
@@ -25,3 +26,13 @@ hugo --environment production \
 hugo mod tidy
 hugo mod verify
 ```
+
+## Content
+
+There are different types of content in the site:
+- Pages — 
+- Articles — 
+- Tech Notes — 
+- Book reviews —
+
+Images related to specific articles or tech notes are stored in

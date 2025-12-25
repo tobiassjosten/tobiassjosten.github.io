@@ -1,0 +1,82 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"os"
+	"path/filepath"
+)
+
+func main() {
+	// Find all tag directories (those with index.md)
+	dirs, err := filepath.Glob("*/index.md")
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+		return
+	}
+
+	redirectCount := 0
+
+	for _, path := range dirs {
+		dir := filepath.Dir(path)
+
+		// Skip Hugo directories
+		if dir == "content" || dir == "layouts" || dir == "static" ||
+			dir == "data" || dir == "archetypes" || dir == "scripts" ||
+			dir == "books" || dir == "public" {
+			continue
+		}
+
+		// Create redirect for index page: /tag/ → /tags/tag/
+		indexRedirect := fmt.Sprintf(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="/tags/%s/"/>
+    <meta http-equiv="refresh" content="0; url=/tags/%s/"/>
+    <meta name="robots" content="noindex">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redirecting to <a href="/tags/%s/">%s</a>...</p>
+</body>
+</html>`, dir, dir, dir, dir)
+
+		os.MkdirAll(filepath.Join("static", dir), 0755)
+		err := ioutil.WriteFile(filepath.Join("static", dir, "index.html"), []byte(indexRedirect), 0644)
+		if err != nil {
+			fmt.Printf("Error writing index redirect for %s: %v\n", dir, err)
+			continue
+		}
+
+		// Create redirect for feed: /tag/feed.atom → /tags/tag/feed.xml
+		feedRedirect := fmt.Sprintf(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="/tags/%s/feed.xml"/>
+    <meta http-equiv="refresh" content="0; url=/tags/%s/feed.xml"/>
+    <meta name="robots" content="noindex">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redirecting to <a href="/tags/%s/feed.xml">feed</a>...</p>
+</body>
+</html>`, dir, dir, dir)
+
+		err = ioutil.WriteFile(filepath.Join("static", dir, "feed.atom"), []byte(feedRedirect), 0644)
+		if err != nil {
+			fmt.Printf("Error writing feed redirect for %s: %v\n", dir, err)
+			continue
+		}
+
+		fmt.Printf("Created redirects for: %s\n", dir)
+		redirectCount++
+	}
+
+	fmt.Printf("\n=== Redirect Creation Complete ===\n")
+	fmt.Printf("Created redirects for %d tags in static/ directory\n", redirectCount)
+	fmt.Printf("\nRedirect pattern:\n")
+	fmt.Printf("  /%s/ → /tags/%s/\n", "tag", "tag")
+	fmt.Printf("  /%s/feed.atom → /tags/%s/feed.xml\n", "tag", "tag")
+}

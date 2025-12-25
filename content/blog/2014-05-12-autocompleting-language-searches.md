@@ -26,61 +26,61 @@ Here are the results for C++, Clojure, Haskell, Java, JavaScript, Lisp, Objectiv
 
 C++ is hard, popular, complicated and hard to learn.
 
-![C++ is hard, popular, complicated and hard to learn](cpp.png)
+![C++ is hard, popular, complicated and hard to learn](/tech-notes/autocompleting-language-searches/cpp.png)
 
 ## Clojure
 
 Clojure is slow, popular and fast.
 
-![Clojure is slow, popular and fast](clojure.png)
+![Clojure is slow, popular and fast](/tech-notes/autocompleting-language-searches/clojure.png)
 
 ## Haskell
 
 Haskell is big, fast, hard and popular.
 
-![Haskell is big, fast, hard and popular](haskell.png)
+![Haskell is big, fast, hard and popular](/tech-notes/autocompleting-language-searches/haskell.png)
 
 ## Java
 
 Java is popular, bad, slow and hard.
 
-![Java is popular, bad, slow and hard](java.png)
+![Java is popular, bad, slow and hard](/tech-notes/autocompleting-language-searches/java.png)
 
 ## JavaScript
 
 JavaScript is popular, bad, hard and slow.
 
-![JavaScript is popular, bad, hard and slow](javascript.png)
+![JavaScript is popular, bad, hard and slow](/tech-notes/autocompleting-language-searches/javascript.png)
 
 ## Lisp
 
 Lisp is powerful, hard and awesome.
 
-![Lisp is powerful, hard and awesome](lisp.png)
+![Lisp is powerful, hard and awesome](/tech-notes/autocompleting-language-searches/lisp.png)
 
 ## Objective-C
 
 Objective-C is complicated, ugly, hard and popular.
 
-![Objective-C is complicated, ugly, hard and popular](objective-c.png)
+![Objective-C is complicated, ugly, hard and popular](/tech-notes/autocompleting-language-searches/objective-c.png)
 
 ## PHP
 
 PHP is bad, popular, slow and hard to learn.
 
-![PHP is bad, popular, slow and hard to learn](php.png)
+![PHP is bad, popular, slow and hard to learn](/tech-notes/autocompleting-language-searches/php.png)
 
 ## Python
 
 Python is slow, good, popular and useful.
 
-![Python is slow, good, popular and useful](python.png)
+![Python is slow, good, popular and useful](/tech-notes/autocompleting-language-searches/python.png)
 
 ## Scala
 
 Scala is popular, slow and complex.
 
-![Scala is popular, slow and complex](scala.png)
+![Scala is popular, slow and complex](/tech-notes/autocompleting-language-searches/scala.png)
 
 ## Similarities and differences
 

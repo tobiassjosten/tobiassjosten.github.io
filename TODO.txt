@@ -1,1 +1,5 @@
 - Clean up HTML from old posts.
+- Projects: exodus, calendzo, simpex, dotfiles, nogfx, csvmerge, truecoach, boris-loader, jsonapi, ResponsibleServiceProvider, CSSNakedDay.js, xchat-common-denominator, sfFlattrPlugin, reactions, ansicolor, protea.
+- Businesses: Draim, Kollegorna, Smartburk, Athlegan, Seastone.
+- Clean out old redirects (not used in logs, not linked from anywhere).
+  - Also move all `aliases` from frontmatter to `_redirects` file.
