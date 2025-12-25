@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="projects">
+    {{ .Content }}
+
+    {{ $projects := .Site.Data.projects.projects }}
+
+    {{ if $projects }}
+    <ul class="projects-list">
+        {{ range $projects }}
+        <li class="project-item">
+            <h3>
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                    {{ .name }}
+                </a>
+            </h3>
+            {{ with .description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            {{ with .language }}
+            <span class="project-meta">{{ . }}</span>
+            {{ end }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+{{ end }}
