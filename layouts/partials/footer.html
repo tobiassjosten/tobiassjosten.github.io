@@ -1,4 +1,12 @@
 <footer>
+    <nav class="footer-nav">
+        <ul>
+            {{ range site.Menus.secondary }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+
     <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
     <p>{{ .Site.Params.description }}</p>
 </footer>

@@ -31,7 +31,7 @@
 
         <section class="recent-writing">
             <h2>Recent Writing</h2>
-            {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "blog" "archive") }}
+            {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "articles" "archive") }}
             {{ range first 3 $blogPosts }}
             <article class="post-summary">
                 <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>

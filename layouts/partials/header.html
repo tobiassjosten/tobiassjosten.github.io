@@ -1,8 +1,7 @@
 <header>
     <nav>
-        {{ range .Site.Menus.main }}
+        {{ range .Site.Menus.primary }}
             <a href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
-        <a href="/archive/">Archive</a>
     </nav>
 </header>

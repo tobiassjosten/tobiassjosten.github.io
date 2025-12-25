@@ -18,17 +18,48 @@ outputFormats:
     baseName: "feed"
 
 menu:
-  main:
+  primary:
+    - name: "Home"
+      url: "/"
+      weight: 1
     - name: "About"
       url: "/about/"
-      weight: 1
+      weight: 2
     - name: "Projects"
       url: "/projects/"
+      weight: 3
+    - name: "Articles"
+      url: "/articles/"
+      weight: 4
+
+  secondary:
+    - name: "Contact"
+      url: "/contact/"
+      weight: 1
+    - name: "Tech Notes"
+      url: "/archive/"
       weight: 2
+    - name: "Now"
+      url: "/now/"
+      weight: 3
+    - name: "Uses"
+      url: "/uses/"
+      weight: 4
+    - name: "Newsletter"
+      url: "/newsletter/"
+      weight: 5
+    - name: "Resume"
+      url: "/resume/"
+      weight: 6
+    - name: "Services"
+      url: "/services/"
+      weight: 7
+    - name: "Speaking"
+      url: "/speaking/"
+      weight: 8
     - name: "Books"
       url: "/books/"
-      weight: 3
-    # Blog intentionally hidden from nav
+      weight: 9
 
 params:
   description: "Web technician and open source aficionado"
