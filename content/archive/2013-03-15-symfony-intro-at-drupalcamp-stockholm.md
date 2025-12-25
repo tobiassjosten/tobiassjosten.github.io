@@ -19,7 +19,7 @@ It was absolutely nerve racking but also really, really fun! I definitely got a 
 
 If you happened to miss the *Symfony Intro* presentation, my good friend [Viktor Miranda](http://viktormiranda.se/) recorded the entire session (thanks, mate!) and I just [finished uploading it](https://www.youtube.com/watch?v=FUmCeN4X9Ec). Put your Swedish on and hit play below.
 
-<iframe width="600" height="450" src="http://www.youtube.com/embed/FUmCeN4X9Ec" frameborder="0" allowfullscreen></iframe>
+{{< youtube FUmCeN4X9Ec >}}
 
 The slides are [available online](http://tobiassjosten.github.com/symfony-intro/).
 

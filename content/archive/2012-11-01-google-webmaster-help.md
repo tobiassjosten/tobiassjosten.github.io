@@ -28,4 +28,4 @@ In today's Google Webmaster Help, Matt discusses the difference between using su
 
 Sounds like I was wrong.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/_MswMYk05tk" frameborder="0" allowfullscreen></iframe>
+{{< youtube _MswMYk05tk >}}
