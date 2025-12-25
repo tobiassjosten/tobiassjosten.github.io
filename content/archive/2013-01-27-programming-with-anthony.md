@@ -8,9 +8,6 @@ tags:
     - development
 summary: If you are into programming and have a couple of minutes to spare, I would really recommend checking out Programming With Anthony.
 slug: programming-with-anthony
-aliases:
-    - /development/programming-with-anthony/
-relevance: archive
 ---
 
 If you are into programming and have a couple of minutes to spare, I would really recommend checking out *Programming With Anthony*; a series of video tutorials on various programming concepts and software design patterns.

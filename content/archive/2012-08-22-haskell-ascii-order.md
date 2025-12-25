@@ -8,9 +8,6 @@ tags:
     - haskell
 summary: This weekend I will be running a 5x5 km relay race and in preparation our team must decide on the order of when each runner will have their turn. Being a geek I naturally turned to computer science to help solve the problem.
 slug: haskell-ascii-order
-aliases:
-    - /haskell/haskell-ascii-order/
-relevance: archive
 ---
 
 This weekend I will be running a 5x5 km relay race and in preparation our team must decide on the order of when each runner will have their turn. Being a geek I naturally turned to computer science to help solve the problem.

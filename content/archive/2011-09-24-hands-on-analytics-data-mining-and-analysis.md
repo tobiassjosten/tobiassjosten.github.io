@@ -9,9 +9,6 @@ tags:
     - google-analytics
 summary: I am a big advocate for data driven decisions and I believe that, as a business, you should try to gather as much data as you can. You never know in advance what discoveries might jump out and surprise you.
 slug: hands-on-analytics-data-mining-and-analysis
-aliases:
-    - /business-intelligence/hands-on-analytics-data-mining-and-analysis/
-relevance: archive
 ---
 
 I am a big advocate for data driven decisions and I believe that, as a business, you should try to gather as much data as you can. You never know in advance what discoveries might jump out and surprise you.

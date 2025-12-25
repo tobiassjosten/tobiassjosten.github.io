@@ -9,9 +9,6 @@ tags:
     - seo
 summary: Linking between pages and websites is what makes up our World Wide Web. To protect our sites from spammers we have lately been given the tool to mark certain links with the nofollow attribute. But now that we are going overboard with them, what does that actually do to the web?
 slug: rel-nofollow-is-killing-the-internet
-aliases:
-    - /internet/rel-nofollow-is-killing-the-internet/
-relevance: archive
 ---
 
 The world wide web is basically nothing more than a bunch of pages linked together by hyperlinks (awesome name, that). [Larry Page](http://www.google.com/corporate/execs.html#larry) realized the importance of these links when he came up with the [PageRank algorithm](http://en.wikipedia.org/wiki/PageRank), the foundation of [Google search](http://www.google.com/).

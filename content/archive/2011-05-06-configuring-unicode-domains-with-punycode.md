@@ -7,9 +7,6 @@ categories:
 tags: []
 summary: If you have a domain with Unicode characters, like tobiassjösten.se, there are some gotchas to consider.
 slug: configuring-unicode-domains-with-punycode
-aliases:
-    - /internet/configuring-unicode-domains-with-punycode/
-relevance: archive
 ---
 
 If you have a domain with Unicode characters, like [tobiassjösten.se](http://tobiassjösten.se/), there are some gotchas to consider.

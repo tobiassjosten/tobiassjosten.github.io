@@ -10,6 +10,8 @@
 
 ## Development
 
+Don't bother backing up files. Everything is tracked by Git and can easily be restored.
+
 Run the following commands to verify that the website builds correctly:
 
 ```bash

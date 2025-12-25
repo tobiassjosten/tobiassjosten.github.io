@@ -8,9 +8,6 @@ tags:
     - development
 summary: I was just reading some articles on TechCrunch about pair programming and its pros and cons. This is the kind of subject it seems you have either tested and love it or think it sounds weird and will never even try.
 slug: three-tenets-of-pair-programming
-aliases:
-    - /development/three-tenets-of-pair-programming/
-relevance: archive
 ---
 
 I was just reading some articles on [TechCrunch](http://techcrunch.com/) about [pair programming](http://en.wikipedia.org/wiki/Pair_programming) and its [pros](http://techcrunch.com/2012/03/17/pair-programming-considered-extremely-beneficial/) and [cons](http://techcrunch.com/2012/03/03/pair-programming-considered-harmful/). This is the kind of subject it seems you have either tested and love it or think it sounds weird and will never even try.

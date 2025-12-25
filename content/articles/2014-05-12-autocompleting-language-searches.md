@@ -11,9 +11,6 @@ tags:
     - php
 summary: Google is a great source for finding answers. One overlooked feature though is using the search engine to find questions! Like for example "Why is JavaScript so slow?".
 slug: autocompleting-language-searches
-aliases:
-    - /development/autocompleting-language-searches/
-relevance: review
 ---
 
 Google is a great source for finding answers. One overlooked feature though is using the search engine to find questions! Like for example *"Why is JavaScript so slow?"*.

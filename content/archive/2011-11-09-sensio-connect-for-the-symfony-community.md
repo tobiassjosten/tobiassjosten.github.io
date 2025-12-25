@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: Yesterday Fabien introduced a service called Sensio Connect. It is a community platform unlike any I have seen before.
 slug: sensio-connect-for-the-symfony-community
-aliases:
-    - /symfony/sensio-connect-for-the-symfony-community/
-relevance: archive
 ---
 
 Yesterday Fabien [introduced](http://symfony.com/blog/developing-the-symfony-community) a service called [Sensio Connect](https://connect.sensiolabs.com/). It is a community platform unlike any I have seen before.

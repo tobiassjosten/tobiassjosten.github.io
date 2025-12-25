@@ -8,9 +8,6 @@ tags:
     - personal
 summary: At this time of year I like to reflect on what has passed. I believe this is important to better cherish the good parts and learn to avoid the bad parts in the future.
 slug: 2011-retrospective
-aliases:
-    - /personal/2011-retrospective/
-relevance: archive
 ---
 
 In a couple of hours it is midnight and we will turn the page to welcome a new year. At this time of year I like to reflect on what has passed. I believe this is important to better cherish the good parts and learn to avoid the bad parts in the future.

@@ -9,9 +9,6 @@ tags:
     - ubuntu
 summary: The Book has a section on setting up permissions for your project. It says to first try and use chmod because that is, it claims, how most systems controls their ACLs. This is only true for Mac OSX however. For Unix and Linux based ones, ACL is actually controlled using setfacl.
 slug: symfony2-file-permissions-in-ubuntu
-aliases:
-    - /symfony/symfony2-file-permissions-in-ubuntu/
-relevance: archive
 ---
 
 The installation section of [The Book](http://symfony.com/doc/current/book/) has a section on [setting up permissions](http://symfony.com/doc/current/book/installation.html). This walks through the process of setting up the `cache` and `log` directories so that both you and your webserver may modify their contents.

@@ -9,9 +9,6 @@ tags:
     - google-analytics
 summary: I just finished implementing a first whack at tracking events with Google Analytics. For this experiment I picked the "elsewhere links" in the footer. Now when you click one these, you will trigger an event which will be tracked by Google Analytics. The idea is that I can then easily see which one is more popular, how their popularity changes over time, how nationality affects popularity, etc.
 slug: tracking-google-analytics-events-with-symfony
-aliases:
-    - /symfony/tracking-google-analytics-events-with-symfony/
-relevance: archive
 ---
 
 I just finished implementing a first whack at [tracking events](http://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html) with [Google Analytics](http://www.google.com/analytics/). For this experiment I picked the "elsewhere links" in the footer. Now when you click one these, you will trigger an event which will be tracked by Google Analytics. The idea is that I can then easily see which one is more popular, how their popularity changes over time, how nationality affects popularity, etc.

@@ -13,9 +13,6 @@ tags:
     - lithium
 summary: The landscape of PHP is changing. We are witnessing a rapid evolution in framework architecture and there are a great many exceptional ones out there. Putting your time into learning one will doubtlessly pay off for many years ahead. But which should you pick?
 slug: communities-comparison-for-php-frameworks
-aliases:
-    - /php/communities-comparison-for-php-frameworks/
-relevance: archive
 ---
 
 The landscape of [PHP](http://php.net/) is changing. We are witnessing a rapid evolution in framework architecture and there are a great many exceptional ones out there. Putting your time into learning one will doubtlessly pay off for many years ahead. But which should you pick?

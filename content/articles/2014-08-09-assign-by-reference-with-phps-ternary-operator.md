@@ -9,9 +9,6 @@ tags:
     - php
 summary: If you want to assign a variable with a reference in a ternary operator you run into problems. Syntax errors to be precise.
 slug: assign-by-reference-with-phps-ternary-operator
-aliases:
-    - /development/assign-by-reference-with-phps-ternary-operator/
-relevance: review
 ---
 
 Setting a PHP variable to one of two values, depending on some third value, is easily achieved with a ternary expression.

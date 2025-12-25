@@ -8,9 +8,6 @@ tags:
     - php
 summary: You can extract data from an XML or (X)HTML document by using regexp. However as in many cases with techniques and systems – just because you can does not mean you should.
 slug: dom-traversing-with-xpath-in-php
-aliases:
-    - /php/dom-traversing-with-xpath-in-php/
-relevance: archive
 ---
 
 You can extract data from an XML or (X)HTML document by using regexp. However as in many cases with techniques and systems – just because you can does not mean you should.

@@ -8,9 +8,6 @@ tags:
     - security
 summary: I am looking into how you could offer authentication and user management in a centralized manner, to a multitude of satellite sites. The most common way of doing this nowadays, especially for third party satellites, is using *the OAuth protocol* and while it is a very sturdy mechanism it does not fit exactly with my requirements.
 slug: centralized-user-authentication-management
-aliases:
-    - /security/centralized-user-authentication-management/
-relevance: archive
 ---
 
 I am looking into how you could offer authentication and user management in a centralized manner, to a multitude of satellite sites. The most common way of doing this nowadays, especially for third party satellites, is using *the OAuth protocol* and while it is a very sturdy mechanism it does not fit exactly with my requirements.

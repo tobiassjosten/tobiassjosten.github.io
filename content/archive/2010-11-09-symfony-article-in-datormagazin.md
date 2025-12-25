@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: Datormagazin is one of Sweden's major technology magazines. I have been reading it myself since back in 1997, when it was still called PC+. This current November issue is special though – because it features my first published article!
 slug: symfony-article-in-datormagazin
-aliases:
-    - /symfony/symfony-article-in-datormagazin/
-relevance: archive
 ---
 
 [Datormagazin](http://www.datormagazin.se/) is one of Sweden's major technology magazines. I have been reading it myself since back in 1997, when it was still called [PC+](http://sv.wikipedia.org/wiki/PC_plus). This [current November issue](http://www.datormagazin.se/tidningar/datormagazin/36) is special though – because it features my first published article!

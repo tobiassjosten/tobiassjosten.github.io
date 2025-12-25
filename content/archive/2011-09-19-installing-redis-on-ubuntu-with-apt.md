@@ -10,9 +10,6 @@ tags:
     - ubuntu
 summary: Deciding to use APT to maintain your software is really a no-brainer if you are Debian based. I prefer Ubuntu myself and its repositories has a lot of toys in them but for stability reasons they often do not hold the very latest versions.
 slug: installing-redis-on-ubuntu-with-apt
-aliases:
-    - /linux/installing-redis-on-ubuntu-with-apt/
-relevance: archive
 ---
 
 Deciding to use [APT](http://en.wikipedia.org/wiki/Advanced_Packaging_Tool) to maintain your software is really a no-brainer if you are Debian based. I prefer *Ubuntu* myself and its repositories has a lot of toys in them but for stability reasons they often do not hold the very latest versions.

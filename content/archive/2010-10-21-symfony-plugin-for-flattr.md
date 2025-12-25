@@ -9,9 +9,6 @@ tags:
     - flattr
 summary: I just finished writing some documentation for my first Symfony plugin – sfFlattrPlugin! I encourage you to try it out and let me know what you think. Everything is up at GitHub, which means that you can easily share whatever improvements you conjure up.
 slug: symfony-plugin-for-flattr
-aliases:
-    - /symfony/symfony-plugin-for-flattr/
-relevance: archive
 ---
 
 I just finished writing [some documentation](http://github.com/tobiassjosten/sfFlattrPlugin#readme) for my first [Symfony](http://www.symfony-project.org/) plugin – [sfFlattrPlugin](http://github.com/tobiassjosten/sfFlattrPlugin)! I encourage you to try it out and let me know what you think. Everything is up at GitHub, which means that you can easily share whatever improvements you conjure up.

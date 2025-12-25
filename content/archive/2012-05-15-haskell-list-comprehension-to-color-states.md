@@ -8,9 +8,6 @@ tags:
     - haskell
 summary: I am reading the book Seven Languages in Seven Weeks, by Bruce A. Tate, and my current chapter is on Haskell. This language is very different from what I am used to but I am definitely seeing its allure, with clean design and powerful expression.
 slug: haskell-list-comprehension-to-color-states
-aliases:
-    - /haskell/haskell-list-comprehension-to-color-states/
-relevance: archive
 ---
 
 I am reading the book *Seven Languages in Seven Weeks*, by Bruce A. Tate, and my current chapter is on Haskell. This language is very different from what I am used to but I am definitely seeing its allure, with clean design and powerful expression.

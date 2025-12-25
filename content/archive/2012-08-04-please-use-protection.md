@@ -8,9 +8,6 @@ tags:
     - security
 summary: My girlfriend just had her purse stolen and with it a lot of valuables, including her phone. I immediately tried looking it up on *Google Latitude* but to no avail. There were no security cameras and police routinely gave their "we will take your report but you are basically shit out of luck" speech.
 slug: please-use-protection
-aliases:
-    - /security/please-use-protection/
-relevance: archive
 ---
 
 My girlfriend just had her purse stolen and with it a lot of valuables, including her phone. I immediately tried looking it up on *Google Latitude* but to no avail. There were no security cameras in the venue and police basically said "we will take your report but do no expect to get anything back".

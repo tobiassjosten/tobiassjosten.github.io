@@ -9,9 +9,6 @@ tags:
     - development
 summary: Following Symfony's Coding Standards you should place the expected value before the actual value in an if statement.
 slug: order-condition-s-expected-and-actual-value
-aliases:
-    - /symfony/order-condition-s-expected-and-actual-value/
-relevance: archive
 ---
 
 Following [Symfony's Coding Standards](http://symfony.com/doc/2.0/contributing/code/standards.html) you should place the expected value before the actual value in an if statement.

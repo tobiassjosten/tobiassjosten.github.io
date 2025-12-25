@@ -9,9 +9,6 @@ tags:
     - spam
 summary: I have previously been writing about my efforts to stop spam by resolving MX records for email addresses and by using a honeypot to trick spammer bots into revealing themselves. But still spammers are bypassing my simple protections, so I needed to add another layer and test out one more idea.
 slug: stopping-spam-with-symfony-forms
-aliases:
-    - /symfony/stopping-spam-with-symfony-forms/
-relevance: archive
 notice: This is part of an *[anti-spam](/spam) series*, including [Resolving MX pointers to fight spam](http://local.tobiassjosten.net:1234/php/resolving-mx-pointers-to-fight-spam) and [Stopping spam with a tasty honeypot](/internet/stopping-spam-with-a-tasty-honeypot).
 ---
 

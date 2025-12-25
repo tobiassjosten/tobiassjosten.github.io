@@ -9,9 +9,6 @@ tags:
     - benchmark
 summary: I recently began working on a contribution to a small programming contest, where the challenge is to optimize ones code to run as fast as possible. One of the parts in my code that caught my interest was some implode() calls. My gut feeling told me that it might be slower than a straight string concatenation.
 slug: benchmarking-php-array-concatenation
-aliases:
-    - /php/benchmarking-php-array-concatenation/
-relevance: archive
 ---
 
 I recently began working on a contribution to a small [programming contest](http://www.phpportalen.net/viewtopic.php?t=113904) (swedish), where the challenge is to optimize ones code to run as fast as possible. One of the parts in my code that caught my interest was some `implode()` calls. My gut feeling told me that it might be slower than a straight string concatenation.

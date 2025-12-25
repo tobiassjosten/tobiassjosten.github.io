@@ -8,9 +8,6 @@ tags:
     - jekyll
 summary: Teamocil is a cool utility for us tmux users. It helps manage your sessions, windows and panes in a way that makes it really easy to boot up preconfigured environments.
 slug: booting-jekyll-with-teamocil
-aliases:
-    - /jekyll/booting-jekyll-with-teamocil/
-relevance: archive
 ---
 
 [Teamocil](https://github.com/remiprev/teamocil) is a cool utility for us [tmux](/tmux/) users. It helps manage your sessions, windows and panes in a way that makes it really easy to boot up preconfigured environments.

@@ -9,9 +9,6 @@ tags:
     - php
 summary: Follow along as I pull out a function from a legacy system and, step by step, refactor it to meet higher quality standards.
 slug: refactoring-a-user-test-function
-aliases:
-    - /development/refactoring-a-user-test-function/
-relevance: archive
 ---
 
 Part of working as a consultant is wrestling legacy code. There is no limit to the WTF you can find in these systems and I often find myself wondering "what were they thinking?".

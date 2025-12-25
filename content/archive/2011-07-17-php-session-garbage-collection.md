@@ -8,9 +8,6 @@ tags:
     - php
 summary: I just bumped into a notice from PHP about a failed session_start(). Here is how I solved it.
 slug: php-session-garbage-collection
-aliases:
-    - /php/php-session-garbage-collection/
-relevance: archive
 ---
 
 I just bumped into a rather omnious notice from PHP, about `session_start()` not being able to complete.

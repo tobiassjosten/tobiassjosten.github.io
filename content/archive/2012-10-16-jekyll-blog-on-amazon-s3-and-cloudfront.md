@@ -11,9 +11,6 @@ tags:
     - aws
 summary: Last weekend I decided to migrate this blog away from my VPS and while doing so I wanted to see how much performance I could squeeze out of it.
 slug: jekyll-blog-on-amazon-s3-and-cloudfront
-aliases:
-    - /development/jekyll-blog-on-amazon-s3-and-cloudfront/
-relevance: archive
 ---
 
 Last weekend I decided to migrate this blog away from my VPS and while doing so I wanted to see how much performance I could squeeze out of it.

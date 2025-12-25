@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: I am just now headed for Symfony Live 2012 Paris. This will be my first Symfony Live conference and I am really excited about it!
 slug: symfony-live-2012-paris
-aliases:
-    - /symfony/symfony-live-2012-paris/
-relevance: archive
 ---
 
 I am just now headed for [Symfony Live 2012 Paris](http://paris2012.live.symfony.com/). This will be my first *Symfony Live* conference and I am really excited about it!

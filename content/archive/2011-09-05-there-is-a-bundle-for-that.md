@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: Being a Drupal developer (among other things) there is one phrase I am guilty of having used more than a dozen times; "there is a module for that". I believe the sheer number of third party modules is in large what has made Drupal the big player it is.
 slug: there-is-a-bundle-for-that
-aliases:
-    - /symfony/there-is-a-bundle-for-that/
-relevance: archive
 ---
 
 Being a Drupal developer (among other things) there is one phrase I am guilty of having used more than a dozen times; *"there is a module for that"*. I believe the sheer number of third party modules is in large what has made Drupal the big player it is.

@@ -9,9 +9,6 @@ tags:
     - _drupalplanet
 summary: Preprocess functions are often a major part of any Drupal theme. It is a vital part of themes but more than often it leads to very big `template.php` files. Today I stumbled upon a simple but brilliant way to reduce its size by separating its logic into nicely shaped and separated files.
 slug: separating-your-theme-s-preprocess-functions
-aliases:
-    - /drupal/separating-your-theme-s-preprocess-functions/
-relevance: archive
 ---
 
 Preprocess functions are often a major part of any Drupal theme. It is a vital part of themes but more than often it leads to very big `template.php` files. Today I stumbled upon a simple but brilliant way to reduce its size by separating its logic into nicely shaped and separated files.

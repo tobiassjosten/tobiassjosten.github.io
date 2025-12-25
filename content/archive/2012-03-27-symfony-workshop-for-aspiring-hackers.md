@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: I meet people who have heard good things about Symfony all the time. Often they have not yet tried it themselves but are planning to … sometime. I also know how very rewarding it is to take the time and learn the ropes with Symfony2. That is why we of Symfony Sverige will host our first ever swedish Symfony workshop!
 slug: symfony-workshop-for-aspiring-hackers
-aliases:
-    - /symfony/symfony-workshop-for-aspiring-hackers/
-relevance: archive
 ---
 
 I meet people who have heard good things about [Symfony](/symfony) all the time. Often they have not yet tried it themselves but are planning to ... sometime. I also know how very rewarding it is to take the time and learn the ropes with Symfony2.

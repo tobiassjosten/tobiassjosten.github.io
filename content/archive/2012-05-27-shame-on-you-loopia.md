@@ -8,9 +8,6 @@ tags:
     - internet
 summary: Greenpeace recently put up a parody campaign site to highlight the damages on rain forest caused by the oil palm plantations of Neste Oil. The oil company retaliated by suing Greenpeace's domain registrar, Loopia, for copyright infringement.
 slug: shame-on-you-loopia
-aliases:
-    - /internet/shame-on-you-loopia/
-relevance: archive
 ---
 
 [Greenpeace](http://www.greenpeace.org/) recently put up a parody campaign site to highlight the damages on rain forest caused by the oil palm plantations of *Neste Oil*. The oil company retaliated by suing Greenpeace's domain registrar, *Loopia*, for copyright infringement.

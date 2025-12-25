@@ -8,9 +8,6 @@ tags:
     - development
 summary: You know the kind. Let us break free of them.
 slug: skip-those-comments-in-your-code
-aliases:
-    - /development/skip-those-comments-in-your-code/
-relevance: archive
 ---
 
 You know the kind, which adds more noise than they help clarify. It is a plague.

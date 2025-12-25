@@ -8,9 +8,6 @@ tags:
     - open-source
 summary: I was recently asked add a proper license to one of my open source projects. My immediate reaction was to slap GPL on it and call it a day. But then I figured I should really take some time to research the subject more thorough.
 slug: open-source-licenses-and-the-asshole-clause
-aliases:
-    - /open-source/open-source-licenses-and-the-asshole-clause/
-relevance: archive
 ---
 
 I was [recently asked](https://github.com/tobiassjosten/FacebookServiceProvider/pull/7) add a proper license to one of my open source projects. My immediate reaction was to slap GPL on it and call it a day. But then I figured I should really take some time to research the subject more thorough.

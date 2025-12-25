@@ -9,9 +9,6 @@ tags:
     - css-naked-day
 summary: I have participated in a proud web tradition for two years straight now; CSS Naked Day 2011 and 2012. As I have recently moved from Symfony to Jekyll as my website engine, that means I can not do any server-side processing and so I had to rethink the solution.
 slug: introducing-cssnakedday-js
-aliases:
-    - /javascript/introducing-cssnakedday-js/
-relevance: archive
 ---
 
 I have participated in a proud web tradition for two years straight now; *CSS Naked Day* [2011](/internet/css-naked-day-2011) and [2012](/internet/i-look-good-naked).

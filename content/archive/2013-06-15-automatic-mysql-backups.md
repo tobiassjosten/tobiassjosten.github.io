@@ -8,9 +8,6 @@ tags:
     - operations
 summary: Automate rolling MySQL backups to keep the data in you production databases safe and sound.
 slug: automatic-mysql-backups
-aliases:
-    - /operations/automatic-mysql-backups/
-relevance: archive
 ---
 
 Quick notes how to *automate rolling MySQL backups* for production databases. I keep having to look this up but now I hope I can just copy and paste it for future projects.

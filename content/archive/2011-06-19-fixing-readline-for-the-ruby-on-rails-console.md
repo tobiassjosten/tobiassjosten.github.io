@@ -10,9 +10,6 @@ tags:
     - cli
 summary: I have begun trying out the Ruby on Rails framework. While doing so I got stuck at a very early stage in the documentation.
 slug: fixing-readline-for-the-ruby-on-rails-console
-aliases:
-    - /ruby-on-rails/fixing-readline-for-the-ruby-on-rails-console/
-relevance: archive
 ---
 
 I have begun trying out [the Ruby on Rails framework](http://rubyonrails.org/). While doing so I got stuck at a [very early stage](http://guides.rubyonrails.org/getting_started.html#using-the-console) in the [documentation](http://guides.rubyonrails.org/).

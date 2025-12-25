@@ -9,9 +9,6 @@ tags:
     - google
 summary: Yesterday saw the announcement of Google+ – Googles new attempt at social networking. The problem I am having with this is that it does not solve the fundamental problem with online communities of today – the fact that they are centralized.
 slug: google-and-the-walled-social-gardens
-aliases:
-    - /internet/google-and-the-walled-social-gardens/
-relevance: archive
 ---
 
 Yesterday saw [the announcement of Google+](http://googleblog.blogspot.com/2011/06/introducing-google-project-real-life.html) – Googles new attempt at social networking. It looks pretty cool and being a signup junkie I am definitely looking forward to trying it out.

@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: I'll be the first to admit that I'm a complete geek. Stretching beyond the world of development and technology, it's taken me somewhere else entirely for the last couple of years.
 slug: refactor-your-afk-interface
-aliases:
-    - /projects/refactor-your-afk-interface/
-relevance: review
 ---
 
 I'll be the first to admit that I'm a complete geek. When I find something that interests me I'll go down the rabbit hole 100%, no matter how little it might interest others.

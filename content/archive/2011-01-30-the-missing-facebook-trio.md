@@ -9,9 +9,6 @@ tags:
     - facebook
 summary: I am building an app that, among other things, lists your Facebook friends. All of a sudden I noticed my images were mismatched. That is not my Facebook friends! So I scanned the list from the top and noticed a face that was familiar – The Zuck, founder of Facebook. Obviously I had ran into a bug.
 slug: the-missing-facebook-trio
-aliases:
-    - /internet/the-missing-facebook-trio/
-relevance: archive
 ---
 
 I am building an app that, among other things, lists your Facebook friends. Their images are being displayed from Facebook using the *http://graph.facebook.com/ID/picture* resource syntax. I am doing this from a loop construction, printing the friend's name and id as I go along.

@@ -9,9 +9,6 @@ tags:
     - ai
 summary: Yesterday I submitted my contribution to that PHP contest I have been writing about. I think this kind of event is a great opportunity to improve ones programming skills and since the deadline is over I thought I would share my code and thoughts on it.
 slug: a-algorithm-for-the-shortest-cheapest-path
-aliases:
-    - /php/a-algorithm-for-the-shortest-cheapest-path/
-relevance: archive
 ---
 
 Yesterday I submitted my contribution to [that PHP contest](http://www.phpportalen.net/viewtopic.php?t=113904) I [have been](/php/benchmarking-php-array-concatenation) [writing about](/php/performance-of-php-functions). I think this kind of event is a great opportunity to improve ones programming skills and since the deadline is over I thought I would share my code and thoughts on it.

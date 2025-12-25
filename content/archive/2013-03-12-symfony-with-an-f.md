@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: A symphony is an extended musical composition in Western classical music, according to Wikipedia. I say that's a grievous typo for one of the world's most powerful web frameworks.
 slug: symfony-with-an-f
-aliases:
-    - /symfony/symfony-with-an-f/
-relevance: archive
 ---
 
 A symphony is an extended musical composition in Western classical music. At least if you would believe the Wikipedia definition. In my world however, it is a grievous typo for one of the world's most powerful web frameworks — [Symfony](/symfony/).

@@ -9,9 +9,6 @@ tags:
     - symfony
 summary: The way to have Doctrine fetch only parts of your entities, and still have them properly hydrated, is to use the partial keyword.
 slug: partial-doctrine-entities
-aliases:
-    - /doctrine/partial-doctrine-entities/
-relevance: archive
 ---
 
 While porting an ooold [MUD community](http://nogfx.org/) site of mine to [Symfony](/symfony/), I wanted to (admittedly prematurely) optimize its database queries. Here is how I made [Doctrine](/doctrine/) comply.

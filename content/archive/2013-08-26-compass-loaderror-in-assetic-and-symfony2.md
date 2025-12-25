@@ -10,9 +10,6 @@ tags:
     - php
 summary: I love using Sass to manage my stylesheets. What I do not love, however, is how the frail Ruby stack can mess with your flow.
 slug: compass-loaderror-in-assetic-and-symfony2
-aliases:
-    - /symfony/compass-loaderror-in-assetic-and-symfony2/
-relevance: archive
 ---
 
 I love using Sass/Compass to manage my stylesheets because it gives so much for free. Like the [px to em calculation](/css/px-to-em-with-sass/) I wrote about a while ago. What I do not love, however, is how the [frail Ruby stack](/ruby/) (RVM, rbenv, etc) can mess with your flow.

@@ -9,9 +9,6 @@ tags:
     - bash
 summary: I recently tinkered (again) to put my current Git working branch in my prompt. It resulted in very useful addition to the tool I use a lot in my everyday work. However it turned out my implementation had a bug.
 slug: dynamic-prompt-with-git-and-ansi-colors
-aliases:
-    - /bash/dynamic-prompt-with-git-and-ansi-colors/
-relevance: archive
 ---
 
 I recently tinkered (again) to put my current [Git working branch in my prompt](/git/add-current-git-branch-to-your-bash-prompt). It resulted in very useful addition to the tool I use a lot in my everyday work.

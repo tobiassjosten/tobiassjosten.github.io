@@ -8,9 +8,6 @@ tags:
     - seo
 summary: I just searched for "Some Service coupon code", to see if I could get a discount before proceeding to my purchase. Most of the results were from aggregator sites but what stood out to me what how three of them triggered me to click them instinctively.
 slug: increase-serp-conversion-with-dynamic-copy
-aliases:
-    - /seo/increase-serp-conversion-with-dynamic-copy/
-relevance: archive
 ---
 
 I just searched for "Some Service coupon code", to see if I could get a discount before proceeding to my purchase. Most of the results were from aggregator sites but what stood out to me what how three of them triggered me to click them instinctively.

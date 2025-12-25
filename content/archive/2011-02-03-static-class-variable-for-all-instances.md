@@ -8,9 +8,6 @@ tags:
     - php
 summary: I just got a question on Aardvark asking if you could somehow share a variable value between multiple instances of the same class. Since the value is an array you could not do this with a class constant.
 slug: static-class-variable-for-all-instances
-aliases:
-    - /php/static-class-variable-for-all-instances/
-relevance: archive
 ---
 
 I just got [a question on Aardvark](http://vark.com/t/hmDkna) asking if you could somehow share a variable value between multiple instances of the same class. Since the value is an array you could not do this with a class constant.

@@ -10,9 +10,6 @@ tags:
     - tmux
 summary: What about when you forget to start up your terminal multiplexer before starting that long running process?
 slug: detaching-processes
-aliases:
-    - /linux/detaching-processes/
-relevance: archive
 ---
 
 I run all my terminal sessions in a multiplexer, like [tmux](/tmux/). One feature I like with this tool, especially on remote servers, is the ability to easily detach long running processes, so you can log out without killing the process.

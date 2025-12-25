@@ -8,9 +8,6 @@ tags:
     - jekyll
 summary: Tag clouds was all the fuss some years ago and they can still be useful for content heavy sites. But how do you create a tag cloud in Jekyll?
 slug: jekyll-tag-cloud
-aliases:
-    - /jekyll/jekyll-tag-cloud/
-relevance: archive
 ---
 
 Tag clouds was all the fuss some years ago and while the fad has now run its course, they can still be useful for content heavy sites. But how do you create a *tag cloud in Jekyll*?

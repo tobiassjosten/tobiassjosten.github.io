@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: I have made it through half of the Symfony2 bible and am now reading up on validation. I am using XML for my bundle configuration, so I switched to that format in the examples and used the following to constraint my Log entity.
 slug: symfony2-validation-in-xml
-aliases:
-    - /symfony/symfony2-validation-in-xml/
-relevance: archive
 ---
 
 I have made it through half of [the Symfony2 bible](http://symfony.com/doc/current/book/index.html) and am now reading up on [validation](http://symfony.com/doc/current/book/validation.html). My bundles uses XML configuration, so I switched to that format in the examples and used the following to constraint my Log entity.

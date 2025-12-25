@@ -8,9 +8,6 @@ tags:
     - projects
 summary: Today marks the official launch of Smartburk; a web service to help you track your favorite TV series.
 slug: smartburk-is-live
-aliases:
-    - /projects/smartburk-is-live/
-relevance: archive
 ---
 
 Today marks the official launch of Smartburk; a web service to help you track your favorite TV series. I am super thrilled to finally be able to show it off and I extend my warmest welcome for you [to come try it out](http://www.smartburk.se/).

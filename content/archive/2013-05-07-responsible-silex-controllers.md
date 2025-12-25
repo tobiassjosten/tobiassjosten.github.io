@@ -9,9 +9,6 @@ tags:
     - silex
     - php
 slug: responsible-silex-controllers
-aliases:
-    - /development/responsible-silex-controllers/
-relevance: archive
 ---
 
 Micro-framework [Silex](/silex/) is an excellent wrapper around the [Symfony components](/symfony/). It abstracts away a lot of the complexities, so you can get right to the nitty gritty details.

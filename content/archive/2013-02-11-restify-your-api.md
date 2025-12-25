@@ -10,9 +10,6 @@ tags:
     - api
 summary: If you are interested in reading up on RESTful architecture; here are some really good resources.
 slug: restify-your-api
-aliases:
-    - /development/restify-your-api/
-relevance: archive
 ---
 
 Last night I was discussing [RESTful architecture](/rest/) on Twitter with [Emil Stenström](https://twitter.com/EmilStenstrom). Specifically how yet another API said it was RESTful, when it really was not.

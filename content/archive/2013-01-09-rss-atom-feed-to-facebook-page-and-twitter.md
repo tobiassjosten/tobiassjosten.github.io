@@ -8,9 +8,6 @@ tags:
     - internet
 summary: Here is how I automatically post content from my Atom feed, to my Facebook page and to Twitter.
 slug: rss-atom-feed-to-facebook-page-and-twitter
-aliases:
-    - /internet/rss-atom-feed-to-facebook-page-and-twitter/
-relevance: archive
 ---
 
 I am trying to gain some traction for [a vegetarian workout blog](http://vvv.vegout.se/) of mine and part of my efforts goes into social networks. Here is how I *automatically post content* from my Atom feed, to my *Facebook page* and to *Twitter*.

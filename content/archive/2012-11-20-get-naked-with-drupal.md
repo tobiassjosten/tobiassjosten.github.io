@@ -9,9 +9,6 @@ tags:
     - _drupalplanet
 summary: I am a big fan of CSS Naked Day and have been participating myself the last two occasions. Earlier this year I open sourced a JavaScript project that on April 9th strips away your CSS entirely from the browser.
 slug: get-naked-with-drupal
-aliases:
-    - /drupal/get-naked-with-drupal/
-relevance: archive
 ---
 
 I am a big fan of [CSS Naked Day](/css-naked-day/) and have been participating myself the last two occasions. Earlier this year I [open sourced a JavaScript project](/javascript/introducing-cssnakedday-js/) that on April 9th strips away your CSS entirely from the browser.

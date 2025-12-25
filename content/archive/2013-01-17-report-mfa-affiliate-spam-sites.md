@@ -8,9 +8,6 @@ tags:
     - spam
 summary: The abhorrent Made For Ads (MFA) sites is a scourage of our Internet. But do not get mad — get even, right?
 slug: report-mfa-affiliate-spam-sites
-aliases:
-    - /spam/report-mfa-affiliate-spam-sites/
-relevance: archive
 ---
 
 I have been known to call them the scourge of our Internet — the abhorrent *Made For Ads (MFA) sites*. They soil what could be an ever greater world wide web, only to make a few bucks for their talentless creators.

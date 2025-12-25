@@ -8,9 +8,6 @@ tags:
     - internet
 summary: If you did not go mobile first when building your site, you will need to create a whole separate, mobile one. Here are some pitfalls to think about before doing so.
 slug: redirection-for-mobile-sites
-aliases:
-    - /internet/redirection-for-mobile-sites/
-relevance: archive
 ---
 
 If you did not go *mobile first* when you initially built your website, chances are you will need to create a whole separate one if you want to cater to the mobile audience. Which you do.

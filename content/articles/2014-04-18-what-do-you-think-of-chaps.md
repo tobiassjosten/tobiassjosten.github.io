@@ -8,9 +8,6 @@ tags:
     - projects
 summary: Say hello to Chaps — a command line tool that will let you manage your many lists of followers.
 slug: what-do-you-think-of-chaps
-aliases:
-    - /projects/what-do-you-think-of-chaps/
-relevance: review
 ---
 
 I recently pushed the initial commit for a new project of mine. Say hello to [Chaps](https://github.com/tobiassjosten/chaps)!

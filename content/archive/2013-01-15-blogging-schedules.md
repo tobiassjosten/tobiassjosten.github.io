@@ -8,9 +8,6 @@ tags:
     - internet
 summary: I often come upon the advice that you should keep a blogging schedule. Though just as often it misses data and studies to back this statement up.
 slug: blogging-schedules
-aliases:
-    - /internet/blogging-schedules/
-relevance: archive
 ---
 
 I often come upon the advice that you should keep *a blogging schedule*. In fact, it is often said to be essential for building an audience. Sadly though, it just as often misses data and studies to back this statement up.

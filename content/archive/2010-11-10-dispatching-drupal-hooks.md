@@ -9,9 +9,6 @@ tags:
     - _drupalplanet
 summary: The word *function* implies its intended scope. A function should strive to leverage exactly one functionality. If you are cramming more than that into your function, then you probably need to do some refactoring. One situation where you are often forced to go against this is when implementing hook_block() in Drupal.
 slug: dispatching-drupal-hooks
-aliases:
-    - /drupal/dispatching-drupal-hooks/
-relevance: archive
 ---
 
 The word *function* implies its intended scope. A function should strive to leverage exactly one functionality. If you are cramming more than that into your function, then you probably need to do some refactoring. I think [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds) [hinted towards this](http://www.kernel.org/doc/Documentation/CodingStyle) quite eloquent.

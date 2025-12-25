@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: The ninetynine times before ths flip of a coin, it has ended up in tails — what are the odds of one hundred in a row?
 slug: by-the-flip-of-a-coin
-aliases:
-    - /business/by-the-flip-of-a-coin/
-relevance: review
 ---
 
 The coin takes air and spins around in suspense before landing for the hundreth time in your palm. The ninetynine times before, by some freak accident, ended up in tails. So surely this time it must be head — for what are the odds of one hundred tails in a row?

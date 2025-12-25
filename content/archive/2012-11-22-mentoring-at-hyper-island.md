@@ -8,9 +8,6 @@ tags:
     - events
 summary: Today I was invited by Mia Jung to visit Hyper Island and help mentor the students in their projects. It was a great experience and I can not help but feel a tinge of envy over how cool a school it is.
 slug: mentoring-at-hyper-island
-aliases:
-    - /events/mentoring-at-hyper-island/
-relevance: archive
 ---
 
 Today I was invited by [Mia Jung](https://twitter.com/miajung) to visit [Hyper Island](http://www.hyperisland.com/) and help mentor the students in their projects. It was a great experience and I can not help but feel a tinge of envy over how cool a school it is. The students dive head first and take on actually-payed-for, sharp projects for real clients!

@@ -8,9 +8,6 @@ tags:
     - development
 summary: A while ago I was introduced to Charles - a web debugging proxy application. It acts as a middle man between your browser and your web application, where it can do a multitude of helpful services.
 slug: monitor-and-debug-with-charles-proxy
-aliases:
-    - /development/monitor-and-debug-with-charles-proxy/
-relevance: archive
 ---
 
 A while ago I was introduced to [Charles](http://www.charlesproxy.com/) - *a web debugging proxy application*. It acts as a middle man between your browser and your web application, where it can do a multitude of helpful services.

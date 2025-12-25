@@ -9,9 +9,6 @@ tags:
     - composer
 summary: Using Composer for our PHP projects is a given. But what about when you stumble over a bug in one of those libraries?
 slug: have-composer-use-development-branches
-aliases:
-    - /php/have-composer-use-development-branches/
-relevance: archive
 ---
 
 Using Composer for our [PHP projects](/php/) is a given. It helps immensely in keeping track of our dependencies and we have easy access to [several thousand useful libraries](https://packagist.org/) just by adding them to our `composer.json`.

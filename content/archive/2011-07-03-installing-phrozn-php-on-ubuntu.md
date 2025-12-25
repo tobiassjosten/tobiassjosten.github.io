@@ -9,9 +9,6 @@ tags:
     - ubuntu
 summary: I was recently inspired by an article written by Christian Schaefer, on the Phrozn project. A very impressive PHP based static site generator!
 slug: installing-phrozn-php-on-ubuntu
-aliases:
-    - /php/installing-phrozn-php-on-ubuntu/
-relevance: archive
 ---
 
 I was recently inspired by [an article](http://test.ical.ly/2011/07/01/phrozn-a-static-site-generator-written-in-php-with-the-help-of-zend-framework-2-symfony2-and-twig/) written by [Christian Schaefer](https://twitter.com/caefer), on the [Phrozn project](http://www.phrozn.info/). A very impressive PHP based static site generator!

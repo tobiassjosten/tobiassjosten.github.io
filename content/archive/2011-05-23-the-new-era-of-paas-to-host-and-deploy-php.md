@@ -9,9 +9,6 @@ tags:
     - paas
 summary: As a PHP developer I am expected to lament my fate of inconsistent naming and envy the slick hipster world of Ruby (on Rails). Be that as it may, I must honestly say I have missed something like the excellent Heroku platform for hosting and deploying my applications.
 slug: the-new-era-of-paas-to-host-and-deploy-php
-aliases:
-    - /php/the-new-era-of-paas-to-host-and-deploy-php/
-relevance: archive
 ---
 
 As a PHP developer I am expected to lament my fate of inconsistent naming and envy the slick hipster world of Ruby (on Rails). Be that as it may, I must honestly say I have missed something like the excellent [Heroku](http://www.heroku.com/) platform for hosting and deploying my applications.

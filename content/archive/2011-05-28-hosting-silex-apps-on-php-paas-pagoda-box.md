@@ -11,9 +11,6 @@ tags:
     - pagodabox
 summary: The PHP microframework Silex is an outstanding piece of software and Pagoda is a PHP PaaS I have grown quite fond of. Obviously marrying these two would be ideal.
 slug: hosting-silex-apps-on-php-paas-pagoda-box
-aliases:
-    - /php/hosting-silex-apps-on-php-paas-pagoda-box/
-relevance: archive
 ---
 
 The PHP microframework [Silex](http://silex-project.org/) is an outstanding piece of software. I use it for a few of my personal projects and I love how easy it is to work with and yet how powerful and flexible it is.

@@ -9,9 +9,6 @@ tags:
     - spam
 summary: As some of you might have noticed (and some even pointed out) I have had some trouble with spam lately. After dismissing the notion to disable comments altogether, I set out to find a solution to fight the spam.
 slug: resolving-mx-pointers-to-fight-spam
-aliases:
-    - /php/resolving-mx-pointers-to-fight-spam/
-relevance: archive
 notice: This is part of an *[anti-spam](/spam) series*, including [Stopping spam with a tasty honeypot](/internet/stopping-spam-with-a-tasty-honeypot) and [Stopping spam with Symfony forms](/symfony/stopping-spam-with-symfony-forms).
 ---
 

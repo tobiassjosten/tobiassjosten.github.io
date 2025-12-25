@@ -9,9 +9,6 @@ tags:
     - bash
 summary: Following up on my post about Git aliases, I want to share another convenience tool for using Git. This time we will talk prompt enhancement – the terminal alternative to plastic surgery.
 slug: add-current-git-branch-to-your-bash-prompt
-aliases:
-    - /git/add-current-git-branch-to-your-bash-prompt/
-relevance: archive
 ---
 
 Following up on my post about [Git aliases](/git/configure-git-aliases-to-save-the-day), I want to share another convenience tool for using Git. This time we will talk prompt enhancement – the terminal alternative to plastic surgery.

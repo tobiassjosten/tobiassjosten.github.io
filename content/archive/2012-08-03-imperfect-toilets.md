@@ -8,9 +8,6 @@ tags:
     - development
 summary: Have you ever wondered how the toilets know what amount of water to use when you flush? It is an engineering problem, which is probably why I started thinking about it. Or I might just be weird like that. However the solution is what makes this interesting.
 slug: imperfect-toilets
-aliases:
-    - /development/imperfect-toilets/
-relevance: archive
 ---
 
 Have you ever wondered how toilets know what amount of water to use when you flush? It is an engineering problem, which is probably why I started thinking about it. Or I might just be weird like that. However the solution is what makes this interesting.

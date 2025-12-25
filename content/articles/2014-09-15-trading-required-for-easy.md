@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: I often do the mistake of replacing one type of cost with another; often at the expense of real progress.
 slug: trading-required-for-easy
-aliases:
-    - /business/trading-required-for-easy/
-relevance: review
 ---
 
 I'm always looking to improve and learn new things. Right now one such thing is the Spanish language and so when I recently walked past a stall with books on different languages I quickly picked up two good candidates.

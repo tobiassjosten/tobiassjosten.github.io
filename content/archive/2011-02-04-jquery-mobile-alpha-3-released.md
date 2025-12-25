@@ -9,9 +9,6 @@ tags:
     - jquery
 summary: jQuery Mobile, an excellent framework for mobile site development, has just released its alpha 3 version. There has been many improvements, with focus on snappier experience and more flexible usage.
 slug: jquery-mobile-alpha-3-released
-aliases:
-    - /javascript/jquery-mobile-alpha-3-released/
-relevance: archive
 ---
 
 [jQuery Mobile](http://jquerymobile.com/), an excellent framework for mobile site development, has just released its [alpha 3 version](http://jquerymobile.com/2011/02/jquery-mobile-alpha-3-released/). There has been many improvements, with focus on snappier experience and more flexible usage.

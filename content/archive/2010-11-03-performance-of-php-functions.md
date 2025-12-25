@@ -9,9 +9,6 @@ tags:
     - benchmark
 summary: I was recently watching a JSConf.eu session by Thomas Fuchs, in which he goes through some known and some not so known techniques to speed up your JavaScript code. One of the speed impediments was function calls and because it had such a major impact on the performance, I decided to benchmark how it performed in PHP.
 slug: performance-of-php-functions
-aliases:
-    - /php/performance-of-php-functions/
-relevance: archive
 ---
 
 I was recently watching a [JSConf.eu](http://jsconf.eu/) session called [Extreme JavaScript Performance](http://blip.tv/file/2999333), by [Thomas Fuchs](http://mir.aculo.us/). In it Thomas goes through some known and some not so known techniques to speed up your JavaScript code. I definitely recommend checking it out if you are into JavaScript!

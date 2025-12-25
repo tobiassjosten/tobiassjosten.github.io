@@ -8,9 +8,6 @@ tags:
     - php
 summary: Earlier today I stumbled on a Stackoverflow challenge where the poster asked for C/C++ code that would count from 1 to 1000 without using conditionals or loops. Then just now I noticed how Justin Vincent at Pluggio had done the same in PHP, my interest sparked. A moment later I now have my own code to meet the challenge.
 slug: php-to-1000-without-conditionals-and-loops
-aliases:
-    - /php/php-to-1000-without-conditionals-and-loops/
-relevance: archive
 ---
 
 Earlier today I stumbled on [a Stackoverflow challenge](http://stackoverflow.com/questions/4568645/printing-1-to-1000-without-loop-or-conditionals/4583502) where the poster asked for C/C++ code that would count from 1 to 1000 without using conditionals or loops. There are some crazy examples in there and I wont presume to understand even half of them.

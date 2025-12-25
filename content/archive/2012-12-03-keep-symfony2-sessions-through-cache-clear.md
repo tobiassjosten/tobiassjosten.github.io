@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: Per default Symfony2 will store session information in its cache directory. Clearing the cache thus logs everyone out. A simple solution to this is moving where Symfony saves its sessions.
 slug: keep-symfony2-sessions-through-cache-clear
-aliases:
-    - /symfony/keep-symfony2-sessions-through-cache-clear/
-relevance: archive
 ---
 
 Per default [Symfony2](/symfony/) will store session information in its cache directory. Clearing the cache thus logs everyone out.

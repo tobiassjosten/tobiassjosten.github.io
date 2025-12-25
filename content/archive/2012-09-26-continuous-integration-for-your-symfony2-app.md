@@ -10,9 +10,6 @@ tags:
     - ci
 summary: The hosted continuous integration service Travis CI has been around for a while now, amplifying the testing ambitions of our open source communities. It is really a great service and I encourage you to familiarize yourself with it if you have not already.
 slug: continuous-integration-for-your-symfony2-app
-aliases:
-    - /symfony/continuous-integration-for-your-symfony2-app/
-relevance: archive
 ---
 
 The hosted *continuous integration service* [Travis CI](http://travis-ci.org/) has been around for a while now, amplifying the testing ambitions of our open source communities. It is really a great service and I encourage you to familiarize yourself with it if you have not already.

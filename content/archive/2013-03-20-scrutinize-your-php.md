@@ -8,9 +8,6 @@ tags:
     - php
 summary: Scritinizer is a service for automated code reviews. PHP Analyzer, Code Sniffer, Mess Detector and more will make sure your PHP code is thoroughly scrutinized for sure.
 slug: scrutinize-your-php
-aliases:
-    - /php/scrutinize-your-php/
-relevance: archive
 ---
 
 Earlier today I was looking at [a pull request](https://github.com/FriendsOfSymfony/FOSUserBundle/pull/1047) I had sent to an open source project on GitHub. It turns out the patch is likely rejected but something interesting popped out. Just below my PR there was a system comment.

@@ -8,9 +8,6 @@ tags:
     - development
 summary: If you have worked with a system of any significant age I am certain you have heard the term *technical debt*. It is what you owe the system from your accumulated shortcuts and hacks. And any further effort not focused on repaying this debt will lead to increased interest.
 slug: settle-your-technical-debt
-aliases:
-    - /development/settle-your-technical-debt/
-relevance: archive
 ---
 
 If you have worked with a system of any significant age I am certain you have heard the term *technical debt*. It is what you owe the system from your accumulated shortcuts and hacks. And any further effort not focused on repaying this debt will lead to increased interest.

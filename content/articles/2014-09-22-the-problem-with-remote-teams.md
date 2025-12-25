@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: There's something special in the question; "how was your week?". This is what welds teams together.
 slug: the-problem-with-remote-teams
-aliases:
-    - /business/the-problem-with-remote-teams/
-relevance: review
 ---
 
 This February I packed my bags, said goodbye to Sweden and moved to Buenos Aires, Argentina. 12'000 kilometers removed from friends and family, in a foreign country where I didn't speak the language and didn't know a single soul. I found myself finally living a long overdue dream of mine.

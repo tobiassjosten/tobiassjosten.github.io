@@ -9,9 +9,6 @@ tags:
     - seo
 summary: My Drupal consultance firm recently re-launched our website. Our time schedule was pressed, to say the least, so we decided to not migrate the blog just yet. In order to not lose out on our "Google juice" we decided to set up some HTTP magic to keep the crawlers at bay.
 slug: keeping-google-juice-with-http-503
-aliases:
-    - /internet/keeping-google-juice-with-http-503/
-relevance: archive
 ---
 
 My [Drupal consultance firm](http://www.kollegorna.se/) recently re-launched our website. We did this now because we are running a minor campaign for a select customer segment. Since we hate throwing away work, and because we want to do more with the site later on, we decided to rebuild the site on Drupal 7.

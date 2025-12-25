@@ -8,9 +8,6 @@ tags:
     - seo
 summary: Google seems to increasingly try and answer our more simple searches directly, like when the sun sets and rises.
 slug: sunrise-and-sunset-from-google
-aliases:
-    - /seo/sunrise-and-sunset-from-google/
-relevance: archive
 ---
 
 Google seems to increasingly try and answer our more simple searches directly, rather than showing a list of websites that in turn might answer the search. It think it makes a lot of sense when it saves me time and clicks.

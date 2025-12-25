@@ -9,9 +9,6 @@ tags:
     - cli
 summary: The tree command is one of those tools that makes our CLI supreme to its GUI interface. Its use is to list files and directories in a structured manner. I find it gives me an excellent overview of the directory structure and I use it a lot to familiarize myself with new projects.
 slug: tree-structured-files-and-directories-listing
-aliases:
-    - /linux/tree-structured-files-and-directories-listing/
-relevance: archive
 ---
 
 The `tree` command is one of those tools that makes the CLI supreme to its GUI interface. Its use is to list files and directories *in a structured manner*. I find it gives me an excellent overview of the directory structure and I use it a lot to familiarize myself with new projects.

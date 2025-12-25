@@ -8,9 +8,6 @@ tags:
     - development
 summary: I recently found a passage in The Pragmatic Programmer that reminded me how my former colleague and mentor used to say that "software development is like gardening".
 slug: gardening-your-code
-aliases:
-    - /development/gardening-your-code/
-relevance: archive
 ---
 
 I was reading through *The Pragmatic Programmer* when I found a passage that reminded me how my former colleague and mentor, [Carl Johan Crafoord](https://github.com/cal), used to say that *"software development is like gardening"* and *"code should be tended to like plants"*.

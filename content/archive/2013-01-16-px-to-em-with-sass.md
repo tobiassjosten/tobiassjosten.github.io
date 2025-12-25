@@ -8,9 +8,6 @@ tags:
     - css
 summary: I used to manually calculate px-to-em but with Sass and Compass, this is a thing of the past.
 slug: px-to-em-with-sass
-aliases:
-    - /css/px-to-em-with-sass/
-relevance: archive
 ---
 
 Whenever I used to write [CSS](/css/) I whipped out *a px-em calculator* to help my pixel-thinking brain write proper-em-values. After having been introduced to *Sass and Compass*, this is thankfully a thing of the past.

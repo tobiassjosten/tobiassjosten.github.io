@@ -9,9 +9,6 @@ tags:
     - interversum
 summary: This last Friday I discontinued my contract with Unibet, where I have been consulting for the last 15 months.
 slug: off-to-new-adventures
-aliases:
-    - /personal/off-to-new-adventures/
-relevance: archive
 ---
 
 This last Friday I discontinued my contract with Unibet, where I have been consulting for the last 15 months.

@@ -9,9 +9,6 @@ tags:
     - kollegorna
 summary: In September 2009 I founded a hot new web agency together with my friend Viktor Miranda. Half a year later, in March 2010, we invited Per Sandström to enforce our team. We called ourself Kollegorna and we were engulfed in a burning passion to craft beautiful web.
 slug: so-long-and-thanks-for-all-the-fish
-aliases:
-    - /personal/so-long-and-thanks-for-all-the-fish/
-relevance: archive
 ---
 
 In September 2009 I founded a hot new web agency together with my friend [Viktor Miranda](http://viktormiranda.com/). Half a year later, in March 2010, we invited [Per Sandström](http://www.helloper.com/) to enforce our team. We called ourself [Kollegorna](http://www.kollegorna.se/) and we were engulfed in a burning passion to craft beautiful web.

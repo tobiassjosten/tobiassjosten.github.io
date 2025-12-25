@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: Finding business competitors often brings out my worst demons and I start questioning myself worse than a high school kid.
 slug: who-the-hell-am-i
-aliases:
-    - /business/who-the-hell-am-i/
-relevance: review
 ---
 
 Finding your first business competitor can be scary. At least for me it often brings out my worst demons and I start questioning myself worse than a high school kid.

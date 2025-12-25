@@ -12,9 +12,6 @@ tags:
     - _drupalplanet
 summary: Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again at March 8th, just two weeks from today.
 slug: drupalcamp-stockholm-2013
-aliases:
-    - /events/drupalcamp-stockholm-2013/
-relevance: archive
 ---
 
 Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again, just two weeks from today. Mark your calendars — March 8th will bring a lot of geeky fun to our capital city.

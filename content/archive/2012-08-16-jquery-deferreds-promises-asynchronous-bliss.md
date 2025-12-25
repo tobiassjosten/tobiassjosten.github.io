@@ -9,9 +9,6 @@ tags:
     - jquery
 summary: When running an asynchronous function, only the function itself knows when it is done. Thus if we want to continue after the function has completed we need to pass it a callback.
 slug: jquery-deferreds-promises-asynchronous-bliss
-aliases:
-    - /javascript/jquery-deferreds-promises-asynchronous-bliss/
-relevance: archive
 ---
 
 When running an asynchronous function, only the function itself knows when it is done. Thus if we want to continue after the function has completed we need to pass it a callback.

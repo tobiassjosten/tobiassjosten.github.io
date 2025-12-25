@@ -8,9 +8,6 @@ tags:
     - development
 summary: Your code will be tested whether you want it or not. Either by you, your peers, your supervisors, your clients or in the very end; your customers.
 slug: someone-will-test-your-code
-aliases:
-    - /development/someone-will-test-your-code/
-relevance: archive
 ---
 
 You often hear testing proponents (such as myself) lament their non-testing peers with an almost religious fervor. That is often counter-productive but more importantly; the case can be made way more tangible than just promoting The Right Way™.

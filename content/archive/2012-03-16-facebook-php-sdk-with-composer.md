@@ -10,9 +10,6 @@ tags:
     - composer
 summary: Just a little while ago, Facebook merged a pull request which enables developers to use Composer to handle their dependencies to the Facebook PHP SDK. Since I wrote about this earlier, I thought it would be fitting to follow up with a howto now that it is in. Let us dive right into it.
 slug: facebook-php-sdk-with-composer
-aliases:
-    - /php/facebook-php-sdk-with-composer/
-relevance: archive
 ---
 
 Just a little while ago, [Facebook merged a pull request](https://github.com/facebook/facebook-php-sdk/pull/12#issuecomment-4547036) which enables developers to use [Composer](http://getcomposer.org/) to handle their dependencies to the Facebook PHP SDK.

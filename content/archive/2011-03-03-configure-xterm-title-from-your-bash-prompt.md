@@ -8,9 +8,6 @@ tags:
     - bash
 summary: Many developers, me included, live out most of their lives in the terminal. But what about the rest of the time? Most likely your terminal stays minimized or otherwised hidden in an activity bar. If you are anything like me you will have lots and lots of such tabs in the activity bar. So how do we find our way back to the right terminal?
 slug: configure-xterm-title-from-your-bash-prompt
-aliases:
-    - /bash/configure-xterm-title-from-your-bash-prompt/
-relevance: archive
 notice: This is a follow-up to my articles on adding [Git branch to your prompt](/git/add-current-git-branch-to-your-bash-prompt) and creating a [dynamic bash prompt](/bash/dynamic-prompt-with-git-and-ansi-colors).
 ---
 

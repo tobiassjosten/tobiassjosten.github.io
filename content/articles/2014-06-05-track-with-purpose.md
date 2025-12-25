@@ -8,9 +8,6 @@ tags:
     - business-intelligence
 summary: Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances, fitness and server infrastructure. But what do you do with all the numbers?
 slug: track-with-purpose
-aliases:
-    - /business-intelligence/track-with-purpose/
-relevance: review
 ---
 
 Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances with [Tink](https://www.tink.se/), use one of many phone apps to oversee your nutrition or register for [Google Analytics](/google-analytics/) to monitor your website traffic.

@@ -11,9 +11,6 @@ tags:
     - symfony
 summary: Together with Viktor Miranda I have flewn to Iceland and Reykjavik to participate in Music Hack Day Reykjavik 2012. This is an event where hackers, designers and musicians travel from all around the world to meet up and create cool stuff somehow related to music.
 slug: music-hack-day-reykjavik-2012
-aliases:
-    - /events/music-hack-day-reykjavik-2012/
-relevance: archive
 ---
 
 Together with [Viktor Miranda](http://www.viktormiranda.com/) I have flewn to Iceland and Reykjavik to attend [Music Hack Day Reykjavik 2012](http://reykjavik.musichackday.org/2012/). This is an event where hackers, designers and musicians travel from all around the world to meet up and create cool stuff somehow related to music.

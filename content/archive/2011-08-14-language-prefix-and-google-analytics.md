@@ -9,9 +9,6 @@ tags:
     - google-analytics
 summary: With an out-of-the-box tracking script for Google Analytics you will record every page on your site as is. This means that the English version of your "About" page could be reported as /en/about and the Swedish one as /sv/about. That setup makes it difficult to analyze your traffic.
 slug: language-prefix-and-google-analytics
-aliases:
-    - /business-intelligence/language-prefix-and-google-analytics/
-relevance: archive
 ---
 
 With an out-of-the-box tracking script for Google Analytics you will record every page on your site as is. This means that the English version of your "About" page could be reported as /en/about and the Swedish one as /sv/about.

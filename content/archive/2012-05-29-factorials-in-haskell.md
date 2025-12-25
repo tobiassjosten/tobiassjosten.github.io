@@ -8,9 +8,6 @@ tags:
     - haskell
 summary: Lorna Jane posted an example of recursive programming earlier today, using factorials as her example of it. Because factorials is a good example for beginner progammers and since I have just begun programming Haskell myself, I thought it might be fitting to give an example of how to do the same thing she does in PHP, in Haskell.
 slug: factorials-in-haskell
-aliases:
-    - /haskell/factorials-in-haskell/
-relevance: archive
 ---
 
 [Lorna Jane](https://twitter.com/lornajane) posted [an example](http://www.lornajane.net/posts/2012/php-recursive-function-example-factorial-numbers) of *recursive programming* earlier today, using *factorials* as her example of it. Because factorials is a good example for beginner progammers and since I have [just begun programming Haskell](/haskell/haskell-list-comprehension-to-color-states) myself, I thought it might be fitting to give an example of how to do the same thing she does in [PHP](/php), in [Haskell](/haskell).

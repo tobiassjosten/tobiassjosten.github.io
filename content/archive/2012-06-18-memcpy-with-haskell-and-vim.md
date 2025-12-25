@@ -10,9 +10,6 @@ tags:
     - vim
 summary: I just got home from a very nice memcpy meetup, organized by Gianfranco Alongi and hosted by Patrik Stenmark of Valtech. Thanks a lot for making this happen!
 slug: memcpy-with-haskell-and-vim
-aliases:
-    - /development/memcpy-with-haskell-and-vim/
-relevance: archive
 ---
 
 I just got home from a very nice [memcpy](http://www.meetup.com/Stockholm-Software-Craftsmanship/events/67240142/) meetup, organized by [Gianfranco Alongi](https://twitter.com/gfalongi) and hosted by [Patrik Stenmark](https://github.com/spatrik) of [Valtech](http://www.valtech.se/). Thanks a lot for making this happen!

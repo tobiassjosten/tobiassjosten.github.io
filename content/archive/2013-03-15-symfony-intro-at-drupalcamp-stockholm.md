@@ -11,9 +11,6 @@ tags:
     - _drupalplanet
 summary: Getting up on stage at DrupalCamp Stockholm 2013 to talk about Symfony was really, really fun! If you missed it — here it is recorded.
 slug: symfony-intro-at-drupalcamp-stockholm
-aliases:
-    - /events/symfony-intro-at-drupalcamp-stockholm/
-relevance: archive
 ---
 
 A week ago today I got up on stage at [DrupalCamp Stockholm 2013](/events/drupalcamp-stockholm-2013/) and held my first ever presentation. The topic was [Symfony](/symfony/) basics and the future of [PHP](/php/) and [Drupal](/drupal/).

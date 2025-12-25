@@ -9,9 +9,6 @@ tags:
     - _drupalplanet
 summary: If you are running a reverse proxy, like Varnish or Squid, in front of your webserver, then it will report the proxy's IP address instead of the visitors'. This is a problem if you, for example, allow anonymous users to vote with VotingAPI.
 slug: correct-ip-with-reverse-proxy-and-drupal
-aliases:
-    - /drupal/correct-ip-with-reverse-proxy-and-drupal/
-relevance: archive
 ---
 
 If you are running a reverse proxy, like [Varnish](http://www.varnish-cache.org/) or [Squid](http://www.squid-cache.org/), in front of your webserver, then it will report the proxy's IP address instead of the visitors'. This is a problem if you, for example, allow anonymous users to vote with [VotingAPI](http://drupal.org/project/votingapi).

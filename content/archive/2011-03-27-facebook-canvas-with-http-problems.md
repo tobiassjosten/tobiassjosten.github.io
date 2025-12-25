@@ -9,9 +9,6 @@ tags:
     - facebook
 summary: A few weeks ago I built a simple Facebook app that, among other things, would provide a canvas page. It worked perfectly when prototyping but a few coding hours later it suddenly stopped working.
 slug: facebook-canvas-with-http-problems
-aliases:
-    - /internet/facebook-canvas-with-http-problems/
-relevance: archive
 ---
 
 A few weeks ago I built a simple Facebook app that, among other things, would provide a canvas page. It worked perfectly when prototyping but a few coding hours later it suddenly stopped working.

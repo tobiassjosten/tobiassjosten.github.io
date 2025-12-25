@@ -8,9 +8,6 @@ tags:
     - symfony
 summary: Are you getting errors about missing icu libs when installing Symfony 2.3? It is easily fixed.
 slug: symfony-icu-requires-lib-icu
-aliases:
-    - /symfony/symfony-icu-requires-lib-icu/
-relevance: archive
 ---
 
 Are you trying to install [Symfony](/symfony/) version 2.3 but get the following error message?

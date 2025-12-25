@@ -8,9 +8,6 @@ tags:
     - nginx
 summary: When I configure a new site on Nginx I always have to look up how to generate those htpasswd files. So here is a quick note for future reference.
 slug: generate-htpasswd-for-nginx
-aliases:
-    - /nginx/generate-htpasswd-for-nginx/
-relevance: archive
 ---
 
 When I configure a new site on [Nginx](/nginx) I always have to look up how to generate those htpasswd files. So here is a quick note for future reference.

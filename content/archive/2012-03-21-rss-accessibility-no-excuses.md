@@ -10,9 +10,6 @@ tags:
     - rss
 summary: Modern time web development is often approached with device agnosticistic mindset. Whether your visitor is on a laptop, a tablet or even a TV, your presentation should adopt and work for them. Great progress is being made all the time in this area but I feel there is one old timer we keep forgetting about - the RSS feed.
 slug: rss-accessibility-no-excuses
-aliases:
-    - /internet/rss-accessibility-no-excuses/
-relevance: archive
 ---
 
 Modern time web development is often approached with device agnosticistic mindset - meaning that you will ship data to a multitude of clients and it should work for them all in a dynamic and flexible way. Whether your visitor is on a laptop, a tablet or even a TV, your presentation should adopt and work for them.

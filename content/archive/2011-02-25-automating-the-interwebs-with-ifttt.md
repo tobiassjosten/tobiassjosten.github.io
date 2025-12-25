@@ -8,9 +8,6 @@ tags:
     - internet
 summary: February 17th I was enrolled in the beta preview of IFTTT, short for *If This Then That*. Now that I have been trying it out some I want to share my experiences.
 slug: automating-the-interwebs-with-ifttt
-aliases:
-    - /internet/automating-the-interwebs-with-ifttt/
-relevance: archive
 ---
 
 February 17th I was enrolled in the beta preview of [IFTTT](http://ifttt.com/), short for *If This Then That*. Now that I have been trying it out some I want to share my experiences.

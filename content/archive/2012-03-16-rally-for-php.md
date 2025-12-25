@@ -8,9 +8,6 @@ tags:
     - php
 summary: The PHP community has a reputation for being fragmented and unable to pool together. It is often seen as the language where wheel reinventing is a recognized sport. While this might have been true 5+ years ago, there is now a strong movement to improve.
 slug: rally-for-php
-aliases:
-    - /php/rally-for-php/
-relevance: archive
 ---
 
 The PHP community has a reputation for being fragmented and unable to pool together. It is often seen as the language where wheel reinventing is a recognized sport.

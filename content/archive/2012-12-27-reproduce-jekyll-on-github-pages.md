@@ -9,9 +9,6 @@ tags:
     - github
 summary: Hosting your Jekyll site on GitHub Pages can certainly save a lot of headache. However, being able to reproduce the GitHub environment can sometimes be the only way to solve a bug.
 slug: reproduce-jekyll-on-github-pages
-aliases:
-    - /jekyll/reproduce-jekyll-on-github-pages/
-relevance: archive
 ---
 
 Hosting your *Jekyll site on GitHub Pages* can certainly save a lot of headache. Unless something goes wrong. Since your only interface to it is `git push`, being able to reproduce the GitHub environment can be the only way to solve a bug.

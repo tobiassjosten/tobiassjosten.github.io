@@ -10,9 +10,6 @@ tags:
     - api
 summary: In software development it is always good to take a look at existing *design patterns* and *standards* before deciding on a path. Two such leading standards for API design used to be *XML-RPC* and *SOAP* but nowadays *RESTful API* is all the hype. It is clean, powerful and easily maintainable. But also completely misunderstood.
 slug: your-api-is-not-restful
-aliases:
-    - /development/your-api-is-not-restful/
-relevance: archive
 ---
 
 In software development it is always good to take a look at existing *design patterns* and *standards* before deciding on a path. Two such leading standards for API design used to be *XML-RPC* and *SOAP* but nowadays *RESTful APIs* is all the hype. It is clean, powerful and easily maintainable. But also completely misunderstood.

@@ -9,9 +9,6 @@ tags:
     - google
 summary: Today at work we discovered a very odd issue with the Dutch SERP. It was how the page at mariabingo.com/en/casino was represented.
 slug: different-titles-in-google-serp
-aliases:
-    - /seo/different-titles-in-google-serp/
-relevance: archive
 ---
 
 Today at work we discovered a very odd issue with the Dutch [SERP](http://en.wikipedia.org/wiki/SERP) and how the page [mariabingo.com/en/casino](http://www.mariabingo.com/en/casino) was represented.

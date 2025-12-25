@@ -9,9 +9,6 @@ tags:
     - css-naked-day
 summary: It is the yearly CSS naked day! This is when we strip off our style sheets and expose the bare truth of our HTML.
 slug: i-look-good-naked
-aliases:
-    - /internet/i-look-good-naked/
-relevance: archive
 ---
 
 It is the yearly CSS naked day! This is when we strip off our style sheets and expose the bare truth of our HTML.

@@ -8,9 +8,6 @@ tags:
     - jekyll
 summary: There are plenty of Jekyll plugins available if you want to generate a sitemap for your blog. The only problem is that GitHub Pages, where a lot of us are hosting our Jekyll sites, does not allow plugins.
 slug: jekyll-sitemap-without-plugins
-aliases:
-    - /jekyll/jekyll-sitemap-without-plugins/
-relevance: archive
 ---
 
 There are plenty of [Jekyll](/jekyll/) plugins available if you want to generate [a sitemap](http://www.sitemaps.org/) for your blog. The only problem is that [GitHub Pages](http://pages.github.com/), where a lot of us are hosting our Jekyll sites, does not allow plugins.

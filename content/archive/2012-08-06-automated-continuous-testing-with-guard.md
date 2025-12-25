@@ -10,9 +10,6 @@ tags:
     - haskell
 summary: Everything you are interacting with has an interface; whether it is a laptop touchpad, buttons on a touchscreen or even the handle of a hammer. The quality of this interface determines the pleasure of the interaction, and that it why I believe the most immersive way of gaming is on a MUD.
 slug: automated-continuous-testing-with-guard
-aliases:
-    - /development/automated-continuous-testing-with-guard/
-relevance: archive
 ---
 
 When doing *test driven development* I really like having continuous feedback. Does the code compile, is all the functionality still intact or what errors are there?

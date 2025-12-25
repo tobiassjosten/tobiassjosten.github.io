@@ -8,9 +8,6 @@ tags:
     - internet
 summary: One of the questions I was trying to sort out while creating tobiassjosten.net was whether to use the www subdomain or not. There are pros and cons both for using it and not using it and deciding on it is not always easy. In this article I will be trying to break it down and hopefully you and me both will be the wiser towards the end.
 slug: using-www-for-your-domain
-aliases:
-    - /internet/using-www-for-your-domain/
-relevance: archive
 ---
 
 One of the questions I was trying to sort out while creating tobiassjosten.net was whether to use the www subdomain or not. There are pros and cons both for using it and not using it and deciding on it is not always easy. In this article I will be trying to break it down and hopefully you and me both will be the wiser towards the end.

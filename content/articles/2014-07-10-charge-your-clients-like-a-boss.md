@@ -9,9 +9,6 @@ tags:
     - _newsletter
 summary: Being worth a certain value != being payed a certain sum. But it can be a tangent!
 slug: charge-your-clients-like-a-boss
-aliases:
-    - /business/charge-your-clients-like-a-boss/
-relevance: review
 ---
 
 There is an important distinction to be made between your [professional worth](/development/my-professional-worth/) and your *professional price*. Basically, being worth a certain value != being payed a certain sum.

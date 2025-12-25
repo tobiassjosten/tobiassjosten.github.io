@@ -9,9 +9,6 @@ tags:
     - doctrine
 summary: After having wrestled with Doctrine migrations I now have working code and my data is safe. But before I go on with my life I wanted to take a minute and post my findings, with hopes of helping future migraters.
 slug: doctrine-migrations-gotchas-in-symfony
-aliases:
-    - /symfony/doctrine-migrations-gotchas-in-symfony/
-relevance: archive
 ---
 
 After having [wrestled](http://twitter.com/tobiassjosten/status/33172676159864832) with Doctrine migrations I now have working code and my data is safe. But before I go on with my life I wanted to take a minute and post my findings, with hopes of helping future migraters.

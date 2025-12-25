@@ -10,9 +10,6 @@ tags:
     - symfony
 summary: Me and the rest of Symfony Sweden will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for November Camp!
 slug: announcing-november-camp-2013
-aliases:
-    - /events/announcing-november-camp-2013/
-relevance: archive
 ---
 
 Me and the rest of [Symfony Sweden](http://www.symfony.se/) will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for [November Camp](http://www.symfony.se/november-camp/)!

@@ -9,9 +9,6 @@ tags:
     - google-analytics
 summary: As much as I love working with Google Analytics, developing for it can sometimes be quite a hassle. Basically it consists of defining your data, calling the ga.js script and then hoping it takes care of business. But does it really and how can you tell?
 slug: debugging-google-analytics
-aliases:
-    - /business-intelligence/debugging-google-analytics/
-relevance: archive
 ---
 
 As much as I love working with Google Analytics, developing for it can sometimes be quite a hassle. Basically it consists of defining your data, calling the ga.js script and then hoping it takes care of business. But does it really and how can you tell?

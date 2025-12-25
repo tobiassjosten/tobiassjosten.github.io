@@ -8,9 +8,6 @@ tags:
     - symfony
     - twig
 slug: trim-and-remove-twig-whitespace
-aliases:
-    - /symfony/trim-and-remove-twig-whitespace/
-relevance: archive
 ---
 
 We seldom see the HTML produced by our backends, at least in their pristine state, still unprettified by our web inspectors. Yet I am not alone in taking pride in clean markup.

@@ -8,9 +8,6 @@ tags:
     - php
 summary: I believe your imperative code can benefit from a more functional approach and to help with this; there is Functional primitives for PHP.
 slug: functional-primitives-for-php
-aliases:
-    - /php/functional-primitives-for-php/
-relevance: archive
 ---
 
 Having coded [functional Haskell](/haskell/) for a while now, I feel my imperative coding style is changing as a result. This primarily means [PHP](/php/) nowadays. While I really do enjoy a lot of aspects of this language, I will be the first to admit it lacks certain elegance.

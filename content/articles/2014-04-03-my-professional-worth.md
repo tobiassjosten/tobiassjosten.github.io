@@ -8,9 +8,6 @@ tags:
     - development
 summary: I used to believe that, as programmers, our professional worth is directly tied to the code we produce and the technical knowledge we are equipped with. Nowadays I have a different definition.
 slug: my-professional-worth
-aliases:
-    - /development/my-professional-worth/
-relevance: review
 ---
 
 I used to believe that, as programmers, our professional worth is directly tied to the code we produce and the technical knowledge we are equipped with. It kind of makes sense. Similar to how proprietary software vendors draw their worth from their existing software, formats and protocols, fighting tooth and nail to keep it hidden away.

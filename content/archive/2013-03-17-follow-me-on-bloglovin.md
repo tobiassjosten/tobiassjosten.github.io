@@ -8,9 +8,6 @@ tags:
     - internet
 summary: Bloglovin' is a service for keeping track of the many blogs you might be following; a modern RSS reader.
 slug: follow-me-on-bloglovin
-aliases:
-    - /internet/follow-me-on-bloglovin/
-relevance: archive
 ---
 
 Bloglovin' is a service for keeping track of the many blogs you might be following; a modern RSS reader.

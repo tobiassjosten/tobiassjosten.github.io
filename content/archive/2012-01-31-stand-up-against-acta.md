@@ -8,9 +8,6 @@ tags:
     - internet
 summary: Our Internet is yet again under siege. This time also the lobbyists are wielding a four lettered acronym to try and impose on our freedom and global community, in hopes of securing some extra income for themselves.
 slug: stand-up-against-acta
-aliases:
-    - /internet/stand-up-against-acta/
-relevance: archive
 ---
 
 Our Internet is yet again under siege. This time also the lobbyists are wielding a four lettered acronym to try and impose on our freedom and global community, in hopes of securing some extra income for themselves.

@@ -8,9 +8,6 @@ tags:
     - internet
 summary: It is remarkable how a social service of Instagram's magnitude has managed for so very long without a proper web based service
 slug: instagram-on-the-web
-aliases:
-    - /internet/instagram-on-the-web/
-relevance: archive
 ---
 
 Photo sharing service Instagram [recently announced](http://blog.instagram.com/post/42363074191/instagramfeed) the immediate availability of [its web based feed](http://instagram.com/).

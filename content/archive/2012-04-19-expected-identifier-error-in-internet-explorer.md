@@ -8,9 +8,6 @@ tags:
     - javascript
 summary: I recently bumped into the enigmatic error message Expected identifier in Internet Explorer. For the umpteenth time, I should say, and so I figured I might as well share and document it for future reference.
 slug: expected-identifier-error-in-internet-explorer
-aliases:
-    - /javascript/expected-identifier-error-in-internet-explorer/
-relevance: archive
 ---
 
 I recently bumped into the enigmatic error message *Expected identifier* in Internet Explorer. For the umpteenth time, I should say, and so I figured I might as well share and document it for future reference.

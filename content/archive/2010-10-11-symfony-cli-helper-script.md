@@ -10,9 +10,6 @@ tags:
     - bash
 summary: I move around a lot when developing with Symfony. This is usually not a problem but with the Symfony CLI tool stuck in the root of projects, I felt it was a hassle. To solve this problem I wrote a little bash script which will give you a convenient way to access the CLI script from anywhere in your Symfony project.
 slug: symfony-cli-helper-script
-aliases:
-    - /symfony/symfony-cli-helper-script/
-relevance: archive
 ---
 
 I move around a lot when developing with Symfony. Well, not physically-physically but in my terminal I do. I move between the many directories when working with different aspects of my websites.

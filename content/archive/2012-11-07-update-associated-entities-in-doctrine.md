@@ -9,9 +9,6 @@ tags:
     - doctrine
 summary: I am building a website for tv-series (Swedish) using Symfony2. Recently I ran into a problem in how to manage my data with Doctrine, which solution took some reading up on the Unit of Work part of the ORM.
 slug: update-associated-entities-in-doctrine
-aliases:
-    - /symfony/update-associated-entities-in-doctrine/
-relevance: archive
 ---
 
 I am building a [website for tv-series](http://www.smartburk.se/) (Swedish) using [Symfony2](/symfony) and recently I ran into a problem in how to manage my data with [Doctrine](/doctrine). The solution took some reading up on the *Unit of Work* part of the ORM and so I wanted to share it.

@@ -10,9 +10,6 @@ tags:
     - cli
 summary: Since I have been trying out Symfony2 lately, I felt it was time to revise my old bash script for Symfony CLI and have it work with the new version of this lovely framework.
 slug: symfony2-cli-bash-script
-aliases:
-    - /symfony/symfony2-cli-bash-script/
-relevance: archive
 ---
 
 Since I have been trying out *Symfony2* lately, I felt it was time to revise my old [bash script for Symfony CLI](/symfony/symfony-cli-helper-script) and have it work with the new version of this lovely framework.

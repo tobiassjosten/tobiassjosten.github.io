@@ -8,9 +8,6 @@ tags:
     - seo
 summary: As a hobbyist search engine optimizer I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP. Instead I rely on others.
 slug: google-webmaster-help
-aliases:
-    - /seo/google-webmaster-help/
-relevance: archive
 ---
 
 As a hobbyist [search engine optimizer](/seo/) I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP.

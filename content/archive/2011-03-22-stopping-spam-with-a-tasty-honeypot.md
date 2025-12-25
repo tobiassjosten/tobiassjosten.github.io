@@ -9,9 +9,6 @@ tags:
     - spam
 summary: Yesterday I implemented spam protection that would resolve MX records in order to validate the comment. It seems to be working but some spammers still got through. So I needed to up my game and head for round two.
 slug: stopping-spam-with-a-tasty-honeypot
-aliases:
-    - /internet/stopping-spam-with-a-tasty-honeypot/
-relevance: archive
 notice: This is part of an *[anti-spam](/spam) series*, including [Resolving MX pointers to fight spam](http://local.tobiassjosten.net:1234/php/resolving-mx-pointers-to-fight-spam) and [Stopping spam with Symfony forms](/symfony/stopping-spam-with-symfony-forms).
 ---
 

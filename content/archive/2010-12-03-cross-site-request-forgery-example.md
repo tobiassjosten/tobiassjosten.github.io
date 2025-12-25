@@ -8,9 +8,6 @@ tags:
     - security
 summary: First let me thank you! Your contribution is very much welcome and I really appreciate you taking the time to help me promote my favourite open source projects.
 slug: cross-site-request-forgery-example
-aliases:
-    - /security/cross-site-request-forgery-example/
-relevance: archive
 ---
 
 First let me thank you! Your contribution is very much welcome and I really appreciate you taking the time to help me promote my favourite open source projects.

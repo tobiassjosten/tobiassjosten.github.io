@@ -8,9 +8,6 @@ tags:
     - events
 summary: May 25th will see the second ever DrupalCamp Göteborg and I will attend it, giving the keynote on "one plus one".
 slug: drupalcamp-goteborg-2013
-aliases:
-    - /events/drupalcamp-goteborg-2013/
-relevance: archive
 ---
 
 May 25th will see the second ever *DrupalCamp Göteborg* and I will attend it. Following my talk at [DrupalCamp Stockholm 2013](/events/drupalcamp-stockholm-2013/), where I gave [an introduction to Symfony](/events/symfony-intro-at-drupalcamp-stockholm/), this time around I have been invited to hold the keynote.

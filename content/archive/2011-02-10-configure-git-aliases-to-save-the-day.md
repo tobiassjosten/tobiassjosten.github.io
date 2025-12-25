@@ -9,9 +9,6 @@ tags:
     - bash
 summary: My morning started out great today. The sun came out solely to greet me, birds were chirping my praise and the coffee tasted especially well. You know the scenario. And then this...
 slug: configure-git-aliases-to-save-the-day
-aliases:
-    - /git/configure-git-aliases-to-save-the-day/
-relevance: archive
 ---
 
 My morning started out great today. The sun came out solely to greet me, birds were chirping my praise and the coffee tasted especially well. You know the scenario.

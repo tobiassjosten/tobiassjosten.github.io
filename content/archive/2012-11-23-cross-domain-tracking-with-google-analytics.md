@@ -8,9 +8,6 @@ tags:
     - google-analytics
 summary: Yesterday when I was mentoring at Hyper Island I got a lot of questions on cross domain tracking with Google Analytics. Since I have not implemented this myself and because I dislike not knowing, I took some time reading up on the subject today.
 slug: cross-domain-tracking-with-google-analytics
-aliases:
-    - /google-analytics/cross-domain-tracking-with-google-analytics/
-relevance: archive
 ---
 
 Yesterday when I was [mentoring at Hyper Island](/events/mentoring-at-hyper-island/) I got a lot of questions on *cross domain tracking* with [Google Analytics](/google-analytics/). Since I have not implemented this myself and because I dislike not knowing, I took some time reading up on the subject today.

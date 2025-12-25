@@ -10,9 +10,6 @@ tags:
     - benchmark
 summary: I recently stumbled over a piece of JavaScript code looking something like this.
 slug: jquery-id-selector-performance
-aliases:
-    - /javascript/jquery-id-selector-performance/
-relevance: archive
 ---
 
 I recently stumbled over a piece of [JavaScript code](/javascript) looking something like this.

@@ -8,9 +8,6 @@ tags:
     - security
 summary: Say that you are, purely theoretically, sitting at an airport in France after a great Symfony Live 2012 Paris. This hypothetical airport would give you 15 min free WiFi and then require you to pay to keep using the Internet connection. If we wanted to continue this thought experiment we could try and hack the airport network security.
 slug: changing-your-mac-address
-aliases:
-    - /security/changing-your-mac-address/
-relevance: archive
 ---
 
 Say that you are, purely theoretically, sitting at an airport in France after a great [Symfony Live 2012 Paris](/symfony/symfony-live-2012-paris). This hypothetical airport would give you 15 min free WiFi and then require you to pay to keep using the Internet connection.

@@ -8,9 +8,6 @@ tags:
     - ruby
 summary: Ruby with rbenv does not come with readline support out of the box, so you will need to recompile your version for it to work. Here is how.
 slug: readline-in-ruby-with-rbenv
-aliases:
-    - /ruby/readline-in-ruby-with-rbenv/
-relevance: archive
 ---
 
 I just switched to using rbenv for handling my Ruby versions. At face value they are almost identical but I like the rbenv philosophy more, with its lighter footprint on my system.

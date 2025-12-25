@@ -9,9 +9,6 @@ tags:
     - doctrine
 summary: Doctrine is a great ORM and DBAL library to use with your Symfony2 application. But occasionally it can feel like a black box, where magic just happens. In those cases it would be good to have a look at what actually happens.
 slug: logging-doctrine-queries-in-symfony2
-aliases:
-    - /symfony/logging-doctrine-queries-in-symfony2/
-relevance: archive
 ---
 
 Doctrine is a great ORM and DBAL library to use with your Symfony2 application. But occasionally it can feel like a black box, where magic just happens. In those cases it would be good to have a look at what actually happens.
