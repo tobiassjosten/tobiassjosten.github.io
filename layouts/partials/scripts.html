@@ -1,0 +1,5 @@
+{{ $ga := resources.Get "js/googleanalytics.js" }}
+{{ $disqus := resources.Get "js/disqus.js" }}
+{{ $cssNakedDay := resources.Get "js/CSSNakedDay.js" }}
+{{ $js := slice $ga $disqus $cssNakedDay | resources.Concat "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

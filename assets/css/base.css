@@ -1,0 +1,81 @@
+/**
+ * BASE
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 20px; }
+
+body {
+  background: #F0F0F0;
+  color: #000;
+  font-family: Times, serif;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 3.25em;
+  font-weight: normal;
+  margin: 1em 0;
+  text-align: center; }
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0; }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none; }
+
+code {
+  background: #111;
+  color: #fff;
+  display: block;
+  font-family: Courier, monospace;
+  font-size: .7em;
+  line-height: 1.5em;
+  padding: 10px; }
+
+p code,
+li code {
+  background: transparent;
+  color: #000;
+  display: inline;
+  font-size: .85em;
+  line-height: 1em;
+  padding: 0; }
+
+a code {
+  color: #900; }
+
+blockquote {
+  color: #777; }
+
+p {
+  font-weight: 100;
+  line-height: 1.7em;
+  margin: 1em 0; }
+
+a {
+  color: #900; }
+
+a:hover,
+a:focus {
+  background: #ff6;
+  color: #000; }
+
+@media screen and (max-width: 750px) {
+  /* This is used in JavaScript. */
+  body:after {
+    content: 'small';
+    display: none; }
+
+  h1 {
+    font-size: 35px;
+    font-weight: bold; } }

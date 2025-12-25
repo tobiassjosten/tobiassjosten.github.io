@@ -27,4 +27,9 @@
 <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
 
 <!-- Stylesheets -->
-<link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" media="all">
+{{ $normalize := resources.Get "css/normalize.css" }}
+{{ $base := resources.Get "css/base.css" }}
+{{ $layout := resources.Get "css/layout.css" }}
+{{ $modules := resources.Get "css/modules.css" }}
+{{ $css := slice $normalize $base $layout $modules | resources.Concat "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

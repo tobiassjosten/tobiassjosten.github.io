@@ -3,3 +3,4 @@
 - Clean out old redirects (not used in logs, not linked from anywhere).
 - Migrate book layout to Hugo.
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
+- Create philosophy study page.
