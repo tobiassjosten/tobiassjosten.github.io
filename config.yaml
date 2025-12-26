@@ -60,6 +60,9 @@ menu:
     - name: "Books"
       url: "/books/"
       weight: 9
+    - name: "Businesses"
+      url: "/businesses/"
+      weight: 10
 
 params:
   description: "Web technician and open source aficionado"

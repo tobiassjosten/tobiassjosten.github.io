@@ -239,6 +239,48 @@
   height: 100px; }
 
 /**
+ * PROJECTS
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.projects .project-group {
+  margin-top: 50px; }
+
+.projects-grid {
+  display: grid;
+  gap: 40px; }
+
+.project-item {
+  display: flex;
+  flex-direction: column; }
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+.project-image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%; }
+
+.project-item h3 {
+  margin: 0 0 10px 0; }
+
+.project-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin: 0; }
+
+.project-meta .language {
+  background: #eee;
+  border-radius: 3px;
+  padding: 2px 8px; }
+
+/**
  * CONTACT
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .contact {

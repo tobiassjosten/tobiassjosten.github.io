@@ -1,5 +1,3 @@
-- Projects: exodus, calendzo, simpex, dotfiles, nogfx, csvmerge, truecoach, boris-loader, jsonapi, ResponsibleServiceProvider, CSSNakedDay.js, xchat-common-denominator, sfFlattrPlugin, reactions, ansicolor, protea.
-- Businesses: Draim, Kollegorna, Smartburk, Teametry, Athlegan, Seastone.
-- Clean out old redirects (not used in logs, not linked from anywhere).
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
 - Create philosophy study page.
+- Switch to Bootstrap 5. Reconsider measurements.

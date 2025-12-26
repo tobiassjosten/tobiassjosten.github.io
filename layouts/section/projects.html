@@ -2,26 +2,111 @@
 <section class="projects">
     {{ .Content }}
 
-    {{ $projects := .Site.Data.projects.projects }}
+    {{/* Define group metadata */}}
+    {{ $groupData := dict
+        "websites" (dict "title" "Websites")
+        "tools" (dict "title" "Tools")
+        "libraries" (dict "title" "Libraries")
+    }}
 
-    {{ if $projects }}
-    <ul class="projects-list">
-        {{ range $projects }}
-        <li class="project-item">
-            <h3>
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                    {{ .name }}
-                </a>
-            </h3>
-            {{ with .description }}
-            <p>{{ . }}</p>
+    {{/* Display groups in order */}}
+    {{ range $groupKey := slice "websites" "tools" "libraries" }}
+        {{ $meta := index $groupData $groupKey }}
+        {{ $groupProjects := slice }}
+
+        {{/* Collect projects for this group */}}
+        {{ range $.Pages }}
+            {{ if eq .Params.group $groupKey }}
+                {{ $groupProjects = $groupProjects | append . }}
             {{ end }}
-            {{ with .language }}
-            <span class="project-meta">{{ . }}</span>
-            {{ end }}
-        </li>
         {{ end }}
-    </ul>
+
+        {{ if $groupProjects }}
+            <section class="project-group">
+                <h2>{{ $meta.title }}</h2>
+
+                <div class="projects-grid">
+                    {{ range $groupProjects }}
+                        {{ $project := . }}
+                        <article class="project-item">
+                            <h3>
+                                <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                    {{ $project.Title }}
+                                </a>
+                            </h3>
+
+                            {{ with .Params.image }}
+                                {{ $image := $project.Resources.GetMatch . }}
+                                {{ if $image }}
+                                    {{ $processed := $image.Fill "800x450 Top" }}
+                                    <div class="project-image">
+                                        <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                            <img src="{{ $processed.RelPermalink }}"
+                                                 alt="{{ $project.Title }}"
+                                                 loading="lazy"
+                                                 width="800"
+                                                 height="450">
+                                        </a>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+
+                            {{ with $project.Params.description }}
+                                <p>{{ . }}</p>
+                            {{ end }}
+                        </article>
+                    {{ end }}
+                </div>
+            </section>
+        {{ end }}
+    {{ end }}
+
+    {{/* Display Misc group for invalid groups */}}
+    {{ $miscProjects := slice }}
+    {{ range $.Pages }}
+        {{ $group := .Params.group | default "misc" }}
+        {{ if not (in (slice "websites" "tools" "libraries") $group) }}
+            {{ $miscProjects = $miscProjects | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{ if $miscProjects }}
+        <section class="project-group">
+            <h2>Miscellaneous</h2>
+
+            <div class="projects-grid">
+                {{ range $miscProjects }}
+                    {{ $project := . }}
+                    <article class="project-item">
+                        {{ with .Params.image }}
+                            {{ $image := $project.Resources.GetMatch . }}
+                            {{ if $image }}
+                                {{ $processed := $image.Fill "800x450 Top" }}
+                                <div class="project-image">
+                                    <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                        <img src="{{ $processed.RelPermalink }}"
+                                             alt="{{ $project.Title }}"
+                                             loading="lazy"
+                                             width="800"
+                                             height="450">
+                                    </a>
+                                </div>
+                            {{ end }}
+                        {{ end }}
+
+                        <h3>
+                            <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                {{ $project.Title }}
+                            </a>
+                        </h3>
+
+                        {{ with $project.Params.description }}
+                            <p>{{ . }}</p>
+                        {{ end }}
+                    </article>
+                {{ end }}
+            </div>
+        </section>
     {{ end }}
 </section>
 {{ end }}

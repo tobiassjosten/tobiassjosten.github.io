@@ -1,0 +1,104 @@
+{{ define "main" }}
+<section class="businesses">
+    {{ .Content }}
+
+    {{/* Collect active and discontinued businesses */}}
+    {{ $activeBusinesses := slice }}
+    {{ $discontinuedBusinesses := slice }}
+    {{ range .Pages }}
+        {{ if .Params.discontinued }}
+            {{ $discontinuedBusinesses = $discontinuedBusinesses | append . }}
+        {{ else }}
+            {{ $activeBusinesses = $activeBusinesses | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Display active businesses */}}
+    {{ if $activeBusinesses }}
+        <div class="projects-grid">
+            {{ range $activeBusinesses }}
+                {{ $business := . }}
+                <article class="project-item">
+                    <h3>
+                        <a href="{{ $business.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                            {{ $business.Title }}
+                        </a>
+                    </h3>
+
+                    {{ with .Params.image }}
+                        {{ $image := $business.Resources.GetMatch . }}
+                        {{ if $image }}
+                            {{ $processed := $image.Fill "800x450 Top" }}
+                            <div class="project-image">
+                                <a href="{{ $business.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ $processed.RelPermalink }}"
+                                         alt="{{ $business.Title }}"
+                                         loading="lazy"
+                                         width="800"
+                                         height="450">
+                                </a>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+
+                    {{ with $business.Params.description }}
+                        <p>{{ . }}</p>
+                    {{ end }}
+                </article>
+            {{ end }}
+        </div>
+    {{ end }}
+
+    {{/* Display discontinued businesses */}}
+    {{ if $discontinuedBusinesses }}
+        <section class="project-group">
+            <h2>Discontinued</h2>
+
+            <div class="projects-grid">
+                {{ range $discontinuedBusinesses }}
+                    {{ $business := . }}
+                    <article class="project-item">
+                        <h3>
+                            {{ if $business.Params.project_url }}
+                                <a href="{{ $business.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                    {{ $business.Title }}
+                                </a>
+                            {{ else }}
+                                {{ $business.Title }}
+                            {{ end }}
+                        </h3>
+
+                        {{ with .Params.image }}
+                            {{ $image := $business.Resources.GetMatch . }}
+                            {{ if $image }}
+                                {{ $processed := $image.Fill "800x450 Top" }}
+                                <div class="project-image">
+                                    {{ if $business.Params.project_url }}
+                                        <a href="{{ $business.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                            <img src="{{ $processed.RelPermalink }}"
+                                                 alt="{{ $business.Title }}"
+                                                 loading="lazy"
+                                                 width="800"
+                                                 height="450">
+                                        </a>
+                                    {{ else }}
+                                        <img src="{{ $processed.RelPermalink }}"
+                                             alt="{{ $business.Title }}"
+                                             loading="lazy"
+                                             width="800"
+                                             height="450">
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        {{ end }}
+
+                        {{ with $business.Params.description }}
+                            <p>{{ . }}</p>
+                        {{ end }}
+                    </article>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
+</section>
+{{ end }}
