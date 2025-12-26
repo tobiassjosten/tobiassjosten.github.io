@@ -1,9 +1,9 @@
 ---
-layout: book
 title: Principles of Package Design
+date: 2015-01-01
 category: development
 tags: [development, php, symfony]
-amazonURL: /books/principles-of-package-design/buy/
+amazonURL: https://amzn.to/4sfvWBE
 image: principles-of-package-design.jpg
 summary: I'll start at the end and say that this is one of the most useful programming books I have ever read and it should be required reading for all professional programmers.
 grade: 5

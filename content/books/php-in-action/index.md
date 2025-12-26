@@ -1,6 +1,6 @@
 ---
-layout: book
 title: PHP In Action
+date: 2013-06-01
 category: php
 tags: [php]
 amazonURL: http://amzn.to/NBbGGr
@@ -10,7 +10,7 @@ grade: 4
 ---
 "Objects, Design, Agility" — the subtitle sums the book up quite well; **PHP In Action** is all about *object oriented programming* in PHP. I owe its authors a lot for having introduced me to the wonderful world of OOP.
 
-<a href="{{ page.amazonURL }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">PHP In Action</a> starts off with an introduction to classes, objects and inheritance. For the beginner programmer this is vital reading but if you can already tell an interface from an abstract class, you might as well skip ahead to part two.
+**PHP In Action** starts off with an introduction to classes, objects and inheritance. For the beginner programmer this is vital reading but if you can already tell an interface from an abstract class, you might as well skip ahead to part two.
 
 The second chapter is what I felt was the gem of this book — *test-driven development*. It goes through the why, what and how to test your code. Even complex cases are discussed and we are shown examples of how to mock integrations with other network services.
 

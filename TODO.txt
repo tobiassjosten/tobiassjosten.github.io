@@ -1,6 +1,5 @@
 - Projects: exodus, calendzo, simpex, dotfiles, nogfx, csvmerge, truecoach, boris-loader, jsonapi, ResponsibleServiceProvider, CSSNakedDay.js, xchat-common-denominator, sfFlattrPlugin, reactions, ansicolor, protea.
 - Businesses: Draim, Kollegorna, Smartburk, Teametry, Athlegan, Seastone.
 - Clean out old redirects (not used in logs, not linked from anywhere).
-- Migrate book layout to Hugo.
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
 - Create philosophy study page.

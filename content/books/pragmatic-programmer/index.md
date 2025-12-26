@@ -1,6 +1,6 @@
 ---
-layout: book
 title: Pragmatic Programmer
+date: 2013-03-01
 category: development
 tags: [development]
 amazonURL: http://amzn.to/Zqgyi0
@@ -10,7 +10,7 @@ grade: 5
 ---
 I will start by saying that **Pragmatic Programmer** is one of the most important programming books I have ever read, hands down. Its impact on my skill as a programmer and development team member is astounding.
 
-<a href="http://amzn.to/Zqgyi0" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Pragmatic Programmer</a> is the result of Andrew Hunt's and David Thomas' long programming careers in which you can tell they have thought hard about every aspect of their profession and how to improve it. Writing code is only a small part of being a programmer and while *Pragmatic Programmer* does cover a lot of coding, it also gives plenty of great insights in how to improve your estimations, prototyping, meetings, team cooperation, skill development and much more.
+**Pragmatic Programmer** is the result of Andrew Hunt's and David Thomas' long programming careers in which you can tell they have thought hard about every aspect of their profession and how to improve it. Writing code is only a small part of being a programmer and while *Pragmatic Programmer* does cover a lot of coding, it also gives plenty of great insights in how to improve your estimations, prototyping, meetings, team cooperation, skill development and much more.
 
 You can tell that Andrew and David has fallen in a lot of traps during their years and because of this we can benefit from their very tangible best practices on how to steer clear from problems. This is one of my biggest take-aways; that preventing problems is so much cheaper than solving them. As the Pragmatic Programmer duo puts it:
 

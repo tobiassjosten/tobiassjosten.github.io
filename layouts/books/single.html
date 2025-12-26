@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="post book" itemscope itemtype="http://schema.org/Book">
+    {{ with .Params.amazonURL }}
+    <a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">
+        <img class="cover" alt="{{ $.Title }}" title="{{ $.Title }}" src="{{ $.Params.image }}" itemprop="image">
+    </a>
+    {{ end }}
+
+    <div itemprop="articleBody">{{ .Content }}</div>
+
+    {{ with .Params.amazonURL }}
+    <p><a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
+    {{ end }}
+
+    <aside class="intro" itemscope itemtype="http://schema.org/Person">
+        <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125" class="avatar" itemprop="image">
+        <p>Reviewed by <a href="/" rel="author" itemprop="url" itemprop="name">{{ .Site.Params.author }}</a>; a <span itemprop="jobTitle">web technician</span> and <span itemprop="jobTitle">open source aficionado</span>.</p>
+        <a href="https://twitter.com/{{ .Site.Params.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ .Site.Params.twitter }}</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </aside>
+</article>
+{{ end }}

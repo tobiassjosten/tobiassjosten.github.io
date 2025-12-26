@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="books-list">
+    {{ .Content }}
+
+    <section class="reviews complete">
+        <ul class="books">
+            {{ range .Pages }}
+                {{ if .Params.grade }}
+                    <li class="book">
+                        <a href="{{ .Permalink }}">
+                            {{ $image := .Resources.GetMatch .Params.image }}
+                            {{ if $image }}
+                            <img class="cover" alt="{{ .Title }}" title="{{ .Title }}" src="{{ $image.RelPermalink }}" itemprop="image">
+                            {{ end }}
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </section>
+</article>
+{{ end }}

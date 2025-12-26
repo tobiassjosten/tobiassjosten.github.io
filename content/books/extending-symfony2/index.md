@@ -1,6 +1,6 @@
 ---
-layout: book
 title: Extending Symfony2
+date: 2014-01-15
 category: development
 tags: [development, php, symfony]
 amazonURL: http://amzn.to/1heHai3

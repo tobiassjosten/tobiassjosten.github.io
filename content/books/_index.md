@@ -1,5 +1,4 @@
 ---
-layout: books
 title: Book reviews
 summary: I love reading books to educate myself and delve deeper into specific fields that interests me. Here I share my favorite readings.
 ---
