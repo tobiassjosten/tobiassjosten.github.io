@@ -1,0 +1,26 @@
+// Bootstrap-compatible color variables
+$primary: #900;
+$body-bg: #F0F0F0;
+$body-color: #000;
+$link-color: #900;
+$link-hover-color: #000;
+
+// Typography
+$font-family-serif: Times, serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 1.25rem;
+$line-height-base: 1.7;
+$headings-font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+$headings-font-weight: 400;
+$h1-font-size: 3.25rem;
+
+// Spacing
+$spacer: 1rem;
+
+// Components
+$border-radius: 2px;
+$border-radius-sm: 2px;
+$border-radius-lg: 3px;
+
+// Container widths (for reference, Bootstrap CDN handles these)
+// We'll override with custom CSS if needed

@@ -7,51 +7,77 @@
 <body class="home">
     {{ partial "header.html" . }}
 
-    <main id="main">
-        <section class="hero">
-            <h1>{{ .Site.Params.author }}</h1>
-            <p class="tagline">{{ .Site.Params.description }}</p>
+    <main id="main" class="container py-5">
+        <!-- Hero Section -->
+        <section class="hero text-center py-5 mb-5">
+            <h1 class="display-4">{{ .Site.Params.author }}</h1>
+            <p class="lead">{{ .Site.Params.description }}</p>
             {{ .Content }}
         </section>
 
+        <!-- Featured Projects -->
         {{ $featuredProjects := where .Site.Pages "Params.featured" true }}
         {{ if $featuredProjects }}
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
+        <section class="featured-projects mb-5">
+            <h2 class="mb-4">Featured Projects</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {{ range $featuredProjects }}
-                <article class="project-card">
-                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    <p>{{ .Params.summary }}</p>
-                </article>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="card-text">{{ .Params.summary }}</p>
+                        </div>
+                    </div>
+                </div>
                 {{ end }}
             </div>
         </section>
         {{ end }}
 
-        <section class="recent-writing">
-            <h2>Recent Writing</h2>
-            {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "articles" "archive") }}
-            {{ range first 3 $blogPosts }}
-            <article class="post-summary">
-                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                <time>{{ .Date.Format "January 2, 2006" }}</time>
-                {{ with .Params.summary }}
-                <p>{{ . }}</p>
+        <!-- Recent Writing -->
+        <section class="recent-writing mb-5">
+            <h2 class="mb-4">Recent Writing</h2>
+            <div class="list-group list-group-flush">
+                {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "articles" "archive") }}
+                {{ range first 3 $blogPosts }}
+                <article class="list-group-item px-0">
+                    <h3 class="h5">
+                        <a href="{{ .Permalink }}" class="text-decoration-none">{{ .Title }}</a>
+                    </h3>
+                    <p class="text-muted small mb-1">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    </p>
+                    {{ with .Params.summary }}
+                    <p class="mb-0">{{ . }}</p>
+                    {{ end }}
+                </article>
                 {{ end }}
-            </article>
-            {{ end }}
-            <p class="archive-link">
-                <a href="/archive/">View archive of technical articles (2010-2015) →</a>
-            </p>
+            </div>
+            <div class="mt-3">
+                <a href="/archive/" class="btn btn-outline-primary">
+                    View archive of technical articles (2010-2015) →
+                </a>
+            </div>
         </section>
 
-        <section class="contact">
-            <h2>Connect</h2>
-            <ul class="social-links">
-                <li><a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a></li>
-                <li><a href="https://github.com/tobiassjosten">GitHub</a></li>
-            </ul>
+        <!-- Connect Section -->
+        <section class="connect text-center mb-5">
+            <h2 class="mb-4">Connect</h2>
+            <div class="d-flex justify-content-center gap-2">
+                <a href="https://twitter.com/{{ .Site.Params.twitter }}"
+                   class="btn btn-outline-primary"
+                   target="_blank" rel="noopener">
+                    Twitter
+                </a>
+                <a href="https://github.com/tobiassjosten"
+                   class="btn btn-outline-primary"
+                   target="_blank" rel="noopener">
+                    GitHub
+                </a>
+            </div>
         </section>
     </main>
 

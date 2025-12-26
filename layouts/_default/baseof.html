@@ -7,12 +7,14 @@
 <body>
     {{ partial "header.html" . }}
 
-    <main id="main">
+    <main id="main" class="container py-5">
         {{ if .Params.notice }}
-            <blockquote class="notice">{{ .Params.notice | markdownify }}</blockquote>
+            <div class="alert alert-info notice" role="alert">
+                {{ .Params.notice | markdownify }}
+            </div>
         {{ end }}
 
-        <h1 class="title">{{ .Title }}</h1>
+        <h1 class="title text-center">{{ .Title }}</h1>
 
         {{ block "main" . }}
         {{ end }}

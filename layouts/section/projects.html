@@ -22,39 +22,38 @@
         {{ end }}
 
         {{ if $groupProjects }}
-            <section class="project-group">
+            <section class="project-group mb-5">
                 <h2>{{ $meta.title }}</h2>
 
-                <div class="projects-grid">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {{ range $groupProjects }}
                         {{ $project := . }}
-                        <article class="project-item">
-                            <h3>
-                                <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
-                                    {{ $project.Title }}
-                                </a>
-                            </h3>
-
-                            {{ with .Params.image }}
-                                {{ $image := $project.Resources.GetMatch . }}
-                                {{ if $image }}
-                                    {{ $processed := $image.Fill "800x450 Top" }}
-                                    <div class="project-image">
+                        <div class="col">
+                            <div class="card h-100">
+                                {{ with .Params.image }}
+                                    {{ $image := $project.Resources.GetMatch . }}
+                                    {{ if $image }}
+                                        {{ $processed := $image.Fill "800x450 Top" }}
                                         <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
                                             <img src="{{ $processed.RelPermalink }}"
+                                                 class="card-img-top"
                                                  alt="{{ $project.Title }}"
-                                                 loading="lazy"
-                                                 width="800"
-                                                 height="450">
+                                                 loading="lazy">
                                         </a>
-                                    </div>
+                                    {{ end }}
                                 {{ end }}
-                            {{ end }}
-
-                            {{ with $project.Params.description }}
-                                <p>{{ . }}</p>
-                            {{ end }}
-                        </article>
+                                <div class="card-body">
+                                    <h3 class="card-title h5">
+                                        <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                            {{ $project.Title }}
+                                        </a>
+                                    </h3>
+                                    {{ with $project.Params.description }}
+                                        <p class="card-text">{{ . }}</p>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
                     {{ end }}
                 </div>
             </section>
@@ -71,39 +70,38 @@
     {{ end }}
 
     {{ if $miscProjects }}
-        <section class="project-group">
+        <section class="project-group mb-5">
             <h2>Miscellaneous</h2>
 
-            <div class="projects-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {{ range $miscProjects }}
                     {{ $project := . }}
-                    <article class="project-item">
-                        {{ with .Params.image }}
-                            {{ $image := $project.Resources.GetMatch . }}
-                            {{ if $image }}
-                                {{ $processed := $image.Fill "800x450 Top" }}
-                                <div class="project-image">
+                    <div class="col">
+                        <div class="card h-100">
+                            {{ with .Params.image }}
+                                {{ $image := $project.Resources.GetMatch . }}
+                                {{ if $image }}
+                                    {{ $processed := $image.Fill "800x450 Top" }}
                                     <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
                                         <img src="{{ $processed.RelPermalink }}"
+                                             class="card-img-top"
                                              alt="{{ $project.Title }}"
-                                             loading="lazy"
-                                             width="800"
-                                             height="450">
+                                             loading="lazy">
                                     </a>
-                                </div>
+                                {{ end }}
                             {{ end }}
-                        {{ end }}
-
-                        <h3>
-                            <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
-                                {{ $project.Title }}
-                            </a>
-                        </h3>
-
-                        {{ with $project.Params.description }}
-                            <p>{{ . }}</p>
-                        {{ end }}
-                    </article>
+                            <div class="card-body">
+                                <h3 class="card-title h5">
+                                    <a href="{{ $project.Params.project_url }}" target="_blank" rel="noopener noreferrer">
+                                        {{ $project.Title }}
+                                    </a>
+                                </h3>
+                                {{ with $project.Params.description }}
+                                    <p class="card-text">{{ . }}</p>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
                 {{ end }}
             </div>
         </section>

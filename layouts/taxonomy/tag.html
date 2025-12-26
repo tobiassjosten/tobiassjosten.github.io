@@ -1,36 +1,41 @@
 {{ define "main" }}
 <article class="tag-page">
-    <h1>{{ .Title }}</h1>
-
     {{ with index .Site.Data.tags (.Title | urlize) }}
         {{ with .description }}
-        <div class="tag-description">
+        <div class="alert alert-info mb-4">
             {{ . | markdownify }}
         </div>
         {{ end }}
     {{ end }}
 
-    <p class="post-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Title }}"</p>
+    <p class="text-muted mb-4">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Title }}"</p>
 
     <section class="tag-posts">
-        {{ range .Pages }}
-        <article class="post-summary">
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-            {{ with .Params.summary }}
-            <p>{{ . }}</p>
-            {{ end }}
-            {{ with .Params.tags }}
-            <ul class="tags-inline">
-                {{ range first 5 . }}
-                    {{ if not (hasPrefix . "_") }}
-                    <li><a href="{{ printf "/tags/%s/" (. | urlize) }}">{{ . }}</a></li>
+        <div class="row g-4">
+            {{ range .Pages }}
+            <div class="col-12">
+                <article class="post-summary">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <p class="text-muted mb-2">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    </p>
+                    {{ with .Params.summary }}
+                    <p>{{ . }}</p>
                     {{ end }}
-                {{ end }}
-            </ul>
+                    {{ with .Params.tags }}
+                    <div class="mt-2">
+                        {{ range first 5 . }}
+                            {{ if not (hasPrefix . "_") }}
+                            <a href="{{ printf "/tags/%s/" (. | urlize) }}"
+                               class="badge bg-secondary text-decoration-none me-1">{{ . }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </article>
+            </div>
             {{ end }}
-        </article>
-        {{ end }}
+        </div>
     </section>
 </article>
 {{ end }}

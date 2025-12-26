@@ -1,7 +1,30 @@
 <header>
-    <nav>
-        {{ range .Site.Menus.primary }}
-            <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">{{ .Site.Params.author }}</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {{ range .Site.Menus.primary }}
+                    <li class="nav-item">
+                        <a class="nav-link{{ if $.IsMenuCurrent "primary" . }} active{{ end }}"
+                           {{ if $.IsMenuCurrent "primary" . }}aria-current="page"{{ end }}
+                           href="{{ .URL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>

@@ -2,6 +2,11 @@ baseURL: "https://vvv.tobiassjosten.net"
 languageCode: "en-us"
 title: "Tobias Sjösten"
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 taxonomies:
   tag: tags
   category: categories

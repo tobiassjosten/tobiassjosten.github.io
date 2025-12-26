@@ -1,0 +1,420 @@
+@import 'variables';
+
+/**
+ * BOOTSTRAP CSS VARIABLE OVERRIDES
+ * Properly theme Bootstrap using CSS custom properties
+ */
+:root {
+  // Background colors
+  --bs-body-bg: #F0F0F0;           // Main background (was #FFF)
+  --bs-body-bg-rgb: 240, 240, 240;  // RGB version for transparency
+
+  // Primary theme color (maroon)
+  --bs-primary: #900;
+  --bs-primary-rgb: 153, 0, 0;
+
+  // Link colors
+  --bs-link-color: #900;            // Links use maroon
+  --bs-link-hover-color: #000;      // Hover color (before yellow bg)
+
+  // Component backgrounds (inherit body bg)
+  --bs-light: #F0F0F0;
+  --bs-light-rgb: 240, 240, 240;
+
+  // Card backgrounds (keep white for contrast)
+  --bs-card-bg: #FFF;
+
+  // Form controls
+  --bs-form-control-bg: #FFF;
+  --bs-input-group-addon-bg: #F0F0F0;
+}
+
+/**
+ * CUSTOM OVERRIDES & PRESERVED STYLES
+ * Styles that can't be replaced by Bootstrap
+ */
+
+// Narrower container for better readability
+.container {
+  max-width: 850px !important;
+}
+
+// Link styling with maroon color and yellow hover (custom behavior)
+a {
+  color: var(--bs-link-color);
+
+  &:hover,
+  &:focus {
+    background: #ff6;
+    color: #000 !important;
+    text-decoration: none;
+  }
+}
+
+// Button hover states (custom yellow behavior)
+.btn-primary {
+  &:hover,
+  &:focus {
+    background: #ff6 !important;
+    border-color: #ff6 !important;
+    color: #000 !important;
+  }
+}
+
+.btn-outline-primary {
+  &:hover,
+  &:focus {
+    background: #ff6 !important;
+    border-color: #ff6 !important;
+    color: #000 !important;
+  }
+}
+
+// Card title links - keep black, hover to maroon
+.card-title a {
+  color: #000;
+
+  &:hover,
+  &:focus {
+    color: var(--bs-primary);
+    background: transparent !important;
+  }
+}
+
+// Badge/tag styling
+.badge {
+  background-color: #ddd !important;
+  color: #888 !important;
+
+  &:hover {
+    background-color: #ccc !important;
+    color: #777 !important;
+  }
+}
+
+// Code blocks - dark background
+code {
+  background: #111;
+  color: #fff;
+  display: block;
+  font-family: Courier, monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+// Inline code - override block display
+p code,
+li code {
+  background: transparent;
+  color: #000;
+  display: inline;
+  font-size: 0.85em;
+  line-height: 1em;
+  padding: 0;
+}
+
+// Code in links
+a code {
+  color: $link-color;
+}
+
+// Article first-letter drop cap effect
+.post.article > div > p:first-child::first-line {
+  font-size: 1.3em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.post.article > div > p:first-child::first-letter {
+  display: block;
+  float: left;
+  font-size: 3em;
+  font-variant: small-caps;
+  line-height: 0.65em;
+  padding: 0.1em 0.2em 0 0;
+  text-transform: uppercase;
+}
+
+// Navbar custom styling
+.navbar {
+  border-bottom: 1px solid #ddd;
+
+  .navbar-brand {
+    font-weight: bold;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: #000;
+    }
+  }
+
+  .nav-link {
+    color: $body-color;
+
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: $body-color;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+// Badge/tag styling to match original
+.badge {
+  background-color: #ddd !important;
+  color: #888 !important;
+  font-weight: normal;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px #ccc;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ccc !important;
+    color: #777 !important;
+  }
+}
+
+// Footer custom styling
+footer {
+  margin-top: auto;
+
+  h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: $headings-font-family;
+  }
+
+  .list-unstyled a {
+    display: block;
+    padding: 0.25rem 0;
+    text-decoration: none;
+    color: #555;
+
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: $body-color;
+    }
+  }
+
+  .social-links .btn {
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: $body-color;
+      border-color: #ff6;
+    }
+  }
+}
+
+// Bootstrap button overrides for yellow hover
+.btn {
+  border-radius: 2px;
+
+  &.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: $body-color;
+      border-color: #ff6;
+    }
+  }
+
+  &.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background: #ff6;
+      color: $body-color;
+      border-color: #ff6;
+    }
+  }
+}
+
+// Card styling
+.card {
+  border-color: #ddd;
+  border-radius: 2px;
+  transition: box-shadow 0.2s;
+  background: #fff;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-title a {
+    text-decoration: none;
+    color: $body-color;
+
+    &:hover {
+      color: $primary;
+      background: transparent;
+    }
+  }
+}
+
+// Posts list
+.posts time:after {
+  content: "»";
+  margin: 0 10px;
+}
+
+// Project meta styling
+.project-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.project-meta .language {
+  background: #eee;
+  border-radius: 3px;
+  padding: 2px 8px;
+}
+
+// Mailchimp signup with stripe background
+.mailchimp-signup {
+  background: url(/stripe.png) repeat top left;
+  margin: 50px 0;
+  padding: 20px;
+  border-radius: 2px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .mailchimp-signup-form {
+    text-align: center;
+  }
+}
+
+// Disqus customizations
+#disqus_thread {
+  margin-top: 75px;
+}
+
+#dsq-global-toolbar,
+#dsq-like-tooltip,
+#dsq-sort-by,
+#dsq-pagination,
+#disqus_thread h3 {
+  display: none;
+}
+
+#disqus_thread .dsq-reply h3 {
+  display: block;
+}
+
+#dsq-account-dropdown:before {
+  content: '(';
+}
+
+#dsq-account-dropdown:after {
+  content: ')';
+}
+
+#dsq-account-dropdown a {
+  margin: 0 -5px;
+  text-transform: lowercase;
+}
+
+// Notice/alert override
+.notice {
+  margin-top: 75px;
+}
+
+// Book cover styling
+.post.book .cover {
+  float: left;
+  height: 160px;
+  margin: 0 2em 1em 0;
+}
+
+// Headings - no underline on links
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+
+  &:hover {
+    background: transparent;
+    color: $primary;
+  }
+}
+
+// H1 center alignment
+h1 {
+  text-align: center;
+}
+
+// Blockquote styling
+blockquote {
+  color: #777;
+}
+
+// Author intro section
+.post .intro {
+  clear: both;
+  color: #888;
+  margin: 50px 0;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .avatar {
+    border-radius: 125px;
+    float: left;
+    margin-right: 25px;
+    width: 125px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #555;
+  }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 35px !important;
+    font-weight: bold;
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      padding: 1rem 0;
+
+      .nav-link {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
