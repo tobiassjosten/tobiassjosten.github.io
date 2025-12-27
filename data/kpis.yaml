@@ -1,0 +1,9 @@
+metrics:
+  - label: "Years Programming"
+    value: 30
+  - label: "Years Professional"
+    value: 20
+  - label: "Direct Reports"
+    value: 18
+  - label: "Businesses Founded"
+    value: 7

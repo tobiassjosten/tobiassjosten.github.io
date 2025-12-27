@@ -3,7 +3,7 @@ title: Refactor your AFK interface
 date: "2015-12-01"
 draft: false
 categories:
-    - Personal
+    - Lifestyle
 tags:
     - projects
     - _newsletter

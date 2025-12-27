@@ -3,7 +3,7 @@ title: Trading required for easy
 date: "2014-09-15"
 draft: false
 categories:
-    - Business
+    - Productivity
 tags:
     - business
     - _newsletter

@@ -3,7 +3,7 @@ title: Assign by reference with PHP's ternary operator
 date: "2014-08-09"
 draft: false
 categories:
-    - Engineering
+    - Technology
 tags:
     - development
     - php

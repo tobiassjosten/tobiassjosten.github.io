@@ -3,7 +3,7 @@ title: Charge your clients like a boss
 date: "2014-07-10"
 draft: false
 categories:
-    - Business
+    - Finance
 tags:
     - business
     - _newsletter

@@ -3,7 +3,7 @@ title: Tracking with purpose
 date: "2014-06-05"
 draft: false
 categories:
-    - Business
+    - Productivity
 tags:
     - business-intelligence
 summary: Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances, fitness and server infrastructure. But what do you do with all the numbers?

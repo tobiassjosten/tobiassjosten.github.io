@@ -137,18 +137,27 @@ a code {
   text-transform: uppercase;
 }
 
-// Navbar custom styling
 .navbar {
-  border-bottom: 1px solid #ddd;
-
   .navbar-brand {
     font-weight: bold;
     color: $primary;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+
+    svg {
+      display: block;
+      stroke: currentColor;
+    }
 
     &:hover,
     &:focus {
       background: #ff6;
       color: #000;
+
+      svg {
+        stroke: #000;
+      }
     }
   }
 
@@ -415,6 +424,79 @@ blockquote {
       .nav-link {
         padding: 0.5rem 0;
       }
+    }
+  }
+}
+
+.home {
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+
+    @media (max-width: 767px) {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+  }
+
+  .hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 991px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      min-height: 50vh;
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .kpis {
+    .display-4 {
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      color: #900;
+    }
+
+    @media (max-width: 767px) {
+      .display-4 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .testimonials {
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7495%) hue-rotate(0deg);
+    }
+
+    .carousel-indicators button {
+      background-color: #900;
     }
   }
 }

@@ -3,7 +3,7 @@ title: Zero multiplication
 date: "2014-09-08"
 draft: false
 categories:
-    - Business
+    - Productivity
 tags:
     - business
     - _newsletter

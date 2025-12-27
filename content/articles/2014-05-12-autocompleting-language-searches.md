@@ -3,7 +3,7 @@ title: Autocompleting language searches
 date: "2014-05-12"
 draft: false
 categories:
-    - Engineering
+    - Technology
 tags:
     - development
     - haskell

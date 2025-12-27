@@ -3,7 +3,7 @@ title: What do you think of Chaps?
 date: "2014-04-18"
 draft: false
 categories:
-    - Personal
+    - Technology
 tags:
     - projects
 summary: Say hello to Chaps — a command line tool that will let you manage your many lists of followers.

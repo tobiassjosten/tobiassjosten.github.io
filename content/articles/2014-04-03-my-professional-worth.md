@@ -3,7 +3,7 @@ title: My professional worth
 date: "2014-04-03"
 draft: false
 categories:
-    - Engineering
+    - Productivity
 tags:
     - development
 summary: I used to believe that, as programmers, our professional worth is directly tied to the code we produce and the technical knowledge we are equipped with. Nowadays I have a different definition.

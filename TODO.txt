@@ -1,3 +1,5 @@
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
 - Create philosophy study page.
 - Verify sitemap.
+- Deployment to Cloudflare Pages.
+- Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.

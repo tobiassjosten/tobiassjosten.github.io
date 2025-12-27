@@ -7,6 +7,8 @@ amazonURL: http://amzn.to/NBbGGr
 image: php-in-action.jpg
 summary: Objects, Design, Agility — the subtitle sums it up well; PHP In Action is a book all about object oriented architecture in PHP. I owe its authors a lot for having introduced me to the wonderful world of OOP.
 grade: 4
+currentlyReading: false
+featured: true
 ---
 "Objects, Design, Agility" — the subtitle sums the book up quite well; **PHP In Action** is all about *object oriented programming* in PHP. I owe its authors a lot for having introduced me to the wonderful world of OOP.
 

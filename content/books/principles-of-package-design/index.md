@@ -7,6 +7,8 @@ amazonURL: https://amzn.to/4sfvWBE
 image: principles-of-package-design.jpg
 summary: I'll start at the end and say that this is one of the most useful programming books I have ever read and it should be required reading for all professional programmers.
 grade: 5
+currentlyReading: false
+featured: true
 ---
 I'll start at the end and say that this is one of the most useful programming books I have ever read. [*Principles of Package Design*](/books/principles-of-package-design/buy/) should be required reading for anyone writing code for a living, independent of one's programming language.
 

@@ -7,76 +7,446 @@
 <body class="home">
     {{ partial "header.html" . }}
 
-    <main id="main" class="container py-5">
-        <!-- Hero Section -->
-        <section class="hero text-center py-5 mb-5">
-            <h1 class="display-4">{{ .Site.Params.author }}</h1>
-            <p class="lead">{{ .Site.Params.description }}</p>
-            {{ .Content }}
+    <main id="main">
+        <!-- Section 1: Hero -->
+        <section class="hero py-5">
+            <div class="container text-center py-5 my-5">
+                <h1 class="display-1 mb-5 fw-bold">Hello, I'm Tobias</h1>
+                <p class="lead fs-2 mb-5" style="max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                    I solve problems and I build things.<br />Often with technology, always systematically.
+                </p>
+            </div>
         </section>
 
-        <!-- Featured Projects -->
-        {{ $featuredProjects := where .Site.Pages "Params.featured" true }}
-        {{ if $featuredProjects }}
-        <section class="featured-projects mb-5">
-            <h2 class="mb-4">Featured Projects</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                {{ range $featuredProjects }}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title h5">
-                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <!-- Section 2: About -->
+        <section class="about py-5">
+            <div class="container">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-8">
+                        <p class="fs-5">
+                            I started programming at age seven and never looked back. What began as childhood curiosity evolved into a lifelong passion for crafting elegant solutions to complex problems. Over the years, I've worked across the full stack—from low-level systems programming to modern web architectures—always pushing to understand not just how things work, but why they work.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Professional+Photo" class="img-fluid rounded shadow-sm" alt="Tobias at work" loading="lazy">
+                    </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-4 order-md-1 order-2">
+                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Speaking+Photo" class="img-fluid rounded shadow-sm" alt="Tobias speaking" loading="lazy">
+                    </div>
+                    <div class="col-md-8 order-md-2 order-1">
+                        <p class="fs-5">
+                            Today, I lead engineering teams in building products that scale. My approach combines pragmatic technical decisions with a deep investment in people development. I believe the best engineering organizations are built on strong fundamentals: clear communication, continuous learning, and a culture where every voice matters. Whether architecting microservices or mentoring junior developers, I'm driven by the challenge of making things better.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="fs-5 mb-4">
+                            Beyond the code, I'm passionate about knowledge sharing through writing, speaking, and open source contributions. I've founded multiple businesses, spoken at conferences across Europe, and maintain an active presence in the developer community. When I'm not at the keyboard, you'll find me training, coaching others in athletic performance, or exploring how systems thinking applies to all aspects of life.
+                        </p>
+                        <a href="/about/" class="btn btn-outline-primary">Learn More About Me →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Recent Content -->
+        <section class="recent-content py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Latest Articles</h2>
+
+                <!-- Featured Articles by Category -->
+                <div class="mb-5">
+                    {{ range $category := slice "Finance" "Technology" "Productivity" "Business" "Lifestyle" }}
+                        {{ $articles := where (where $.Site.Pages "Section" "articles") "Params.categories" "intersect" (slice $category) }}
+                        {{ $article := index $articles 0 }}
+                        {{ if $article }}
+                        <article class="mb-4 pb-4">
+                            <h3 class="h5 mb-2">
+                                <a href="{{ $article.Permalink }}">{{ $article.Title }}</a>
                             </h3>
-                            <p class="card-text">{{ .Params.summary }}</p>
+                            {{ with $article.Params.summary }}
+                            <p class="mb-2">{{ . }}</p>
+                            {{ end }}
+                            <p class="text-muted small mb-0">
+                                <time>{{ $article.Date.Format "January 2, 2006" }}</time>
+                                <span class="mx-2">·</span>
+                                <span>{{ $category }}</span>
+                            </p>
+                        </article>
+                        {{ end }}
+                    {{ end }}
+                </div>
+
+                <!-- Three columns: Newsletters, Tech Notes, Interviews -->
+                <div class="row">
+                    <!-- Newsletters -->
+                    <div class="col-md-4 mb-4">
+                        <h3 class="h5 mb-3">Latest Newsletters</h3>
+                        {{ $newsletters := first 3 (where .Site.Pages "Section" "newsletters") }}
+                        {{ if $newsletters }}
+                        <ul class="list-unstyled">
+                            {{ range $newsletters }}
+                            <li class="mb-3">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ else }}
+                        <p class="text-muted"><em>Coming soon...</em></p>
+                        {{ end }}
+                    </div>
+
+                    <!-- Tech Notes -->
+                    <div class="col-md-4 mb-4">
+                        <h3 class="h5 mb-3">Latest Tech Notes</h3>
+                        {{ $techNotes := first 3 (where .Site.Pages "Section" "archive") }}
+                        {{ if $techNotes }}
+                        <ul class="list-unstyled">
+                            {{ range $techNotes }}
+                            <li class="mb-3">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+
+                    <!-- Interviews -->
+                    <div class="col-md-4 mb-4">
+                        <h3 class="h5 mb-3">Latest Interviews</h3>
+                        {{ $interviews := first 3 (where .Site.Pages "Section" "interviews") }}
+                        {{ if $interviews }}
+                        <ul class="list-unstyled">
+                            {{ range $interviews }}
+                            <li class="mb-3">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ else }}
+                        <p class="text-muted"><em>Coming soon...</em></p>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Professional -->
+        <section class="professional bg-white py-5">
+            <div class="container">
+                {{ $professional := .Site.Data.professional }}
+
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-4">
+                        <h2 class="h3 mb-3">Current Position</h2>
+                        {{ if $professional }}
+                        <p class="fs-5 mb-3">
+                            <strong>{{ $professional.current_position.title }}</strong><br>
+                            <span class="text-muted">at</span> <a href="{{ $professional.current_position.url }}" target="_blank" rel="noopener">{{ $professional.current_position.company }}</a>
+                        </p>
+                        {{ end }}
+                        <p>Leading engineering teams in building scalable, maintainable software solutions. Focused on technical excellence, team development, and strategic technology decisions.</p>
+                        <a href="/resume/" class="btn btn-outline-primary">View Resume →</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h2 class="h3 mb-3">Active Businesses</h2>
+                        {{ $activeBusinesses := where (where .Site.Pages "Section" "businesses") "Params.discontinued" "!=" true }}
+                        {{ if $activeBusinesses }}
+                        <ul class="list-unstyled mb-3">
+                            {{ range $activeBusinesses }}
+                            <li class="mb-2">
+                                {{ if .Params.project_url }}
+                                <a href="{{ .Params.project_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
+                                {{ else }}
+                                <strong>{{ .Title }}</strong>
+                                {{ end }}
+                                {{ with .Params.description }}
+                                <small class="text-muted d-block">{{ . }}</small>
+                                {{ end }}
+                            </li>
+                            {{ end }}
+                        </ul>
+                        <a href="/businesses/" class="btn btn-outline-primary">All Businesses →</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: KPIs & Companies -->
+        <section class="kpis bg-white py-5">
+            <div class="container">
+                {{ $kpis := .Site.Data.kpis }}
+                {{ $companies := .Site.Data.companies }}
+
+                {{ if $kpis }}
+                <!-- KPI Metrics -->
+                <div class="row text-center mb-5">
+                    {{ range $kpis.metrics }}
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="display-4 text-primary fw-bold">{{ .value }}</div>
+                        <div class="text-muted">{{ .label }}</div>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+
+                {{ if $companies }}
+                <!-- Company Logos -->
+                <div class="text-center mb-3">
+                    <h3 class="h5 text-muted">Worked With</h3>
+                </div>
+                <div class="row justify-content-center align-items-center g-4">
+                    {{ range $companies.companies }}
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="{{ .logo }}"
+                             alt="{{ .name }}"
+                             class="img-fluid"
+                             style="max-height: 60px; filter: grayscale(100%) opacity(60%);"
+                             loading="lazy">
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- Section 6: Books -->
+        <section class="books py-5">
+            <div class="container">
+                {{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
+                {{ $featuredBooks := where (where .Site.Pages "Section" "books") "Params.featured" true }}
+
+                {{ if $currentlyReading }}
+                <!-- Currently Reading -->
+                <div class="mb-5">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h3 mb-0">Currently Reading</h2>
+                        <a href="/now/" class="btn btn-sm btn-outline-primary">What I'm Up To →</a>
+                    </div>
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                        {{ range $currentlyReading }}
+                        <div class="col">
+                            <a href="{{ .Permalink }}">
+                                {{ with .Params.image }}
+                                    {{ $image := $.Resources.GetMatch . }}
+                                    {{ if $image }}
+                                    <img src="{{ $image.RelPermalink }}"
+                                         class="img-fluid shadow-sm"
+                                         alt="{{ $.Title }}"
+                                         style="max-height: 200px;"
+                                         loading="lazy">
+                                    {{ else }}
+                                    <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
+                                         class="img-fluid shadow-sm"
+                                         alt="{{ $.Title }}"
+                                         style="max-height: 200px;">
+                                    {{ end }}
+                                {{ else }}
+                                <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
+                                     class="img-fluid shadow-sm"
+                                     alt="{{ .Title }}"
+                                     style="max-height: 200px;">
+                                {{ end }}
+                            </a>
                         </div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                {{ if $featuredBooks }}
+                <!-- Featured Books -->
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h3 mb-0">Featured Reviews</h2>
+                        <a href="/books/" class="btn btn-sm btn-outline-primary">All Reviews →</a>
+                    </div>
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                        {{ range $featuredBooks }}
+                        <div class="col">
+                            <a href="{{ .Permalink }}">
+                                {{ with .Params.image }}
+                                    {{ $image := $.Resources.GetMatch . }}
+                                    {{ if $image }}
+                                    <img src="{{ $image.RelPermalink }}"
+                                         class="img-fluid shadow-sm"
+                                         alt="{{ $.Title }}"
+                                         style="max-height: 200px;"
+                                         loading="lazy">
+                                    {{ else }}
+                                    <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
+                                         class="img-fluid shadow-sm"
+                                         alt="{{ $.Title }}"
+                                         style="max-height: 200px;">
+                                    {{ end }}
+                                {{ else }}
+                                <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
+                                     class="img-fluid shadow-sm"
+                                     alt="{{ .Title }}"
+                                     style="max-height: 200px;">
+                                {{ end }}
+                            </a>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
                 {{ end }}
             </div>
         </section>
-        {{ end }}
 
-        <!-- Recent Writing -->
-        <section class="recent-writing mb-5">
-            <h2 class="mb-4">Recent Writing</h2>
-            <div class="list-group list-group-flush">
-                {{ $blogPosts := where .Site.RegularPages "Section" "in" (slice "articles" "archive") }}
-                {{ range first 3 $blogPosts }}
-                <article class="list-group-item px-0">
-                    <h3 class="h5">
-                        <a href="{{ .Permalink }}" class="text-decoration-none">{{ .Title }}</a>
-                    </h3>
-                    <p class="text-muted small mb-1">
-                        <time>{{ .Date.Format "January 2, 2006" }}</time>
-                    </p>
-                    {{ with .Params.summary }}
-                    <p class="mb-0">{{ . }}</p>
-                    {{ end }}
-                </article>
+        <!-- Section 7: Speaking -->
+        <section class="speaking py-5">
+            <div class="container">
+                {{ $professional := .Site.Data.professional }}
+
+                <h2 class="text-center mb-4">Speaking</h2>
+
+                {{ if $professional.speaking }}
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="{{ $professional.speaking.featured_video.url }}"
+                                    title="{{ $professional.speaking.featured_video.title }}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center mb-4">
+                    {{ $professional.speaking.featured_video.description }}
+                </p>
                 {{ end }}
-            </div>
-            <div class="mt-3">
-                <a href="/archive/" class="btn btn-outline-primary">
-                    View archive of technical articles (2010-2015) →
-                </a>
+
+                <div class="text-center">
+                    <a href="/speaking/" class="btn btn-outline-primary">View All Talks →</a>
+                </div>
             </div>
         </section>
 
-        <!-- Connect Section -->
-        <section class="connect text-center mb-5">
-            <h2 class="mb-4">Connect</h2>
-            <div class="d-flex justify-content-center gap-2">
-                <a href="https://twitter.com/{{ .Site.Params.twitter }}"
-                   class="btn btn-outline-primary"
-                   target="_blank" rel="noopener">
-                    Twitter
-                </a>
-                <a href="https://github.com/tobiassjosten"
-                   class="btn btn-outline-primary"
-                   target="_blank" rel="noopener">
-                    GitHub
-                </a>
+        <!-- Section 8: Testimonials -->
+        <section class="testimonials py-5">
+            <div class="container">
+                {{ $testimonials := .Site.Data.testimonials }}
+
+                <h2 class="text-center mb-5">Testimonials</h2>
+
+                {{ if $testimonials }}
+                <!-- Bootstrap Carousel -->
+                <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        {{ range $index, $testimonial := $testimonials.testimonials }}
+                        <button type="button"
+                                data-bs-target="#testimonialsCarousel"
+                                data-bs-slide-to="{{ $index }}"
+                                {{ if eq $index 0 }}class="active" aria-current="true"{{ end }}
+                                aria-label="Slide {{ add $index 1 }}">
+                        </button>
+                        {{ end }}
+                    </div>
+
+                    <div class="carousel-inner">
+                        {{ range $index, $testimonial := $testimonials.testimonials }}
+                        <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 text-center">
+                                    <img src="{{ $testimonial.photo }}"
+                                         class="rounded-circle mb-4"
+                                         style="width: 100px; height: 100px; object-fit: cover;"
+                                         alt="{{ $testimonial.name }}"
+                                         loading="lazy">
+                                    <p class="fs-5 fst-italic mb-4">"{{ $testimonial.text }}"</p>
+                                    <p class="mb-0"><strong>{{ $testimonial.name }}</strong></p>
+                                    <p class="text-muted">{{ $testimonial.title }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <button class="carousel-control-prev" type="button"
+                            data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                            data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- Section 9: Athletic Coaching -->
+        <section class="athletic py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 mb-4 mb-md-0">
+                        <img src="https://via.placeholder.com/1200x600/900/FFF?text=Athletic+Coaching"
+                             class="img-fluid rounded shadow-sm"
+                             alt="Athletic coaching and training"
+                             loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="h3 mb-3">Athletic Coaching</h2>
+                        <p class="mb-3">Combining technical precision with athletic performance optimization. Helping individuals reach their peak physical potential through systematic training and evidence-based coaching.</p>
+                        <a href="https://athlegan.com"
+                           class="btn btn-outline-primary"
+                           target="_blank" rel="noopener">
+                            Visit Athlegan →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Newsletter CTA -->
+        <section class="newsletter-cta bg-white py-5">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="h3 mb-4">Learn With Me</h2>
+                        <p class="fs-5 mb-4">
+                            Join my newsletter to get insights on software engineering,
+                            business building, and personal development delivered to your inbox.
+                        </p>
+
+                        <!-- Newsletter signup form - update action URL with actual newsletter service -->
+                        <form class="row g-3 justify-content-center"
+                              action="#"
+                              method="post">
+                            <div class="col-auto">
+                                <input type="email"
+                                       class="form-control form-control-lg"
+                                       placeholder="your@email.com"
+                                       name="email"
+                                       required
+                                       style="min-width: 280px;">
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                        <p class="text-muted small mt-3">
+                            <em>No spam, unsubscribe anytime.</em>
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

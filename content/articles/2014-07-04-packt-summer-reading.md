@@ -3,7 +3,7 @@ title: Packt summer reading
 date: "2014-07-04"
 draft: false
 categories:
-    - Business
+    - Lifestyle
 tags:
     - events
     - books
