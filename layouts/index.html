@@ -8,7 +8,6 @@
     {{ partial "header.html" . }}
 
     <main id="main">
-        <!-- Section 1: Hero -->
         <section class="hero py-5">
             <div class="container text-center py-5 my-5">
                 <h1 class="display-1 mb-5 fw-bold">Hello, I'm Tobias</h1>
@@ -18,7 +17,6 @@
             </div>
         </section>
 
-        <!-- Section 2: About -->
         <section class="about py-5">
             <div class="container">
                 <div class="row align-items-center mb-4">
@@ -28,7 +26,7 @@
                         </p>
                     </div>
                     <div class="col-md-4">
-                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Professional+Photo" class="img-fluid rounded shadow-sm" alt="Tobias at work" loading="lazy">
+                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Professional+Photo" class="img-fluid rounded shadow-sm" alt="Tobias with his family" loading="lazy">
                     </div>
                 </div>
                 <div class="row align-items-center mb-4">
@@ -46,16 +44,15 @@
                         <p class="fs-5 mb-4">
                             Beyond the code, I'm passionate about knowledge sharing through writing, speaking, and open source contributions. I've founded multiple businesses, spoken at conferences across Europe, and maintain an active presence in the developer community. When I'm not at the keyboard, you'll find me training, coaching others in athletic performance, or exploring how systems thinking applies to all aspects of life.
                         </p>
-                        <a href="/about/" class="btn btn-outline-primary">Learn More About Me →</a>
+                        <a href="/about/">Learn more about me →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Recent Content -->
         <section class="recent-content py-5">
             <div class="container">
-                <h2 class="text-center mb-5">Latest Articles</h2>
+                <h2 class="text-center mb-5">Latest articles</h2>
 
                 <!-- Featured Articles by Category -->
                 <div class="mb-5">
@@ -137,7 +134,6 @@
             </div>
         </section>
 
-        <!-- Section 4: Professional -->
         <section class="professional bg-white py-5">
             <div class="container">
                 {{ $professional := .Site.Data.professional }}
@@ -180,7 +176,6 @@
             </div>
         </section>
 
-        <!-- Section 5: KPIs & Companies -->
         <section class="kpis bg-white py-5">
             <div class="container">
                 {{ $kpis := .Site.Data.kpis }}
@@ -218,91 +213,35 @@
             </div>
         </section>
 
-        <!-- Section 6: Books -->
         <section class="books py-5">
             <div class="container">
-                {{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
-                {{ $featuredBooks := where (where .Site.Pages "Section" "books") "Params.featured" true }}
+                <h2 class="text-center mb-4">Books</h2>
+                <p class="fs-5 px-5">I'm an avid reader and enjoy sharing my thoughts on books that haved an impact on me. Here are some of the books I'm currently reading and a few highlights.</p>
 
+                {{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
                 {{ if $currentlyReading }}
-                <!-- Currently Reading -->
-                <div class="mb-5">
+                <div class="mt-5">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h3 mb-0">Currently Reading</h2>
-                        <a href="/now/" class="btn btn-sm btn-outline-primary">What I'm Up To →</a>
+                        <h3 class="h3 mb-0">Currently reading</h3>
+                        <a href="/now/">What else I'm up to →</a>
                     </div>
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                        {{ range $currentlyReading }}
-                        <div class="col">
-                            <a href="{{ .Permalink }}">
-                                {{ with .Params.image }}
-                                    {{ $image := $.Resources.GetMatch . }}
-                                    {{ if $image }}
-                                    <img src="{{ $image.RelPermalink }}"
-                                         class="img-fluid shadow-sm"
-                                         alt="{{ $.Title }}"
-                                         style="max-height: 200px;"
-                                         loading="lazy">
-                                    {{ else }}
-                                    <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
-                                         class="img-fluid shadow-sm"
-                                         alt="{{ $.Title }}"
-                                         style="max-height: 200px;">
-                                    {{ end }}
-                                {{ else }}
-                                <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
-                                     class="img-fluid shadow-sm"
-                                     alt="{{ .Title }}"
-                                     style="max-height: 200px;">
-                                {{ end }}
-                            </a>
-                        </div>
-                        {{ end }}
-                    </div>
+                    {{ partial "book-grid.html" (dict "books" $currentlyReading) }}
                 </div>
                 {{ end }}
 
+                {{ $featuredBooks := where (where .Site.Pages "Section" "books") "Params.featuredOnHomepage" true }}
                 {{ if $featuredBooks }}
-                <!-- Featured Books -->
-                <div>
+                <div class="mt-5">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h3 mb-0">Featured Reviews</h2>
-                        <a href="/books/" class="btn btn-sm btn-outline-primary">All Reviews →</a>
+                        <h3 class="h3 mb-0">Featured books</h3>
+                        <a href="/books/">All book reviews →</a>
                     </div>
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
-                        {{ range $featuredBooks }}
-                        <div class="col">
-                            <a href="{{ .Permalink }}">
-                                {{ with .Params.image }}
-                                    {{ $image := $.Resources.GetMatch . }}
-                                    {{ if $image }}
-                                    <img src="{{ $image.RelPermalink }}"
-                                         class="img-fluid shadow-sm"
-                                         alt="{{ $.Title }}"
-                                         style="max-height: 200px;"
-                                         loading="lazy">
-                                    {{ else }}
-                                    <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
-                                         class="img-fluid shadow-sm"
-                                         alt="{{ $.Title }}"
-                                         style="max-height: 200px;">
-                                    {{ end }}
-                                {{ else }}
-                                <img src="https://via.placeholder.com/150x225/900/FFF?text=Book"
-                                     class="img-fluid shadow-sm"
-                                     alt="{{ .Title }}"
-                                     style="max-height: 200px;">
-                                {{ end }}
-                            </a>
-                        </div>
-                        {{ end }}
-                    </div>
+                    {{ partial "book-grid.html" (dict "books" $featuredBooks) }}
                 </div>
                 {{ end }}
             </div>
         </section>
 
-        <!-- Section 7: Speaking -->
         <section class="speaking py-5">
             <div class="container">
                 {{ $professional := .Site.Data.professional }}
@@ -330,12 +269,11 @@
                 {{ end }}
 
                 <div class="text-center">
-                    <a href="/speaking/" class="btn btn-outline-primary">View All Talks →</a>
+                    <a href="/speaking/">View all talks →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Section 8: Testimonials -->
         <section class="testimonials py-5">
             <div class="container">
                 {{ $testimonials := .Site.Data.testimonials }}
@@ -390,7 +328,6 @@
             </div>
         </section>
 
-        <!-- Section 9: Athletic Coaching -->
         <section class="athletic py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -413,7 +350,6 @@
             </div>
         </section>
 
-        <!-- Section 10: Newsletter CTA -->
         <section class="newsletter-cta bg-white py-5">
             <div class="container text-center">
                 <div class="row justify-content-center">

@@ -1,14 +1,12 @@
 ---
-title: Pragmatic Programmer
-date: 2013-03-01
-category: development
-tags: [development]
-amazonURL: http://amzn.to/Zqgyi0
-image: pragmatic-programmer.jpg
-summary: I will start by saying that **Pragmatic Programmer** is one of the most important programming books I have ever read, hands down. Its impact on my skill as a programmer and development team member is astounding.
-grade: 5
-currentlyReading: true
-featured: true
+title: "Pragmatic Programmer"
+author: "andrew-hunt"
+date: "2013-03-01"
+category: "Tech"
+amazonURL: "http://amzn.to/Zqgyi0"
+image: "pragmatic-programmer.jpg"
+rating: 5
+featuredOnHomepage: true
 ---
 I will start by saying that **Pragmatic Programmer** is one of the most important programming books I have ever read, hands down. Its impact on my skill as a programmer and development team member is astounding.
 

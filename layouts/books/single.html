@@ -1,22 +1,51 @@
 {{ define "main" }}
 <article class="post book" itemscope itemtype="http://schema.org/Book">
-    {{ with .Params.amazonURL }}
-    <a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">
+    {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
         <img class="cover" alt="{{ $.Title }}" title="{{ $.Title }}" src="{{ $.Params.image }}" itemprop="image">
-    </a>
+    {{ with .Params.amazonURL }}</a>{{ end }}
+
+    {{ with .Params.author }}
+        {{ $authorSlug := . }}
+        {{ $authorPage := $.Site.GetPage (printf "/authors/%s" .) }}
+        {{ if $authorPage }}
+            <p class="book-author">
+                By <a href="{{ $authorPage.Permalink }}">{{ $authorPage.Title }}</a>
+                {{ $otherBooks := where (where $.Site.RegularPages "Type" "books") ".Params.author" $authorSlug }}
+                {{ $otherBooks = where $otherBooks "Permalink" "!=" $.Permalink }}
+                {{ if gt (len $otherBooks) 0 }}
+                    — who also wrote
+                    {{ range $i, $book := $otherBooks }}
+                        {{ if gt $i 0 }}{{ if eq $i (sub (len $otherBooks) 1) }} and {{ else }}, {{ end }}{{ end }}
+                        <a href="{{ $book.Permalink }}">{{ $book.Title }}</a>
+                    {{ end }}
+                {{ end }}
+            </p>
+        {{ end }}
     {{ end }}
 
-    <div itemprop="articleBody">{{ .Content }}</div>
+    {{ with .Params.relatedBooks }}
+        <p>
+            If you enjoyed this book, you might also like:
+            {{ range . }}
+                {{ $relatedBook := $.Site.GetPage (printf "/books/%s" .) }}
+                {{ if $relatedBook }}
+                    <a href="{{ $relatedBook.Permalink }}">{{ $relatedBook.Title }}</a>
+                {{ end }}
+            {{ end }}
+        </p>
+    {{ end }}
+
+    <div itemprop="articleBody">
+        {{ $content := .Content | plainify | strings.TrimSpace }}
+        {{ if gt (len $content) 0 }}
+            {{ .Content }}
+        {{ else }}
+            <p><em>Full review coming soon!</em></p>
+        {{ end }}
+    </div>
 
     {{ with .Params.amazonURL }}
-    <p><a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
+        <p><a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
     {{ end }}
-
-    <aside class="intro" itemscope itemtype="http://schema.org/Person">
-        <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125" class="avatar" itemprop="image">
-        <p>Reviewed by <a href="/" rel="author" itemprop="url" itemprop="name">{{ .Site.Params.author }}</a>; a <span itemprop="jobTitle">web technician</span> and <span itemprop="jobTitle">open source aficionado</span>.</p>
-        <a href="https://twitter.com/{{ .Site.Params.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ .Site.Params.twitter }}</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </aside>
 </article>
 {{ end }}

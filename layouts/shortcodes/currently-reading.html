@@ -1,0 +1,6 @@
+{{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
+{{ if $currentlyReading }}
+{{ partial "book-grid.html" (dict "books" $currentlyReading) }}
+{{ else }}
+<p class="text-muted">No books currently being read. Check back soon!</p>
+{{ end }}

@@ -1,14 +1,12 @@
 ---
-title: PHP In Action
-date: 2013-06-01
-category: php
-tags: [php]
-amazonURL: http://amzn.to/NBbGGr
-image: php-in-action.jpg
-summary: Objects, Design, Agility — the subtitle sums it up well; PHP In Action is a book all about object oriented architecture in PHP. I owe its authors a lot for having introduced me to the wonderful world of OOP.
-grade: 4
-currentlyReading: false
-featured: true
+title: "PHP In Action"
+author: "dagfinn-reiersol"
+date: "2013-06-01"
+category: "Tech"
+amazonURL: "http://amzn.to/NBbGGr"
+image: "php-in-action.jpg"
+rating: 4
+featuredOnHomepage: true
 ---
 "Objects, Design, Agility" — the subtitle sums the book up quite well; **PHP In Action** is all about *object oriented programming* in PHP. I owe its authors a lot for having introduced me to the wonderful world of OOP.
 

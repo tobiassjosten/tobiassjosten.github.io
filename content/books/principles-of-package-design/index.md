@@ -1,14 +1,12 @@
 ---
-title: Principles of Package Design
-date: 2015-01-01
-category: development
-tags: [development, php, symfony]
-amazonURL: https://amzn.to/4sfvWBE
-image: principles-of-package-design.jpg
-summary: I'll start at the end and say that this is one of the most useful programming books I have ever read and it should be required reading for all professional programmers.
-grade: 5
-currentlyReading: false
-featured: true
+title: "Principles of Package Design"
+author: "matthias-noback"
+date: "2015-01-01"
+category: "Tech"
+amazonURL: "https://amzn.to/4sfvWBE"
+image: "principles-of-package-design.jpg"
+rating: 5
+featuredOnHomepage: true
 ---
 I'll start at the end and say that this is one of the most useful programming books I have ever read. [*Principles of Package Design*](/books/principles-of-package-design/buy/) should be required reading for anyone writing code for a living, independent of one's programming language.
 

@@ -2,28 +2,71 @@
 <article class="books-list">
     {{ .Content }}
 
-    <section class="reviews complete">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
-            {{ range .Pages }}
-                {{ if .Params.grade }}
+    {{ $booksByYear := dict }}
+    {{ $undated := slice }}
+
+    {{ range .Pages }}
+        {{ if .Params.rating }}
+            {{ if .Date }}
+                {{ $year := .Date.Format "2006" }}
+                {{ $existing := index $booksByYear $year | default slice }}
+                {{ $booksByYear = merge $booksByYear (dict $year ($existing | append .)) }}
+            {{ else }}
+                {{ $undated = $undated | append . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ $years := slice }}
+    {{ range $year, $books := $booksByYear }}
+        {{ $years = $years | append $year }}
+    {{ end }}
+    {{ $years = sort $years "value" "desc" }}
+
+    {{ range $years }}
+        {{ $year := . }}
+        {{ $books := index $booksByYear $year }}
+        <section class="reviews-year mb-5">
+            <h2 class="h3 mb-4">{{ $year }}</h2>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
+                {{ range $books }}
                     <div class="col">
                         <div class="text-center">
                             <a href="{{ .Permalink }}">
                                 {{ $image := .Resources.GetMatch .Params.image }}
                                 {{ if $image }}
-                                <img class="img-fluid"
-                                     style="max-height: 200px;"
-                                     alt="{{ .Title }}"
-                                     title="{{ .Title }}"
-                                     src="{{ $image.RelPermalink }}"
-                                     itemprop="image">
+                                <img class="img-fluid" style="max-height: 200px;"
+                                     alt="{{ .Title }}" title="{{ .Title }}"
+                                     src="{{ $image.RelPermalink }}" itemprop="image">
                                 {{ end }}
                             </a>
                         </div>
                     </div>
                 {{ end }}
-            {{ end }}
-        </div>
-    </section>
+            </div>
+        </section>
+    {{ end }}
+
+    {{ if gt (len $undated) 0 }}
+        <section class="reviews-year mb-5">
+            <h2 class="h3 mb-4">Undated</h2>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
+                {{ range $undated }}
+                    <div class="col">
+                        <div class="text-center">
+                            <a href="{{ .Permalink }}">
+                                {{ $image := .Resources.GetMatch .Params.image }}
+                                {{ if $image }}
+                                <img class="img-fluid" style="max-height: 200px;"
+                                     alt="{{ .Title }}" title="{{ .Title }}"
+                                     src="{{ $image.RelPermalink }}" itemprop="image">
+                                {{ end }}
+                            </a>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
 </article>
 {{ end }}

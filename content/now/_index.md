@@ -1,28 +1,23 @@
 ---
-title: Now
-description: What I'm focused on right now
+title: What I'm doing now
 ---
 
-# What I'm Doing Now
+This is a [Now](https://nownownow.com/about) page. It outlines a few things I'm focused on at the moment.
 
-*Last updated: December 2025*
+*Last updated {{< last-updated >}}.*
 
-## Work
+- At work, we're pushing forward with the migration away from our old IBM systems, and I'm working diligently on the architecture of the new systems, trying to fit all the pieces together and making the puzzle work, both acceptably during the transition and excellently once we're done.
 
-Currently focused on web development and software engineering, with a particular emphasis on PHP, Symfony, and modern web technologies.
+- During evenings and weekends, I'm working with an organization to help improve their tech, as a way to boost their business. Things are shaping up nicely, and I'm excited to share more about this project soon.
 
-## Projects
+- I love my new schedule, where I wake up early to get my training done and go to bed early to read substantially. This discipline is slowly becoming second nature.
 
-Working on various open source projects and exploring new technologies in the web development ecosystem.
+- I'm diving deep into the world of Domain-Driven Design, and I'm hoping to share a lot of my thoughts once I've had a chance to organize everything.
 
-## Learning
+## Currently reading
 
-Continuously expanding my knowledge in software architecture, system design, and emerging web technologies.
+I usually read several books in parallel — one fiction, one non-fiction, one biography (as an audiobook), and one daily book — so I can switch by mood and reliably read at least one page before allowing myself to call it a day.
 
-## Life
+These are my current reads:
 
-Balancing professional development with personal interests and maintaining a healthy work-life integration.
-
----
-
-*This is a "now page" - learn more at [nownownow.com](https://nownownow.com/about)*
+{{< currently-reading >}}
