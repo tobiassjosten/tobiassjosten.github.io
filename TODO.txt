@@ -4,3 +4,4 @@
 - Deployment to Cloudflare Pages.
 - Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.
 - Delete Jekyll remnants. For example, the _directories?
+- Migrated the Uses page (https://www.seastone.io/uses/).
