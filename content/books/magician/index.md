@@ -1,6 +1,7 @@
 ---
 title: "Magician"
-author: "raymond-e-feist"
+authors:
+  - "raymond-e-feist"
 date: "2006-01-01"
 amazonURL: ""
 image: "magician.jpg"

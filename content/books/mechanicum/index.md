@@ -1,6 +1,7 @@
 ---
 title: "Mechanicum"
-author: "graham-mcneill"
+authors:
+  - "graham-mcneill"
 date: "2021-04-18"
 amazonURL: ""
 image: "mechanicum.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "The SaaS Playbook"
-author: "rob-walling"
+authors:
+  - "rob-walling"
 date: "2024-10-05"
 amazonURL: ""
 image: "the-saas-playbook.jpg"

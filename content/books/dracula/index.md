@@ -1,6 +1,7 @@
 ---
 title: "Dracula"
-author: "bram-stoker"
+authors:
+  - "bram-stoker"
 date: "2024-02-17"
 amazonURL: ""
 image: "dracula.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Plato"
-author: "julia-annas"
+authors:
+  - "julia-annas"
 date: "2025-07-07"
 amazonURL: ""
 image: "plato.jpg"

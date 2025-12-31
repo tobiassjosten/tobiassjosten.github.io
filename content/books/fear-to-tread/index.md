@@ -1,6 +1,7 @@
 ---
 title: "Fear to Tread"
-author: "james-swallow"
+authors:
+  - "james-swallow"
 date: "2023-06-07"
 amazonURL: ""
 image: "fear-to-tread.jpg"

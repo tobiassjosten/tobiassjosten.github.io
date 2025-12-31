@@ -1,6 +1,7 @@
 ---
 title: "The Cyberiad"
-author: "stanislaw-lem"
+authors:
+  - "stanislaw-lem"
 date: "2013-07-29"
 amazonURL: ""
 image: "the-cyberiad.jpg"

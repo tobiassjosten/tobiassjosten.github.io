@@ -1,6 +1,7 @@
 ---
 title: "Eat Like You Care"
-author: "gary-l-francione"
+authors:
+  - "gary-l-francione"
 date: "2017-09-02"
 amazonURL: ""
 image: "eat-like-you-care.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Long Walk to Freedom"
-author: "nelson-mandela"
+authors:
+  - "nelson-mandela"
 date: ""
 amazonURL: ""
 image: "long-walk-to-freedom.jpg"

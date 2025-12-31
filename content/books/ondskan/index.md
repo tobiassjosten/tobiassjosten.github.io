@@ -1,6 +1,7 @@
 ---
 title: "Ondskan"
-author: "jan-guillou"
+authors:
+  - "jan-guillou"
 date: "1998-01-01"
 amazonURL: ""
 image: "ondskan.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Artificial Condition"
-author: "martha-wells"
+authors:
+  - "martha-wells"
 date: "2019-12-19"
 amazonURL: ""
 image: "artificial-condition.jpg"

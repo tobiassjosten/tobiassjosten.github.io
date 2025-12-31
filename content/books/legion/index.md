@@ -1,6 +1,7 @@
 ---
 title: "Legion"
-author: "dan-abnett"
+authors:
+  - "dan-abnett"
 date: "2020-11-03"
 amazonURL: ""
 image: "legion.jpg"

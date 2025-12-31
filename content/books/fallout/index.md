@@ -1,6 +1,7 @@
 ---
 title: "Fallout"
-author: "bruno-miller"
+authors:
+  - "bruno-miller"
 date: "2018-10-31"
 amazonURL: ""
 image: "fallout.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "The Code Breaker"
-author: "walter-isaacson"
+authors:
+  - "walter-isaacson"
 date: "2025-06-13"
 amazonURL: ""
 image: "the-code-breaker.jpg"

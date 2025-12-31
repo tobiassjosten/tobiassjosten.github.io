@@ -1,6 +1,7 @@
 ---
 title: "Free Will"
-author: "sam-harris"
+authors:
+  - "sam-harris"
 date: "2017-03-25"
 amazonURL: ""
 image: "free-will.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Minimalism"
-author: "joshua-fields-millburn"
+authors:
+  - "joshua-fields-millburn"
 date: "2017-01-02"
 amazonURL: ""
 image: "minimalism.jpg"

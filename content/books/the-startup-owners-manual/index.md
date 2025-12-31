@@ -1,6 +1,7 @@
 ---
 title: "The Startup Owner's Manual"
-author: "steve-blank"
+authors:
+  - "steve-blank"
 date: "2024-09-19"
 amazonURL: ""
 image: "the-startup-owners-manual.jpg"

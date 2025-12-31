@@ -1,6 +1,7 @@
 ---
 title: "Learning Domain-Driven Design"
-author: "vladik-khononov"
+authors:
+  - "vladik-khononov"
 date: "2025-08-11"
 amazonURL: ""
 image: "learning-domain-driven-design.jpg"

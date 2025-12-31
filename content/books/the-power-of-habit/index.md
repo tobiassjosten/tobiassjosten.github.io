@@ -1,6 +1,7 @@
 ---
 title: "The Power of Habit"
-author: "charles-duhigg"
+authors:
+  - "charles-duhigg"
 date: "2015-10-22"
 amazonURL: ""
 image: "the-power-of-habit.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Software as a Science"
-author: "dan-martell"
+authors:
+  - "dan-martell"
 date: "2025-06-10"
 amazonURL: ""
 image: "software-as-a-science.jpg"

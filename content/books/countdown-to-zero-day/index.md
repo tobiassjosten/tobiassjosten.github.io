@@ -1,6 +1,7 @@
 ---
 title: "Countdown to Zero Day"
-author: "kim-zetter"
+authors:
+  - "kim-zetter"
 date: "2025-10-31"
 amazonURL: ""
 image: "countdown-to-zero-day.jpg"

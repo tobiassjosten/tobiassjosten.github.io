@@ -1,6 +1,10 @@
 ---
 title: "The DevOps Handbook"
-author: "gene-kim"
+authors:
+  - "gene-kim"
+  - "jez-humble"
+  - "patrick-debois"
+  - "john-willis"
 date: "2021-11-12"
 amazonURL: ""
 image: "the-devops-handbook.jpg"

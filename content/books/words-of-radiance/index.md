@@ -1,6 +1,7 @@
 ---
 title: "Words of Radiance"
-author: "brandon-sanderson"
+authors:
+  - "brandon-sanderson"
 date: "2018-10-05"
 amazonURL: ""
 image: "words-of-radiance.jpg"

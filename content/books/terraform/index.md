@@ -1,6 +1,7 @@
 ---
 title: "Terraform"
-author: "yevgeniy-brikman"
+authors:
+  - "yevgeniy-brikman"
 date: "2019-04-18"
 amazonURL: ""
 image: "terraform.jpg"

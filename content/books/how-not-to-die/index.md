@@ -1,6 +1,7 @@
 ---
 title: "How Not to Die"
-author: "michael-greger"
+authors:
+  - "michael-greger"
 date: "2016-05-20"
 amazonURL: ""
 image: "how-not-to-die.jpg"

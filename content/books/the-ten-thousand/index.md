@@ -1,6 +1,7 @@
 ---
 title: "The Ten Thousand"
-author: "michael-curtis-ford"
+authors:
+  - "michael-curtis-ford"
 date: "2022-07-08"
 amazonURL: ""
 image: "the-ten-thousand.jpg"

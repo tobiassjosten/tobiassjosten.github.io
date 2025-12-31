@@ -1,6 +1,7 @@
 ---
 title: "The Engineering Executive's Primer"
-author: "will-larson"
+authors:
+  - "will-larson"
 date: "2024-07-10"
 amazonURL: ""
 image: "the-engineering-executives-primer.jpg"

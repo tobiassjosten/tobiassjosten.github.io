@@ -1,6 +1,7 @@
 ---
 title: "Sorceress of Darshiva"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1996-01-01"
 amazonURL: ""
 image: "sorceress-of-darshiva.jpg"

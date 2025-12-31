@@ -1,6 +1,7 @@
 ---
 title: "Refactoring"
-author: "martin-fowler"
+authors:
+  - "martin-fowler"
 date: "2024-06-11"
 amazonURL: ""
 image: "refactoring.jpg"

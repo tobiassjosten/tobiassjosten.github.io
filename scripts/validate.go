@@ -10,30 +10,11 @@ import (
 	"strings"
 )
 
-// Valid categories hardcoded for self-containment
-var validCategories = []string{
-	"Biography",
-	"Business",
-	"Dystopia",
-	"History",
-	"Horror",
-	"Leadership",
-	"Marketing",
-	"Philosophy",
-	"Politics",
-	"Productivity",
-	"Psychology",
-	"Science-fiction",
-	"Tech",
-}
-
 // Allowed frontmatter properties
 var allowedProperties = map[string]bool{
 	"title":              true,
-	"subtitle":           true,
-	"author":             true,
+	"authors":            true,
 	"date":               true,
-	"category":           true,
 	"amazonURL":          true,
 	"image":              true,
 	"relatedBooks":       true,
@@ -48,10 +29,8 @@ type BookMetadata struct {
 	Slug               string
 	AllProperties      map[string]string // raw properties from frontmatter
 	Title              string
-	Subtitle           string
-	Author             string
+	Authors            []string
 	Date               string
-	Category           string
 	AmazonURL          string
 	Image              string
 	RelatedBooksRaw    string // raw value to detect bracket syntax
@@ -110,8 +89,10 @@ func parseFrontMatter(content string) (map[string]string, error) {
 		// Check if this is a continuation of a multiline value
 		if inMultilineValue {
 			if strings.HasPrefix(trimmed, "-") {
-				// Part of array
-				multilineValue = append(multilineValue, strings.TrimSpace(strings.TrimPrefix(trimmed, "-")))
+				// Part of array - remove prefix, trim whitespace and quotes
+				item := strings.TrimSpace(strings.TrimPrefix(trimmed, "-"))
+				item = strings.Trim(item, "\"")
+				multilineValue = append(multilineValue, item)
 			} else if strings.Contains(trimmed, ":") {
 				// New key, save previous multiline value
 				fm[currentKey] = strings.Join(multilineValue, ",")
@@ -130,14 +111,14 @@ func parseFrontMatter(content string) (map[string]string, error) {
 			if strings.HasPrefix(value, "[") && strings.HasSuffix(value, "]") {
 				// Inline array like [a, b, c] - store as-is to detect bracket syntax
 				fm[key] = value
-			} else if value == "" || value == "null" {
-				// Empty value or null
-				fm[key] = value
 			} else if value == "" {
-				// Start of multiline value (like relatedBooks:)
+				// Start of multiline value (like authors:, relatedBooks:)
 				currentKey = key
 				inMultilineValue = true
 				multilineValue = []string{}
+			} else if value == "null" {
+				// Null value
+				fm[key] = value
 			} else {
 				// Regular key-value
 				fm[key] = strings.Trim(value, "\"")
@@ -172,13 +153,21 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		Slug:          slug,
 		AllProperties: fm,
 		Title:         fm["title"],
-		Subtitle:      fm["subtitle"],
-		Author:        fm["author"],
 		Date:          fm["date"],
-		Category:      fm["category"],
 		AmazonURL:     fm["amazonURL"],
 		Image:         fm["image"],
 		Rating:        fm["rating"],
+	}
+
+	// Parse authors array
+	if authorsRaw, exists := fm["authors"]; exists && authorsRaw != "" {
+		// Multiline format - split by comma
+		for _, a := range strings.Split(authorsRaw, ",") {
+			a = strings.TrimSpace(a)
+			if a != "" {
+				book.Authors = append(book.Authors, a)
+			}
+		}
 	}
 
 	// Parse relatedBooks
@@ -285,36 +274,19 @@ func validateAllowedProperties(ctx *ValidationContext) {
 	}
 }
 
-// validateCategories checks that categories are valid
-func validateCategories(ctx *ValidationContext) {
-	validCategoryMap := make(map[string]bool)
-	for _, cat := range validCategories {
-		validCategoryMap[cat] = true
-	}
-
-	for _, book := range ctx.Books {
-		if book.Category == "" {
-			ctx.addError(book, "MISSING_CATEGORY", "Missing required 'category' field")
-			continue
-		}
-		if !validCategoryMap[book.Category] {
-			ctx.addError(book, "INVALID_CATEGORY",
-				fmt.Sprintf("Invalid category '%s'. Valid categories: %s",
-					book.Category, strings.Join(validCategories, ", ")))
-		}
-	}
-}
-
 // validateAuthors checks that authors exist
 func validateAuthors(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
-		if book.Author == "" {
-			ctx.addError(book, "MISSING_AUTHOR", "Missing required 'author' field")
+		if len(book.Authors) == 0 {
+			ctx.addError(book, "MISSING_AUTHOR", "Missing required 'author' or 'authors' field")
 			continue
 		}
-		if !ctx.Authors[book.Author] {
-			ctx.addError(book, "INVALID_AUTHOR",
-				fmt.Sprintf("Author '%s' does not exist in content/authors/", book.Author))
+
+		for _, authorSlug := range book.Authors {
+			if !ctx.Authors[authorSlug] {
+				ctx.addError(book, "INVALID_AUTHOR",
+					fmt.Sprintf("Author '%s' does not exist in content/authors/", authorSlug))
+			}
 		}
 	}
 }
@@ -490,8 +462,8 @@ func validateUnusedAuthors(ctx *ValidationContext) {
 	referencedAuthors := make(map[string]bool)
 
 	for _, book := range ctx.Books {
-		if book.Author != "" {
-			referencedAuthors[book.Author] = true
+		for _, authorSlug := range book.Authors {
+			referencedAuthors[authorSlug] = true
 		}
 	}
 
@@ -511,7 +483,6 @@ func validateUnusedAuthors(ctx *ValidationContext) {
 // validateBookMeta runs all validations
 func validateBookMeta(ctx *ValidationContext) {
 	validateAllowedProperties(ctx)
-	validateCategories(ctx)
 	validateAuthors(ctx)
 	validateUnusedAuthors(ctx)
 	validateUniqueTitles(ctx)

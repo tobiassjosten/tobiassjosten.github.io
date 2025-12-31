@@ -1,6 +1,7 @@
 ---
 title: "Can You Go?"
-author: "dan-john"
+authors:
+  - "dan-john"
 date: "2018-08-11"
 amazonURL: ""
 image: "can-you-go.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Guardians of the West"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1995-01-02"
 amazonURL: ""
 image: "guardians-of-the-west.jpg"

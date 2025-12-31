@@ -1,6 +1,9 @@
 ---
 title: "Accelerate"
-author: "nicole-forsgren"
+authors:
+  - "nicole-forsgren"
+  - "jez-humble"
+  - "gene-kim"
 date: "2021-12-01"
 amazonURL: ""
 image: "accelerate.jpg"

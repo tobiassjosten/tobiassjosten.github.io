@@ -1,6 +1,7 @@
 ---
 title: "Second Foundation"
-author: "isaac-asimov"
+authors:
+  - "isaac-asimov"
 date: "2010-01-03"
 amazonURL: ""
 image: "second-foundation.jpg"

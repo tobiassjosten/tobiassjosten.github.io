@@ -1,6 +1,7 @@
 ---
 title: "The Tipping Point"
-author: "malcolm-gladwell"
+authors:
+  - "malcolm-gladwell"
 date: "2015-11-09"
 amazonURL: ""
 image: "the-tipping-point.jpg"

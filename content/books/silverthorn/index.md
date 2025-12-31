@@ -1,6 +1,7 @@
 ---
 title: "Silverthorn"
-author: "raymond-e-feist"
+authors:
+  - "raymond-e-feist"
 date: "2007-01-01"
 amazonURL: ""
 image: "silverthorn.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "The Way of Kings"
-author: "brandon-sanderson"
+authors:
+  - "brandon-sanderson"
 date: "2018-03-19"
 amazonURL: ""
 image: "the-way-of-kings.jpg"

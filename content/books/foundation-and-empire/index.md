@@ -1,6 +1,7 @@
 ---
 title: "Foundation and Empire"
-author: "isaac-asimov"
+authors:
+  - "isaac-asimov"
 date: "2010-01-02"
 amazonURL: ""
 image: "foundation-and-empire.jpg"

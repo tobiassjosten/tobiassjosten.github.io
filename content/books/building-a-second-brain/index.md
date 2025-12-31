@@ -1,6 +1,7 @@
 ---
 title: "Building a Second Brain"
-author: "tiago-forte"
+authors:
+  - "tiago-forte"
 date: "2024-06-16"
 amazonURL: ""
 image: "building-a-second-brain.jpg"

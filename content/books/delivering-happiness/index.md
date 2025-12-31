@@ -1,6 +1,7 @@
 ---
 title: "Delivering Happiness"
-author: "tony-hsieh"
+authors:
+  - "tony-hsieh"
 date: "2013-01-01"
 amazonURL: ""
 image: "delivering-happiness.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Bushido"
-author: "inazo-nitobe"
+authors:
+  - "inazo-nitobe"
 date: "2023-02-18"
 amazonURL: ""
 image: "bushido.jpg"

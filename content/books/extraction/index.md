@@ -1,6 +1,7 @@
 ---
 title: "Extraction"
-author: "bruno-miller"
+authors:
+  - "bruno-miller"
 date: "2018-11-05"
 amazonURL: ""
 image: "extraction.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Hardwired"
-author: "walter-jon-williams"
+authors:
+  - "walter-jon-williams"
 date: "2020-12-28"
 amazonURL: ""
 image: "hardwired.jpg"

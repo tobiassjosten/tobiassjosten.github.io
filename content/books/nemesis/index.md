@@ -1,6 +1,7 @@
 ---
 title: "Nemesis"
-author: "james-swallow"
+authors:
+  - "james-swallow"
 date: "2022-02-19"
 amazonURL: ""
 image: "nemesis.jpg"

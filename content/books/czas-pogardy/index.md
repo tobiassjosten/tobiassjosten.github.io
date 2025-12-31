@@ -1,6 +1,7 @@
 ---
 title: "Czas pogardy"
-author: "andrzej-sapkowski"
+authors:
+  - "andrzej-sapkowski"
 date: "2019-08-21"
 amazonURL: ""
 image: "czas-pogardy.jpg"

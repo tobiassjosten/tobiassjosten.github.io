@@ -1,6 +1,7 @@
 ---
 title: "Carmilla"
-author: "j-sheridan-le-fanu"
+authors:
+  - "j-sheridan-le-fanu"
 date: "2024-02-23"
 amazonURL: ""
 image: "carmilla.jpg"

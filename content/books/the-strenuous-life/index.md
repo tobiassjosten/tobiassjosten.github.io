@@ -1,6 +1,7 @@
 ---
 title: "The Strenuous Life"
-author: "theodore-roosevelt"
+authors:
+  - "theodore-roosevelt"
 date: "2018-05-21"
 amazonURL: ""
 image: "the-strenuous-life.jpg"

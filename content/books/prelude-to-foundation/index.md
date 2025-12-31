@@ -1,6 +1,7 @@
 ---
 title: "Prelude to Foundation"
-author: "isaac-asimov"
+authors:
+  - "isaac-asimov"
 date: "2010-01-04"
 amazonURL: ""
 image: "prelude-to-foundation.jpg"

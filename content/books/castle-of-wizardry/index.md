@@ -1,6 +1,7 @@
 ---
 title: "Castle of Wizardry"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1995-01-04"
 amazonURL: ""
 image: "castle-of-wizardry.jpg"

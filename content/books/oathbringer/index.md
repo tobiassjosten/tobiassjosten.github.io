@@ -1,6 +1,7 @@
 ---
 title: "Oathbringer"
-author: "brandon-sanderson"
+authors:
+  - "brandon-sanderson"
 date: "2019-06-15"
 amazonURL: ""
 image: "oathbringer.jpg"

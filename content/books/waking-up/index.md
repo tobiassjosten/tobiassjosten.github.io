@@ -1,6 +1,7 @@
 ---
 title: "Waking Up"
-author: "sam-harris"
+authors:
+  - "sam-harris"
 date: "2017-06-05"
 amazonURL: ""
 image: "waking-up.jpg"

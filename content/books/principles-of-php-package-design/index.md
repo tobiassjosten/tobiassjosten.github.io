@@ -1,6 +1,7 @@
 ---
 title: "Principles of PHP Package Design"
-author: "matthias-noback"
+authors:
+  - "matthias-noback"
 date: "2014-08-13"
 amazonURL: ""
 image: "principles-of-php-package-design.jpg"

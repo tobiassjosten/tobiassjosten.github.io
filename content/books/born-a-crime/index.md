@@ -1,6 +1,7 @@
 ---
 title: "Born a Crime"
-author: "trevor-noah"
+authors:
+  - "trevor-noah"
 date: "2023-07-18"
 amazonURL: ""
 image: "born-a-crime.jpg"

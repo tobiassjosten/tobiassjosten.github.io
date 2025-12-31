@@ -1,6 +1,7 @@
 ---
 title: "Skitmat"
-author: "jacob-gudiol"
+authors:
+  - "jacob-gudiol"
 date: "2020-02-17"
 amazonURL: ""
 image: "skitmat.jpg"

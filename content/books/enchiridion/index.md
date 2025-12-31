@@ -1,6 +1,7 @@
 ---
 title: "Enchiridion"
-author: "epictetus"
+authors:
+  - "epictetus"
 date: "2016-12-26"
 amazonURL: ""
 image: "enchiridion.jpg"

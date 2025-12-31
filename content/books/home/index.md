@@ -1,6 +1,7 @@
 ---
 title: "Home"
-author: "martha-wells"
+authors:
+  - "martha-wells"
 date: "2021-05-17"
 amazonURL: ""
 image: "home.jpg"

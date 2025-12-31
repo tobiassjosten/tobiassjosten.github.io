@@ -1,6 +1,7 @@
 ---
 title: "Outcomes Over Output"
-author: "josh-seiden"
+authors:
+  - "josh-seiden"
 date: "2020-05-04"
 amazonURL: ""
 image: "outcomes-over-output.jpg"

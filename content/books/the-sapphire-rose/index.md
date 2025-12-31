@@ -1,6 +1,7 @@
 ---
 title: "The Sapphire Rose"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1997-01-02"
 amazonURL: ""
 image: "the-sapphire-rose.jpg"

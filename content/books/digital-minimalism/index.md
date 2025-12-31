@@ -1,6 +1,7 @@
 ---
 title: "Digital Minimalism"
-author: "cal-newport"
+authors:
+  - "cal-newport"
 date: "2019-09-08"
 amazonURL: ""
 image: "digital-minimalism.jpg"

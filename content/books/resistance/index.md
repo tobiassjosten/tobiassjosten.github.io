@@ -1,6 +1,7 @@
 ---
 title: "Resistance"
-author: "bruno-miller"
+authors:
+  - "bruno-miller"
 date: "2018-10-29"
 amazonURL: ""
 image: "resistance.jpg"

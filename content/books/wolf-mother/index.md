@@ -1,6 +1,7 @@
 ---
 title: "Wolf Mother"
-author: "graham-mcneill"
+authors:
+  - "graham-mcneill"
 date: "2022-05-16"
 amazonURL: ""
 image: "wolf-mother.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Escaping the Build Trap"
-author: "melissa-perri"
+authors:
+  - "melissa-perri"
 date: "2024-08-03"
 amazonURL: ""
 image: "escaping-the-build-trap.jpg"

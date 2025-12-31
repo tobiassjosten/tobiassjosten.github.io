@@ -1,6 +1,7 @@
 ---
 title: "The Problems of Philosophy"
-author: "bertrand-russell"
+authors:
+  - "bertrand-russell"
 date: "2016-03-06"
 amazonURL: ""
 image: "the-problems-of-philosophy.jpg"

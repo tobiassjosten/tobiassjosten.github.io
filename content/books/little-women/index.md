@@ -1,6 +1,7 @@
 ---
 title: "Little Women"
-author: "louisa-may-alcott"
+authors:
+  - "louisa-may-alcott"
 date: "2021-02-17"
 amazonURL: ""
 image: "little-women.jpg"

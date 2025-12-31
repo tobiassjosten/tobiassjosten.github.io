@@ -1,6 +1,7 @@
 ---
 title: "Algorithms to Live By"
-author: "brian-christian"
+authors:
+  - "brian-christian"
 date: "2017-06-05"
 amazonURL: ""
 image: "algorithms-to-live-by.jpg"

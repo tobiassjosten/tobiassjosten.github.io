@@ -1,6 +1,8 @@
 ---
 title: "The Pragmatic Programmer"
-author: "andy-hunt"
+authors:
+  - "andy-hunt"
+  - "david-thomas"
 date: "2011-07-20"
 amazonURL: ""
 image: "the-pragmatic-programmer.jpg"

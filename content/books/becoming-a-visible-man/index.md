@@ -1,6 +1,7 @@
 ---
 title: "Becoming a Visible Man"
-author: "jamison-green"
+authors:
+  - "jamison-green"
 date: "2024-08-06"
 amazonURL: ""
 image: "becoming-a-visible-man.jpg"

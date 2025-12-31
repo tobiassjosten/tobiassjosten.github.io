@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes"
-author: "kelsey-hightower"
+authors:
+  - "kelsey-hightower"
 date: "2019-04-30"
 amazonURL: ""
 image: "kubernetes.jpg"

@@ -14,15 +14,33 @@
     <div class="book-cover placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">
         <div>
             <div class="placeholder-title fw-bold mb-2">{{ .Title }}</div>
-            {{ $authorSlug := .Params.author }}
-            {{ $authorName := $authorSlug }}
-            {{ if $authorSlug }}
-                {{ range where .Site.Pages "Section" "authors" }}
-                    {{ if and .File (eq (path.Base .File.Dir) $authorSlug) }}
-                        {{ $authorName = .Title }}
+            {{/* Support both author (string) and authors (array) */}}
+            {{ $bookAuthors := slice }}
+            {{ if .Params.authors }}
+                {{ $bookAuthors = .Params.authors }}
+            {{ else if .Params.author }}
+                {{ $bookAuthors = slice .Params.author }}
+            {{ end }}
+            {{ if gt (len $bookAuthors) 0 }}
+                {{ $authorNames := slice }}
+                {{ range $authorSlug := $bookAuthors }}
+                    {{ $authorName := $authorSlug }}
+                    {{ range where $.book.Site.Pages "Section" "authors" }}
+                        {{ if and .File (eq (path.Base .File.Dir) $authorSlug) }}
+                            {{ $authorName = .Title }}
+                        {{ end }}
                     {{ end }}
+                    {{ $authorNames = $authorNames | append $authorName }}
                 {{ end }}
-                <div class="placeholder-author small">{{ $authorName }}</div>
+                {{/* Format as: "Author1, Author2 and Author3" */}}
+                <div class="placeholder-author small">
+                    {{ range $i, $name := $authorNames }}
+                        {{ if gt $i 0 }}
+                            {{ if eq $i (sub (len $authorNames) 1) }} and {{ else }}, {{ end }}
+                        {{ end }}
+                        {{ $name }}
+                    {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>

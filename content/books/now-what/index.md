@@ -1,6 +1,7 @@
 ---
 title: "Now What?"
-author: "dan-john"
+authors:
+  - "dan-john"
 date: "2018-09-04"
 amazonURL: ""
 image: "now-what.jpg"

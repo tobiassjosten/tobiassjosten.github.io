@@ -1,6 +1,7 @@
 ---
 title: "The Iliad"
-author: "homer"
+authors:
+  - "homer"
 date: "2023-08-20"
 amazonURL: ""
 image: "the-iliad.jpg"

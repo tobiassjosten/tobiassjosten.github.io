@@ -1,6 +1,7 @@
 ---
 title: "Show Your Work!"
-author: "austin-kleon"
+authors:
+  - "austin-kleon"
 date: "2021-02-26"
 amazonURL: ""
 image: "show-your-work.jpg"

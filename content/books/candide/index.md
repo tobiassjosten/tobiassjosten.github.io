@@ -1,6 +1,7 @@
 ---
 title: "Candide"
-author: "voltaire"
+authors:
+  - "voltaire"
 date: "2000-01-01"
 amazonURL: ""
 image: "candide.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Neuromancer"
-author: "william-gibson"
+authors:
+  - "william-gibson"
 date: "2009-01-01"
 amazonURL: ""
 image: "neuromancer.jpg"

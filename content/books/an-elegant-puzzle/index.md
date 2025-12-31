@@ -1,6 +1,7 @@
 ---
 title: "An Elegant Puzzle"
-author: "will-larson"
+authors:
+  - "will-larson"
 date: "2022-08-23"
 amazonURL: ""
 image: "an-elegant-puzzle.jpg"

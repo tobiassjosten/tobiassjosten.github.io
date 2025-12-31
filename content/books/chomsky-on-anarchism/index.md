@@ -1,6 +1,7 @@
 ---
 title: "Chomsky On Anarchism"
-author: "noam-chomsky"
+authors:
+  - "noam-chomsky"
 date: "2016-11-17"
 amazonURL: ""
 image: "chomsky-on-anarchism.jpg"

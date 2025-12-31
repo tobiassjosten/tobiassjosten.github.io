@@ -1,6 +1,7 @@
 ---
 title: "All Systems Red"
-author: "martha-wells"
+authors:
+  - "martha-wells"
 date: "2019-04-04"
 amazonURL: ""
 image: "all-systems-red.jpg"

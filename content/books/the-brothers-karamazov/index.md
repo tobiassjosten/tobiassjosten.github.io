@@ -1,6 +1,7 @@
 ---
 title: "The Brothers Karamazov"
-author: "fyodor-dostoevsky"
+authors:
+  - "fyodor-dostoevsky"
 date: "2025-03-31"
 amazonURL: ""
 image: "the-brothers-karamazov.jpg"

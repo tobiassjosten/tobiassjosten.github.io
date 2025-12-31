@@ -1,6 +1,7 @@
 ---
 title: "Freakonomics"
-author: "steven-d-levitt"
+authors:
+  - "steven-d-levitt"
 date: "2013-01-01"
 amazonURL: ""
 image: "freakonomics.jpg"

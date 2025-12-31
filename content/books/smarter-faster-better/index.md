@@ -1,6 +1,7 @@
 ---
 title: "Smarter Faster Better"
-author: "charles-duhigg"
+authors:
+  - "charles-duhigg"
 date: "2016-08-24"
 amazonURL: ""
 image: "smarter-faster-better.jpg"

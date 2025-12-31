@@ -1,6 +1,7 @@
 ---
 title: "SuperFreakonomics"
-author: "steven-d-levitt"
+authors:
+  - "steven-d-levitt"
 date: "2010-01-01"
 amazonURL: ""
 image: "superfreakonomics.jpg"

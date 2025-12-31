@@ -1,6 +1,7 @@
 ---
 title: "Leonardo da Vinci"
-author: "walter-isaacson"
+authors:
+  - "walter-isaacson"
 date: "2023-12-04"
 amazonURL: ""
 image: "leonardo-da-vinci.jpg"

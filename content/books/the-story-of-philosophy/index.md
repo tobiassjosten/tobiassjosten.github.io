@@ -1,6 +1,7 @@
 ---
 title: "The Story of Philosophy"
-author: "will-durant"
+authors:
+  - "will-durant"
 date: ""
 amazonURL: ""
 image: "the-story-of-philosophy.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "The Greyskull LP"
-author: "john-sheaffer"
+authors:
+  - "john-sheaffer"
 date: "2018-08-03"
 amazonURL: ""
 image: "the-greyskull-lp.jpg"

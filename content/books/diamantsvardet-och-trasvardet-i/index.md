@@ -1,6 +1,7 @@
 ---
 title: "Diamantsvärdet och träsvärdet I"
-author: "nick-perumov"
+authors:
+  - "nick-perumov"
 date: "1999-01-01"
 amazonURL: ""
 image: "diamantsvardet-och-trasvardet-i.jpg"

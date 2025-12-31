@@ -1,6 +1,9 @@
 ---
 title: "PHP In Action"
-author: "dagfinn-reiersol"
+authors:
+  - "dagfinn-reiersol"
+  - "marcus-baker"
+  - "chris-shiflett"
 date: "2013-06-01"
 amazonURL: "http://amzn.to/NBbGGr"
 image: "php-in-action.jpg"

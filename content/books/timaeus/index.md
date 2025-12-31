@@ -1,6 +1,7 @@
 ---
 title: "Timaeus"
-author: "plato"
+authors:
+  - "plato"
 date: "2025-08-15"
 amazonURL: ""
 image: "timaeus.jpg"

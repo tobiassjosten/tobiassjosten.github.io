@@ -1,6 +1,7 @@
 ---
 title: "Meditations"
-author: "marcus-aurelius"
+authors:
+  - "marcus-aurelius"
 date: "2018-12-29"
 amazonURL: ""
 image: "meditations.jpg"

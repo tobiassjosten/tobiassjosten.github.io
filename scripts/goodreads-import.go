@@ -44,7 +44,15 @@ func stripSubtitle(title string) string {
 		}
 	}
 
+	if idx := strings.Index(title, " - "); idx != -1 {
+		return strings.TrimSpace(title[:idx])
+	}
+
 	if idx := strings.Index(title, "–"); idx != -1 {
+		return strings.TrimSpace(title[:idx])
+	}
+
+	if idx := strings.Index(title, "—"); idx != -1 {
 		return strings.TrimSpace(title[:idx])
 	}
 
@@ -88,10 +96,6 @@ func loadExistingAuthors() (map[string]bool, error) {
 }
 
 func readGoodreadsCSV(filename string) ([]GoodreadsBook, error) {
-	excluded := map[string]struct{}{
-		"42421971": {},
-	}
-
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, fmt.Errorf("opening CSV file: %w", err)
@@ -144,6 +148,30 @@ func readGoodreadsCSV(filename string) ([]GoodreadsBook, error) {
 	}
 
 	return books, nil
+}
+
+func parseAuthors(authorString string) []string {
+	var authors []string
+
+	// Try different separators for co-authors
+	separators := []string{" & ", " and ", ", "}
+
+	remaining := authorString
+	for _, sep := range separators {
+		if strings.Contains(remaining, sep) {
+			parts := strings.Split(remaining, sep)
+			for _, part := range parts {
+				part = strings.TrimSpace(part)
+				if part != "" {
+					authors = append(authors, part)
+				}
+			}
+			return authors
+		}
+	}
+
+	// Single author
+	return []string{strings.TrimSpace(authorString)}
 }
 
 func createAuthor(authorName string) error {
@@ -220,7 +248,13 @@ func downloadCover(book GoodreadsBook) error {
 
 func createBook(book GoodreadsBook) error {
 	bookSlug := slug.Make(book.Title)
-	authorSlug := slug.Make(book.Author)
+
+	// Parse multiple authors from author string
+	authorNames := parseAuthors(book.Author)
+	var authorSlugs []string
+	for _, name := range authorNames {
+		authorSlugs = append(authorSlugs, slug.Make(name))
+	}
 
 	bookDir := filepath.Join("content/books", bookSlug)
 
@@ -234,7 +268,13 @@ func createBook(book GoodreadsBook) error {
 	var frontmatter strings.Builder
 	frontmatter.WriteString("---\n")
 	frontmatter.WriteString(fmt.Sprintf("title: \"%s\"\n", mainTitle))
-	frontmatter.WriteString(fmt.Sprintf("author: \"%s\"\n", authorSlug))
+
+	// Write authors as multiline YAML array
+	frontmatter.WriteString("authors:\n")
+	for _, authorSlug := range authorSlugs {
+		frontmatter.WriteString(fmt.Sprintf("  - \"%s\"\n", authorSlug))
+	}
+
 	frontmatter.WriteString(fmt.Sprintf("date: \"%s\"\n", dateFormatted))
 	frontmatter.WriteString("amazonURL: \"\"\n")
 	frontmatter.WriteString(fmt.Sprintf("image: \"%s.jpg\"\n", bookSlug))
@@ -291,7 +331,13 @@ func main() {
 
 	for i, book := range books {
 		bookSlug := slug.Make(book.Title)
-		authorSlug := slug.Make(book.Author)
+
+		// Parse multiple authors
+		authorNames := parseAuthors(book.Author)
+		var authorSlugs []string
+		for _, name := range authorNames {
+			authorSlugs = append(authorSlugs, slug.Make(name))
+		}
 
 		if existingBooks[bookSlug] {
 			skipped++
@@ -300,18 +346,30 @@ func main() {
 
 		fmt.Printf("[%d/%d] Importing: %s\n", i+1, len(books), book.Title)
 		fmt.Printf("  Slug: %s\n", bookSlug)
-		fmt.Printf("  Author: %s (%s)\n", book.Author, authorSlug)
+		if len(authorNames) == 1 {
+			fmt.Printf("  Author: %s (%s)\n", authorNames[0], authorSlugs[0])
+		} else {
+			fmt.Printf("  Authors: %s (%s)\n", strings.Join(authorNames, ", "), strings.Join(authorSlugs, ", "))
+		}
 
-		if !existingAuthors[authorSlug] {
-			if err := createAuthor(book.Author); err != nil {
-				fmt.Printf("  ✗ Failed to create author: %v\n", err)
-				continue
+		// Create all authors for this book
+		bookAuthorsCreated := 0
+		for j, authorName := range authorNames {
+			authorSlug := authorSlugs[j]
+			if !existingAuthors[authorSlug] {
+				if err := createAuthor(authorName); err != nil {
+					fmt.Printf("  ✗ Failed to create author %s: %v\n", authorName, err)
+					continue
+				}
+
+				existingAuthors[authorSlug] = true
+				bookAuthorsCreated++
+
+				fmt.Printf("  ✓ Created author: %s\n", authorSlug)
 			}
-
-			existingAuthors[authorSlug] = true
-			authorsCreated++
-
-			fmt.Printf("  ✓ Created author: %s\n", authorSlug)
+		}
+		if bookAuthorsCreated > 0 {
+			authorsCreated += bookAuthorsCreated
 		}
 
 		if err := createBook(book); err != nil {

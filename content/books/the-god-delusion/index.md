@@ -1,6 +1,7 @@
 ---
 title: "The God Delusion"
-author: "richard-dawkins"
+authors:
+  - "richard-dawkins"
 date: "2007-01-01"
 amazonURL: ""
 image: "the-god-delusion.jpg"

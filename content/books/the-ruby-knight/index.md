@@ -1,6 +1,7 @@
 ---
 title: "The Ruby Knight"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1997-01-01"
 amazonURL: ""
 image: "the-ruby-knight.jpg"

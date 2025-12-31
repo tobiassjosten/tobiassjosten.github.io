@@ -1,6 +1,7 @@
 ---
 title: "The Long Earth"
-author: "terry-pratchett"
+authors:
+  - "terry-pratchett"
 date: "2017-10-10"
 amazonURL: ""
 image: "the-long-earth.jpg"

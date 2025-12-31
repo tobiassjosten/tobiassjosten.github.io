@@ -1,6 +1,7 @@
 ---
 title: "Stoicism & Western Buddhism"
-author: "patrick-ussher"
+authors:
+  - "patrick-ussher"
 date: "2018-08-22"
 amazonURL: ""
 image: "stoicism-and-western-buddhism.jpg"

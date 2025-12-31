@@ -1,6 +1,7 @@
 ---
 title: "Snow Crash"
-author: "neal-stephenson"
+authors:
+  - "neal-stephenson"
 date: "2019-12-08"
 amazonURL: ""
 image: "snow-crash.jpg"

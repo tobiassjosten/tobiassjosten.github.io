@@ -1,6 +1,7 @@
 ---
 title: "The Slight Edge"
-author: "jeff-olson"
+authors:
+  - "jeff-olson"
 date: "2017-10-26"
 amazonURL: ""
 image: "the-slight-edge.jpg"

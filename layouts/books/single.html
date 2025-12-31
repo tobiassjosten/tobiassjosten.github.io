@@ -2,23 +2,60 @@
 <article class="post book" itemscope itemtype="http://schema.org/Book">
     {{ partial "book-cover.html" (dict "book" . "amazonLink" true) }}
 
-    {{ with .Params.author }}
-        {{ $authorSlug := . }}
-        {{ $authorPage := $.Site.GetPage (printf "/authors/%s" .) }}
-        {{ if $authorPage }}
-            <p class="book-author">
-                By <a href="{{ $authorPage.Permalink }}">{{ $authorPage.Title }}</a>
-                {{ $otherBooks := where (where $.Site.RegularPages "Type" "books") ".Params.author" $authorSlug }}
-                {{ $otherBooks = where $otherBooks "Permalink" "!=" $.Permalink }}
-                {{ if gt (len $otherBooks) 0 }}
-                    — who also wrote
-                    {{ range $i, $book := $otherBooks }}
-                        {{ if gt $i 0 }}{{ if eq $i (sub (len $otherBooks) 1) }} and {{ else }}, {{ end }}{{ end }}
-                        <a href="{{ $book.Permalink }}">{{ $book.Title }}</a>
+    {{/* Support both author (string) and authors (array) */}}
+    {{ $bookAuthors := slice }}
+    {{ if .Params.authors }}
+        {{ $bookAuthors = .Params.authors }}
+    {{ else if .Params.author }}
+        {{ $bookAuthors = slice .Params.author }}
+    {{ end }}
+
+    {{ if gt (len $bookAuthors) 0 }}
+        <p class="book-author">
+            By
+            {{/* Display all authors with proper grammar */}}
+            {{ range $i, $authorSlug := $bookAuthors }}
+                {{ $authorPage := $.Site.GetPage (printf "/authors/%s" $authorSlug) }}
+                {{ if $authorPage }}
+                    {{ if gt $i 0 }}
+                        {{ if eq $i (sub (len $bookAuthors) 1) }} and {{ else }}, {{ end }}
+                    {{ end }}
+                    <a href="{{ $authorPage.Permalink }}">{{ $authorPage.Title }}</a>
+                {{ end }}
+            {{ end }}
+
+            {{/* Find other books by ANY of these authors (deduplicated) */}}
+            {{ $seenBooks := slice }}
+            {{ $otherBooks := slice }}
+            {{ range $authorSlug := $bookAuthors }}
+                {{ range $book := $.Site.RegularPages }}
+                    {{ if and (eq $book.Type "books") (ne $book.Permalink $.Permalink) }}
+                        {{/* Check if this book has this author in either format */}}
+                        {{ $hasAuthor := false }}
+                        {{ if $book.Params.authors }}
+                            {{ if in $book.Params.authors $authorSlug }}
+                                {{ $hasAuthor = true }}
+                            {{ end }}
+                        {{ else if eq $book.Params.author $authorSlug }}
+                            {{ $hasAuthor = true }}
+                        {{ end }}
+                        {{/* Add to otherBooks if not already seen */}}
+                        {{ if and $hasAuthor (not (in $seenBooks $book.Permalink)) }}
+                            {{ $otherBooks = $otherBooks | append $book }}
+                            {{ $seenBooks = $seenBooks | append $book.Permalink }}
+                        {{ end }}
                     {{ end }}
                 {{ end }}
-            </p>
-        {{ end }}
+            {{ end }}
+
+            {{ if gt (len $otherBooks) 0 }}
+                — who also wrote
+                {{ range $i, $book := $otherBooks }}
+                    {{ if gt $i 0 }}{{ if eq $i (sub (len $otherBooks) 1) }} and {{ else }}, {{ end }}{{ end }}
+                    <a href="{{ $book.Permalink }}">{{ $book.Title }}</a>
+                {{ end }}
+            {{ end }}
+        </p>
     {{ end }}
 
     {{ with .Params.relatedBooks }}

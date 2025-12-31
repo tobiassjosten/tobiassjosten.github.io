@@ -1,6 +1,7 @@
 ---
 title: "Never Split the Difference"
-author: "chris-voss"
+authors:
+  - "chris-voss"
 date: "2025-12-27"
 amazonURL: ""
 image: "never-split-the-difference.jpg"

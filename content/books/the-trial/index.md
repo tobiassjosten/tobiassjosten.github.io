@@ -1,6 +1,7 @@
 ---
 title: "The Trial"
-author: "franz-kafka"
+authors:
+  - "franz-kafka"
 date: "2023-01-03"
 amazonURL: ""
 image: "the-trial.jpg"

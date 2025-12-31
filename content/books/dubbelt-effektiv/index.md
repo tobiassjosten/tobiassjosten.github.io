@@ -1,6 +1,7 @@
 ---
 title: "Dubbelt effektiv"
-author: "martin-skold"
+authors:
+  - "martin-skold"
 date: "2025-07-02"
 amazonURL: ""
 image: "dubbelt-effektiv.jpg"

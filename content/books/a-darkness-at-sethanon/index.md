@@ -1,6 +1,7 @@
 ---
 title: "A Darkness at Sethanon"
-author: "raymond-e-feist"
+authors:
+  - "raymond-e-feist"
 date: "2008-01-01"
 amazonURL: ""
 image: "a-darkness-at-sethanon.jpg"

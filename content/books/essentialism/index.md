@@ -1,6 +1,7 @@
 ---
 title: "Essentialism"
-author: "greg-mckeown"
+authors:
+  - "greg-mckeown"
 date: "2023-01-03"
 amazonURL: ""
 image: "essentialism.jpg"

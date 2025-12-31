@@ -1,6 +1,7 @@
 ---
 title: "Virtual Assistant Solution"
-author: "michael-hyatt"
+authors:
+  - "michael-hyatt"
 date: "2021-01-02"
 amazonURL: ""
 image: "virtual-assistant-solution.jpg"

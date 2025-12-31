@@ -1,6 +1,7 @@
 ---
 title: "Rogue Protocol"
-author: "martha-wells"
+authors:
+  - "martha-wells"
 date: "2020-04-16"
 amazonURL: ""
 image: "rogue-protocol.jpg"

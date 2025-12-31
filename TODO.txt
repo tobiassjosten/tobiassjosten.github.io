@@ -1,5 +1,3 @@
-- Support multiple authors in book and author pages.
-- Support multiple authors in Goodreads import.
 - Add amazonURLs.
 - Add book relations.
 

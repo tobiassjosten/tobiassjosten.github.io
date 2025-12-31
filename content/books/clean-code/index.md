@@ -1,6 +1,7 @@
 ---
 title: "Clean Code"
-author: "robert-c-martin"
+authors:
+  - "robert-c-martin"
 date: "2018-10-03"
 amazonURL: ""
 image: "clean-code.jpg"

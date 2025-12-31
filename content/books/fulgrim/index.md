@@ -1,6 +1,7 @@
 ---
 title: "Fulgrim"
-author: "graham-mcneill"
+authors:
+  - "graham-mcneill"
 date: "2020-10-07"
 amazonURL: ""
 image: "fulgrim.jpg"

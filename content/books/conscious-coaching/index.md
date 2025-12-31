@@ -1,6 +1,7 @@
 ---
 title: "Conscious Coaching"
-author: "brett-bartholomew"
+authors:
+  - "brett-bartholomew"
 date: "2018-02-05"
 amazonURL: ""
 image: "conscious-coaching.jpg"

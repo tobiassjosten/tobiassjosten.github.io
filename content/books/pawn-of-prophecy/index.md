@@ -1,6 +1,7 @@
 ---
 title: "Pawn of Prophecy"
-author: "david-eddings"
+authors:
+  - "david-eddings"
 date: "1994-01-01"
 amazonURL: ""
 image: "pawn-of-prophecy.jpg"

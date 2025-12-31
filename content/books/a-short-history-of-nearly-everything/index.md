@@ -1,6 +1,7 @@
 ---
 title: "A Short History of Nearly Everything"
-author: "bill-bryson"
+authors:
+  - "bill-bryson"
 date: "2009-01-01"
 amazonURL: ""
 image: "a-short-history-of-nearly-everything.jpg"

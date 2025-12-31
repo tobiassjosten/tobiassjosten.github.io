@@ -1,6 +1,7 @@
 ---
 title: "Sales Funnel Sabotage"
-author: "miles-beckler"
+authors:
+  - "miles-beckler"
 date: "2024-02-02"
 amazonURL: ""
 image: "sales-funnel-sabotage.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Antifragile"
-author: "nassim-nicholas-taleb"
+authors:
+  - "nassim-nicholas-taleb"
 date: "2019-08-13"
 amazonURL: ""
 image: "antifragile.jpg"

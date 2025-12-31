@@ -1,6 +1,7 @@
 ---
 title: "Escape"
-author: "bruno-miller"
+authors:
+  - "bruno-miller"
 date: "2018-10-26"
 amazonURL: ""
 image: "escape.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Conversation Tactics"
-author: "patrick-king"
+authors:
+  - "patrick-king"
 date: "2016-02-25"
 amazonURL: ""
 image: "conversation-tactics.jpg"

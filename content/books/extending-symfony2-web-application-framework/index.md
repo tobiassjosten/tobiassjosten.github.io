@@ -1,6 +1,7 @@
 ---
 title: "Extending Symfony2 Web Application Framework"
-author: "sebastien-armand"
+authors:
+  - "sebastien-armand"
 date: "2014-04-22"
 amazonURL: ""
 image: "extending-symfony2-web-application-framework.jpg"

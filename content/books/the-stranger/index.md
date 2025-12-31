@@ -1,6 +1,7 @@
 ---
 title: "The Stranger"
-author: "albert-camus"
+authors:
+  - "albert-camus"
 date: "2021-11-16"
 amazonURL: ""
 image: "the-stranger.jpg"

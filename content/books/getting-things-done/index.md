@@ -1,6 +1,7 @@
 ---
 title: "Getting Things Done"
-author: "david-allen"
+authors:
+  - "david-allen"
 date: "2023-06-04"
 amazonURL: ""
 image: "getting-things-done.jpg"

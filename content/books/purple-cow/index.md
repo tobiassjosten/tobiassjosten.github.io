@@ -1,6 +1,7 @@
 ---
 title: "Purple Cow"
-author: "seth-godin"
+authors:
+  - "seth-godin"
 date: "2017-11-13"
 amazonURL: ""
 image: "purple-cow.jpg"

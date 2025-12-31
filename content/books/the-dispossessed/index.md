@@ -1,6 +1,7 @@
 ---
 title: "The Dispossessed"
-author: "ursula-k-le-guin"
+authors:
+  - "ursula-k-le-guin"
 date: "2022-12-13"
 amazonURL: ""
 image: "the-dispossessed.jpg"

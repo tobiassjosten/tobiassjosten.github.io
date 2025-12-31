@@ -1,6 +1,7 @@
 ---
 title: "Fallen Angels"
-author: "mike-lee"
+authors:
+  - "mike-lee"
 date: "2021-07-13"
 amazonURL: ""
 image: "fallen-angels.jpg"

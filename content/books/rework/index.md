@@ -1,6 +1,7 @@
 ---
 title: "Rework"
-author: "jason-fried"
+authors:
+  - "jason-fried"
 date: "2010-01-01"
 amazonURL: ""
 image: "rework.jpg"

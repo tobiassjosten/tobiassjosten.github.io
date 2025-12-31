@@ -1,6 +1,7 @@
 ---
 title: "Wind and Truth"
-author: "brandon-sanderson"
+authors:
+  - "brandon-sanderson"
 date: "2025-11-06"
 amazonURL: ""
 image: "wind-and-truth.jpg"

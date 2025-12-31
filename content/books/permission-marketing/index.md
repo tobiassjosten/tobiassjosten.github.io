@@ -1,6 +1,7 @@
 ---
 title: "Permission Marketing"
-author: "seth-godin"
+authors:
+  - "seth-godin"
 date: "2016-02-23"
 amazonURL: ""
 image: "permission-marketing.jpg"

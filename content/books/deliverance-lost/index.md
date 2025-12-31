@@ -1,6 +1,7 @@
 ---
 title: "Deliverance Lost"
-author: "gav-thorpe"
+authors:
+  - "gav-thorpe"
 date: "2022-06-11"
 amazonURL: ""
 image: "deliverance-lost.jpg"

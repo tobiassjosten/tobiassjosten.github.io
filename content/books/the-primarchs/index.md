@@ -1,6 +1,7 @@
 ---
 title: "The Primarchs"
-author: "christian-z-dunn"
+authors:
+  - "christian-z-dunn"
 date: "2023-03-30"
 amazonURL: ""
 image: "the-primarchs.jpg"

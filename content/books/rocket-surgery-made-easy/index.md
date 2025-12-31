@@ -1,6 +1,7 @@
 ---
 title: "Rocket Surgery Made Easy"
-author: "steve-krug"
+authors:
+  - "steve-krug"
 date: "2020-05-07"
 amazonURL: ""
 image: "rocket-surgery-made-easy.jpg"

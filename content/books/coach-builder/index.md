@@ -1,6 +1,7 @@
 ---
 title: "Coach Builder"
-author: "donald-miller"
+authors:
+  - "donald-miller"
 date: "2024-04-26"
 amazonURL: ""
 image: "coach-builder.jpg"

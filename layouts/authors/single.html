@@ -5,8 +5,19 @@
     {{ $authorSlug := path.Base .File.Dir }}
     {{ $authorBooks := slice }}
     {{ range .Site.RegularPages }}
-        {{ if and (eq .Type "books") (eq .Params.author $authorSlug) }}
-            {{ $authorBooks = $authorBooks | append . }}
+        {{ if eq .Type "books" }}
+            {{/* Support both author (string) and authors (array) */}}
+            {{ $hasAuthor := false }}
+            {{ if .Params.authors }}
+                {{ if in .Params.authors $authorSlug }}
+                    {{ $hasAuthor = true }}
+                {{ end }}
+            {{ else if eq .Params.author $authorSlug }}
+                {{ $hasAuthor = true }}
+            {{ end }}
+            {{ if $hasAuthor }}
+                {{ $authorBooks = $authorBooks | append . }}
+            {{ end }}
         {{ end }}
     {{ end }}
 

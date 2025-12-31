@@ -1,6 +1,7 @@
 ---
 title: "The Republic"
-author: "plato"
+authors:
+  - "plato"
 date: "2016-10-17"
 amazonURL: ""
 image: "the-republic.jpg"

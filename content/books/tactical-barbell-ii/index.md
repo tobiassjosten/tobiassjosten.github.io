@@ -1,6 +1,7 @@
 ---
 title: "Tactical Barbell II"
-author: "k-black"
+authors:
+  - "k-black"
 date: "2018-06-18"
 amazonURL: ""
 image: "tactical-barbell-ii.jpg"

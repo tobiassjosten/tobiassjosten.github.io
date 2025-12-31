@@ -1,6 +1,7 @@
 ---
 title: "Breakdown"
-author: "bruno-miller"
+authors:
+  - "bruno-miller"
 date: "2018-10-23"
 amazonURL: ""
 image: "breakdown.jpg"
