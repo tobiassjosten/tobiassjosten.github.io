@@ -1,17 +1,8 @@
 ---
 title: "The Lean Startup"
 author: "eric-ries"
-date: "2024-09-01"
-category: "Business"
-amazonURL: "https://amzn.to/4dLqAXh"
+date: "2017-09-02"
+amazonURL: ""
 image: "the-lean-startup.jpg"
-relatedBooks:
-  - the-four-steps-to-the-epiphany
-  - running-lean
-  - obviously-awesome
-  - the-mom-test
-rating: 3
+rating: 4
 ---
-
-
-This is a placeholder. Full book review to follow!

@@ -1,8 +1,6 @@
 {{ define "main" }}
 <article class="post book" itemscope itemtype="http://schema.org/Book">
-    {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
-        <img class="cover" alt="{{ $.Title }}" title="{{ $.Title }}" src="{{ $.Params.image }}" itemprop="image">
-    {{ with .Params.amazonURL }}</a>{{ end }}
+    {{ partial "book-cover.html" (dict "book" . "amazonLink" true) }}
 
     {{ with .Params.author }}
         {{ $authorSlug := . }}

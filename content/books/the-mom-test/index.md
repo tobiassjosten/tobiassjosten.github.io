@@ -1,14 +1,8 @@
 ---
 title: "The Mom Test"
 author: "rob-fitzpatrick"
-date: "2024-08-08"
-category: "Business"
-amazonURL: "https://amzn.to/3A9UaXH"
+date: "2020-09-17"
+amazonURL: ""
 image: "the-mom-test.jpg"
-relatedBooks:
-  - talking-to-humans
-rating: 3
+rating: 4
 ---
-
-
-This is a placeholder. Full book review to follow!

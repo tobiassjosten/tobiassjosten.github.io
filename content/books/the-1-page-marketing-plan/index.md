@@ -1,18 +1,8 @@
 ---
 title: "The 1-Page Marketing Plan"
 author: "allan-dib"
-date: "2024-09-01"
-category: "Marketing"
-amazonURL: "https://amzn.to/4e2Vj1M"
+date: "2024-03-01"
+amazonURL: ""
 image: "the-1-page-marketing-plan.jpg"
-relatedBooks:
-  - building-a-storybrand
-  - permission-marketing
-  - podcast-marketing
-  - newsletter-ninja
-  - 100m-leads
-rating: 3
+rating: 4
 ---
-
-
-This is a placeholder. Full book review to follow!

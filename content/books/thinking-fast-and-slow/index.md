@@ -1,11 +1,8 @@
 ---
 title: "Thinking, Fast and Slow"
 author: "daniel-kahneman"
-date: "2025-04-12"
-category: "Psychology"
-amazonURL: "https://amzn.to/3RLk7Cj"
+date: "2025-05-12"
+amazonURL: ""
 image: "thinking-fast-and-slow.jpg"
-rating: 3
+rating: 5
 ---
-
-This is a placeholder. Full book review to follow!

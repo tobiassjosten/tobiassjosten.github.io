@@ -26,24 +26,10 @@
     {{ range $years }}
         {{ $year := . }}
         {{ $books := index $booksByYear $year }}
+        {{ $sortedBooks := sort $books "Date" "desc" }}
         <section class="reviews-year mb-5">
             <h2 class="h3 mb-4">{{ $year }}</h2>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
-                {{ range $books }}
-                    <div class="col">
-                        <div class="text-center">
-                            <a href="{{ .Permalink }}">
-                                {{ $image := .Resources.GetMatch .Params.image }}
-                                {{ if $image }}
-                                <img class="img-fluid" style="max-height: 200px;"
-                                     alt="{{ .Title }}" title="{{ .Title }}"
-                                     src="{{ $image.RelPermalink }}" itemprop="image">
-                                {{ end }}
-                            </a>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
+            {{ partial "book-grid.html" (dict "books" $sortedBooks) }}
         </section>
     {{ end }}
 

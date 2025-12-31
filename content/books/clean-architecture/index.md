@@ -1,11 +1,9 @@
 ---
 title: "Clean Architecture"
-author: "uncle-bob"
-date: "2025-01-29"
-category: "Tech"
-amazonURL: "https://amzn.to/4hDvSWC"
+author: "robert-c-martin"
+date: "2019-10-26"
+amazonURL: ""
 image: "clean-architecture.jpg"
-rating: 3
+rating: 5
+featuredOnHomepage: true
 ---
-
-This is a placeholder. Full book review to follow!

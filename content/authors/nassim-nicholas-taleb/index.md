@@ -1,0 +1,3 @@
+---
+title: "Nassim Nicholas Taleb"
+---

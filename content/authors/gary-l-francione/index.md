@@ -1,0 +1,3 @@
+---
+title: "Gary L. Francione"
+---

@@ -1,11 +1,8 @@
 ---
-title: "Testing With Humans"
+title: "Testing with Humans"
 author: "giff-constable"
-date: "2024-08-08"
-category: "Business"
-amazonURL: "https://amzn.to/4d8khNi"
+date: "2020-10-24"
+amazonURL: ""
 image: "testing-with-humans.jpg"
-rating: 3
+rating: 2
 ---
-
-This is a placeholder. Full book review to follow!

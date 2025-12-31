@@ -1,0 +1,3 @@
+---
+title: "Friedrich Nietzsche"
+---

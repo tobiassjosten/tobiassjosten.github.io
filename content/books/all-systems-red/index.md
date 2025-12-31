@@ -1,0 +1,8 @@
+---
+title: "All Systems Red"
+author: "martha-wells"
+date: "2019-04-04"
+amazonURL: ""
+image: "all-systems-red.jpg"
+rating: 4
+---

@@ -1,0 +1,3 @@
+---
+title: "Eric S. Raymond"
+---

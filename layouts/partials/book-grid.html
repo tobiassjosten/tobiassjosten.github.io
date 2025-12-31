@@ -1,36 +1,10 @@
-{{- /*
-  Renders a responsive grid of book covers
-
-  Parameters:
-  - books (required): Collection of book pages to display
-  - columns (optional): Column layout - "standard" (default) or "compact"
-                        "standard" = 2-3-4-5 columns
-                        "compact" = 2-3-4 columns (for smaller sections)
-*/ -}}
-
-{{ $books := .books }}
-{{ $columns := .columns | default "standard" }}
-
-{{ if $books }}
-{{ $gridClasses := "row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4" }}
-{{ if eq $columns "compact" }}
-  {{ $gridClasses = "row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4" }}
-{{ end }}
-
-<div class="{{ $gridClasses }}">
-    {{ range $books }}
-    <div class="col">
-        <a href="{{ .Permalink }}">
-            {{ $image := .Resources.GetMatch .Params.image }}
-            {{ if $image }}
-            <img src="{{ $image.RelPermalink }}"
-                 class="img-fluid shadow-sm"
-                 alt="{{ .Title }}"
-                 style="max-height: 200px;"
-                 loading="lazy">
-            {{ end }}
-        </a>
-    </div>
+{{ with .books }}
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
+    {{ range . }}
+        {{ $book := . }}
+        <div class="col">
+            {{ partial "book-cover.html" (dict "book" $book) }}
+        </div>
     {{ end }}
 </div>
 {{ end }}

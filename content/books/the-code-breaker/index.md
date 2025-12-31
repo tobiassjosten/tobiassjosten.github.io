@@ -1,11 +1,8 @@
 ---
 title: "The Code Breaker"
 author: "walter-isaacson"
-date: "2025-01-05"
-category: "History"
-amazonURL: "https://amzn.to/421prry"
+date: "2025-06-13"
+amazonURL: ""
 image: "the-code-breaker.jpg"
-rating: 3
+rating: 4
 ---
-
-This is a placeholder. Full book review to follow!

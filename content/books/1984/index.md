@@ -1,17 +1,8 @@
 ---
 title: "1984"
 author: "george-orwell"
-date: "2024-09-01"
-category: "Dystopia"
-amazonURL: "https://amzn.to/4dLN5LE"
+date: "2021-09-04"
+amazonURL: ""
 image: "1984.jpg"
-relatedBooks:
-  - fahrenheit-451
-  - slaughterhouse-five
-  - lord-of-the-flies
-  - brave-new-world
-rating: 3
+rating: 5
 ---
-
-
-This is a placeholder. Full book review to follow!

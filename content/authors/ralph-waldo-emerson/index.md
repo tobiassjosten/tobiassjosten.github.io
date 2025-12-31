@@ -1,0 +1,3 @@
+---
+title: "Ralph Waldo Emerson"
+---

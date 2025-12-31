@@ -1,18 +1,8 @@
 ---
-title: "Brave New World"
+title: "Brave new World"
 author: "aldous-huxley"
-date: "2024-09-01"
-category: "Dystopia"
-amazonURL: "https://amzn.to/4cNW0v2"
+date: "2022-03-22"
+amazonURL: ""
 image: "brave-new-world.jpg"
-relatedBooks:
-  - 1984
-  - fahrenheit-451
-  - slaughterhouse-five
-  - animal-farm
-  - lord-of-the-flies
-rating: 3
+rating: 4
 ---
-
-
-This is a placeholder. Full book review to follow!

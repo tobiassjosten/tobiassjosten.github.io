@@ -1,11 +1,8 @@
 ---
 title: "Essentialism"
 author: "greg-mckeown"
-date: "2025-01-01"
-category: "Productivity"
-amazonURL: "https://amzn.to/4gVoQfi"
+date: "2023-01-03"
+amazonURL: ""
 image: "essentialism.jpg"
-rating: 3
+rating: 5
 ---
-
-This is a placeholder. Full book review to follow!

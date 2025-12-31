@@ -1,0 +1,3 @@
+---
+title: "Kurt Vonnegut Jr."
+---

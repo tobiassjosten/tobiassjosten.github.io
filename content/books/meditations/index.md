@@ -1,9 +1,8 @@
 ---
 title: "Meditations"
 author: "marcus-aurelius"
-date: "2015-12-10"
-category: "Philosophy"
-amazonURL: "https://amzn.to/4a3OjAU"
+date: "2018-12-29"
+amazonURL: ""
 image: "meditations.jpg"
 rating: 5
 featuredOnHomepage: true

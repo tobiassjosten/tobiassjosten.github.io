@@ -1,15 +1,8 @@
 ---
 title: "The Mythical Man-Month"
-author: "fred-brooks"
-date: "2024-11-02"
-category: "Tech"
-amazonURL: "https://amzn.to/3ApKU22"
+author: "frederick-p-brooks-jr"
+date: "2020-02-11"
+amazonURL: ""
 image: "the-mythical-man-month.jpg"
-relatedBooks:
-  - an-elegant-puzzle
-  - an-elegant-puzzle
-rating: 3
+rating: 4
 ---
-
-
-This is a placeholder. Full book review to follow!

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="author-page">
+    {{ .Content }}
+
+    {{ $authorSlug := path.Base .File.Dir }}
+    {{ $authorBooks := slice }}
+    {{ range .Site.RegularPages }}
+        {{ if and (eq .Type "books") (eq .Params.author $authorSlug) }}
+            {{ $authorBooks = $authorBooks | append . }}
+        {{ end }}
+    {{ end }}
+
+    <section class="author-books">
+        <h2>Books by {{ .Title }}</h2>
+
+        {{ if gt (len $authorBooks) 0 }}
+            {{ partial "book-grid.html" (dict "books" $authorBooks) }}
+        {{ else }}
+            <p>No books found for this author.</p>
+        {{ end }}
+    </section>
+</article>
+{{ end }}

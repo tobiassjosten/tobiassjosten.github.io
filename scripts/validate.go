@@ -352,6 +352,7 @@ func validateUniqueAmazonURLs(ctx *ValidationContext) {
 			ctx.addError(book, "MISSING_AMAZON_URL", "Missing required 'amazonURL' field")
 			continue
 		}
+
 		urlMap[book.AmazonURL] = append(urlMap[book.AmazonURL], book.Slug)
 	}
 
@@ -375,13 +376,19 @@ func validateImageFiles(ctx *ValidationContext) {
 			continue
 		}
 
-		// Image should be in the same directory as index.md
 		bookDir := filepath.Dir(book.Path)
 		imagePath := filepath.Join(bookDir, book.Image)
 
-		if _, err := os.Stat(imagePath); os.IsNotExist(err) {
+		info, err := os.Stat(imagePath)
+		if os.IsNotExist(err) {
 			ctx.addError(book, "MISSING_IMAGE_FILE",
 				fmt.Sprintf("Image file '%s' not found in book directory", book.Image))
+			continue
+		}
+
+		if info.Size() < 100 {
+			ctx.addError(book, "IMAGE_FILE_TOO_SMALL",
+				fmt.Sprintf("Image file '%s' is suspiciously small (%d bytes)", book.Image, info.Size()))
 		}
 	}
 }

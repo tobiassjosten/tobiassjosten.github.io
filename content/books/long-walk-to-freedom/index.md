@@ -1,9 +1,8 @@
 ---
 title: "Long Walk to Freedom"
 author: "nelson-mandela"
-date: null
-category: "Biography"
-amazonURL: "https://amzn.to/3YMG2wt"
+date: ""
+amazonURL: ""
 image: "long-walk-to-freedom.jpg"
 currentlyReading: true
 ---

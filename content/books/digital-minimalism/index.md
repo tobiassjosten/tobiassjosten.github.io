@@ -1,11 +1,8 @@
 ---
 title: "Digital Minimalism"
 author: "cal-newport"
-date: "2025-01-01"
-category: "Productivity"
-amazonURL: "https://amzn.to/40hwCdS"
+date: "2019-09-08"
+amazonURL: ""
 image: "digital-minimalism.jpg"
-rating: 3
+rating: 5
 ---
-
-This is a placeholder. Full book review to follow!

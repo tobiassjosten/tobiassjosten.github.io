@@ -1,9 +1,9 @@
 ---
 title: Book reviews
-summary: I love reading books to educate myself and delve deeper into specific fields that interests me. Here I share my favorite readings.
 ---
-Reading short posts online and applying that yourself is a great way to get started with new technology. But sooner or later you will come to a point where you need something deeper to keep improving your skills.
 
-That is when I sit down to educate myself with a book. I try to do that as often as possible and over the years I have managed quite a few.
+Books are the result of someone knowledgeable and experienced sitting down to summarize and structure their knowledge and experience. As such, I consider it a great blessing to be able to pick the brains of people who have thought long and hard about one specific topic for years and then distilled it into a few hours of reading.
 
-Here I will be gathering the top selection; all recommended books that I think you should consider reading. It is a great way to up your game!
+But reading is not enough! I have realized that I learn the most from books by also "processing" them afterwards. After finishing a book, I go through my many notes and highlights to summarize and synthesize what I've read, in order to absorb it into my own worldview and make sure I truly understand it.
+
+This collection is where I share my processing, in hopes that someone else might learn what I have learned.

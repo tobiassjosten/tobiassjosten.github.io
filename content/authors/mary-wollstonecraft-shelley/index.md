@@ -1,0 +1,3 @@
+---
+title: "Mary Wollstonecraft Shelley"
+---

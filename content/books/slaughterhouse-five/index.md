@@ -1,18 +1,8 @@
 ---
 title: "Slaughterhouse-Five"
-author: "kurt-vonnegut"
-date: "2024-09-01"
-category: "Science-fiction"
-amazonURL: "https://amzn.to/3X3VaEu"
+author: "kurt-vonnegut-jr"
+date: "2024-10-11"
+amazonURL: ""
 image: "slaughterhouse-five.jpg"
-relatedBooks:
-  - 1984
-  - fahrenheit-451
-  - animal-farm
-  - lord-of-the-flies
-  - brave-new-world
-rating: 3
+rating: 2
 ---
-
-
-This is a placeholder. Full book review to follow!

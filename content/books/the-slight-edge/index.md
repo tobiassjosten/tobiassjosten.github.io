@@ -1,11 +1,9 @@
 ---
 title: "The Slight Edge"
 author: "jeff-olson"
-date: "2024-12-30"
-category: "Psychology"
-amazonURL: "https://amzn.to/49Vzxw9"
+date: "2017-10-26"
+amazonURL: ""
 image: "the-slight-edge.jpg"
-rating: 3
+rating: 4
+featuredOnHomepage: true
 ---
-
-This is a placeholder. Full book review to follow!
