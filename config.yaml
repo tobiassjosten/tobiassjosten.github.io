@@ -33,16 +33,16 @@ menu:
     - name: "About"
       url: "/about/"
       weight: 1
-    - name: "Projects"
-      url: "/projects/"
+    - name: "Services"
+      url: "/services/"
       weight: 2
-    - name: "Articles"
-      url: "/articles/"
-      weight: 3
+    - name: "Connect"
+      url: "/connect/"
+      weight: 2
 
   secondary:
-    - name: "Contact"
-      url: "/contact/"
+    - name: "Connect"
+      url: "/connect/"
       weight: 1
     - name: "Tech Notes"
       url: "/archive/"
