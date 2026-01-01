@@ -29,6 +29,35 @@
   --bs-input-group-addon-bg: #F0F0F0;
 }
 
+main li + li {
+  margin-top: 1em;
+}
+
+code {
+  background: #111;
+  color: #fff;
+  display: block;
+  font-family: Courier, monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+p code,
+li code {
+  background: transparent;
+  color: #000;
+  display: inline;
+  font-size: 0.85em;
+  line-height: 1em;
+  padding: 0;
+}
+
+a code {
+  color: $link-color;
+}
+
 /**
  * CUSTOM OVERRIDES & PRESERVED STYLES
  * Styles that can't be replaced by Bootstrap
@@ -90,34 +119,6 @@ a {
     background-color: #ccc !important;
     color: #777 !important;
   }
-}
-
-// Code blocks - dark background
-code {
-  background: #111;
-  color: #fff;
-  display: block;
-  font-family: Courier, monospace;
-  font-size: 0.7em;
-  line-height: 1.5em;
-  padding: 10px;
-  border-radius: 2px;
-}
-
-// Inline code - override block display
-p code,
-li code {
-  background: transparent;
-  color: #000;
-  display: inline;
-  font-size: 0.85em;
-  line-height: 1em;
-  padding: 0;
-}
-
-// Code in links
-a code {
-  color: $link-color;
 }
 
 // Article first-letter drop cap effect

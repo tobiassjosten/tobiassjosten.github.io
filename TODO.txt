@@ -6,3 +6,4 @@
 - Migrated the Uses page (https://www.seastone.io/uses/).
 - Uses: Habitify, Lastpass.
 - Make sure to review the books feature on the homepage.
+- Look through templates for schema.org markup.
