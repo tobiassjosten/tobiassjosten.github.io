@@ -3,7 +3,6 @@
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
 - Verify sitemap.
 - Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.
-- Migrated the Uses page (https://www.seastone.io/uses/).
-- Uses: Habitify, Lastpass.
 - Make sure to review the books feature on the homepage.
 - Look through templates for schema.org markup.
+- Verify error pages.
