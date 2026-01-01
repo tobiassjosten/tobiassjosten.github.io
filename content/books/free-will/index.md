@@ -2,6 +2,8 @@
 title: "Free Will"
 authors:
   - "sam-harris"
+philosophers:
+  - "sam-harris"
 date: "2017-03-25"
 amazonURL: ""
 image: "free-will.jpg"

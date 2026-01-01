@@ -2,6 +2,8 @@
 title: "Candide"
 authors:
   - "voltaire"
+philosophers:
+  - "voltaire"
 date: "2000-01-01"
 amazonURL: ""
 image: "candide.jpg"

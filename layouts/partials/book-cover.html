@@ -1,26 +1,22 @@
 {{ with .book }}
+{{ $isReviewed := .Content }}
 {{ if $.amazonLink }}
     {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
-{{ else }}
+{{ else if $isReviewed }}
     {{ with .Permalink }}<a href="{{ . }}">{{ end }}
 {{ end }}
     {{ $image := .Resources.GetMatch .Params.image }}
     {{ if $image }}
     <img src="{{ $image.RelPermalink }}"
             class="book-cover img-fluid shadow-sm"
+            {{ if not $isReviewed }}style="filter: brightness(1.0) contrast(0.5) saturate(0.7)"{{ end }}
             alt="{{ .Title }}"
             loading="lazy">
     {{ else }}
     <div class="book-cover placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">
         <div>
             <div class="placeholder-title fw-bold mb-2">{{ .Title }}</div>
-            {{/* Support both author (string) and authors (array) */}}
-            {{ $bookAuthors := slice }}
-            {{ if .Params.authors }}
-                {{ $bookAuthors = .Params.authors }}
-            {{ else if .Params.author }}
-                {{ $bookAuthors = slice .Params.author }}
-            {{ end }}
+            {{ $bookAuthors := .Params.authors }}
             {{ if gt (len $bookAuthors) 0 }}
                 {{ $authorNames := slice }}
                 {{ range $authorSlug := $bookAuthors }}
@@ -32,7 +28,6 @@
                     {{ end }}
                     {{ $authorNames = $authorNames | append $authorName }}
                 {{ end }}
-                {{/* Format as: "Author1, Author2 and Author3" */}}
                 <div class="placeholder-author small">
                     {{ range $i, $name := $authorNames }}
                         {{ if gt $i 0 }}
@@ -45,5 +40,5 @@
         </div>
     </div>
     {{ end }}
-{{ if (or (not $.amazonLink) .Params.amazonURL) }}</a>{{ end }}
+{{ if (or (and (not $.amazonLink) $isReviewed) .Params.amazonURL) }}</a>{{ end }}
 {{ end }}

@@ -533,3 +533,24 @@ blockquote {
     clear: both;
   }
 }
+
+.philosopher-row {
+  .philosopher-meta {
+    font-weight: 500;
+  }
+
+  .philosopher-books {
+    .book-cover {
+      max-height: 150px;
+      min-height: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .philosopher-row {
+    .philosopher-meta {
+      text-align: center;
+    }
+  }
+}

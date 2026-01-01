@@ -2,6 +2,8 @@
 title: "Timaeus"
 authors:
   - "plato"
+philosophers:
+  - "plato"
 date: "2025-08-15"
 amazonURL: ""
 image: "timaeus.jpg"

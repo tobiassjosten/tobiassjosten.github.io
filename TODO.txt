@@ -1,8 +1,8 @@
 - Add amazonURLs.
 - Add book relations.
 - "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
-- Create philosophy study page.
 - Verify sitemap.
 - Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.
 - Migrated the Uses page (https://www.seastone.io/uses/).
 - Uses: Habitify, Lastpass.
+- Make sure to review the books feature on the homepage.
