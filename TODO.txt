@@ -1,7 +1,5 @@
 - Add amazonURLs.
 - Add book relations.
-- "Connect" in primary, "Contact" in secondary. Both leading to /contact/.
 - Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.
 - Make sure to review the books feature on the homepage.
 - Look through templates for schema.org markup.
-- Verify error pages.
