@@ -12,9 +12,9 @@
 
 Don't bother backing up files. Everything is tracked by Git and can easily be restored.
 
-Don't write new utility scripts for ad-hoc tasks, but instead rely shell commands and Posix tools.
+Only create new utility scripts when explicitly told to do so. Instead rely on shell commands and Posix tools for ad-hoc tasks.
 
-Don't comment code, but instead use clear and descriptive names for variables, functions, files, and directories.
+Default to not commenting code. Instead use clear and descriptive names for variables, functions, files, and directories.
 
 For CSS and styling, rely on Bootstrap 5, using its built-in extension points like variables. Use custom CSS and code only when necessary.
 

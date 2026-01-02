@@ -3,6 +3,10 @@ languageCode: "en-us"
 title: "Tobias Sjösten"
 
 frontmatter:
+  date:
+    - date
+    - :filename
+    - :fileModTime
   lastmod:
     - lastmod
     - :fileModTime

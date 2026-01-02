@@ -28,7 +28,7 @@
                 {{ end }}
                 {{ $fontSize := add 1 (mul $weight 1.5) }}
 
-                <a href="{{ .Page.Permalink }}"
+                <a href="{{ .Page.RelPermalink }}"
                    class="tag-cloud-item me-2 mb-2 d-inline-block text-decoration-none"
                    style="font-size: {{ $fontSize }}rem;"
                    {{ with $tagData }}{{ with .description }}title="{{ . | plainify }}"{{ end }}{{ end }}>

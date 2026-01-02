@@ -1,5 +1,7 @@
 - Add amazonURLs.
 - Add book relations.
 - Move articles correctly from Tobiassjosten.net, Seastone.io, and Athlegan.com.
+  - Sort through categories and tags (if the latter should remain).
 - Make sure to review the books feature on the homepage.
 - Look through templates for schema.org markup.
+- Make sure all links are relative to root (RelPermalink).
