@@ -8,7 +8,7 @@
         {{ range .Params.tags }}
             {{ if not (hasPrefix . "_") }}
                 <a class="badge bg-secondary text-decoration-none me-2"
-                   href="{{ printf "/tags/%s/" (. | urlize) }}"
+                   href="{{ printf "/articles/%s/" (. | urlize) }}"
                    itemprop="articleSection">
                     {{ . }}
                 </a>

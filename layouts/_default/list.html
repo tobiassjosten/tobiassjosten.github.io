@@ -11,29 +11,32 @@
 
     <div class="row g-4">
         {{ range $pages }}
-        <div class="col-12">
-            <article class="post-summary">
-                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                <p class="text-muted mb-2">
-                    <time>{{ .Date.Format "January 2, 2006" }}</time>
-                </p>
-                {{ with .Params.summary }}
-                <p>{{ . }}</p>
-                {{ end }}
-                {{ with .Params.tags }}
-                <div class="mt-2">
-                    {{ range first 5 . }}
-                        {{ if not (hasPrefix . "_") }}
-                        <a href="{{ printf "/tags/%s/" (. | urlize) }}"
-                           class="badge bg-secondary text-decoration-none me-1">
-                            {{ . }}
-                        </a>
-                        {{ end }}
+            <div class="col-12">
+                <article class="post-summary">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+                    <p class="text-muted mb-2">
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    </p>
+
+                    {{ with .Params.summary }}
+                        <p>{{ . }}</p>
                     {{ end }}
-                </div>
-                {{ end }}
-            </article>
-        </div>
+
+                    {{ with .Params.tags }}
+                        <div class="mt-2">
+                            {{ range first 5 . }}
+                                {{ if not (hasPrefix . "_") }}
+                                    <a href="{{ printf "/articles/%s/" (. | urlize) }}"
+                                    class="badge bg-secondary text-decoration-none me-1">
+                                        {{ . }}
+                                    </a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </article>
+            </div>
         {{ end }}
     </div>
 </section>

@@ -16,7 +16,7 @@
                 <span class="ms-2">
                     {{ range first 3 . }}
                         {{ if not (hasPrefix . "_") }}
-                        <a href="{{ printf "/tags/%s/" (. | urlize) }}"
+                        <a href="{{ printf "/articles/%s/" (. | urlize) }}"
                            class="badge bg-secondary text-decoration-none me-1">{{ . }}</a>
                         {{ end }}
                     {{ end }}
