@@ -1,32 +1,44 @@
 @import 'variables';
 
-/**
- * BOOTSTRAP CSS VARIABLE OVERRIDES
- * Properly theme Bootstrap using CSS custom properties
- */
 :root {
-  // Background colors
-  --bs-body-bg: #F0F0F0;           // Main background (was #FFF)
-  --bs-body-bg-rgb: 240, 240, 240;  // RGB version for transparency
+  --bs-body-bg: #F0F0F0;
+  --bs-body-bg-rgb: 240, 240, 240;
 
-  // Primary theme color (maroon)
   --bs-primary: #900;
   --bs-primary-rgb: 153, 0, 0;
 
-  // Link colors
-  --bs-link-color: #900;            // Links use maroon
-  --bs-link-hover-color: #000;      // Hover color (before yellow bg)
+  --bs-link-color: #900;
+  --bs-link-hover-color: #000;
 
-  // Component backgrounds (inherit body bg)
   --bs-light: #F0F0F0;
   --bs-light-rgb: 240, 240, 240;
 
-  // Card backgrounds (keep white for contrast)
   --bs-card-bg: #FFF;
 
-  // Form controls
   --bs-form-control-bg: #FFF;
   --bs-input-group-addon-bg: #F0F0F0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+
+  &:hover {
+    background: transparent;
+    color: $primary;
+  }
+}
+
+blockquote {
+  color: #777;
 }
 
 main li + li {
@@ -58,17 +70,10 @@ a code {
   color: $link-color;
 }
 
-/**
- * CUSTOM OVERRIDES & PRESERVED STYLES
- * Styles that can't be replaced by Bootstrap
- */
-
-// Narrower container for better readability
 .container {
   max-width: 850px !important;
 }
 
-// Link styling with maroon color and yellow hover (custom behavior)
 a {
   color: var(--bs-link-color);
 
@@ -80,7 +85,6 @@ a {
   }
 }
 
-// Button hover states (custom yellow behavior)
 .btn-primary {
   &:hover,
   &:focus {
@@ -99,7 +103,6 @@ a {
   }
 }
 
-// Card title links - keep black, hover to maroon
 .card-title a {
   color: #000;
 
@@ -110,7 +113,6 @@ a {
   }
 }
 
-// Badge/tag styling
 .badge {
   background-color: #ddd !important;
   color: #888 !important;
@@ -119,23 +121,6 @@ a {
     background-color: #ccc !important;
     color: #777 !important;
   }
-}
-
-// Article first-letter drop cap effect
-.post.article > div > p:first-child::first-line {
-  font-size: 1.3em;
-  font-variant: small-caps;
-  text-transform: lowercase;
-}
-
-.post.article > div > p:first-child::first-letter {
-  display: block;
-  float: left;
-  font-size: 3em;
-  font-variant: small-caps;
-  line-height: 0.65em;
-  padding: 0.1em 0.2em 0 0;
-  text-transform: uppercase;
 }
 
 .navbar {
@@ -177,7 +162,41 @@ a {
   }
 }
 
-// Badge/tag styling to match original
+.content {
+  h1 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 4em;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+   h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+.content > * > p:first-child::first-line {
+  font-size: 1.3em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.content > * > p:first-child::first-letter {
+  display: block;
+  float: left;
+  font-size: 3em;
+  font-variant: small-caps;
+  line-height: 0.65em;
+  padding: 0.1em 0.2em 0 0;
+  text-transform: uppercase;
+}
+
 .badge {
   background-color: #ddd !important;
   color: #888 !important;
@@ -192,7 +211,6 @@ a {
   }
 }
 
-// Footer custom styling
 footer {
   margin-top: auto;
 
@@ -226,7 +244,6 @@ footer {
   }
 }
 
-// Bootstrap button overrides for yellow hover
 .btn {
   border-radius: 2px;
 
@@ -255,7 +272,6 @@ footer {
   }
 }
 
-// Card styling
 .card {
   border-color: #ddd;
   border-radius: 2px;
@@ -277,13 +293,11 @@ footer {
   }
 }
 
-// Posts list
 .posts time:after {
   content: "»";
   margin: 0 10px;
 }
 
-// Project meta styling
 .project-meta {
   color: #888;
   font-size: 0.9em;
@@ -296,7 +310,6 @@ footer {
   padding: 2px 8px;
 }
 
-// Mailchimp signup with stripe background
 .mailchimp-signup {
   background: url(/stripe.png) repeat top left;
   margin: 50px 0;
@@ -312,91 +325,8 @@ footer {
   }
 }
 
-// Disqus customizations
-#disqus_thread {
-  margin-top: 75px;
-}
-
-#dsq-global-toolbar,
-#dsq-like-tooltip,
-#dsq-sort-by,
-#dsq-pagination,
-#disqus_thread h3 {
-  display: none;
-}
-
-#disqus_thread .dsq-reply h3 {
-  display: block;
-}
-
-#dsq-account-dropdown:before {
-  content: '(';
-}
-
-#dsq-account-dropdown:after {
-  content: ')';
-}
-
-#dsq-account-dropdown a {
-  margin: 0 -5px;
-  text-transform: lowercase;
-}
-
 .notice {
   margin-top: 75px;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  text-decoration: none;
-
-  &:hover {
-    background: transparent;
-    color: $primary;
-  }
-}
-
-h1 {
-  text-align: center;
-}
-
-blockquote {
-  color: #777;
-}
-
-.post .intro {
-  clear: both;
-  color: #888;
-  margin: 50px 0;
-
-  &:before,
-  &:after {
-    content: '';
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-
-  .avatar {
-    border-radius: 125px;
-    float: left;
-    margin-right: 25px;
-    width: 125px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: #555;
-  }
 }
 
 // Responsive adjustments
@@ -417,8 +347,8 @@ blockquote {
   }
 }
 
-.home {
-  section {
+.content-home {
+  .home-section {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
 
@@ -428,7 +358,7 @@ blockquote {
     }
   }
 
-  .hero {
+  .home-section-hero {
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -465,7 +395,7 @@ blockquote {
     }
   }
 
-  .kpis {
+  .home-section-kpis {
     .display-4 {
       font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
       color: #900;
@@ -478,7 +408,7 @@ blockquote {
     }
   }
 
-  .testimonials {
+  .home-section-testimonials {
     .carousel-control-prev,
     .carousel-control-next {
       filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7495%) hue-rotate(0deg);
@@ -522,7 +452,7 @@ blockquote {
   }
 }
 
-.post.book {
+.content-book {
   .book-cover {
     margin: 0 2em 1em 0;
     float: left;

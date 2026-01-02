@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="books-list">
+<article class="books-list content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ .Content }}
 
     {{ $booksByYear := dict }}

@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="author-page">
+<article class="author-page content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ .Content }}
 
     {{ $authorSlug := path.Base .File.Dir }}

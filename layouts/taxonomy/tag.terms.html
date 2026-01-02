@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="tags-overview">
+<article class="tags-overview content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     <p class="lead mb-4">Browse posts by topic. {{ len .Data.Terms }} tags total.</p>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">

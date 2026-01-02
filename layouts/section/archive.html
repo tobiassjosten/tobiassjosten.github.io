@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="archive">
+<article class="archive content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ .Content }}
 
     {{ range .Pages.GroupByDate "2006" }}

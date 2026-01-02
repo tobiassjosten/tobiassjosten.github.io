@@ -1,5 +1,7 @@
 {{ define "main" }}
-<section class="philosophers">
+<section class="philosophers content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ .Content }}
 
     {{ $pending := slice }}

@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="post book" itemscope itemtype="http://schema.org/Book">
+<article class="content content-book" itemscope itemtype="http://schema.org/Book">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ partial "book-cover.html" (dict "book" . "amazonLink" true) }}
 
     {{/* Support both author (string) and authors (array) */}}

@@ -1,9 +1,6 @@
 ---
 title: Services
-description: Professional services and consulting
 ---
-
-# Services
 
 I offer professional services in web development, software architecture, and technical consulting.
 

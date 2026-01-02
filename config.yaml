@@ -41,16 +41,16 @@ menu:
       weight: 2
 
   secondary:
-    - name: "Connect"
+    - name: "Connect with me"
       url: "/connect/"
       weight: 1
     - name: "Tech Notes"
       url: "/archive/"
       weight: 2
-    - name: "Now"
+    - name: "Current focus"
       url: "/now/"
       weight: 3
-    - name: "Uses"
+    - name: "My toolbox"
       url: "/uses/"
       weight: 4
     - name: "Newsletter"

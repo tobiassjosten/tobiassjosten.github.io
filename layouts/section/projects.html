@@ -1,15 +1,15 @@
 {{ define "main" }}
-<section class="projects">
+<section class="projects content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ .Content }}
 
-    {{/* Define group metadata */}}
     {{ $groupData := dict
         "websites" (dict "title" "Websites")
         "tools" (dict "title" "Tools")
         "libraries" (dict "title" "Libraries")
     }}
 
-    {{/* Display groups in order */}}
     {{ range $groupKey := slice "websites" "tools" "libraries" }}
         {{ $meta := index $groupData $groupKey }}
         {{ $groupProjects := slice }}
@@ -60,7 +60,6 @@
         {{ end }}
     {{ end }}
 
-    {{/* Display Misc group for invalid groups */}}
     {{ $miscProjects := slice }}
     {{ range $.Pages }}
         {{ $group := .Params.group | default "misc" }}

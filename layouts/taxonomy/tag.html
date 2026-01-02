@@ -1,5 +1,7 @@
 {{ define "main" }}
-<article class="tag-page">
+<article class="tag-page content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     {{ with index .Site.Data.tags (.Title | urlize) }}
         {{ with .description }}
         <div class="alert alert-info mb-4">

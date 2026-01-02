@@ -1,8 +1,9 @@
 {{ define "main" }}
-<article class="post article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
     <div itemprop="articleBody">{{ .Content }}</div>
 
-    <!-- Tags -->
     <div class="my-4">
         {{ range .Params.tags }}
             {{ if not (hasPrefix . "_") }}
@@ -16,7 +17,6 @@
         {{ end }}
     </div>
 
-    <!-- Published date -->
     <p class="text-muted fst-italic">
         Published
         <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -24,7 +24,6 @@
         </time>
     </p>
 
-    <!-- Author card -->
     <aside class="card my-5" itemscope itemtype="http://schema.org/Person">
         <div class="card-body">
             <div class="row align-items-center">
@@ -54,7 +53,6 @@
         </div>
     </aside>
 
-    <!-- Next/Previous navigation -->
     {{ if or .NextInSection .PrevInSection }}
     <nav class="my-5">
         <div class="row">

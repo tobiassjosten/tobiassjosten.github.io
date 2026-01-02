@@ -4,11 +4,10 @@
     {{ partial "head.html" . }}
     {{ partial "analytics.html" . }}
 </head>
-<body class="home">
+<body>
     {{ partial "header.html" . }}
-
-    <main id="main">
-        <section class="hero py-5">
+    <main class="content-home">
+        <section class="home-section home-section-hero py-5">
             <div class="container text-center py-5 my-5">
                 <h1 class="display-1 mb-5 fw-bold">Hello, I'm Tobias</h1>
                 <p class="lead fs-2 mb-5" style="max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.6;">
@@ -17,7 +16,7 @@
             </div>
         </section>
 
-        <section class="about py-5">
+        <section class="home-section home-section-about py-5">
             <div class="container">
                 <div class="row align-items-center mb-4">
                     <div class="col-md-8">
@@ -50,7 +49,7 @@
             </div>
         </section>
 
-        <section class="recent-content py-5">
+        <section class="home-section home-section-recent-content py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Latest articles</h2>
 
@@ -134,7 +133,7 @@
             </div>
         </section>
 
-        <section class="professional bg-white py-5">
+        <section class="home-section home-section-professional bg-white py-5">
             <div class="container">
                 {{ $professional := .Site.Data.professional }}
 
@@ -176,7 +175,7 @@
             </div>
         </section>
 
-        <section class="kpis bg-white py-5">
+        <section class="home-section home-section-kpis bg-white py-5">
             <div class="container">
                 {{ $kpis := .Site.Data.kpis }}
                 {{ $companies := .Site.Data.companies }}
@@ -213,7 +212,7 @@
             </div>
         </section>
 
-        <section class="books py-5">
+        <section class="home-section home-section-books py-5">
             <div class="container">
                 <h2 class="text-center mb-4">Books</h2>
                 <p class="fs-5 px-5">I'm an avid reader and enjoy sharing my thoughts on books that haved an impact on me. Here are some of the books I'm currently reading and a few highlights.</p>
@@ -242,7 +241,7 @@
             </div>
         </section>
 
-        <section class="speaking py-5">
+        <section class="home-section home-section-speaking py-5">
             <div class="container">
                 {{ $professional := .Site.Data.professional }}
 
@@ -274,7 +273,7 @@
             </div>
         </section>
 
-        <section class="testimonials py-5">
+        <section class="home-section home-section-testimonials py-5">
             <div class="container">
                 {{ $testimonials := .Site.Data.testimonials }}
 
@@ -328,7 +327,7 @@
             </div>
         </section>
 
-        <section class="athletic py-5">
+        <section class="home-section home-section-athletic py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-8 mb-4 mb-md-0">
@@ -350,7 +349,7 @@
             </div>
         </section>
 
-        <section class="newsletter-cta bg-white py-5">
+        <section class="home-section home-section-newsletter-cta bg-white py-5">
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
