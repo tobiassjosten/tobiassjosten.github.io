@@ -5,3 +5,4 @@
 - Make sure to review the books feature on the homepage.
 - Look through templates for schema.org markup.
 - Make sure all links are relative to root (RelPermalink).
+- Go through all content types and make sure they have the right content, metadata, and representation in menus.
