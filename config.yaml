@@ -51,8 +51,8 @@ menu:
     - name: "Connect with me"
       url: "/connect/"
       weight: 1
-    - name: "Tech Notes"
-      url: "/archive/"
+    - name: "Articles"
+      url: "/articles/"
       weight: 2
     - name: "Current focus"
       url: "/now/"

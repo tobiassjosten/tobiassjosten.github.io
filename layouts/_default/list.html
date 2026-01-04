@@ -4,13 +4,8 @@
 
     {{ .Content }}
 
-    {{ $pages := .Pages }}
-    {{ if .IsHome }}
-        {{ $pages = where .Site.RegularPages "Type" "in" (slice "blog" "archive") }}
-    {{ end }}
-
     <div class="row g-4">
-        {{ range $pages }}
+        {{ range .Pages }}
             <div class="col-12">
                 <article class="post-summary">
                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>

@@ -53,7 +53,6 @@
             <div class="container">
                 <h2 class="text-center mb-5">Latest articles</h2>
 
-                <!-- Featured Articles by Category -->
                 <div class="mb-5">
                     {{ range $category := slice "Finance" "Technology" "Productivity" "Business" "Lifestyle" }}
                         {{ $articles := where (where $.Site.Pages "Section" "articles") "Params.categories" "intersect" (slice $category) }}
@@ -76,11 +75,9 @@
                     {{ end }}
                 </div>
 
-                <!-- Three columns: Newsletters, Tech Notes, Interviews -->
                 <div class="row">
-                    <!-- Newsletters -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="h5 mb-3">Latest Newsletters</h3>
+                    <div class="col-md-6 mb-4">
+                        <h3 class="h5 mb-3">Latest newsletters</h3>
                         {{ $newsletters := first 3 (where .Site.Pages "Section" "newsletters") }}
                         {{ if $newsletters }}
                         <ul class="list-unstyled">
@@ -96,37 +93,23 @@
                         {{ end }}
                     </div>
 
-                    <!-- Tech Notes -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="h5 mb-3">Latest Tech Notes</h3>
-                        {{ $techNotes := first 3 (where .Site.Pages "Section" "archive") }}
-                        {{ if $techNotes }}
-                        <ul class="list-unstyled">
-                            {{ range $techNotes }}
-                            <li class="mb-3">
-                                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
-                            </li>
-                            {{ end }}
-                        </ul>
-                        {{ end }}
-                    </div>
-
-                    <!-- Interviews -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="h5 mb-3">Latest Interviews</h3>
-                        {{ $interviews := first 3 (where .Site.Pages "Section" "interviews") }}
-                        {{ if $interviews }}
-                        <ul class="list-unstyled">
-                            {{ range $interviews }}
-                            <li class="mb-3">
-                                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
-                            </li>
-                            {{ end }}
-                        </ul>
-                        {{ else }}
-                        <p class="text-muted"><em>Coming soon...</em></p>
+                    <div class="col-md-6 mb-4">
+                        <h3 class="h5 mb-3">Elsewhere online</h3>
+                        {{ $elsewhere := .Site.Data.elsewhere }}
+                        {{ if $elsewhere }}
+                            {{ $sorted := sort $elsewhere "date" "desc" }}
+                            <ul class="list-unstyled">
+                                {{ range first 3 $sorted }}
+                                    <li class="mb-2">
+                                        <a href="{{ .url }}" target="_blank" rel="noopener" class="text-decoration-none">
+                                            {{ .title }}
+                                        </a>
+                                        {{ with .date }}
+                                            <small class="text-muted d-block">{{ . }}</small>
+                                        {{ end }}
+                                    </li>
+                                {{ end }}
+                            </ul>
                         {{ end }}
                     </div>
                 </div>

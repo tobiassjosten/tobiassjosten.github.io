@@ -1,0 +1,15 @@
+- title: "First example"
+  url: "https://example.com/article"
+  date: "2024-01-15"
+
+- title: "Second example"
+  url: "https://example.com/article"
+  date: "2024-01-14"
+
+- title: "Third example"
+  url: "https://example.com/article"
+  date: "2024-03-16"
+
+- title: "Fourth example"
+  url: "https://example.com/article"
+  date: "2023-03-16"

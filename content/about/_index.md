@@ -14,10 +14,6 @@ Throughout my career, I've worked extensively with:
 - API design and development
 - Open source contributions
 
-## Writing
-
-I've been sharing technical insights and experiences since 2010. You can find my articles in the [archive](/archive/).
-
 ## Contact
 
 Feel free to reach out:
