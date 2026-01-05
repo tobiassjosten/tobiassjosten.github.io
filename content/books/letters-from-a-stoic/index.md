@@ -1,8 +1,7 @@
 ---
+
 title: "Letters from a Stoic"
 authors:
-  - "seneca"
-philosophers:
   - "seneca"
 date: "2018-04-23"
 amazonURL: ""

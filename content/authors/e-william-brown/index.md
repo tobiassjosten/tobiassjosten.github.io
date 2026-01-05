@@ -1,3 +1,0 @@
----
-title: "E. William Brown"
----

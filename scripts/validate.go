@@ -38,6 +38,8 @@ type BookMetadata struct {
 	Rating             string
 	CurrentlyReading   bool
 	FeaturedOnHomepage bool
+	Content            string // content body after frontmatter
+	HasContent         bool   // whether book has non-empty content
 }
 
 // ArticleMetadata represents parsed article content
@@ -48,6 +50,14 @@ type ArticleMetadata struct {
 	Title       string
 	Content     string
 	HasMoreMark bool
+}
+
+// PhilosopherMetadata represents parsed philosopher frontmatter
+type PhilosopherMetadata struct {
+	Path  string
+	Slug  string
+	Title string
+	Books []string
 }
 
 // ValidationError represents a validation error
@@ -67,11 +77,12 @@ type ValidationWarning struct {
 
 // ValidationContext holds all data needed for validation
 type ValidationContext struct {
-	Books    map[string]*BookMetadata    // slug -> metadata
-	Articles map[string]*ArticleMetadata // slug -> metadata
-	Authors  map[string]bool             // author slug -> exists
-	Errors   []ValidationError
-	Warnings []ValidationWarning
+	Books        map[string]*BookMetadata        // slug -> metadata
+	Articles     map[string]*ArticleMetadata     // slug -> metadata
+	Philosophers map[string]*PhilosopherMetadata // slug -> metadata
+	Authors      map[string]bool                 // author slug -> exists
+	Errors       []ValidationError
+	Warnings     []ValidationWarning
 }
 
 // parseFrontMatter parses YAML frontmatter from book content
@@ -152,9 +163,20 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		return nil, fmt.Errorf("reading file: %w", err)
 	}
 
-	fm, err := parseFrontMatter(string(content))
+	contentStr := string(content)
+
+	fm, err := parseFrontMatter(contentStr)
 	if err != nil {
 		return nil, fmt.Errorf("parsing frontmatter: %w", err)
+	}
+
+	// Extract content body after frontmatter
+	parts := strings.SplitN(contentStr, "---", 3)
+	bodyContent := ""
+	hasContent := false
+	if len(parts) >= 3 {
+		bodyContent = strings.TrimSpace(parts[2])
+		hasContent = len(bodyContent) > 0
 	}
 
 	slug := filepath.Base(filepath.Dir(path))
@@ -168,6 +190,8 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		AmazonURL:     fm["amazonURL"],
 		Image:         fm["image"],
 		Rating:        fm["rating"],
+		Content:       bodyContent,
+		HasContent:    hasContent,
 	}
 
 	// Parse authors array
@@ -208,6 +232,44 @@ func parseBookFile(path string) (*BookMetadata, error) {
 	return book, nil
 }
 
+// parsePhilosopherFile parses a single philosopher file
+func parsePhilosopherFile(path string) (*PhilosopherMetadata, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("reading file: %w", err)
+	}
+
+	contentStr := string(content)
+
+	fm, err := parseFrontMatter(contentStr)
+	if err != nil {
+		return nil, fmt.Errorf("parsing frontmatter: %w", err)
+	}
+
+	slug := filepath.Base(filepath.Dir(path))
+	title := fm["title"]
+
+	// Parse books array
+	var books []string
+	if booksRaw, exists := fm["books"]; exists && booksRaw != "" {
+		for _, b := range strings.Split(booksRaw, ",") {
+			b = strings.TrimSpace(b)
+			if b != "" {
+				books = append(books, b)
+			}
+		}
+	}
+
+	philosopher := &PhilosopherMetadata{
+		Path:  path,
+		Slug:  slug,
+		Title: title,
+		Books: books,
+	}
+
+	return philosopher, nil
+}
+
 // parseArticleFile parses a single article/newsletter/interview file
 func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
 	content, err := os.ReadFile(path)
@@ -246,12 +308,13 @@ func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
 	return article, nil
 }
 
-// loadValidationContext loads all books, articles, and authors
+// loadValidationContext loads all books, articles, philosophers, and authors
 func loadValidationContext() (*ValidationContext, error) {
 	ctx := &ValidationContext{
-		Books:    make(map[string]*BookMetadata),
-		Articles: make(map[string]*ArticleMetadata),
-		Authors:  make(map[string]bool),
+		Books:        make(map[string]*BookMetadata),
+		Articles:     make(map[string]*ArticleMetadata),
+		Philosophers: make(map[string]*PhilosopherMetadata),
+		Authors:      make(map[string]bool),
 	}
 
 	// Load all books
@@ -309,6 +372,28 @@ func loadValidationContext() (*ValidationContext, error) {
 			}
 			ctx.Articles[article.Slug] = article
 		}
+	}
+
+	// Load all philosophers
+	philosopherPaths, err := filepath.Glob("content/philosophers/*/index.md")
+	if err != nil {
+		return nil, fmt.Errorf("finding philosopher files: %w", err)
+	}
+
+	for _, path := range philosopherPaths {
+		philosopher, err := parsePhilosopherFile(path)
+		if err != nil {
+			// Add parsing error but continue
+			slug := filepath.Base(filepath.Dir(path))
+			ctx.Errors = append(ctx.Errors, ValidationError{
+				BookSlug:  slug,
+				FilePath:  path,
+				ErrorType: "PARSE_ERROR",
+				Message:   fmt.Sprintf("Failed to parse: %v", err),
+			})
+			continue
+		}
+		ctx.Philosophers[philosopher.Slug] = philosopher
 	}
 
 	// Load all authors
@@ -401,12 +486,17 @@ func validateUniqueTitles(ctx *ValidationContext) {
 }
 
 // validateUniqueAmazonURLs checks that all Amazon URLs are unique
+// and that books with content have an Amazon URL
 func validateUniqueAmazonURLs(ctx *ValidationContext) {
 	urlMap := make(map[string][]string) // url -> []slugs
 
 	for _, book := range ctx.Books {
 		if book.AmazonURL == "" {
-			ctx.addError(book, "MISSING_AMAZON_URL", "Missing required 'amazonURL' field")
+			// Only require amazonURL if book has actual content
+			if book.HasContent {
+				ctx.addError(book, "MISSING_AMAZON_URL",
+					"Missing required 'amazonURL' field for book with content")
+			}
 			continue
 		}
 
@@ -579,6 +669,22 @@ func validateArticleMoreMarker(ctx *ValidationContext) {
 	}
 }
 
+// validatePhilosopherBooks checks that philosopher book references are valid
+func validatePhilosopherBooks(ctx *ValidationContext) {
+	for _, philosopher := range ctx.Philosophers {
+		for _, bookSlug := range philosopher.Books {
+			if _, exists := ctx.Books[bookSlug]; !exists {
+				ctx.Errors = append(ctx.Errors, ValidationError{
+					BookSlug:  philosopher.Slug,
+					FilePath:  philosopher.Path,
+					ErrorType: "INVALID_BOOK_REFERENCE",
+					Message:   fmt.Sprintf("Philosopher references non-existent book: '%s'", bookSlug),
+				})
+			}
+		}
+	}
+}
+
 // validateBookMeta runs all validations
 func validateBookMeta(ctx *ValidationContext) {
 	validateAllowedProperties(ctx)
@@ -596,7 +702,7 @@ func validateBookMeta(ctx *ValidationContext) {
 func printResults(ctx *ValidationContext) {
 	fmt.Println("=== Content Validation ===")
 	fmt.Println()
-	fmt.Printf("Validating %d books and %d articles...\n", len(ctx.Books), len(ctx.Articles))
+	fmt.Printf("Validating %d books, %d articles, and %d philosophers...\n", len(ctx.Books), len(ctx.Articles), len(ctx.Philosophers))
 	fmt.Println()
 
 	if len(ctx.Errors) > 0 {
@@ -676,6 +782,7 @@ func main() {
 	// Run validations
 	validateBookMeta(ctx)
 	validateArticleMoreMarker(ctx)
+	validatePhilosopherBooks(ctx)
 
 	// Print results
 	printResults(ctx)

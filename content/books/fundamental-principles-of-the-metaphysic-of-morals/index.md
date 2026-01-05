@@ -1,8 +1,7 @@
 ---
+
 title: "Fundamental Principles of the Metaphysic of Morals"
 authors:
-  - "immanuel-kant"
-philosophers:
   - "immanuel-kant"
 date: "2016-06-09"
 amazonURL: ""

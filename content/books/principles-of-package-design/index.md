@@ -1,15 +1,14 @@
 ---
-title: "Principles of PHP Package Design"
+title: "Principles of Package Design"
 authors:
   - "matthias-noback"
 date: "2014-08-13"
-amazonURL: ""
-image: "principles-of-php-package-design.jpg"
+amazonURL: "https://amzn.to/4pjX7bV"
+image: "principles-of-package-design.jpg"
 rating: 5
 ---
 
-I'll start at the end and say that this is one of the most useful programming books I have ever read. [*Principles of Package Design*](/books/principles-of-package-design/buy/) should be required reading for anyone writing code for a living,
- independent of one's programming language.
+I'll start at the end and say that this is one of the most useful programming books I have ever read. [*Principles of Package Design*](/books/principles-of-package-design/buy/) should be required reading for anyone writing code for a living, independent of one's programming language.
 
 [Matthias Noback](https://twitter.com/matthiasnoback) is a well known figure ([and blogger](http://php-and-symfony.matthiasnoback.nl/)) in the [Symfony world](/symfony/), where he's been pioneering the concept of [hexagonal architecture](http://hexagonal-symfony.eu/) and developing [some very cool libraries](http://simplebus.github.io/MessageBus/). So I have of course been looking forward to reading his book – **Principles of Package Design**.
 

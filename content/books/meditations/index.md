@@ -1,8 +1,7 @@
 ---
+
 title: "Meditations"
 authors:
-  - "marcus-aurelius"
-philosophers:
   - "marcus-aurelius"
 date: "2018-12-29"
 amazonURL: ""

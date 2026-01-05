@@ -4,7 +4,7 @@ authors:
   - "andy-hunt"
   - "david-thomas"
 date: "2011-07-20"
-amazonURL: ""
+amazonURL: "http://amzn.to/Zqgyi0"
 image: "the-pragmatic-programmer.jpg"
 rating: 5
 ---

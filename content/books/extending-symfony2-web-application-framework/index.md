@@ -3,7 +3,7 @@ title: "Extending Symfony2 Web Application Framework"
 authors:
   - "sebastien-armand"
 date: "2014-04-22"
-amazonURL: ""
+amazonURL: "https://amzn.to/4ptyhGP"
 image: "extending-symfony2-web-application-framework.jpg"
 rating: 3
 ---

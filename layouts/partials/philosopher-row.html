@@ -1,13 +1,10 @@
 {{ $philosopher := . }}
-{{ $philosopherSlug := path.Base .File.Dir }}
 
 {{ $books := slice }}
-{{ range .Site.RegularPages }}
-    {{ if eq .Type "books" }}
-        {{ if .Params.philosophers }}
-            {{ if in .Params.philosophers $philosopherSlug }}
-                {{ $books = $books | append . }}
-            {{ end }}
+{{ with .Params.books }}
+    {{ range . }}
+        {{ with $.Site.GetPage (printf "/books/%s" .) }}
+            {{ $books = $books | append . }}
         {{ end }}
     {{ end }}
 {{ end }}

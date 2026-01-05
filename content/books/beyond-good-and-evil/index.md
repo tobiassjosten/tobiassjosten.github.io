@@ -1,8 +1,7 @@
 ---
+
 title: "Beyond Good and Evil"
 authors:
-  - "friedrich-nietzsche"
-philosophers:
   - "friedrich-nietzsche"
 date: "2016-08-04"
 amazonURL: ""

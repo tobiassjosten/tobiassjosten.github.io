@@ -13,3 +13,8 @@ serve:
 deploy:
 	@echo "deploying to cloudflare pages"
 	@BRANCH=$$(git branch --show-current) ./scripts/deploy-cloudflare.sh
+
+.PHONY: validate
+validate:
+	@echo "validating site"
+	@go run scripts/validate.go
