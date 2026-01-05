@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - internet
-summary: I often come upon the advice that you should keep a blogging schedule. Though just as often it misses data and studies to back this statement up.
 ---
 
 I often come upon the advice that you should keep *a blogging schedule*. In fact, it is often said to be essential for building an audience. Sadly though, it just as often misses data and studies to back this statement up.
+
+<!--more-->
 
 The reason behind keep a blogging schedule is apparently to have your readers know when to expect new content. Then in turn they can come visiting your blog the days or hours when you have posted. Sans a schedule, they say, you will lose these return visitors.
 

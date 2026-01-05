@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - internet
-summary: A recent call for action from W3C representative Daniel Glazman sparked a reaction from Dustin Curtis. It led to more discussions around the web about standardization and proprietary enhancements.
 ---
 
 A recent [call for action](http://www.glazman.org/weblog/dotclear/index.php?post/2012/02/09/CALL-FOR-ACTION:-THE-OPEN-WEB-NEEDS-YOU-NOW) from W3C representative [Daniel Glazman](https://twitter.com/glazou) sparked [a reaction](http://dcurt.is/web-standards) from [Dustin Curtis](https://twitter.com/dcurtis). It led to [more discussions](http://jjk2012.jardenberg.se/post/17417752451/web-standards-by-dustin-curtis) around the web about standardization and proprietary enhancements.
+
+<!--more-->
 
 The approaching danger *Daniel Glazman* writes about is certainly frightening. Last it took us over a decade to resolve the hell caused by Internet Explorer 6 and we are still reeling from the experience. We do NOT want that again.
 

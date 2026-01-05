@@ -7,8 +7,11 @@ categories:
 tags:
     - events
     - books
-summary: Stepping away from the computer doesn't mean you have to stop tuning your skills and sharpening your tools.
 ---
+
+Stepping away from the computer doesn't mean you have to stop tuning your skills and sharpening your tools.
+
+<!--more-->
 
 Finally it's summer in the northern hemisphere! Though for us living in Scotland it's more like not-so-much-winter-anymore than actual summer. But still, many of us go on a well deserved vacation this time of year.
 

@@ -7,3 +7,4 @@
 - Make sure all links are relative to root (RelPermalink).
 - Go through all content types and make sure they have the right content, metadata, and representation in menus.
 - Decide on repository for article drafts.
+- Add archetypes for articles, books, and whatever else is needed. Augment with Makefile targets.

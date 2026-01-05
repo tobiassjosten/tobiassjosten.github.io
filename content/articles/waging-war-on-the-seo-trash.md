@@ -7,10 +7,11 @@ categories:
 tags:
     - internet
     - seo
-summary: Click around some on my blog and you will find *a lot* of spam comments. I am periodically deleting them but they keep pouring in. Probably because I believe in a living Internet with a lot of cross linking, and so I am giving my commenters [delicious dofollow backlinks](/internet/rel-nofollow-is-killing-the-internet).
 ---
 
 Click around some on my blog and you will find *a lot* of spam comments. I am periodically deleting them but they keep pouring in. Probably because I believe in a living Internet with a lot of cross linking, and so I am giving my commenters [delicious dofollow backlinks](/internet/rel-nofollow-is-killing-the-internet).
+
+<!--more-->
 
 Recently when going through and cleaning up, I decided to try another approach. Instead of just deleting the spam comments I decided to first click on their links and look for a way to contact the owner of the site I landed on.
 

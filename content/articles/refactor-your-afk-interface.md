@@ -7,10 +7,11 @@ categories:
 tags:
     - projects
     - _newsletter
-summary: I'll be the first to admit that I'm a complete geek. Stretching beyond the world of development and technology, it's taken me somewhere else entirely for the last couple of years.
 ---
 
 I'll be the first to admit that I'm a complete geek. When I find something that interests me I'll go down the rabbit hole 100%, no matter how little it might interest others.
+
+<!--more-->
 
 This quirk stretches beyond the world of development and technology and it's taken me somewhere else entirely for the last couple of years.
 

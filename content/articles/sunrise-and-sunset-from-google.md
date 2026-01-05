@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - seo
-summary: Google seems to increasingly try and answer our more simple searches directly, like when the sun sets and rises.
 ---
 
 Google seems to increasingly try and answer our more simple searches directly, rather than showing a list of websites that in turn might answer the search. It think it makes a lot of sense when it saves me time and clicks.
+
+<!--more-->
 
 One such query I just bumped into is sunsets and sunrises. I wanted to know [what time the sun set in Stockholm](https://www.google.se/search?pws=0&q=sunset%20stockholm) and Google gave me the answer, right there in the SERP.
 

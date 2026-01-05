@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - internet
-summary: Bloglovin' is a service for keeping track of the many blogs you might be following; a modern RSS reader.
 ---
 
 Bloglovin' is a service for keeping track of the many blogs you might be following; a modern RSS reader.
+
+<!--more-->
 
 They solve their marketplace problem beautifully by piggy-backing on the RSS protocol. This way you do not have to register your blog before others can follow it.
 

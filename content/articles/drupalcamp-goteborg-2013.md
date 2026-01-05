@@ -6,10 +6,11 @@ categories:
     - Business
 tags:
     - events
-summary: May 25th will see the second ever DrupalCamp Göteborg and I will attend it, giving the keynote on "one plus one".
 ---
 
 May 25th will see the second ever *DrupalCamp Göteborg* and I will attend it. Following my talk at [DrupalCamp Stockholm 2013](/events/drupalcamp-stockholm-2013/), where I gave [an introduction to Symfony](/events/symfony-intro-at-drupalcamp-stockholm/), this time around I have been invited to hold the keynote.
+
+<!--more-->
 
 I will talk about how the statement [one plus one](http://summer2013.drupalcamp.se/content/keynote-ett-plus-ett) works in open source in general and with the Drupal and Symfony collaboration specifically. Could it ever be anything but 2, lower or higher? Come find out!
 

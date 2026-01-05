@@ -7,12 +7,13 @@ categories:
 tags:
     - business
     - _newsletter
-summary: Finding business competitors often brings out my worst demons and I start questioning myself worse than a high school kid.
 ---
 
 Finding your first business competitor can be scary. At least for me it often brings out my worst demons and I start questioning myself worse than a high school kid.
 
->How can I possibly compete with that? Should I even start when I'm this far behind? Who the hell am I to think I can bring something to this table?
+<!--more-->
+
+> How can I possibly compete with that? Should I even start when I'm this far behind? Who the hell am I to think I can bring something to this table?
 
 Competition is a good thing though. It shows you're not alone in thinking there's a market and if your competition is making money it might even be a lucrative one. The smart marketer also know how to turn these existing user bases into gold.
 

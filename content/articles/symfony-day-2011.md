@@ -6,10 +6,11 @@ categories:
     - Engineering
 tags:
     - symfony
-summary: I am just now sitting on plane bound for Cologne, to participate in Symfony Day 2011. This is my second Symfony Day and I am really psyched about it.
 ---
 
 I am just now sitting on plane bound for Cologne, to participate in [Symfony Day 2011](http://www.symfonyday.com/). This is my second Symfony Day and I am really psyched about it.
+
+<!--more-->
 
 It will kick off tomorrow with a workshop day, featuring four different tracks. I picked "*Build your own framework... based on the Symfony2 components*" with [Fabien Potencier](http://fabien.potencier.org/), where I am hoping to get a better understanding on how the different components are wired together and what you can do to customize the framework on a macro level.
 

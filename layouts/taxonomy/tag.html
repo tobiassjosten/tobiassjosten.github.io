@@ -21,7 +21,7 @@
                             <time>{{ .Date.Format "January 2, 2006" }}</time>
                         </p>
 
-                        {{ with .Params.summary }}
+                        {{ with .Summary }}
                             <p>{{ . }}</p>
                         {{ end }}
 

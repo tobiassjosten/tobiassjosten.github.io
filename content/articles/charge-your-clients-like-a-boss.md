@@ -7,8 +7,11 @@ categories:
 tags:
     - business
     - _newsletter
-summary: Being worth a certain value != being payed a certain sum. But it can be a tangent!
 ---
+
+Being worth a certain value does not equate to being payed the same amount. But it can be a tangent!
+
+<!--more-->
 
 There is an important distinction to be made between your [professional worth](/development/my-professional-worth/) and your *professional price*. Basically, being worth a certain value != being payed a certain sum.
 

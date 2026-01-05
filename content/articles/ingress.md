@@ -6,10 +6,11 @@ categories:
     - Personal
 tags:
     - gaming
-summary: Today I found, applied for and was invited to Ingress. Just a few hours of playing has already gotten me hooked and chances are you will like it too.
 ---
 
 Today I found, applied for and was invited to *Ingress*. Just a few hours of playing has already gotten me hooked and if you are frequenting this site, chances are you will like it too.
+
+<!--more-->
 
 [Wikipedia describes](http://en.wikipedia.org/wiki/Ingress_%28game%29) Ingress as "a near-realtime augmented reality massively multiplayer online video game. NianticLabs at Google has created a very involved story and parallel world where two factions, the Resistance and the Enlightened, fight for power.
 

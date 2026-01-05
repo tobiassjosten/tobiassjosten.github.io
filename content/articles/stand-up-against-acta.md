@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - internet
-summary: Our Internet is yet again under siege. This time also the lobbyists are wielding a four lettered acronym to try and impose on our freedom and global community, in hopes of securing some extra income for themselves.
 ---
 
 Our Internet is yet again under siege. This time also the lobbyists are wielding a four lettered acronym to try and impose on our freedom and global community, in hopes of securing some extra income for themselves.
+
+<!--more-->
 
 It is the [Anti-Counterfeiting Trade Agreement](http://en.wikipedia.org/wiki/Anti-Counterfeiting_Trade_Agreement). While noble and righteous in its name, it is anything but in practice. From its creation it has been revised in secrecy and agreed upon in meetings behind locked doors. Neither its content nor its process is becoming of a democratic civilization.
 

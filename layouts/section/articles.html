@@ -48,7 +48,7 @@
                     <p class="text-muted mb-2">
                         <time>{{ .Date.Format "January 2, 2006" }}</time>
                     </p>
-                    {{ with .Params.summary }}
+                    {{ with .Summary }}
                     <p>{{ . }}</p>
                     {{ end }}
                     {{ with .Params.tags }}

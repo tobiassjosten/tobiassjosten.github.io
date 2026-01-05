@@ -6,10 +6,11 @@ categories:
     - Technology
 tags:
     - projects
-summary: Say hello to Chaps — a command line tool that will let you manage your many lists of followers.
 ---
 
 I recently pushed the initial commit for a new project of mine. Say hello to [Chaps](https://github.com/tobiassjosten/chaps)!
+
+<!--more-->
 
 Chaps is a *command line tool* that will let you *manage your many lists of followers* on the various social networks out there. I will use it myself to find new, potentially interesting, people to follow on Twitter and to trim my following list on GitHub a bit.
 

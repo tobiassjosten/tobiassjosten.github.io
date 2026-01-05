@@ -10,10 +10,11 @@ tags:
     - drupal
     - symfony
     - _drupalplanet
-summary: Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again at March 8th, just two weeks from today.
 ---
 
 Kind-of-annual event *DrupalCamp Stockholm* is about to kick off again, just two weeks from today. Mark your calendars — March 8th will bring a lot of geeky fun to our capital city.
+
+<!--more-->
 
 There are some really promising sessions planned for this DrupalCamp. I am especially looking forward to [Fredrik Jonsson's](https://twitter.com/frjo_xdeb) talk on [Git](/git/) and [Fabian Sörqvist's](https://twitter.com/fabsor_) talk on Jaegirmeister. As always there are some conflicting sessions where I would love to see two talks but they are at the same time, like [Ida Franceen's](https://twitter.com/kolombiken) talk on kodsmuts which clashes with my own presentation.
 

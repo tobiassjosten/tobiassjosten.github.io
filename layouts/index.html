@@ -62,7 +62,7 @@
                             <h3 class="h5 mb-2">
                                 <a href="{{ $article.Permalink }}">{{ $article.Title }}</a>
                             </h3>
-                            {{ with $article.Params.summary }}
+                            {{ with $article.Summary }}
                             <p class="mb-2">{{ . }}</p>
                             {{ end }}
                             <p class="text-muted small mb-0">
@@ -104,8 +104,11 @@
                                         <a href="{{ .url }}" target="_blank" rel="noopener" class="text-decoration-none">
                                             {{ .title }}
                                         </a>
+                                        {{ $parsedURL := urls.Parse .url }}
+                                        {{ $hostParts := split $parsedURL.Host "." }}
+                                        {{ $domain := delimit (last 2 $hostParts) "." }}
                                         {{ with .date }}
-                                            <small class="text-muted d-block">{{ . }}</small>
+                                            <small class="text-muted d-block">{{ . }} • {{ $domain }}</small>
                                         {{ end }}
                                     </li>
                                 {{ end }}

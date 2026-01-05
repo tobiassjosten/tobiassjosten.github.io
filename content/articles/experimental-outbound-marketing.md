@@ -7,10 +7,11 @@ categories:
 tags:
     - business
     - _newsletter
-summary: As part of building Teametry I'm experimenting with marketing it. First out is through outbound marketing.
 ---
 
 As part of building my [tool for remote teams](http://www.teametry.com/) I'm exploring ways to market it. I want to try a bunch of ideas in small scale and see how they perform, so that I can calculate how it could work once I scale it up.
+
+<!--more-->
 
 One of my first attempts has been with *outbound marketing*. This basically means I'm reaching out to people that I think Teametry can help and try to convince them to become my customer. I picked this approach first because it'd allow me to communicate directly with potential customers and learn from their objections and problems.
 

@@ -6,10 +6,11 @@ categories:
     - Personal
 tags:
     - projects
-summary: Today marks the official launch of Smartburk; a web service to help you track your favorite TV series.
 ---
 
 Today marks the official launch of Smartburk; a web service to help you track your favorite TV series. I am super thrilled to finally be able to show it off and I extend my warmest welcome for you [to come try it out](http://www.smartburk.se/).
+
+<!--more-->
 
 Smartburk has been in development on and off for the last three years but together with my friend and colleague [Viktor](http://www.viktormiranda.com/), I have made a final push these last couple of months to finish it.
 

@@ -6,10 +6,11 @@ categories:
     - Engineering
 tags:
     - php
-summary: I recently joined a program to further *the PHP community*, called PHP Mentoring. Its purpose is helping aspiring PHP programmers to improved code quality and best practices.
 ---
 
 I recently joined a program to further *the PHP community*, called [PHP Mentoring](http://phpmentoring.org/). Its purpose is helping aspiring PHP programmers to improved code quality and best practices.
+
+<!--more-->
 
 The declaration of intent sums it up well.
 

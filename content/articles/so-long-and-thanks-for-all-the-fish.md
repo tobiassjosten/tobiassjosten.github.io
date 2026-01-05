@@ -7,10 +7,11 @@ categories:
 tags:
     - personal
     - kollegorna
-summary: In September 2009 I founded a hot new web agency together with my friend Viktor Miranda. Half a year later, in March 2010, we invited Per Sandström to enforce our team. We called ourself Kollegorna and we were engulfed in a burning passion to craft beautiful web.
 ---
 
 In September 2009 I founded a hot new web agency together with my friend [Viktor Miranda](http://viktormiranda.com/). Half a year later, in March 2010, we invited [Per Sandström](http://www.helloper.com/) to enforce our team. We called ourself [Kollegorna](http://www.kollegorna.se/) and we were engulfed in a burning passion to craft beautiful web.
+
+<!--more-->
 
 Over the course of the last two years we have built some really great sites and had a lot of fun doing it. There are too many understanding clients, helpful freelancers and great colleagues I would like to thank for this time. It has been a blast!
 

@@ -7,10 +7,11 @@ categories:
 tags:
     - business-intelligence
     - google-analytics
-summary: I am a big advocate for data driven decisions and I believe that, as a business, you should try to gather as much data as you can. You never know in advance what discoveries might jump out and surprise you.
 ---
 
 I am a big advocate for data driven decisions and I believe that, as a business, you should try to gather as much data as you can. You never know in advance what discoveries might jump out and surprise you.
+
+<!--more-->
 
 So when I started building [Smartburk](http://www.smartburk.se/) (swedish) I wanted to measure the potential interest in the service. I did so by putting up a splash page explaining the benefits of using Smartburk, accompanied by a signup form. This gives me a list of interested users I can communicate with for feedback and that is absolutely invaluable.
 

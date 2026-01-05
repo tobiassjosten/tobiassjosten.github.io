@@ -9,10 +9,11 @@ tags:
     - haskell
     - javascript
     - php
-summary: Google is a great source for finding answers. One overlooked feature though is using the search engine to find questions! Like for example "Why is JavaScript so slow?".
 ---
 
 Google is a great source for finding answers. One overlooked feature though is using the search engine to find questions! Like for example *"Why is JavaScript so slow?"*.
+
+<!--more-->
 
 What you can do is go to Google, type in a partial search query and then wait for the autocomplete to tell you what others are searching for. I did so for a few programming languages and learned what apparently a lot of people are asking.
 

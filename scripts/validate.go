@@ -40,6 +40,16 @@ type BookMetadata struct {
 	FeaturedOnHomepage bool
 }
 
+// ArticleMetadata represents parsed article content
+type ArticleMetadata struct {
+	Path        string
+	Slug        string
+	Type        string // "article", "newsletter", or "interview"
+	Title       string
+	Content     string
+	HasMoreMark bool
+}
+
 // ValidationError represents a validation error
 type ValidationError struct {
 	BookSlug  string
@@ -57,8 +67,9 @@ type ValidationWarning struct {
 
 // ValidationContext holds all data needed for validation
 type ValidationContext struct {
-	Books    map[string]*BookMetadata // slug -> metadata
-	Authors  map[string]bool          // author slug -> exists
+	Books    map[string]*BookMetadata    // slug -> metadata
+	Articles map[string]*ArticleMetadata // slug -> metadata
+	Authors  map[string]bool             // author slug -> exists
 	Errors   []ValidationError
 	Warnings []ValidationWarning
 }
@@ -197,11 +208,50 @@ func parseBookFile(path string) (*BookMetadata, error) {
 	return book, nil
 }
 
-// loadValidationContext loads all books and authors
+// parseArticleFile parses a single article/newsletter/interview file
+func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("reading file: %w", err)
+	}
+
+	contentStr := string(content)
+
+	// Split front matter from content
+	parts := strings.SplitN(contentStr, "---", 3)
+	if len(parts) < 3 {
+		return nil, fmt.Errorf("invalid front matter format")
+	}
+
+	// Extract title from frontmatter
+	fm, _ := parseFrontMatter(contentStr)
+	title := fm["title"]
+
+	// Get slug from filename
+	slug := strings.TrimSuffix(filepath.Base(path), ".md")
+
+	// Check for <!--more--> in content body
+	bodyContent := parts[2]
+	hasMoreMark := strings.Contains(bodyContent, "<!--more-->")
+
+	article := &ArticleMetadata{
+		Path:        path,
+		Slug:        slug,
+		Type:        contentType,
+		Title:       title,
+		Content:     bodyContent,
+		HasMoreMark: hasMoreMark,
+	}
+
+	return article, nil
+}
+
+// loadValidationContext loads all books, articles, and authors
 func loadValidationContext() (*ValidationContext, error) {
 	ctx := &ValidationContext{
-		Books:   make(map[string]*BookMetadata),
-		Authors: make(map[string]bool),
+		Books:    make(map[string]*BookMetadata),
+		Articles: make(map[string]*ArticleMetadata),
+		Authors:  make(map[string]bool),
 	}
 
 	// Load all books
@@ -224,6 +274,41 @@ func loadValidationContext() (*ValidationContext, error) {
 			continue
 		}
 		ctx.Books[book.Slug] = book
+	}
+
+	// Load all articles, newsletters, and interviews
+	contentTypes := map[string]string{
+		"content/articles/*.md":    "article",
+		"content/newsletters/*.md": "newsletter",
+		"content/interviews/*.md":  "interview",
+	}
+
+	for pattern, contentType := range contentTypes {
+		articlePaths, err := filepath.Glob(pattern)
+		if err != nil {
+			return nil, fmt.Errorf("finding %s files: %w", contentType, err)
+		}
+
+		for _, path := range articlePaths {
+			// Skip _index.md files
+			if strings.HasSuffix(path, "_index.md") {
+				continue
+			}
+
+			article, err := parseArticleFile(path, contentType)
+			if err != nil {
+				// Add parsing error but continue
+				slug := strings.TrimSuffix(filepath.Base(path), ".md")
+				ctx.Errors = append(ctx.Errors, ValidationError{
+					BookSlug:  slug,
+					FilePath:  path,
+					ErrorType: "PARSE_ERROR",
+					Message:   fmt.Sprintf("Failed to parse: %v", err),
+				})
+				continue
+			}
+			ctx.Articles[article.Slug] = article
+		}
 	}
 
 	// Load all authors
@@ -480,6 +565,20 @@ func validateUnusedAuthors(ctx *ValidationContext) {
 	}
 }
 
+// validateArticleMoreMarker checks that articles have <!--more--> marker
+func validateArticleMoreMarker(ctx *ValidationContext) {
+	for _, article := range ctx.Articles {
+		if !article.HasMoreMark {
+			ctx.Errors = append(ctx.Errors, ValidationError{
+				BookSlug:  article.Slug,
+				FilePath:  article.Path,
+				ErrorType: "MISSING_MORE_MARKER",
+				Message:   fmt.Sprintf("Article is missing <!--more--> separator for summary generation"),
+			})
+		}
+	}
+}
+
 // validateBookMeta runs all validations
 func validateBookMeta(ctx *ValidationContext) {
 	validateAllowedProperties(ctx)
@@ -495,9 +594,9 @@ func validateBookMeta(ctx *ValidationContext) {
 
 // printResults prints validation results
 func printResults(ctx *ValidationContext) {
-	fmt.Println("=== Book Metadata Validation ===")
+	fmt.Println("=== Content Validation ===")
 	fmt.Println()
-	fmt.Printf("Validating %d books...\n", len(ctx.Books))
+	fmt.Printf("Validating %d books and %d articles...\n", len(ctx.Books), len(ctx.Articles))
 	fmt.Println()
 
 	if len(ctx.Errors) > 0 {
@@ -576,6 +675,7 @@ func main() {
 
 	// Run validations
 	validateBookMeta(ctx)
+	validateArticleMoreMarker(ctx)
 
 	// Print results
 	printResults(ctx)

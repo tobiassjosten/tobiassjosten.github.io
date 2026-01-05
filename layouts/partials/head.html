@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
 <meta name="twitter:domain" content="{{ .Site.Params.domain }}">
 

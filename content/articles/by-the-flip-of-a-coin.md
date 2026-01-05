@@ -7,10 +7,11 @@ categories:
 tags:
     - business
     - _newsletter
-summary: The ninetynine times before ths flip of a coin, it has ended up in tails — what are the odds of one hundred in a row?
 ---
 
 The coin takes air and spins around in suspense before landing for the hundreth time in your palm. The ninetynine times before, by some freak accident, ended up in tails. So surely this time it must be head — for what are the odds of one hundred tails in a row?
+
+<!--more-->
 
 The answer is two to the hundreth power: a probability of abyssmally, monomentually and humongously small proportions. It just won't happen. But yet is it really that hard to imagine that a coin could show tails when flipped? Of course not and this problem is called [the gambler's fallacy](http://en.wikipedia.org/wiki/Gambler's_fallacy).
 

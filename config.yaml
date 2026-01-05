@@ -12,6 +12,8 @@ frontmatter:
     - :fileModTime
     - date
 
+summaryLength: 50
+
 markup:
   goldmark:
     renderer:

@@ -7,10 +7,11 @@ categories:
 tags:
     - business
     - _newsletter
-summary: There's something special in the question; "how was your week?". This is what welds teams together.
 ---
 
 This February I packed my bags, said goodbye to Sweden and moved to Buenos Aires, Argentina. 12'000 kilometers removed from friends and family, in a foreign country where I didn't speak the language and didn't know a single soul. I found myself finally living a long overdue dream of mine.
+
+<!--more-->
 
 Today, eight months later, I still enjoy life on the road and can't see myself doing anything else for the forseeable future. Being able to just unfold my laptop at a random café and get to work is a true privilege. But as the sun has its spots, so does remote work have some drawbacks.
 

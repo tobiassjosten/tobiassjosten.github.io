@@ -6,10 +6,11 @@ categories:
     - Personal
 tags:
     - personal
-summary: At this time of year I like to reflect on what has passed. I believe this is important to better cherish the good parts and learn to avoid the bad parts in the future.
 ---
 
 In a couple of hours it is midnight and we will turn the page to welcome a new year. At this time of year I like to reflect on what has passed. I believe this is important to better cherish the good parts and learn to avoid the bad parts in the future.
+
+<!--more-->
 
 I structure my daily work using the [Scrum methodology](http://en.wikipedia.org/wiki/Scrum_%28development%29) and I find this to be a great framework. This includes a retrospective session at the end of every sprint. So what would be a better format for my reflections of 2011?
 

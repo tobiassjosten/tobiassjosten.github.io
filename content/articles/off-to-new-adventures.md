@@ -7,10 +7,11 @@ categories:
 tags:
     - personal
     - interversum
-summary: This last Friday I discontinued my contract with Unibet, where I have been consulting for the last 15 months.
 ---
 
 This last Friday I discontinued my contract with Unibet, where I have been consulting for the last 15 months.
+
+<!--more-->
 
 It was a great gig and I am very grateful for having been onboard for the ride. We finished it off by launching the [complete redesign and restructure](https://www.maria.com/) of their [Drupal platform](/drupal), which powers a dozen gambling sites, in several languages and with support for multiple jurisdictions and brands. Quite complex and insanely fun to architecture!
 

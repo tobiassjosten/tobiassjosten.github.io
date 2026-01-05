@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - seo
-summary: As a hobbyist search engine optimizer I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP. Instead I rely on others.
 ---
 
 As a hobbyist [search engine optimizer](/seo/) I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP.
+
+<!--more-->
 
 Instead I rely on others, with way more SEO skills than me, to do the heavy lifting and hopefully impart some of their results through the blogs I follow.
 

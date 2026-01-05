@@ -8,10 +8,11 @@ tags:
     - events
     - php
     - symfony
-summary: Me and the rest of Symfony Sweden will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for November Camp!
 ---
 
 Me and the rest of [Symfony Sweden](http://www.symfony.se/) will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for [November Camp](http://www.symfony.se/november-camp/)!
+
+<!--more-->
 
 If you are doing PHP professionally, you should definitely come. This whole day event will guide you through the latest and greatest of modern PHP. The PSR standards, Composer and Packagist and the SOLID principles are given topics but we will also cover essential peripherals like continuous integration and monitoring.
 

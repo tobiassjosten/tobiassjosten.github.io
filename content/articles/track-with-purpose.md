@@ -6,10 +6,11 @@ categories:
     - Productivity
 tags:
     - business-intelligence
-summary: Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances, fitness and server infrastructure. But what do you do with all the numbers?
 ---
 
 Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances with [Tink](https://www.tink.se/), use one of many phone apps to oversee your nutrition or register for [Google Analytics](/google-analytics/) to monitor your website traffic.
+
+<!--more-->
 
 Install, activate and you'll be rewarded with an endless stream of delicious numbers. Self quantifiers rejoice!
 

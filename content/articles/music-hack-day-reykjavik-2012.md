@@ -9,10 +9,11 @@ tags:
     - javascript
     - php
     - symfony
-summary: Together with Viktor Miranda I have flewn to Iceland and Reykjavik to participate in Music Hack Day Reykjavik 2012. This is an event where hackers, designers and musicians travel from all around the world to meet up and create cool stuff somehow related to music.
 ---
 
 Together with [Viktor Miranda](http://www.viktormiranda.com/) I have flewn to Iceland and Reykjavik to attend [Music Hack Day Reykjavik 2012](http://reykjavik.musichackday.org/2012/). This is an event where hackers, designers and musicians travel from all around the world to meet up and create cool stuff somehow related to music.
+
+<!--more-->
 
 Me and Viktor are currently heavily involved in building a [tv-series startup](http://www.smartburk.se/) but felt it would be a good time to take a short break and do something else for a few days. Participating in Music Hack Day and visiting the beautiful Iceland seems like a great pause.
 

@@ -6,10 +6,11 @@ categories:
     - Web
 tags:
     - internet
-summary: Yesterday saw the release of The Pirate Bay — Away From Keyboard; a documentary about the world's largest and most resilient file sharing site.
 ---
 
 Yesterday saw the release of *The Pirate Bay — Away From Keyboard*; a documentary about the world's largest and most resilient file sharing site.
+
+<!--more-->
 
 I just finished watching it and I liked it a lot. It was nice getting to know the persons behind the names *Brokep*, *Anakata* and *TiAMO*. I especially enjoyed listening to Peter Sunde and he definitely made it onto my list of cool people.
 
