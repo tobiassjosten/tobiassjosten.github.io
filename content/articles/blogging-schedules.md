@@ -1,11 +1,6 @@
 ---
-title: Blogging schedules
+title: "Blogging schedules"
 date: "2013-01-15"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 I often come upon the advice that you should keep *a blogging schedule*. In fact, it is often said to be essential for building an audience. Sadly though, it just as often misses data and studies to back this statement up.

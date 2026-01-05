@@ -6,11 +6,6 @@
 
 <!-- Feeds -->
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "feed.xml" | absURL }}" />
-{{ if .Params.categories }}
-  {{ range .Params.categories }}
-    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} - {{ . }}" href="{{ printf "categories/%s/feed.xml" (. | urlize) | absURL }}" />
-  {{ end }}
-{{ end }}
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}"/>

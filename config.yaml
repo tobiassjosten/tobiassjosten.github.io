@@ -19,13 +19,6 @@ markup:
     renderer:
       unsafe: true
 
-taxonomies:
-  tag: tags
-  category: categories
-
-permalinks:
-  tags: /articles/:slug/
-
 outputs:
   home: ["HTML", "RSS"]
   section: ["HTML", "RSS"]

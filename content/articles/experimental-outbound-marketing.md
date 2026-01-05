@@ -1,12 +1,6 @@
 ---
-title: Experimental outbound marketing
+title: "Experimental outbound marketing"
 date: "2014-10-27"
-draft: false
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 As part of building my [tool for remote teams](http://www.teametry.com/) I'm exploring ways to market it. I want to try a bunch of ideas in small scale and see how they perform, so that I can calculate how it could work once I scale it up.

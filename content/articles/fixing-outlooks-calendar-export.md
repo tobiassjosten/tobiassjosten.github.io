@@ -1,11 +1,6 @@
 ---
 title: "Fixing Outlook's calendar export"
 date: "2025-03-03"
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 I use a variety of calendars to organize my life, my family, and the many projects and businesses I'm involved with. Most of them use Google Workspace, but at work we use, for some unfathomable reason, Office 365.

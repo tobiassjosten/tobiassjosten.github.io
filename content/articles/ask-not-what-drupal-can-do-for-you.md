@@ -1,12 +1,6 @@
 ---
-title: Ask not what Drupal can do for you
+title: "Ask not what Drupal can do for you"
 date: "2012-08-03"
-draft: false
-categories:
-    - Engineering
-tags:
-    - drupal
-    - _drupalplanet
 ---
 
 I often [rave and rant](https://twitter.com/tobiassjosten) about the shortcomings of *Drupal*. I think because I take its strengths and virtues for granted. Like an old, married couple.

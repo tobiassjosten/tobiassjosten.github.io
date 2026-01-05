@@ -1,12 +1,6 @@
 ---
-title: Charge your clients like a boss
+title: "Charge your clients like a boss"
 date: "2014-07-10"
-draft: false
-categories:
-    - Finance
-tags:
-    - business
-    - _newsletter
 ---
 
 Being worth a certain value does not equate to being payed the same amount. But it can be a tangent!

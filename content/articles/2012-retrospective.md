@@ -1,11 +1,6 @@
 ---
-title: 2012 retrospective
+title: "2012 retrospective"
 date: "2012-12-31"
-draft: false
-categories:
-    - Personal
-tags:
-    - personal
 ---
 
 Following up on [last years retrospective](/personal/2011-retrospective/) I thought it would be fun and useful to mull over what has passed and look ahead on what is yet to come. This year however I will deviate from the scrum sprint retrospective framework.

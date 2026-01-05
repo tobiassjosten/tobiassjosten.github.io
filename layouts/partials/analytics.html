@@ -4,9 +4,6 @@
 
     _gaq.push(["_setAccount", "{{ .Site.Params.ga_tracking_id }}"]);
     _gaq.push(['_setSiteSpeedSampleRate', 100]);
-    {{ with .Params.categories }}
-        _gaq.push(['_setCustomVar', 1, 'Category', '{{ index . 0}}', 3]);
-    {{ end }}
     _gaq.push(["_trackPageview"]);
 
     (function () {

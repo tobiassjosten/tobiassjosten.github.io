@@ -1,11 +1,6 @@
 ---
-title: Imperfect toilets
+title: "Imperfect toilets"
 date: "2012-08-03"
-draft: false
-categories:
-    - Engineering
-tags:
-    - development
 ---
 
 Have you ever wondered how toilets know what amount of water to use when you flush? It is an engineering problem, which is probably why I started thinking about it. Or I might just be weird like that. However the solution is what makes this interesting.

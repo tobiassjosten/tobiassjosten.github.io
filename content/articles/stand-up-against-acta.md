@@ -1,11 +1,6 @@
 ---
-title: Stand up against ACTA
+title: "Stand up against ACTA"
 date: "2012-01-31"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 Our Internet is yet again under siege. This time also the lobbyists are wielding a four lettered acronym to try and impose on our freedom and global community, in hopes of securing some extra income for themselves.

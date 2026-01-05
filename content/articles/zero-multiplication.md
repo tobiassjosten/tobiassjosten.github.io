@@ -1,12 +1,6 @@
 ---
-title: Zero multiplication
+title: "Zero multiplication"
 date: "2014-09-08"
-draft: false
-categories:
-    - Productivity
-tags:
-    - business
-    - _newsletter
 ---
 
 I often describe myself as highly analytical and as someone who works very systematically. To be honest that's just CV code for saying I'm a world class procrastrinator. If something needs to be done you can trust me to find a way to work hard doing anything but the actual thing. Often accompanied by the words "if something is worth doing, it's worth doing correctly".

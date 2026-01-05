@@ -1,11 +1,6 @@
 ---
-title: Symfony workshop for aspiring hackers
+title: "Symfony workshop for aspiring hackers"
 date: "2012-03-27"
-draft: false
-categories:
-    - Engineering
-tags:
-    - symfony
 ---
 
 I meet people who have heard good things about [Symfony](/symfony) all the time. Often they have not yet tried it themselves but are planning to ... sometime. I also know how very rewarding it is to take the time and learn the ropes with Symfony2.

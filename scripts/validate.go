@@ -10,7 +10,6 @@ import (
 	"strings"
 )
 
-// Allowed frontmatter properties
 var allowedProperties = map[string]bool{
 	"title":              true,
 	"authors":            true,
@@ -21,6 +20,16 @@ var allowedProperties = map[string]bool{
 	"rating":             true,
 	"currentlyReading":   true,
 	"featuredOnHomepage": true,
+}
+
+var allowedArticleProperties = map[string]bool{
+	"title": true,
+	"date":  true,
+}
+
+var requiredArticleProperties = []string{
+	"title",
+	"date",
 }
 
 // BookMetadata represents parsed book frontmatter
@@ -46,8 +55,10 @@ type BookMetadata struct {
 type ArticleMetadata struct {
 	Path        string
 	Slug        string
-	Type        string // "article", "newsletter", or "interview"
+	Properties  map[string]string // raw properties from frontmatter
 	Title       string
+	Date        string
+	Draft       bool
 	Content     string
 	HasMoreMark bool
 }
@@ -270,8 +281,8 @@ func parsePhilosopherFile(path string) (*PhilosopherMetadata, error) {
 	return philosopher, nil
 }
 
-// parseArticleFile parses a single article/newsletter/interview file
-func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
+// parseArticleFile parses a single article file
+func parseArticleFile(path string) (*ArticleMetadata, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("reading file: %w", err)
@@ -285,9 +296,8 @@ func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
 		return nil, fmt.Errorf("invalid front matter format")
 	}
 
-	// Extract title from frontmatter
-	fm, _ := parseFrontMatter(contentStr)
-	title := fm["title"]
+	// Parse all properties from frontmatter
+	properties, _ := parseFrontMatter(contentStr)
 
 	// Get slug from filename
 	slug := strings.TrimSuffix(filepath.Base(path), ".md")
@@ -299,9 +309,11 @@ func parseArticleFile(path, contentType string) (*ArticleMetadata, error) {
 	article := &ArticleMetadata{
 		Path:        path,
 		Slug:        slug,
-		Type:        contentType,
-		Title:       title,
-		Content:     bodyContent,
+		Properties:  properties,
+		Title:       properties["title"],
+		Date:        properties["date"],
+		Draft:       properties["draft"] == "true",
+		Content:     strings.TrimSpace(bodyContent),
 		HasMoreMark: hasMoreMark,
 	}
 
@@ -317,7 +329,6 @@ func loadValidationContext() (*ValidationContext, error) {
 		Authors:      make(map[string]bool),
 	}
 
-	// Load all books
 	bookPaths, err := filepath.Glob("content/books/*/index.md")
 	if err != nil {
 		return nil, fmt.Errorf("finding book files: %w", err)
@@ -326,10 +337,8 @@ func loadValidationContext() (*ValidationContext, error) {
 	for _, path := range bookPaths {
 		book, err := parseBookFile(path)
 		if err != nil {
-			// Add parsing error but continue
-			slug := filepath.Base(filepath.Dir(path))
 			ctx.Errors = append(ctx.Errors, ValidationError{
-				BookSlug:  slug,
+				BookSlug:  filepath.Base(filepath.Dir(path)),
 				FilePath:  path,
 				ErrorType: "PARSE_ERROR",
 				Message:   fmt.Sprintf("Failed to parse: %v", err),
@@ -339,42 +348,29 @@ func loadValidationContext() (*ValidationContext, error) {
 		ctx.Books[book.Slug] = book
 	}
 
-	// Load all articles, newsletters, and interviews
-	contentTypes := map[string]string{
-		"content/articles/*.md":    "article",
-		"content/newsletters/*.md": "newsletter",
-		"content/interviews/*.md":  "interview",
+	articlePaths, err := filepath.Glob("content/articles/**.md")
+	if err != nil {
+		return nil, fmt.Errorf("finding article files: %w", err)
 	}
 
-	for pattern, contentType := range contentTypes {
-		articlePaths, err := filepath.Glob(pattern)
+	for _, path := range articlePaths {
+		if filepath.Base(path) == "_index.md" {
+			continue
+		}
+
+		article, err := parseArticleFile(path)
 		if err != nil {
-			return nil, fmt.Errorf("finding %s files: %w", contentType, err)
+			ctx.Errors = append(ctx.Errors, ValidationError{
+				BookSlug:  strings.TrimSuffix(filepath.Base(path), ".md"),
+				FilePath:  path,
+				ErrorType: "PARSE_ERROR",
+				Message:   fmt.Sprintf("Failed to parse: %v", err),
+			})
+			continue
 		}
-
-		for _, path := range articlePaths {
-			// Skip _index.md files
-			if strings.HasSuffix(path, "_index.md") {
-				continue
-			}
-
-			article, err := parseArticleFile(path, contentType)
-			if err != nil {
-				// Add parsing error but continue
-				slug := strings.TrimSuffix(filepath.Base(path), ".md")
-				ctx.Errors = append(ctx.Errors, ValidationError{
-					BookSlug:  slug,
-					FilePath:  path,
-					ErrorType: "PARSE_ERROR",
-					Message:   fmt.Sprintf("Failed to parse: %v", err),
-				})
-				continue
-			}
-			ctx.Articles[article.Slug] = article
-		}
+		ctx.Articles[article.Slug] = article
 	}
 
-	// Load all philosophers
 	philosopherPaths, err := filepath.Glob("content/philosophers/*/index.md")
 	if err != nil {
 		return nil, fmt.Errorf("finding philosopher files: %w", err)
@@ -669,6 +665,49 @@ func validateArticleMoreMarker(ctx *ValidationContext) {
 	}
 }
 
+// validateArticleProperties checks that articles have valid frontmatter properties
+func validateArticleProperties(ctx *ValidationContext) {
+	for _, article := range ctx.Articles {
+		// Check for invalid properties
+		for prop := range article.Properties {
+			if !allowedArticleProperties[prop] {
+				ctx.Errors = append(ctx.Errors, ValidationError{
+					BookSlug:  article.Slug,
+					FilePath:  article.Path,
+					ErrorType: "INVALID_PROPERTY",
+					Message:   fmt.Sprintf("Article has invalid property: %s", prop),
+				})
+			}
+		}
+
+		// Check for required properties
+		for _, prop := range requiredArticleProperties {
+			value := article.Properties[prop]
+			if value == "" || value == "null" {
+				ctx.Errors = append(ctx.Errors, ValidationError{
+					BookSlug:  article.Slug,
+					FilePath:  article.Path,
+					ErrorType: "MISSING_PROPERTY",
+					Message:   fmt.Sprintf("Article missing required property: %s", prop),
+				})
+			}
+		}
+
+		// Validate date format (if present)
+		if article.Date != "" {
+			datePattern := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
+			if !datePattern.MatchString(article.Date) {
+				ctx.Errors = append(ctx.Errors, ValidationError{
+					BookSlug:  article.Slug,
+					FilePath:  article.Path,
+					ErrorType: "INVALID_DATE_FORMAT",
+					Message:   fmt.Sprintf("Article has invalid date format: %s (expected YYYY-MM-DD)", article.Date),
+				})
+			}
+		}
+	}
+}
+
 // validatePhilosopherBooks checks that philosopher book references are valid
 func validatePhilosopherBooks(ctx *ValidationContext) {
 	for _, philosopher := range ctx.Philosophers {
@@ -782,6 +821,7 @@ func main() {
 	// Run validations
 	validateBookMeta(ctx)
 	validateArticleMoreMarker(ctx)
+	validateArticleProperties(ctx)
 	validatePhilosopherBooks(ctx)
 
 	// Print results

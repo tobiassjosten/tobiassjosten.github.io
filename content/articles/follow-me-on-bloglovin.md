@@ -1,11 +1,6 @@
 ---
-title: Follow me on Bloglovin'
+title: "Follow me on Bloglovin'"
 date: "2013-03-17"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 Bloglovin' is a service for keeping track of the many blogs you might be following; a modern RSS reader.

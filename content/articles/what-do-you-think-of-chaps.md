@@ -1,11 +1,6 @@
 ---
-title: What do you think of Chaps?
+title: "What do you think of Chaps?"
 date: "2014-04-18"
-draft: false
-categories:
-    - Technology
-tags:
-    - projects
 ---
 
 I recently pushed the initial commit for a new project of mine. Say hello to [Chaps](https://github.com/tobiassjosten/chaps)!

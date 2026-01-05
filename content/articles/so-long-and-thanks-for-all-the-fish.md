@@ -1,12 +1,6 @@
 ---
-title: So long and thanks for all the fish!
+title: "So long and thanks for all the fish!"
 date: "2011-05-25"
-draft: false
-categories:
-    - Personal
-tags:
-    - personal
-    - kollegorna
 ---
 
 In September 2009 I founded a hot new web agency together with my friend [Viktor Miranda](http://viktormiranda.com/). Half a year later, in March 2010, we invited [Per Sandström](http://www.helloper.com/) to enforce our team. We called ourself [Kollegorna](http://www.kollegorna.se/) and we were engulfed in a burning passion to craft beautiful web.

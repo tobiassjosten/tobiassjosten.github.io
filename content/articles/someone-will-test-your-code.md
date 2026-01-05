@@ -1,11 +1,6 @@
 ---
-title: Someone will test your code
+title: "Someone will test your code"
 date: "2013-05-01"
-draft: false
-categories:
-    - Engineering
-tags:
-    - development
 ---
 
 You often hear testing proponents (such as myself) lament their non-testing peers with an almost religious fervor. That is often counter-productive but more importantly; the case can be made way more tangible than just promoting The Right Way™.

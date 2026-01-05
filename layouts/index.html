@@ -54,23 +54,21 @@
                 <h2 class="text-center mb-5">Latest articles</h2>
 
                 <div class="mb-5">
-                    {{ range $category := slice "Finance" "Technology" "Productivity" "Business" "Lifestyle" }}
-                        {{ $articles := where (where $.Site.Pages "Section" "articles") "Params.categories" "intersect" (slice $category) }}
-                        {{ $article := index $articles 0 }}
-                        {{ if $article }}
-                        <article class="mb-4 pb-4">
-                            <h3 class="h5 mb-2">
-                                <a href="{{ $article.Permalink }}">{{ $article.Title }}</a>
-                            </h3>
-                            {{ with $article.Summary }}
-                            <p class="mb-2">{{ . }}</p>
-                            {{ end }}
-                            <p class="text-muted small mb-0">
-                                <time>{{ $article.Date.Format "January 2, 2006" }}</time>
-                                <span class="mx-2">·</span>
-                                <span>{{ $category }}</span>
-                            </p>
-                        </article>
+                    {{ $articles := where .Site.RegularPages "Section" "articles" }}
+                    {{ if $articles }}
+                        {{ $sorted := sort $articles "Date" "desc" }}
+                        {{ range first 5 $sorted }}
+                            <article class="mb-4 pb-4">
+                                <h3 class="h5 mb-2">
+                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                </h3>
+                                {{ with .Summary }}
+                                    <p class="mb-2">{{ . }}</p>
+                                {{ end }}
+                                <p class="text-muted small mb-0">
+                                    <time>{{ .Date.Format "January 2, 2006" }}</time>
+                                </p>
+                            </article>
                         {{ end }}
                     {{ end }}
                 </div>

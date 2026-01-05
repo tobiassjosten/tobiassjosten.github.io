@@ -1,13 +1,6 @@
 ---
-title: Announcing November Camp 2013
+title: "Announcing November Camp 2013"
 date: "2013-10-01"
-draft: false
-categories:
-    - Business
-tags:
-    - events
-    - php
-    - symfony
 ---
 
 Me and the rest of [Symfony Sweden](http://www.symfony.se/) will be hosting a PHP conference in Stockholm this coming winter. Mark the 22nd for [November Camp](http://www.symfony.se/november-camp/)!

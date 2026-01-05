@@ -1,11 +1,6 @@
 ---
-title: My professional worth
+title: "My professional worth"
 date: "2014-04-03"
-draft: false
-categories:
-    - Productivity
-tags:
-    - development
 ---
 
 I used to believe that, as programmers, our professional worth is directly tied to the code we produce and the technical knowledge we are equipped with. It kind of makes sense. Similar to how proprietary software vendors draw their worth from their existing software, formats and protocols, fighting tooth and nail to keep it hidden away.

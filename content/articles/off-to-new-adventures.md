@@ -1,12 +1,6 @@
 ---
-title: Off to new adventures
+title: "Off to new adventures"
 date: "2012-09-04"
-draft: false
-categories:
-    - Personal
-tags:
-    - personal
-    - interversum
 ---
 
 This last Friday I discontinued my contract with Unibet, where I have been consulting for the last 15 months.

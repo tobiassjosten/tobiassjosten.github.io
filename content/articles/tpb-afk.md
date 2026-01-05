@@ -1,11 +1,6 @@
 ---
-title: TPB AFK
+title: "TPB AFK"
 date: "2013-02-09"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 Yesterday saw the release of *The Pirate Bay — Away From Keyboard*; a documentary about the world's largest and most resilient file sharing site.

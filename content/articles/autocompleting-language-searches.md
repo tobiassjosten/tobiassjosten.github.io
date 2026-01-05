@@ -1,14 +1,6 @@
 ---
-title: Autocompleting language searches
+title: "Autocompleting language searches"
 date: "2014-05-12"
-draft: false
-categories:
-    - Technology
-tags:
-    - development
-    - haskell
-    - javascript
-    - php
 ---
 
 Google is a great source for finding answers. One overlooked feature though is using the search engine to find questions! Like for example *"Why is JavaScript so slow?"*.

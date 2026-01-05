@@ -1,11 +1,6 @@
 ---
-title: Mentoring at Hyper Island
+title: "Mentoring at Hyper Island"
 date: "2012-11-22"
-draft: false
-categories:
-    - Business
-tags:
-    - events
 ---
 
 Today I was invited by [Mia Jung](https://twitter.com/miajung) to visit [Hyper Island](http://www.hyperisland.com/) and help mentor the students in their projects. It was a great experience and I can not help but feel a tinge of envy over how cool a school it is. The students dive head first and take on actually-payed-for, sharp projects for real clients!

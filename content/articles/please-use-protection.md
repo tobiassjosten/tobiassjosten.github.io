@@ -1,11 +1,6 @@
 ---
-title: Please use protection
+title: "Please use protection"
 date: "2012-08-04"
-draft: false
-categories:
-    - Engineering
-tags:
-    - security
 ---
 
 My girlfriend just had her purse stolen and with it a lot of valuables, including her phone. I immediately tried looking it up on *Google Latitude* but to no avail. There were no security cameras in the venue and police basically said "we will take your report but do no expect to get anything back".

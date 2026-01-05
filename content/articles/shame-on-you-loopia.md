@@ -1,11 +1,6 @@
 ---
-title: Shame on you, Loopia
+title: "Shame on you, Loopia"
 date: "2012-05-27"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 [Greenpeace](http://www.greenpeace.org/) recently put up a parody campaign site to highlight the damages on rain forest caused by the oil palm plantations of *Neste Oil*. The oil company retaliated by suing Greenpeace's domain registrar, *Loopia*, for copyright infringement.

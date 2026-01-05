@@ -1,11 +1,6 @@
 ---
-title: Smartburk is live!
+title: "Smartburk is live!"
 date: "2013-04-16"
-draft: false
-categories:
-    - Personal
-tags:
-    - projects
 ---
 
 Today marks the official launch of Smartburk; a web service to help you track your favorite TV series. I am super thrilled to finally be able to show it off and I extend my warmest welcome for you [to come try it out](http://www.smartburk.se/).

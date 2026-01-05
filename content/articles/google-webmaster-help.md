@@ -1,11 +1,6 @@
 ---
-title: Google Webmaster Help
+title: "Google Webmaster Help"
 date: "2012-11-01"
-draft: false
-categories:
-    - Web
-tags:
-    - seo
 ---
 
 As a hobbyist [search engine optimizer](/seo/) I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP.

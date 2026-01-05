@@ -1,11 +1,6 @@
 ---
-title: PHP Mentoring
+title: "PHP Mentoring"
 date: "2012-08-17"
-draft: false
-categories:
-    - Engineering
-tags:
-    - php
 ---
 
 I recently joined a program to further *the PHP community*, called [PHP Mentoring](http://phpmentoring.org/). Its purpose is helping aspiring PHP programmers to improved code quality and best practices.

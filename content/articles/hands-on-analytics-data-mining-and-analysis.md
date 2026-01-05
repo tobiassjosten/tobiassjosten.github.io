@@ -1,12 +1,6 @@
 ---
-title: Hands-on Analytics data mining and analysis
+title: "Hands-on Analytics data mining and analysis"
 date: "2011-09-24"
-draft: false
-categories:
-    - Business
-tags:
-    - business-intelligence
-    - google-analytics
 ---
 
 I am a big advocate for data driven decisions and I believe that, as a business, you should try to gather as much data as you can. You never know in advance what discoveries might jump out and surprise you.

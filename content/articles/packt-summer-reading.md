@@ -1,12 +1,6 @@
 ---
-title: Packt summer reading
+title: "Packt summer reading"
 date: "2014-07-04"
-draft: false
-categories:
-    - Lifestyle
-tags:
-    - events
-    - books
 ---
 
 Stepping away from the computer doesn't mean you have to stop tuning your skills and sharpening your tools.

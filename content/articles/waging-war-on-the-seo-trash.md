@@ -1,12 +1,6 @@
 ---
-title: Waging war on the SEO trash
+title: "Waging war on the SEO trash"
 date: "2012-01-19"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
-    - seo
 ---
 
 Click around some on my blog and you will find *a lot* of spam comments. I am periodically deleting them but they keep pouring in. Probably because I believe in a living Internet with a lot of cross linking, and so I am giving my commenters [delicious dofollow backlinks](/internet/rel-nofollow-is-killing-the-internet).

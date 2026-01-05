@@ -1,12 +1,6 @@
 ---
-title: Trading required for easy
+title: "Trading required for easy"
 date: "2014-09-15"
-draft: false
-categories:
-    - Productivity
-tags:
-    - business
-    - _newsletter
 ---
 
 I'm always looking to improve and learn new things. Right now one such thing is the Spanish language and so when I recently walked past a stall with books on different languages I quickly picked up two good candidates.

@@ -1,12 +1,6 @@
 ---
-title: The problem with remote teams
+title: "The problem with remote teams"
 date: "2014-09-22"
-draft: false
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 This February I packed my bags, said goodbye to Sweden and moved to Buenos Aires, Argentina. 12'000 kilometers removed from friends and family, in a foreign country where I didn't speak the language and didn't know a single soul. I found myself finally living a long overdue dream of mine.

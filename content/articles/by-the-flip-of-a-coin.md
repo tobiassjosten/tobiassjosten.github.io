@@ -1,12 +1,6 @@
 ---
-title: By the flip of a coin
+title: "By the flip of a coin"
 date: "2015-01-12"
-draft: false
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 The coin takes air and spins around in suspense before landing for the hundreth time in your palm. The ninetynine times before, by some freak accident, ended up in tails. So surely this time it must be head — for what are the odds of one hundred tails in a row?

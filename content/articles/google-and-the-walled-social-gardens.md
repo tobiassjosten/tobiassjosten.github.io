@@ -1,12 +1,6 @@
 ---
-title: Google+ and the walled social gardens
+title: "Google+ and the walled social gardens"
 date: "2011-06-29"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
-    - google
 ---
 
 Yesterday saw [the announcement of Google+](http://googleblog.blogspot.com/2011/06/introducing-google-project-real-life.html) – Googles new attempt at social networking. It looks pretty cool and being a signup junkie I am definitely looking forward to trying it out.

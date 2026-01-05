@@ -17,19 +17,6 @@
                     {{ with .Summary }}
                         <p>{{ . }}</p>
                     {{ end }}
-
-                    {{ with .Params.tags }}
-                        <div class="mt-2">
-                            {{ range first 5 . }}
-                                {{ if not (hasPrefix . "_") }}
-                                    <a href="{{ printf "/articles/%s/" (. | urlize) }}"
-                                    class="badge bg-secondary text-decoration-none me-1">
-                                        {{ . }}
-                                    </a>
-                                {{ end }}
-                            {{ end }}
-                        </div>
-                    {{ end }}
                 </article>
             </div>
         {{ end }}

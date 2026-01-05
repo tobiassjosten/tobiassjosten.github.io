@@ -1,11 +1,6 @@
 ---
-title: Symfony Day 2011
+title: "Symfony Day 2011"
 date: "2011-10-20"
-draft: false
-categories:
-    - Engineering
-tags:
-    - symfony
 ---
 
 I am just now sitting on plane bound for Cologne, to participate in [Symfony Day 2011](http://www.symfonyday.com/). This is my second Symfony Day and I am really psyched about it.

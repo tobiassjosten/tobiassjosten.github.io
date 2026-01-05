@@ -1,11 +1,6 @@
 ---
-title: Instagram on the web
+title: "Instagram on the web"
 date: "2013-02-06"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 Photo sharing service Instagram [recently announced](http://blog.instagram.com/post/42363074191/instagramfeed) the immediate availability of [its web based feed](http://instagram.com/).

@@ -1,11 +1,6 @@
 ---
-title: Report MFA affiliate spam sites
+title: "Report MFA affiliate spam sites"
 date: "2013-01-17"
-draft: false
-categories:
-    - Engineering
-tags:
-    - spam
 ---
 
 I have been known to call them the scourge of our Internet — the abhorrent *Made For Ads (MFA) sites*. They soil what could be an ever greater world wide web, only to make a few bucks for their talentless creators. But do not get mad — get even, right?

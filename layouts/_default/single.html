@@ -4,19 +4,6 @@
 
     <div itemprop="articleBody">{{ .Content }}</div>
 
-    <div class="my-4">
-        {{ range .Params.tags }}
-            {{ if not (hasPrefix . "_") }}
-                <a class="badge bg-secondary text-decoration-none me-2"
-                   href="{{ printf "/articles/%s/" (. | urlize) }}"
-                   itemprop="articleSection">
-                    {{ . }}
-                </a>
-                <meta itemprop="genre" content="{{ . }}">
-            {{ end }}
-        {{ end }}
-    </div>
-
     <p class="text-muted fst-italic">
         Published
         <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">

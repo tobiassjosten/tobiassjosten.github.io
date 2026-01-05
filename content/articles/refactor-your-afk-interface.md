@@ -1,12 +1,6 @@
 ---
-title: Refactor your AFK interface
+title: "Refactor your AFK interface"
 date: "2015-12-01"
-draft: false
-categories:
-    - Lifestyle
-tags:
-    - projects
-    - _newsletter
 ---
 
 I'll be the first to admit that I'm a complete geek. When I find something that interests me I'll go down the rabbit hole 100%, no matter how little it might interest others.

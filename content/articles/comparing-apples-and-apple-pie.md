@@ -1,12 +1,6 @@
 ---
-title: Comparing apple and apple pie
+title: "Comparing apple and apple pie"
 date: "2014-10-08"
-draft: false
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 I have been doing [CrossFit here in Edinburgh](http://www.crgcrossfit.com/) for about four months now and I feel myself getting stronger for every passing week. I can tell from the weights and repetitions but also from the fact that every workout is timed, so to give you a way to compare yourself to others and your previous workouts.

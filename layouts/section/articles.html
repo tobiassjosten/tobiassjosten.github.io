@@ -4,40 +4,6 @@
 
     {{ .Content }}
 
-    <div class="tag-cloud my-5">
-        <h2 class="h4 mb-3">Browse by Topic</h2>
-        {{ $tags := .Site.Taxonomies.tags }}
-        {{ $maxCount := 0 }}
-        {{ $minCount := 9999 }}
-
-        {{ range $tags }}
-            {{ if gt .Count $maxCount }}
-                {{ $maxCount = .Count }}
-            {{ end }}
-            {{ if lt .Count $minCount }}
-                {{ $minCount = .Count }}
-            {{ end }}
-        {{ end }}
-
-        <div class="tags-wrapper">
-            {{ range $tags.Alphabetical }}
-                {{ $tagData := index $.Site.Data.tags (.Page.Title | urlize) }}
-                {{ $weight := 0.0 }}
-                {{ if gt (sub $maxCount $minCount) 0 }}
-                    {{ $weight = div (sub (float .Count) (float $minCount)) (sub (float $maxCount) (float $minCount)) }}
-                {{ end }}
-                {{ $fontSize := add 1 (mul $weight 1.5) }}
-
-                <a href="{{ .Page.RelPermalink }}"
-                   class="tag-cloud-item me-2 mb-2 d-inline-block text-decoration-none"
-                   style="font-size: {{ $fontSize }}rem;"
-                   {{ with $tagData }}{{ with .description }}title="{{ . | plainify }}"{{ end }}{{ end }}>
-                    {{ .Page.Title }}
-                </a>
-            {{ end }}
-        </div>
-    </div>
-
     <div class="articles-list mt-5">
         <h2 class="h4 mb-4">All Articles</h2>
         <div class="row g-4">
@@ -50,16 +16,6 @@
                     </p>
                     {{ with .Summary }}
                     <p>{{ . }}</p>
-                    {{ end }}
-                    {{ with .Params.tags }}
-                    <div class="mt-2">
-                        {{ range first 5 . }}
-                            {{ if not (hasPrefix . "_") }}
-                            <a href="{{ printf "/articles/%s/" (. | urlize) }}"
-                               class="badge bg-secondary text-decoration-none me-1">{{ . }}</a>
-                            {{ end }}
-                        {{ end }}
-                    </div>
                     {{ end }}
                 </article>
             </div>

@@ -1,12 +1,6 @@
 ---
-title: Who the hell am I?
+title: "Who the hell am I?"
 date: "2014-10-13"
-draft: false
-categories:
-    - Business
-tags:
-    - business
-    - _newsletter
 ---
 
 Finding your first business competitor can be scary. At least for me it often brings out my worst demons and I start questioning myself worse than a high school kid.

@@ -1,11 +1,6 @@
 ---
-title: Ingress
+title: "Ingress"
 date: "2013-05-17"
-draft: false
-categories:
-    - Personal
-tags:
-    - gaming
 ---
 
 Today I found, applied for and was invited to *Ingress*. Just a few hours of playing has already gotten me hooked and if you are frequenting this site, chances are you will like it too.

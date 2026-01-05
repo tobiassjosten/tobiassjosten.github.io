@@ -113,16 +113,6 @@ a {
   }
 }
 
-.badge {
-  background-color: #ddd !important;
-  color: #888 !important;
-
-  &:hover {
-    background-color: #ccc !important;
-    color: #777 !important;
-  }
-}
-
 .navbar {
   .navbar-brand {
     font-weight: bold;
@@ -195,20 +185,6 @@ a {
   line-height: 0.65em;
   padding: 0.1em 0.2em 0 0;
   text-transform: uppercase;
-}
-
-.badge {
-  background-color: #ddd !important;
-  color: #888 !important;
-  font-weight: normal;
-  border-radius: 2px;
-  box-shadow: 1px 1px 2px #ccc;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #ccc !important;
-    color: #777 !important;
-  }
 }
 
 footer {

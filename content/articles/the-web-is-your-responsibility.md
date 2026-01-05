@@ -1,11 +1,6 @@
 ---
-title: The web is your responsibility
+title: "The web is your responsibility"
 date: "2012-02-11"
-draft: false
-categories:
-    - Web
-tags:
-    - internet
 ---
 
 A recent [call for action](http://www.glazman.org/weblog/dotclear/index.php?post/2012/02/09/CALL-FOR-ACTION:-THE-OPEN-WEB-NEEDS-YOU-NOW) from W3C representative [Daniel Glazman](https://twitter.com/glazou) sparked [a reaction](http://dcurt.is/web-standards) from [Dustin Curtis](https://twitter.com/dcurtis). It led to [more discussions](http://jjk2012.jardenberg.se/post/17417752451/web-standards-by-dustin-curtis) around the web about standardization and proprietary enhancements.

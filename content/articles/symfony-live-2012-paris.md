@@ -1,11 +1,6 @@
 ---
-title: Symfony Live 2012 Paris
+title: "Symfony Live 2012 Paris"
 date: "2012-06-06"
-draft: false
-categories:
-    - Engineering
-tags:
-    - symfony
 ---
 
 I am just now headed for [Symfony Live 2012 Paris](http://paris2012.live.symfony.com/). This will be my first *Symfony Live* conference and I am really excited about it!

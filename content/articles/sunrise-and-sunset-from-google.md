@@ -1,11 +1,6 @@
 ---
-title: Sunrise and sunset from Google
+title: "Sunrise and sunset from Google"
 date: "2013-05-13"
-draft: false
-categories:
-    - Web
-tags:
-    - seo
 ---
 
 Google seems to increasingly try and answer our more simple searches directly, rather than showing a list of websites that in turn might answer the search. It think it makes a lot of sense when it saves me time and clicks.
