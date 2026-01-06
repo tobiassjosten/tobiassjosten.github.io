@@ -71,7 +71,7 @@
                         <ul class="list-unstyled">
                             {{ range $newsletters }}
                             <li class="mb-3">
-                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                                 <small class="text-muted d-block">{{ .Date.Format "Jan 2, 2006" }}</small>
                             </li>
                             {{ end }}

@@ -45,14 +45,14 @@
         <div class="row">
             {{ with .PrevInSection }}
             <div class="col-md-6 mb-3 mb-md-0">
-                <a href="{{ .Permalink }}" class="btn btn-outline-primary w-100">
+                <a href="{{ .RelPermalink }}" class="btn btn-outline-primary w-100">
                     ← {{ .Title }}
                 </a>
             </div>
             {{ end }}
             {{ with .NextInSection }}
             <div class="col-md-6{{ if not $.PrevInSection }} ms-auto{{ end }}">
-                <a href="{{ .Permalink }}" class="btn btn-outline-primary w-100">
+                <a href="{{ .RelPermalink }}" class="btn btn-outline-primary w-100">
                     {{ .Title }} →
                 </a>
             </div>

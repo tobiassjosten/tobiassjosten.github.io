@@ -42,7 +42,7 @@
                 {{ range $undated }}
                     <div class="col">
                         <div class="text-center">
-                            <a href="{{ .Permalink }}">
+                            <a href="{{ .RelPermalink }}">
                                 {{ $image := .Resources.GetMatch .Params.image }}
                                 {{ if $image }}
                                 <img class="img-fluid" style="max-height: 200px;"

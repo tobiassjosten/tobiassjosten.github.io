@@ -3,7 +3,7 @@
 {{ if $.amazonLink }}
     {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
 {{ else if $isReviewed }}
-    {{ with .Permalink }}<a href="{{ . }}">{{ end }}
+    {{ with .RelPermalink }}<a href="{{ . }}">{{ end }}
 {{ end }}
     {{ $image := .Resources.GetMatch .Params.image }}
     {{ if $image }}

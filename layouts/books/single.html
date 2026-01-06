@@ -22,7 +22,7 @@
                     {{ if gt $i 0 }}
                         {{ if eq $i (sub (len $bookAuthors) 1) }} and {{ else }}, {{ end }}
                     {{ end }}
-                    <a href="{{ $authorPage.Permalink }}">{{ $authorPage.Title }}</a>
+                    <a href="{{ $authorPage.RelPermalink }}">{{ $authorPage.Title }}</a>
                 {{ end }}
             {{ end }}
 
@@ -54,7 +54,7 @@
                 — who also wrote
                 {{ range $i, $book := $otherBooks }}
                     {{ if gt $i 0 }}{{ if eq $i (sub (len $otherBooks) 1) }} and {{ else }}, {{ end }}{{ end }}
-                    <a href="{{ $book.Permalink }}">{{ $book.Title }}</a>
+                    <a href="{{ $book.RelPermalink }}">{{ $book.Title }}</a>
                 {{ end }}
             {{ end }}
         </p>
@@ -66,7 +66,7 @@
             {{ range . }}
                 {{ $relatedBook := $.Site.GetPage (printf "/books/%s" .) }}
                 {{ if $relatedBook }}
-                    <a href="{{ $relatedBook.Permalink }}">{{ $relatedBook.Title }}</a>
+                    <a href="{{ $relatedBook.RelPermalink }}">{{ $relatedBook.Title }}</a>
                 {{ end }}
             {{ end }}
         </p>
