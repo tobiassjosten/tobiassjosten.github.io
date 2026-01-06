@@ -58,17 +58,7 @@
                     {{ if $articles }}
                         {{ $sorted := sort $articles "Date" "desc" }}
                         {{ range first 5 $sorted }}
-                            <article class="mb-4 pb-4">
-                                <h3 class="h5 mb-2">
-                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                </h3>
-                                {{ with .Summary }}
-                                    <p class="mb-2">{{ . }}</p>
-                                {{ end }}
-                                <p class="text-muted small mb-0">
-                                    <time>{{ .Date.Format "January 2, 2006" }}</time>
-                                </p>
-                            </article>
+                            {{ partial "article-list-item.html" . }}
                         {{ end }}
                     {{ end }}
                 </div>

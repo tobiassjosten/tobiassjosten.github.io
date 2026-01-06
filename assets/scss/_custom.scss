@@ -461,3 +461,9 @@ footer {
     }
   }
 }
+
+.article-list-item {
+  .article-summary p:last-of-type {
+    margin-bottom: 0;
+  }
+}
