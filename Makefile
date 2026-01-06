@@ -18,3 +18,10 @@ deploy:
 validate:
 	@echo "validating site"
 	@go run scripts/validate.go
+
+.PHONY: new
+new:
+	@go run scripts/create-content.go $(filter-out new,$(MAKECMDGOALS))
+
+%:
+	@:

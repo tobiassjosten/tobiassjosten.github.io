@@ -3,7 +3,5 @@
   - Sort through categories and tags (if the latter should remain).
 - Make sure to review the books feature on the homepage.
 - Look through templates for schema.org markup.
-- Make sure all links are relative to root (RelPermalink). Grep through public/ for any absolute links.
 - Go through all content types and make sure they have the right content, metadata, and representation in menus.
 - Decide on repository for article drafts.
-- Add archetypes for articles, books, and whatever else is needed. Augment with Makefile targets.
