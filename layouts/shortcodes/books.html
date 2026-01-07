@@ -1,0 +1,20 @@
+{{- $slugs := .Get 0 -}}
+{{- $books := slice -}}
+
+{{- if $slugs -}}
+  {{- range $slug := split $slugs "," -}}
+    {{- $slug = trim $slug " " -}}
+    {{- $bookPath := printf "books/%s" $slug -}}
+    {{- with site.GetPage $bookPath -}}
+      {{- $books = $books | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $books) 0 -}}
+  {{ partial "book-grid.html" (dict "books" $books) }}
+{{- else -}}
+  <div class="alert alert-warning" role="alert">
+    <p class="mb-0">No books found for the provided slugs.</p>
+  </div>
+{{- end -}}

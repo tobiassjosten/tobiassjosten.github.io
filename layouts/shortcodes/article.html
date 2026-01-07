@@ -1,0 +1,18 @@
+{{- $slug := .Get 0 -}}
+{{- $articlePath := printf "articles/%s.md" $slug -}}
+{{- with site.GetPage $articlePath -}}
+<aside class="article-highlight">
+  <div class="article-highlight-content">
+    <h3 class="article-highlight-title">
+      Related: <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+    {{- if .Summary -}}
+      {{ .Summary }}
+    {{- end -}}
+  </div>
+</aside>
+{{- else -}}
+<aside class="article-highlight article-highlight-error">
+  <p>Article not found: <code>{{ $slug }}</code></p>
+</aside>
+{{- end -}}

@@ -5,12 +5,14 @@
     {{ .Content }}
 
     <div class="articles-list mt-5">
-        <h2 class="h4 mb-4">All Articles</h2>
-        <div>
-            {{ range .Pages }}
-                {{ partial "article-list-item.html" . }}
-            {{ end }}
-        </div>
+        {{ range .Pages.GroupByDate "2006" }}
+            <h2 class="h4 mb-4">{{ .Key }}</h2>
+            <div>
+                {{ range .Pages }}
+                    {{ partial "article-list-item.html" . }}
+                {{ end }}
+            </div>
+        {{ end }}
     </div>
 </section>
 {{ end }}

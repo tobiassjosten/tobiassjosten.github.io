@@ -1,0 +1,20 @@
+{{ $inner := .Inner }}
+{{- $images := split $inner "\n" -}}
+{{- $cleanImages := slice -}}
+
+{{- range $images -}}
+  {{- $trimmed := trim . " \t\n\r" -}}
+  {{- if $trimmed -}}
+    {{- $cleanImages = $cleanImages | append $trimmed -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $cleanImages) 0 -}}
+<div class="image-grid">
+  {{- range $cleanImages -}}
+    <div class="image-grid-item">
+      <img src="{{ . }}" alt="" class="img-fluid" loading="lazy">
+    </div>
+  {{- end -}}
+</div>
+{{- end -}}

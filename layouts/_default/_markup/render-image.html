@@ -1,0 +1,6 @@
+{{- $alt := .Text -}}
+{{- $src := .Destination -}}
+{{- $title := .Title -}}
+<img src="{{ $src | safeURL }}" alt="{{ $alt }}" class="img-fluid"
+{{- with $title }} title="{{ . }}"{{ end -}}
+>

@@ -2,7 +2,7 @@
 title: "{{ replace .File.ContentBaseName `-` ` ` | title }}"
 authors:
   - ""
-date: "{{ .Date }}"
+date: "{{ dateFormat "2006-01-02" now }}"
 amazonURL: ""
 image: ""
 rating:

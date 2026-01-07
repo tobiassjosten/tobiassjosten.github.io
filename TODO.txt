@@ -5,3 +5,7 @@
 - Look through templates for schema.org markup.
 - Go through all content types and make sure they have the right content, metadata, and representation in menus.
 - Decide on repository for article drafts.
+- Integrate with MailerLite, implement newsletter sign-up form, and fix old subscription links.
+  - For example: #/portal/signup
+- Download images for articles migrated from seastone.io, and fix links in those articles too.
+- Link to book pages instead of Goodreads.

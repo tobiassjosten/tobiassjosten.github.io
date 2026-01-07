@@ -1,6 +1,6 @@
 ---
 title: "Newsletter #N: Title Here"
-date: {{ .Date }}
+date: {{ dateFormat "2006-01-02" now }}
 issue: 1
 ---
 

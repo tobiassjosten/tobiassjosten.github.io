@@ -10,7 +10,7 @@
     <img src="{{ $image.RelPermalink }}"
             class="book-cover img-fluid shadow-sm"
             {{ if not $isReviewed }}style="filter: brightness(1.0) contrast(0.5) saturate(0.7)"{{ end }}
-            alt="{{ .Title }}"
+            alt="Book cover for {{ .Title }}"
             loading="lazy">
     {{ else }}
     <div class="book-cover placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">

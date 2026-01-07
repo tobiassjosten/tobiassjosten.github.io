@@ -57,7 +57,8 @@ Skimming through RFC 5545, focusing on time zones, one thing stood out: It kept 
 
 This suspicion had me switch over to the calendar export from Outlook, where I soon noticed something weird. Among the many different time zones used (which was weird in itself), I saw for the first time one called "Romance Standard Time".
 
-![](https://www.seastone.io/content/images/2025/03/Screenshot-2025-03-02-at-14.41.23.png)Nothing "Standard" about that!
+![Outlook export using "Romance Standard Time" time zone](https://www.seastone.io/content/images/2025/03/Screenshot-2025-03-02-at-14.41.23.png)
+*'Nothing "Standard" about that!'*
 
 This was not a time zone I'd ever seen before and I've been working with time for decades, specifically in this part of the world. So I began suspecting it must be one of those "non-standard" ones referenced in the RFC.
 
@@ -139,6 +140,7 @@ Say hello to [Calendzo](https://www.calendzo.com/?ref=seastone.io)!
 
 It's basically a proxy between Outlook and your client, rewriting any iCalendar stream to replace Microsoft time zones with standard ones. As simple as it is effective.
 
-![](https://www.seastone.io/content/images/2025/03/calendzo-overview-1.png)Outlook exports crap, Calendzo fixes it, systems can interoperate
+![Flowchart showing how Calendzo intercepts and fixes crappy Outlook exports](https://www.seastone.io/content/images/2025/03/calendzo-overview-1.png)
+*Outlook exports crap, Calendzo fixes it, systems can interoperate.*
 
 It's 100% free and if it helps someone else, I'd love to hear about it!
