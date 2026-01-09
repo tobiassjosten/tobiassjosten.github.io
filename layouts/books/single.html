@@ -4,18 +4,10 @@
 
     {{ partial "book-cover.html" (dict "book" . "amazonLink" true) }}
 
-    {{/* Support both author (string) and authors (array) */}}
-    {{ $bookAuthors := slice }}
-    {{ if .Params.authors }}
-        {{ $bookAuthors = .Params.authors }}
-    {{ else if .Params.author }}
-        {{ $bookAuthors = slice .Params.author }}
-    {{ end }}
-
+    {{ $bookAuthors := .Params.authors }}
     {{ if gt (len $bookAuthors) 0 }}
         <p class="book-author">
             By
-            {{/* Display all authors with proper grammar */}}
             {{ range $i, $authorSlug := $bookAuthors }}
                 {{ $authorPage := $.Site.GetPage (printf "/authors/%s" $authorSlug) }}
                 {{ if $authorPage }}
@@ -26,13 +18,11 @@
                 {{ end }}
             {{ end }}
 
-            {{/* Find other books by ANY of these authors (deduplicated) */}}
             {{ $seenBooks := slice }}
             {{ $otherBooks := slice }}
             {{ range $authorSlug := $bookAuthors }}
                 {{ range $book := $.Site.RegularPages }}
                     {{ if and (eq $book.Type "books") (ne $book.Permalink $.Permalink) }}
-                        {{/* Check if this book has this author in either format */}}
                         {{ $hasAuthor := false }}
                         {{ if $book.Params.authors }}
                             {{ if in $book.Params.authors $authorSlug }}
@@ -41,7 +31,6 @@
                         {{ else if eq $book.Params.author $authorSlug }}
                             {{ $hasAuthor = true }}
                         {{ end }}
-                        {{/* Add to otherBooks if not already seen */}}
                         {{ if and $hasAuthor (not (in $seenBooks $book.Permalink)) }}
                             {{ $otherBooks = $otherBooks | append $book }}
                             {{ $seenBooks = $seenBooks | append $book.Permalink }}
@@ -79,10 +68,16 @@
         {{ else }}
             <p><em>Full review coming soon!</em></p>
         {{ end }}
-    </div>
 
-    {{ with .Params.amazonURL }}
-        <p><a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
-    {{ end }}
+        {{ with .Params.amazonURL }}
+            <p>→ <a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
+        {{ end }}
+
+        {{ $highlights := .Resources.GetMatch "highlights.md" }}
+        {{ if $highlights }}
+            <h2>My highlights</h2>
+            {{ $highlights.Content | .RenderString }}
+        {{ end }}
+    </div>
 </article>
 {{ end }}

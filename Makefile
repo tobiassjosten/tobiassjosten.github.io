@@ -19,6 +19,10 @@ validate:
 	@echo "validating site"
 	@go run scripts/validate.go
 
+.PHONY: highlights
+highlights:
+	@go run scripts/download-highlights.go $(filter-out highlights,$(MAKECMDGOALS))
+
 .PHONY: new
 new:
 	@go run scripts/create-content.go $(filter-out new,$(MAKECMDGOALS))
