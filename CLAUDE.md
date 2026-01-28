@@ -18,6 +18,8 @@ Default to not commenting code. Instead use clear and descriptive names for vari
 
 For CSS and styling, rely on Bootstrap 5, using its built-in extension points like variables. Use custom CSS and code only when necessary.
 
+Don't run `hugo server`, but instead use `hugo build`.
+
 Run the following commands to verify that the website builds correctly:
 
 ```bash
