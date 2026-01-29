@@ -5,6 +5,9 @@
 /2022/ /2022-annual-review/ 301
 /2023/ /2023-annual-review/ 301
 
+# Is this correct? Should it redirect from /php/… instead?
+/books/principles-of-php-package-design/ /books/principles-of-package-design/
+
 /accessibility/ /articles/accessibility/ 301
 /ai/ /articles/ai/ 301
 /amazon/ /articles/amazon/ 301

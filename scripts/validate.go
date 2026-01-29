@@ -20,6 +20,7 @@ var allowedProperties = map[string]bool{
 	"rating":             true,
 	"currentlyReading":   true,
 	"featuredOnHomepage": true,
+	"series":             true,
 }
 
 var allowedArticleProperties = map[string]bool{

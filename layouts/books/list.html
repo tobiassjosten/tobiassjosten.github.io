@@ -8,14 +8,12 @@
     {{ $undated := slice }}
 
     {{ range .Pages }}
-        {{ if .Params.rating }}
-            {{ if .Date }}
-                {{ $year := .Date.Format "2006" }}
-                {{ $existing := index $booksByYear $year | default slice }}
-                {{ $booksByYear = merge $booksByYear (dict $year ($existing | append .)) }}
-            {{ else }}
-                {{ $undated = $undated | append . }}
-            {{ end }}
+        {{ if .Date }}
+            {{ $year := .Date.Format "2006" }}
+            {{ $existing := index $booksByYear $year | default slice }}
+            {{ $booksByYear = merge $booksByYear (dict $year ($existing | append .)) }}
+        {{ else }}
+            {{ $undated = $undated | append . }}
         {{ end }}
     {{ end }}
 

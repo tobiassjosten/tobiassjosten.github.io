@@ -1,19 +1,21 @@
 {{ with .book }}
 {{ $isReviewed := .Content }}
-{{ if $.amazonLink }}
-    {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
-{{ else if $isReviewed }}
-    {{ with .RelPermalink }}<a href="{{ . }}">{{ end }}
-{{ end }}
+<div class="book-cover">
+    {{ if $.amazonLink }}
+        {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
+    {{ else if $isReviewed }}
+        {{ with .RelPermalink }}<a href="{{ . }}">{{ end }}
+    {{ end }}
+
     {{ $image := .Resources.GetMatch .Params.image }}
     {{ if $image }}
     <img src="{{ $image.RelPermalink }}"
-            class="book-cover img-fluid shadow-sm"
+            class="book-cover-image img-fluid shadow-sm"
             {{ if not $isReviewed }}style="filter: brightness(1.0) contrast(0.5) saturate(0.7)"{{ end }}
             alt="Book cover for {{ .Title }}"
             loading="lazy">
     {{ else }}
-    <div class="book-cover placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">
+    <div class="book-cover-placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">
         <div>
             <div class="placeholder-title fw-bold mb-2">{{ .Title }}</div>
             {{ $bookAuthors := .Params.authors }}
@@ -40,5 +42,8 @@
         </div>
     </div>
     {{ end }}
-{{ if (or (and (not $.amazonLink) $isReviewed) .Params.amazonURL) }}</a>{{ end }}
+    {{ if (or (and (not $.amazonLink) $isReviewed) .Params.amazonURL) }}</a>{{ end }}
+
+    {{ partial "book-rating-stars.html" (dict "rating" .Params.rating) }}
+</div>
 {{ end }}

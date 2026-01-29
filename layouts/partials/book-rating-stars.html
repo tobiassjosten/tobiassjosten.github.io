@@ -1,0 +1,16 @@
+{{ with .rating }}
+    {{ if and (ge . 1) (le . 5) }}
+    <div class="book-rating-overlay" aria-label="{{ . }} out of 5 stars" role="img">
+        <div class="book-rating-stars" aria-hidden="true">
+            {{ range seq 5 }}
+                    {{ if le . $.rating }}
+                        <span class="book-rating-star book-rating-full">★</span>
+                    {{ else }}
+                        <span class="book-rating-star book-rating-empty">☆</span>
+                    {{ end }}
+                </span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+{{ end }}

@@ -1,10 +1,9 @@
 ---
-
 title: "Meditations"
 authors:
   - "marcus-aurelius"
 date: "2018-12-29"
-amazonURL: ""
+amazonURL: "https://amzn.to/3NJlDpU"
 image: "meditations.jpg"
 rating: 5
 featuredOnHomepage: true

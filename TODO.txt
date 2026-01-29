@@ -10,3 +10,4 @@
 - Download images for articles migrated from seastone.io, and fix links in those articles too.
 - Link to book pages instead of Goodreads.
 - Handle drafts and scheduling posts.
+- Rewrite the book review for "Principles of Package Design".

@@ -48,15 +48,7 @@
             <h3 class="mb-3">{{ .Title }}</h3>
 
             {{ if gt (len $books) 0 }}
-                <div class="philosopher-books mb-3">
-                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
-                        {{ range $books }}
-                            <div class="col">
-                                {{ partial "book-cover.html" (dict "book" .) }}
-                            </div>
-                        {{ end }}
-                    </div>
-                </div>
+                {{ partial "book-grid.html" (dict "books" $books) }}
             {{ else }}
                 <p class="text-muted"><em>No books added yet.</em></p>
             {{ end }}

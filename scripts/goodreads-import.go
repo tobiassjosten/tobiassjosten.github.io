@@ -246,6 +246,162 @@ func downloadCover(book GoodreadsBook) error {
 	return nil
 }
 
+func readBookFrontmatter(bookSlug string) (map[string]string, error) {
+	indexPath := filepath.Join("content/books", bookSlug, "index.md")
+
+	content, err := os.ReadFile(indexPath)
+	if err != nil {
+		return nil, fmt.Errorf("reading book file: %w", err)
+	}
+
+	parts := strings.SplitN(string(content), "---", 3)
+	if len(parts) < 3 {
+		return nil, fmt.Errorf("invalid frontmatter format")
+	}
+
+	fm := make(map[string]string)
+	lines := strings.Split(strings.TrimSpace(parts[1]), "\n")
+
+	var currentKey string
+	var inMultilineValue bool
+	var multilineValue []string
+
+	for _, line := range lines {
+		trimmed := strings.TrimSpace(line)
+		if trimmed == "" {
+			continue
+		}
+
+		if inMultilineValue {
+			if strings.HasPrefix(trimmed, "-") {
+				item := strings.TrimSpace(strings.TrimPrefix(trimmed, "-"))
+				item = strings.Trim(item, "\"")
+				multilineValue = append(multilineValue, item)
+			} else if strings.Contains(trimmed, ":") {
+				fm[currentKey] = strings.Join(multilineValue, ",")
+				inMultilineValue = false
+				multilineValue = nil
+			}
+		}
+
+		if !inMultilineValue && strings.Contains(trimmed, ":") {
+			parts := strings.SplitN(trimmed, ":", 2)
+			key := strings.TrimSpace(parts[0])
+			value := strings.TrimSpace(parts[1])
+
+			if value == "" {
+				currentKey = key
+				inMultilineValue = true
+				multilineValue = []string{}
+			} else {
+				value = strings.Trim(value, "\"")
+				fm[key] = value
+			}
+		}
+	}
+
+	if inMultilineValue && currentKey != "" {
+		fm[currentKey] = strings.Join(multilineValue, ",")
+	}
+
+	return fm, nil
+}
+
+func checkIfNeedsUpdate(book GoodreadsBook, existing map[string]string) (bool, map[string]string, []string) {
+	updates := make(map[string]string)
+	removals := []string{}
+
+	if book.Rating != "" && book.Rating != "0" && existing["rating"] != book.Rating {
+		updates["rating"] = book.Rating
+	}
+
+	if existing["date"] == "" && book.DateRead != "" {
+		dateFormatted := strings.ReplaceAll(book.DateRead, "/", "-")
+		updates["date"] = dateFormatted
+	}
+
+	if book.DateRead == "" {
+		if existing["currentlyReading"] != "true" {
+			updates["currentlyReading"] = "true"
+		}
+	} else {
+		if existing["currentlyReading"] == "true" {
+			removals = append(removals, "currentlyReading")
+		}
+	}
+
+	return len(updates) > 0 || len(removals) > 0, updates, removals
+}
+
+func updateBookFrontmatter(bookSlug string, updates map[string]string, removals []string) error {
+	indexPath := filepath.Join("content/books", bookSlug, "index.md")
+
+	content, err := os.ReadFile(indexPath)
+	if err != nil {
+		return fmt.Errorf("reading book file: %w", err)
+	}
+
+	parts := strings.SplitN(string(content), "---", 3)
+	if len(parts) < 3 {
+		return fmt.Errorf("invalid frontmatter format")
+	}
+
+	lines := strings.Split(strings.TrimSpace(parts[1]), "\n")
+	var newLines []string
+	updatedKeys := make(map[string]bool)
+	removalSet := make(map[string]bool)
+
+	for _, r := range removals {
+		removalSet[r] = true
+	}
+
+	for _, line := range lines {
+		trimmed := strings.TrimSpace(line)
+		if trimmed == "" {
+			newLines = append(newLines, line)
+			continue
+		}
+
+		if strings.Contains(trimmed, ":") {
+			parts := strings.SplitN(trimmed, ":", 2)
+			key := strings.TrimSpace(parts[0])
+
+			if removalSet[key] {
+				continue
+			}
+
+			if newValue, exists := updates[key]; exists {
+				newLines = append(newLines, fmt.Sprintf("%s: \"%s\"", key, newValue))
+				updatedKeys[key] = true
+				continue
+			}
+		}
+
+		newLines = append(newLines, line)
+	}
+
+	for key, value := range updates {
+		if !updatedKeys[key] {
+			newLines = append(newLines, fmt.Sprintf("%s: \"%s\"", key, value))
+		}
+	}
+
+	newFrontmatter := strings.Join(newLines, "\n")
+
+	var bodyContent string
+	if len(parts) > 2 {
+		bodyContent = parts[2]
+	}
+
+	newContent := fmt.Sprintf("---\n%s\n---\n%s", newFrontmatter, bodyContent)
+
+	if err := os.WriteFile(indexPath, []byte(newContent), 0644); err != nil {
+		return fmt.Errorf("writing book file: %w", err)
+	}
+
+	return nil
+}
+
 func createBook(book GoodreadsBook) error {
 	bookSlug := slug.Make(book.Title)
 
@@ -326,6 +482,7 @@ func main() {
 
 	imported := 0
 	skipped := 0
+	updated := 0
 	authorsCreated := 0
 	coversFailed := 0
 
@@ -340,7 +497,37 @@ func main() {
 		}
 
 		if existingBooks[bookSlug] {
-			skipped++
+			existing, err := readBookFrontmatter(bookSlug)
+			if err != nil {
+				fmt.Printf("[%d/%d] ⚠ Could not read existing book %s: %v\n", i+1, len(books), bookSlug, err)
+				skipped++
+				continue
+			}
+
+			needsUpdate, updates, removals := checkIfNeedsUpdate(book, existing)
+			if !needsUpdate {
+				skipped++
+				continue
+			}
+
+			fmt.Printf("[%d/%d] Updating: %s\n", i+1, len(books), book.Title)
+			fmt.Printf("  Slug: %s\n", bookSlug)
+
+			if err := updateBookFrontmatter(bookSlug, updates, removals); err != nil {
+				fmt.Printf("  ✗ Failed to update book: %v\n", err)
+				skipped++
+				continue
+			}
+
+			if len(updates) > 0 {
+				fmt.Printf("  ✓ Updated: %v\n", updates)
+			}
+			if len(removals) > 0 {
+				fmt.Printf("  ✓ Removed: %v\n", removals)
+			}
+
+			updated++
+			fmt.Println()
 			continue
 		}
 
@@ -393,7 +580,8 @@ func main() {
 
 	fmt.Printf("\n=== Import Summary ===\n")
 	fmt.Printf("Books imported: %d\n", imported)
-	fmt.Printf("Books skipped (already exist): %d\n", skipped)
+	fmt.Printf("Books updated: %d\n", updated)
+	fmt.Printf("Books skipped (no changes): %d\n", skipped)
 	fmt.Printf("Authors created: %d\n", authorsCreated)
 	fmt.Printf("Covers failed: %d\n", coversFailed)
 }

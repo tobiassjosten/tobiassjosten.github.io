@@ -5,3 +5,5 @@ settings.personal.json
 settings.local.json
 
 .env.local
+
+goodreads_library_export.csv

@@ -73,6 +73,25 @@
             <p>→ <a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">Get {{ $.Title }} now!</a></p>
         {{ end }}
 
+        {{ $currentSeries := .Params.series }}
+        {{ if $currentSeries }}
+            {{ $seriesBooks := slice }}
+            {{ range $.Site.RegularPages }}
+                {{ if and (eq .Type "books") (ne .Permalink $.Permalink) }}
+                    {{ if eq .Params.series $currentSeries }}
+                        {{ $seriesBooks = $seriesBooks | append . }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+
+            {{ if gt (len $seriesBooks) 0 }}
+            <section class="mt-5 mb-5">
+                <h2>Other books in "{{ $currentSeries }}"</h2>
+                {{ partial "book-grid.html" (dict "books" $seriesBooks) }}
+            </section>
+            {{ end }}
+        {{ end }}
+
         {{ $highlights := .Resources.GetMatch "highlights.md" }}
         {{ if $highlights }}
             <h2>My highlights</h2>

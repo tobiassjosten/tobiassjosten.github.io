@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log/slog"
 	"net/http"
 	"os"
 	"slices"
@@ -14,16 +15,21 @@ import (
 )
 
 type HighlightsResponse struct {
-	Count    int         `json:"count"`
-	Next     *string     `json:"next"`
-	Previous *string     `json:"previous"`
-	Results  []Highlight `json:"results"`
+	Count   int                `json:"count"`
+	Cursor  *string            `json:"nextPageCursor"`
+	Results []HighlightsResult `json:"results"`
+}
+
+type HighlightsResult struct {
+	Highlights []Highlight `json:"highlights"`
 }
 
 type Highlight struct {
-	ID   int    `json:"id"`
-	Text string `json:"text"`
-	Note string `json:"note"`
+	ID         int    `json:"id"`
+	Text       string `json:"text"`
+	Note       string `json:"note"`
+	IsFavorite bool   `json:"is_favorite"`
+	IsDiscard  bool   `json:"is_discard"`
 }
 
 func main() {
@@ -98,11 +104,10 @@ func getAccessToken() string {
 	return strings.TrimSpace(input)
 }
 
-func buildAPIURL(bookID string, page int) string {
+func buildAPIURL(bookID, cursor string) string {
 	return fmt.Sprintf(
-		"https://readwise.io/api/v2/highlights/?book_id=%s&page=%d&page_size=1000",
-		bookID,
-		page,
+		"https://readwise.io/api/v2/export/?includeDeleted=true&ids=%s&pageCursor=%s",
+		bookID, cursor,
 	)
 }
 
@@ -127,8 +132,10 @@ func makeAPIRequest(url, token string) (*http.Response, error) {
 	return resp, nil
 }
 
-func fetchPage(bookID, token string, page int) (*HighlightsResponse, error) {
-	url := buildAPIURL(bookID, page)
+func fetchPage(bookID, token, cursor string) (*HighlightsResponse, error) {
+	url := buildAPIURL(bookID, cursor)
+
+	slog.Info("Fetching highlights", "url", url)
 
 	resp, err := makeAPIRequest(url, token)
 	if err != nil {
@@ -160,21 +167,22 @@ func fetchPage(bookID, token string, page int) (*HighlightsResponse, error) {
 
 func fetchHighlights(bookID, token string) ([]Highlight, error) {
 	var allHighlights []Highlight
-	page := 1
 
-	for {
-		response, err := fetchPage(bookID, token, page)
+	for cursor := ""; ; {
+		response, err := fetchPage(bookID, token, cursor)
 		if err != nil {
 			return nil, err
 		}
 
-		allHighlights = append(allHighlights, response.Results...)
+		for _, result := range response.Results {
+			allHighlights = append(allHighlights, result.Highlights...)
+		}
 
-		if response.Next == nil || *response.Next == "" {
+		if response.Cursor == nil {
 			break
 		}
 
-		page++
+		cursor = *response.Cursor
 
 		time.Sleep(1 * time.Second)
 	}
