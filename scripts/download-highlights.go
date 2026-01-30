@@ -25,11 +25,9 @@ type HighlightsResult struct {
 }
 
 type Highlight struct {
-	ID         int    `json:"id"`
-	Text       string `json:"text"`
-	Note       string `json:"note"`
-	IsFavorite bool   `json:"is_favorite"`
-	IsDiscard  bool   `json:"is_discard"`
+	Location int    `json:"location"`
+	Text     string `json:"text"`
+	Note     string `json:"note"`
 }
 
 func main() {
@@ -186,6 +184,10 @@ func fetchHighlights(bookID, token string) ([]Highlight, error) {
 
 		time.Sleep(1 * time.Second)
 	}
+
+	slices.SortFunc(allHighlights, func(a, b Highlight) int {
+		return b.Location - a.Location
+	})
 
 	slices.Reverse(allHighlights)
 
