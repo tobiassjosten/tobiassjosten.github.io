@@ -3,7 +3,7 @@ title: "Exploring business ideas"
 date: "2024-06-25"
 ---
 
-Last year I read a series of book on personal finance, some of which made quite an impact on my life. Especially [Rich Dad, Poor Dad](https://www.goodreads.com/book/show/39924789-rich-dad-poor-dad) and [The Psychology of Money](https://www.goodreads.com/book/show/51181015-the-psychology-of-money) (also [The Richest Man in Babylon](https://www.goodreads.com/book/show/41817041-the-richest-man-in-babylon), to some extent).
+Last year I read a series of book on personal finance, some of which made quite an impact on my life. Especially [Rich Dad, Poor Dad](/books/rich-dad-poor-dad/) and [The Psychology of Money](/books/the-psychology-of-money/) (also [The Richest Man in Babylon](/books/the-richest-man-in-babylon/), to some extent).
 
 <!--more-->
 
@@ -50,7 +50,7 @@ This line of thinking has lately seen me asking myself what I want to achieve in
 
 I do have some ideas and I'm thankful to find myself in a position with more options than I could ever possibly exercise. In terms of building assets, I could go in a hundred different directions, which would all be plausible choices.
 
-Whatever direction, however, the distance one is be able to cover is determined by how long they're able to consistently take one step after another. As [The Slight Edge](https://www.goodreads.com/book/show/590652.The_Slight_Edge) teaches, big changes comes from many small actions over a long period of time.
+Whatever direction, however, the distance one is be able to cover is determined by how long they're able to consistently take one step after another. As [The Slight Edge](/books/the-slight-edge/) teaches, big changes comes from many small actions over a long period of time.
 
 So if I want to become wealthy, for example, it’s high time to tie on my shoes and start walking.
 
@@ -58,7 +58,7 @@ So if I want to become wealthy, for example, it’s high time to tie on my shoes
 
 While all roads lead to Rome, few other destinations enjoy the same luxury. If we want to go somewhere specific, we benefit from considering the path to get there.
 
-At the end of 2022 I read [Essentialism](https://www.goodreads.com/book/show/18077875-essentialism) and it really hammered home the point of picking just ONE path. I have a natural tendency (pathology?) to walk all the paths, at the same time, not really getting anywhere, so this was an important lesson for me.
+At the end of 2022 I read [Essentialism](/books/essentialism/) and it really hammered home the point of picking just ONE path. I have a natural tendency (pathology?) to walk all the paths, at the same time, not really getting anywhere, so this was an important lesson for me.
 
 With this book, Greg McKeown expanded on Jeff Olson's point in The Slight Edge and declared that success comes from many small steps, consistently over time, _in one direction at at time_.
 

@@ -7,7 +7,7 @@
 <body>
     {{ partial "header.html" . }}
     <main class="content-home">
-        <section class="home-section home-section-hero py-5">
+        <section class="home-section home-section-hero py-3">
             <div class="container text-center py-5 my-5">
                 <h1 class="display-1 mb-5 fw-bold">Hello, I'm Tobias</h1>
                 <p class="lead fs-2 mb-5" style="max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.6;">
@@ -16,42 +16,9 @@
             </div>
         </section>
 
-        <section class="home-section home-section-about py-5">
+        <section class="home-section home-section-recent-content py-4">
             <div class="container">
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8">
-                        <p class="fs-5">
-                            I started programming at age seven and never looked back. What began as childhood curiosity evolved into a lifelong passion for crafting elegant solutions to complex problems. Over the years, I've worked across the full stack—from low-level systems programming to modern web architectures—always pushing to understand not just how things work, but why they work.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Professional+Photo" class="img-fluid rounded shadow-sm" alt="Tobias with family" loading="lazy">
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-4 order-md-1 order-2">
-                        <img src="https://via.placeholder.com/800x600/900/FFF?text=Speaking+Photo" class="img-fluid rounded shadow-sm" alt="Tobias speaking" loading="lazy">
-                    </div>
-                    <div class="col-md-8 order-md-2 order-1">
-                        <p class="fs-5">
-                            Today, I lead engineering teams in building products that scale. My approach combines pragmatic technical decisions with a deep investment in people development. I believe the best engineering organizations are built on strong fundamentals: clear communication, continuous learning, and a culture where every voice matters. Whether architecting microservices or mentoring junior developers, I'm driven by the challenge of making things better.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="fs-5 mb-4">
-                            Beyond the code, I'm passionate about knowledge sharing through writing, speaking, and open source contributions. I've founded multiple businesses, spoken at conferences across Europe, and maintain an active presence in the developer community. When I'm not at the keyboard, you'll find me training, coaching others in athletic performance, or exploring how systems thinking applies to all aspects of life.
-                        </p>
-                        <a href="/about/">Learn more about me →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="home-section home-section-recent-content py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Latest articles</h2>
+                <h2 class="text-center mb-5">I publish my thoughts</h2>
 
                 <div class="mb-5">
                     {{ $articles := where .Site.RegularPages "Section" "articles" }}
@@ -107,176 +74,52 @@
             </div>
         </section>
 
-        <section class="home-section home-section-professional bg-white py-5">
-            <div class="container">
-                {{ $professional := .Site.Data.professional }}
-
-                <div class="row mb-4">
-                    <div class="col-md-6 mb-4">
-                        <h2 class="h3 mb-3">Current Position</h2>
-                        {{ if $professional }}
-                        <p class="fs-5 mb-3">
-                            <strong>{{ $professional.current_position.title }}</strong><br>
-                            <span class="text-muted">at</span> <a href="{{ $professional.current_position.url }}" target="_blank" rel="noopener">{{ $professional.current_position.company }}</a>
-                        </p>
-                        {{ end }}
-                        <p>Leading engineering teams in building scalable, maintainable software solutions. Focused on technical excellence, team development, and strategic technology decisions.</p>
-                        <a href="/resume/" class="btn btn-outline-primary">View Resume →</a>
-                    </div>
-
-                    <div class="col-md-6">
-                        <h2 class="h3 mb-3">Active Businesses</h2>
-                        {{ $activeBusinesses := where (where .Site.Pages "Section" "businesses") "Params.discontinued" "!=" true }}
-                        {{ if $activeBusinesses }}
-                        <ul class="list-unstyled mb-3">
-                            {{ range $activeBusinesses }}
-                            <li class="mb-2">
-                                {{ if .Params.project_url }}
-                                <a href="{{ .Params.project_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
-                                {{ else }}
-                                <strong>{{ .Title }}</strong>
-                                {{ end }}
-                                {{ with .Params.description }}
-                                <small class="text-muted d-block">{{ . }}</small>
-                                {{ end }}
-                            </li>
-                            {{ end }}
-                        </ul>
-                        <a href="/businesses/" class="btn btn-outline-primary">All Businesses →</a>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="home-section home-section-kpis bg-white py-5">
             <div class="container">
+                <h2 class="text-center mb-5">I work with tech</h2>
+
                 {{ $kpis := .Site.Data.kpis }}
                 {{ $companies := .Site.Data.companies }}
 
                 {{ if $kpis }}
-                <!-- KPI Metrics -->
-                <div class="row text-center mb-5">
-                    {{ range $kpis.metrics }}
-                    <div class="col-6 col-md-3 mb-4">
-                        <div class="display-4 text-primary fw-bold">{{ .value }}</div>
-                        <div class="text-muted">{{ .label }}</div>
+                    <div class="row text-center mb-5">
+                        {{ range $kpis.metrics }}
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="display-4 text-primary fw-bold">{{ .value }}</div>
+                            <div class="text-muted">{{ .label }}</div>
+                        </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
-                </div>
                 {{ end }}
 
                 {{ if $companies }}
-                <!-- Company Logos -->
-                <div class="text-center mb-3">
-                    <h3 class="h5 text-muted">Worked With</h3>
-                </div>
-                <div class="row justify-content-center align-items-center g-4">
-                    {{ range $companies.companies }}
-                    <div class="col-6 col-md-3 text-center">
-                        <img src="{{ .logo }}"
-                             alt="{{ .name }}"
-                             class="img-fluid"
-                             style="max-height: 60px; filter: grayscale(100%) opacity(60%);"
-                             loading="lazy">
+                    <div class="text-center mb-3">
+                        <h3 class="h5 text-muted">Worked With</h3>
                     </div>
-                    {{ end }}
-                </div>
-                {{ end }}
-            </div>
-        </section>
-
-        <section class="home-section home-section-books py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Books</h2>
-                <p class="fs-5 px-5">I'm an avid reader and enjoy sharing my thoughts on books that haved an impact on me. Here are some of the books I'm currently reading and a few highlights.</p>
-
-                {{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
-                {{ if $currentlyReading }}
-                <div class="mt-5">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h3 class="h3 mb-0">Currently reading</h3>
-                        <a href="/now/">What else I'm up to →</a>
-                    </div>
-                    {{ partial "book-grid.html" (dict "books" $currentlyReading) }}
-                </div>
-                {{ end }}
-
-                {{ $featuredBooks := where (where .Site.Pages "Section" "books") "Params.featuredOnHomepage" true }}
-                {{ if $featuredBooks }}
-                <div class="mt-5">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h3 class="h3 mb-0">Featured books</h3>
-                        <a href="/books/">All book reviews →</a>
-                    </div>
-                    {{ partial "book-grid.html" (dict "books" $featuredBooks) }}
-                </div>
-                {{ end }}
-            </div>
-        </section>
-
-        <section class="home-section home-section-speaking py-5">
-            <div class="container">
-                {{ $professional := .Site.Data.professional }}
-
-                <h2 class="text-center mb-4">Speaking</h2>
-
-                {{ if $professional.speaking }}
-                <div class="row justify-content-center mb-4">
-                    <div class="col-lg-8">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="{{ $professional.speaking.featured_video.url }}"
-                                    title="{{ $professional.speaking.featured_video.title }}"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
+                    <div class="row justify-content-center align-items-center g-4">
+                        {{ range $companies.companies }}
+                            <div class="col-6 col-md-3 text-center">
+                                <img src="{{ .logo }}"
+                                    alt="{{ .name }}"
+                                    class="img-fluid"
+                                    style="max-height: 60px; filter: grayscale(100%) opacity(60%);"
                                     loading="lazy">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="text-center mb-4">
-                    {{ $professional.speaking.featured_video.description }}
-                </p>
-                {{ end }}
-
-                <div class="text-center">
-                    <a href="/speaking/">View all talks →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="home-section home-section-testimonials py-5">
-            <div class="container">
-                {{ $testimonials := .Site.Data.testimonials }}
-
-                <h2 class="text-center mb-5">Testimonials</h2>
-
-                {{ if $testimonials }}
-                <!-- Bootstrap Carousel -->
-                <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="false">
-                    <div class="carousel-indicators">
-                        {{ range $index, $testimonial := $testimonials.testimonials }}
-                        <button type="button"
-                                data-bs-target="#testimonialsCarousel"
-                                data-bs-slide-to="{{ $index }}"
-                                {{ if eq $index 0 }}class="active" aria-current="true"{{ end }}
-                                aria-label="Slide {{ add $index 1 }}">
-                        </button>
+                            </div>
                         {{ end }}
                     </div>
+                {{ end }}
 
+                {{ $testimonials := .Site.Data.testimonials }}
+
+                <h2 class="text-center mt-5">Testimonials</h2>
+
+                {{ if $testimonials }}
+                <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-inner">
                         {{ range $index, $testimonial := $testimonials.testimonials }}
                         <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8 text-center">
-                                    <img src="{{ $testimonial.photo }}"
-                                         class="rounded-circle mb-4"
-                                         style="width: 100px; height: 100px; object-fit: cover;"
-                                         alt="{{ $testimonial.name }}"
-                                         loading="lazy">
                                     <p class="fs-5 fst-italic mb-4">"{{ $testimonial.text }}"</p>
                                     <p class="mb-0"><strong>{{ $testimonial.name }}</strong></p>
                                     <p class="text-muted">{{ $testimonial.title }}</p>
@@ -301,8 +144,35 @@
             </div>
         </section>
 
-        <section class="home-section home-section-athletic py-5">
+        <section class="home-section home-section-books py-5">
             <div class="container">
+                <h2 class="text-center mb-4">I read voraciously</h2>
+                <p class="fs-5 px-5">I'm an avid reader and enjoy sharing my thoughts on books that haved an impact on me. Here are some of the books I'm currently reading and a few highlights.</p>
+
+                {{ $currentlyReading := where (where .Site.Pages "Section" "books") "Params.currentlyReading" true }}
+                {{ if $currentlyReading }}
+                    <div class="mt-5">
+                        <h3 class="h3 mb-4">Currently reading</h3>
+                        {{ partial "book-grid.html" (dict "books" (first 4 $currentlyReading)) }}
+                    </div>
+                {{ end }}
+
+                {{ $featuredBooks := where (where .Site.Pages "Section" "books") "Params.featuredOnHomepage" true }}
+                {{ if $featuredBooks }}
+                    <div class="mt-5">
+                        <h3 class="h3 mb-4">Featured books</h3>
+                        {{ partial "book-grid.html" (dict "books" (first 5 (shuffle $featuredBooks))) }}
+                    </div>
+                {{ end }}
+
+                <p class="fs-5 mt-5"><a href="/books/" class="float-end">See all books →</a></p>
+            </div>
+        </section>
+
+        <section class="home-section home-section-athletic bg-white py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">I coach fitness</h2>
+
                 <div class="row align-items-center">
                     <div class="col-md-8 mb-4 mb-md-0">
                         <img src="https://via.placeholder.com/1200x600/900/FFF?text=Athletic+Coaching"
@@ -323,11 +193,45 @@
             </div>
         </section>
 
+        <section class="home-section home-section-speaking py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">I share my thinking</h2>
+
+                {{ $professional := .Site.Data.professional }}
+
+                {{ if $professional.speaking }}
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="{{ $professional.speaking.featured_video.url }}"
+                                    title="{{ $professional.speaking.featured_video.title }}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center mb-4">
+                    {{ $professional.speaking.featured_video.description }}
+                </p>
+                {{ end }}
+
+                <div class="text-center">
+                    <a href="/speaking/">View all talks →</a>
+                </div>
+
+                <h2 class="text-center mb-4">Podcasting</h2>
+            </div>
+        </section>
+
         <section class="home-section home-section-newsletter-cta bg-white py-5">
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="h3 mb-4">Learn With Me</h2>
+                        <h2 class="h3 mb-4">I keep you updated</h2>
                         <p class="fs-5 mb-4">
                             Join my newsletter to get insights on software engineering,
                             business building, and personal development delivered to your inbox.

@@ -10,7 +10,7 @@
 
 > This book focusses on the central areas of accounting (financial reporting and management accounting) and does not have space to examine the areas of insolvency, tax, consultancy, and finance.
 
-> Each time a shop sells something, a bank lends money or a manufacturer pays the wages, a record must be kept. The process of recording all the transactions is called bookkeeping. ... the technique used is nearly always ‘double-entry bookkeeping’, which is an Italian invention of the thirteenth century. It is famous for its debits and credits. ... Financial accounting information is prepared in summarized form for people outside of the entity, such as shareholders. The process of sending such information is called financial reporting. ... The financial reports include an income statement and a balance sheet.
+> Each time a shop sells something, a bank lends money or a manufacturer pays the wages, a record must be kept. The process of recording all the transactions is called bookkeeping. […] the technique used is nearly always ‘double-entry bookkeeping’, which is an Italian invention of the thirteenth century. It is famous for its debits and credits. […] Financial accounting information is prepared in summarized form for people outside of the entity, such as shareholders. The process of sending such information is called financial reporting. […] The financial reports include an income statement and a balance sheet.
 
 > One major reason for needing to keep account is so that the stewards of resources can later give an account to the owner of what they did with the resources. Originally, this was the high officials giving account to temple complexes or kings. Now, it is the directors of a company giving account to its shareholders.
 
@@ -48,7 +48,7 @@
 
 > A liability is defined in IFRS as: a present obligation caused by a past event expected to lead to future outflows.
 
-> Why would trained and loyal staff not be ‘assets’ of their employing company? The company is probably expecting future benefits from staff, and has had transactions with them in the past. However, staff can resign—often with little notice. ... So, staff are not ‘controlled’. For this reason, they are not treated as assets. This also means that training courses and other costs related to staff are treated as expenses rather than assets.
+> Why would trained and loyal staff not be ‘assets’ of their employing company? The company is probably expecting future benefits from staff, and has had transactions with them in the past. However, staff can resign—often with little notice. […] So, staff are not ‘controlled’. For this reason, they are not treated as assets. This also means that training courses and other costs related to staff are treated as expenses rather than assets.
 
 > Some of the income and expenses are regarded as so far from cash or so removed from the control of the directors that they are shown separately as ‘other comprehensive income’ (OCI). Unfortunately, there is no clear principle to explain which these items are, only some complicated rules.
 
@@ -70,7 +70,7 @@
 
 > The idea of ‘fairness’ reflects the fact that accounting is not an exact science and that there may be a number of different ways in which to present broadly similar information. The term conveys the idea that the financial statements have been honestly prepared to reflect the facts, and are not misleading to readers.
 
-> Naturally, investors who will have no active part in the management of the company, and may not even know those who are running it, deserve some protection from unscrupulous and incompetent managers. ... An important safeguard is the right to receive financial statements from the directors showing the profit of the company and its state of affairs, together with quite a lot of detailed information as required by various regulations.
+> Naturally, investors who will have no active part in the management of the company, and may not even know those who are running it, deserve some protection from unscrupulous and incompetent managers. […] An important safeguard is the right to receive financial statements from the directors showing the profit of the company and its state of affairs, together with quite a lot of detailed information as required by various regulations.
 
 > [Financial accounting] The information is designed to make managers accountable to owners, and to assist investors with economic decisions. Typical financial documents produced under this category are: the income statement, the balance sheet, and the cash flow statement.
 
@@ -92,6 +92,6 @@
 
 > Quis custodiet ipsos custodes?
 
-> There are two main high-level purposes of budgeting. The first is to optimize the use of the economic resources within the firm in order to maximize profit. ... The second purpose is to help the firm to achieve its overall strategic objectives.
+> There are two main high-level purposes of budgeting. The first is to optimize the use of the economic resources within the firm in order to maximize profit. […] The second purpose is to help the firm to achieve its overall strategic objectives.
 
-> Any differences between budgeted and actual figures are called variances and this method of comparison is called ‘variance analysis’, ... Managers need to investigate the differences (variances) and to identify the causes. These might include the original estimates being poorly thought out and incorrectly calculated; or possible overspending on materials.
+> Any differences between budgeted and actual figures are called variances and this method of comparison is called ‘variance analysis’, […] Managers need to investigate the differences (variances) and to identify the causes. These might include the original estimates being poorly thought out and incorrectly calculated; or possible overspending on materials.

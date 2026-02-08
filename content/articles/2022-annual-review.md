@@ -3,7 +3,7 @@ title: "2022 annual review"
 date: "2023-01-02"
 ---
 
-I've been doing public, annual reviews for over a decade. First on my old tech blog ([2011](https://vvv.tobiassjosten.net/personal/2011-retrospective/), [2012](https://vvv.tobiassjosten.net/personal/2012-retrospective/)) and then on my fitness side project ([2015](https://www.athlegan.com/a-new-year), [2016](https://www.athlegan.com/one-year-vegan-fitness), [2019](https://www.athlegan.com/2019-summary), [2020](https://www.athlegan.com/good-riddance-2020)). While it hasn't been super consistent, with half the years missing, I do enjoy the process of reviewing and I find it beneficial. So here's another one, looking back at 2022.
+I've been doing public, annual reviews for over a decade. First on my old tech blog ([2011](/2011-retrospective/), [2012](/2012-retrospective/)) and then on my fitness side project ([2015](https://www.athlegan.com/a-new-year), [2016](https://www.athlegan.com/one-year-vegan-fitness), [2019](https://www.athlegan.com/2019-summary), [2020](https://www.athlegan.com/good-riddance-2020)). While it hasn't been super consistent, with half the years missing, I do enjoy the process of reviewing and I find it beneficial. So here's another one, looking back at 2022.
 
 <!--more-->
 
@@ -22,9 +22,9 @@ Let's start with the good stuff. Here are some of the highlights from the past y
 
 **I started new open-source projects.** Not having any time to code at work drove me to spend time during evenings and weekends working on a long-time dream project of mine: [a MUD client](https://github.com/tobiassjosten/nogfx)! As a spin-off, I also released [my first Go library](https://github.com/tobiassjosten/go-simpex) and began work on a new version of [my old MUD community site](https://www.nogfx.com/).
 
-**I upgraded my data analysis.** In my quest to add one new, major technology to [my toolbox](https://www.seastone.io/uses/) every year, this time I took on [Observable](https://observablehq.com/) and their [Plot library](https://github.com/observablehq/plot). Even as a long-time power user and die-hard fan of spreadsheets, this blew everything I previously knew out of the water.
+**I upgraded my data analysis.** In my quest to add one new, major technology to [my toolbox](/uses/) every year, this time I took on [Observable](https://observablehq.com/) and their [Plot library](https://github.com/observablehq/plot). Even as a long-time power user and die-hard fan of spreadsheets, this blew everything I previously knew out of the water.
 
-**I hit my reading goal (with a margin).** For the seventh(!) year in a row, I set myself a Goodreads reading challenge for 2022. It was ambitious, with 0.75 books per week \* 52 weeks per year = 39 books to complete. (Although I do think _number of books_ is a stupid measurement.) Some days ago, I finished [The Metamorphosis](https://www.goodreads.com/book/show/50735153-the-metamorphosis) and thus hit 41 books!
+**I hit my reading goal (with a margin).** For the seventh(!) year in a row, I set myself a Goodreads reading challenge for 2022. It was ambitious, with 0.75 books per week \* 52 weeks per year = 39 books to complete. (Although I do think _number of books_ is a stupid measurement.) Some days ago, I finished [The Metamorphosis](/books/the-metamorphosis/) and thus hit 41 books!
 
 **I took up writing again.** After putting [my side project](https://athlegan.com/) on hold at the turn of the year, I haven't really had somewhere to publish anything. That changed on November 21st when I gave myself the birthday present of starting [Seastone.io](https://www.seastone.io/) as a new blog for things related to my job as an engineering manager.
 

@@ -7,7 +7,7 @@ Another year has passed and it's time for my annual review! As usual, I reflect 
 
 <!--more-->
 
-_Previous years:_ [_2011_](https://vvv.tobiassjosten.net/personal/2011-retrospective/)_,_ [_2012_](https://vvv.tobiassjosten.net/personal/2012-retrospective/)_,_ [_2015_](https://www.athlegan.com/a-new-year)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness)_,_ [_2019_](https://www.athlegan.com/2019-summary)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020)_,_ [_2022_](https://www.seastone.io/2022)_._
+_Previous years:_ [_2011_](/2011-retrospective/)_,_ [_2012_](/2012-retrospective/)_,_ [_2015_](https://www.athlegan.com/a-new-year)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness)_,_ [_2019_](https://www.athlegan.com/2019-summary)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020)_,_ [_2022_](/2022-annual-review/)_._
 
 1.  What went well this year?
 2.  What didn’t go so well this year?
@@ -24,7 +24,7 @@ One interesting thing I've discovered lately is that I relish diving deep into a
 
 This year I dove into and learned a lot about writing books, podcasting, personal finance, ancient philosophy, and burnout (more on that later).
 
-Here are some of my favourite reads from 2023, in no particular order: [Born a Crime](https://www.goodreads.com/book/show/29780253-born-a-crime), [Essentialism](https://www.goodreads.com/book/show/18077875-essentialism), [Frankenstein](https://www.goodreads.com/book/show/35031085-frankenstein), [Getting Things Done](https://www.goodreads.com/book/show/1633.Getting_Things_Done), [Leonardo da Vinci](https://www.goodreads.com/book/show/34684622-leonardo-da-vinci), [Psychology of Money](https://www.goodreads.com/book/show/41881472-the-psychology-of-money), [Rich Dad Poor Dad](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad), [The Trial](https://www.goodreads.com/book/show/17690.The_Trial), [This is Vegan Propaganda](https://www.goodreads.com/book/show/59063252-this-is-vegan-propaganda).
+Here are some of my favourite reads from 2023, in no particular order: [Born a Crime](/books/born-a-crime/), [Essentialism](/books/essentialism/), [Frankenstein](/books/frankenstein/), [Getting Things Done](/books/getting-things-done/), [Leonardo da Vinci](/books/leonardo-da-vinci/), [Psychology of Money](/books/the-psychology-of-money/), [Rich Dad Poor Dad](/books/rich-dad-poor-dad/), [The Trial](/books/the-trial/), [This is Vegan Propaganda](/books/this-is-vegan-propaganda/).
 
 {{< books "born-a-crime,essentialism,frankenstein,getting-things-done,leonardo-da-vinci,psychology-of-money,rich-dad-poor-dad,the-trial,this-is-vegan-propaganda" >}}
 
@@ -130,21 +130,21 @@ Of course, I don't claim any sort of expertise from this stint but I understand 
 
 ### I improved my mental models for finance
 
-Plowing through [Rich Dad, Poor Dad](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad), [The Richest Man in Babylon](https://www.goodreads.com/book/show/1052.The_Richest_Man_in_Babylon), and [The Psychology of Money](https://www.goodreads.com/book/show/41881472-the-psychology-of-money), made me view the world slightly different, in terms of building wealth and growing rich.
+Plowing through [Rich Dad, Poor Dad](/books/rich-dad-poor-dad/), [The Richest Man in Babylon](/books/the-richest-man-in-babylon/), and [The Psychology of Money](/books/the-psychology-of-money/), made me view the world slightly different, in terms of building wealth and growing rich.
 
-This, in turn, helped me tweak [my framework for handling personal finances](https://www.seastone.io/engineering-my-familys-spending/), which has already led to a more rapid growth.
+This, in turn, helped me tweak [my framework for handling personal finances](/engineering-my-familys-spending/), which has already led to a more rapid growth.
 
 ### I learned how to produce, publish, and market
 
-I started the year by reading [Write a Must-Read](https://www.goodreads.com/book/show/61160025-write-a-must-read), [Write Useful Books](https://www.goodreads.com/book/show/58482658-write-useful-books), and [Blueprint for a Nonfiction Book](https://www.goodreads.com/book/show/60765454-blueprint-for-a-nonfiction-book). They taught a strategy of developing and publish a book pretty much like you would a SaaS startup. Developing a market, building a following, and testing continuously, so that publishing is just a formal process of hitting a button.
+I started the year by reading [Write a Must-Read](/books/write-a-must-read/), [Write Useful Books](/books/write-useful-books/), and [Blueprint for a Nonfiction Book](/books/blueprint-for-a-nonfiction-book/). They taught a strategy of developing and publish a book pretty much like you would a SaaS startup. Developing a market, building a following, and testing continuously, so that publishing is just a formal process of hitting a button.
 
-I ended the year by reading [Stop Asking Questions](https://www.goodreads.com/book/show/59347437-stop-asking-questions), [Podcast Launch](https://www.goodreads.com/book/show/18068346-podcast-launch---a-step-by-step-podcasting-guide-including-15-video-tuto) (don't bother), and [Podcast Marketing](https://www.goodreads.com/book/show/58544401-podcast-marketing). After these I feel fully equipped to start my own podcast and psyched to do so!
+I ended the year by reading [Stop Asking Questions](/books/stop-asking-questions/), [Podcast Launch](/books/podcast-launch/) (don't bother), and [Podcast Marketing](/books/podcast-marketing/). After these I feel fully equipped to start my own podcast and psyched to do so!
 
 Of course, reading books is just a start and a useless one if you fail to apply what you learn. More on that later.
 
 ### I acquired new tools
 
-During 2023 I added six new tools to [my toolbox](https://www.seastone.io/uses):
+During 2023 I added six new tools to [my toolbox](/uses/):
 
 -   [Anki](https://apps.apple.com/us/app/anki-notes-flashcards-maker/id1388842081) is a tool to learn facts, through spaced repetition and active recall. I initially bit off more than I could comfortably chew by trying to learn all flags, capitals, and countries of the world but, once I'm through that, I'm looking forward to using Anki for many other areas.
 -   [Readwise](https://readwise.io/) is basically an interface on top of my Kindle highlights and notes, making them actually useful and evergreen. I use it to both process the books I've read and remind me of books I've read in the past.

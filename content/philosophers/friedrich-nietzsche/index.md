@@ -6,4 +6,5 @@ image: "friedrich-nietzsche.png"
 books:
   - beyond-good-and-evil
   - thus-spoke-zarathustra
+  - ethics
 ---

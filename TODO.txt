@@ -11,3 +11,4 @@
 - Link to book pages instead of Goodreads.
 - Handle drafts and scheduling posts.
 - Rewrite the book review for "Principles of Package Design".
+- Move images local to the articles.

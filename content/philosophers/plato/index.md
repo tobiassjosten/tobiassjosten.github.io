@@ -8,4 +8,6 @@ books:
   - meno
   - plato
   - timaeus
+  - euthyphro
+  - ethics
 ---

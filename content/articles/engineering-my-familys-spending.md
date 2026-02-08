@@ -3,7 +3,7 @@ title: "Engineering my family's spending"
 date: "2023-09-27"
 ---
 
-One of the areas for improvement I brought up in my [2022 review](https://www.seastone.io/2022/) was finances. I have very specific goals for my family's financial future and, in order to reach those goals, we'll have to optimize three aspects of our finances: earning, spending, and investing.
+One of the areas for improvement I brought up in my [2022 review](/2022-annual-review/) was finances. I have very specific goals for my family's financial future and, in order to reach those goals, we'll have to optimize three aspects of our finances: earning, spending, and investing.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ Let's look at both principles in turn.
 
 ## Principle 1: Intentionality
 
-Jeff Olson described in [The Slight Edge](https://www.goodreads.com/en/book/show/590652) how we're all headed in one trajectory or another, in all aspects of our lives. For example, you might be putting in extra hours at work and crushing it in your career, while skipping exercise and having your health decline.
+Jeff Olson described in [The Slight Edge](/books/the-slight-edge/) how we're all headed in one trajectory or another, in all aspects of our lives. For example, you might be putting in extra hours at work and crushing it in your career, while skipping exercise and having your health decline.
 
 The main argument in Mr. Olson's book is that if you're not consciously deciding and working on a specific trajectory, it'll most likely default to a bad one, which compounds over time. Thankfully, very little effort is required to turn that around (e.g. the slight edge).
 
@@ -35,7 +35,7 @@ The main argument in Mr. Olson's book is that if you're not consciously deciding
 
 Apart from our innate laziness and proclivity for short-term rewards, many external forces also conspire against us having a positive, financial trajectory.
 
-Cal Newport hammered this home in [Digital Minimalism](https://www.goodreads.com/book/show/40672036-digital-minimalism) and it bears repeating: marketers are working day and night trying to change your behavior to benefit them, and companies are investing a lot of money in research to maximize your spending with them.
+Cal Newport hammered this home in [Digital Minimalism](/books/digital-minimalism/) and it bears repeating: marketers are working day and night trying to change your behavior to benefit them, and companies are investing a lot of money in research to maximize your spending with them.
 
 The best way to combat this influence and to take charge of your finances is to become more intentional about how you live your life and how you spend your precious, finite resources. But how do you practically do that?
 
@@ -95,7 +95,7 @@ If we decide on $15 per day and there are 30 days in the month, then we add anot
 
 Mike Tyson once said, "Everyone has a plan until they get punched in the mouth." This is equally true for personal finance. Shit inevitably happens, which is why I like to own a generous supply of proverbial toilet paper.
 
-On one hand, it's incredibly hard to predict all your expenses and, on the other hand, a huge reason why we're being so zealous with our finances is to enable spontaneity. Jocko Willinks explained it well in his book [Discipline Equals Freedom](https://www.goodreads.com/book/show/34431560-discipline-equals-freedom) — by having a strict baseline, you give yourself incomparable liberty the rest of the time. This applies to all aspects of our lives.
+On one hand, it's incredibly hard to predict all your expenses and, on the other hand, a huge reason why we're being so zealous with our finances is to enable spontaneity. Jocko Willinks explained it well in his book [Discipline Equals Freedom](/books/discipline-equals-freedom/) — by having a strict baseline, you give yourself incomparable liberty the rest of the time. This applies to all aspects of our lives.
 
 I live in Sweden with my family, where we are blessed with an incredible social safety net that takes care of any would-be medical emergency. Scraped your knee and need a professionally applied bandaid? That's $20, thank you. Require a double-bypass surgery and six weeks of hospital care? Yup, that's $20 just the same. We do pay our fair share of taxes but when something bad happens, you're taken care of.
 

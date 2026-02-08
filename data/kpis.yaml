@@ -1,9 +1,12 @@
 metrics:
-  - label: "Years Programming"
+  - label: "Years in Tech"
     value: 30
-  - label: "Years Professional"
-    value: 20
-  - label: "Direct Reports"
-    value: 18
-  - label: "Businesses Founded"
-    value: 7
+
+  - label: "Years in Leadership"
+    value: 6
+
+  - label: "Billions in Revenue"
+    value: 24
+
+  - label: "Developers Led"
+    value: 34

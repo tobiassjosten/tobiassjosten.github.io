@@ -56,9 +56,9 @@ As I'm reading a book, I highlight mentions of other books. Similarly to recomme
 
 ### Criterion four: Pages
 
-I loved [The Dip](https://www.goodreads.com/book/show/324748.The_Dip) and [Principles](https://www.goodreads.com/book/show/34941133-principles) enough to give them both a five-star review. Each delivered a powerful concept that still stays with me today. Yet, one of them managed this in 80 pages and the other took 593 pages.
+I loved [The Dip](/books/the-dip/) and [Principles](/books/principles/) enough to give them both a five-star review. Each delivered a powerful concept that still stays with me today. Yet, one of them managed this in 80 pages and the other took 593 pages.
 
-Less isn't always more but, all other things being equal, I'd rather read the shorter book, so that I have more time to process the contents and [write about its ideas](https://www.seastone.io/writing-learning-growing/).
+Less isn't always more but, all other things being equal, I'd rather read the shorter book, so that I have more time to process the contents and [write about its ideas](/writing-learning-growing/).
 
 ## The algorithm
 
@@ -127,9 +127,9 @@ Where `p` is the number of pages.
 
 With all these different parts defined, let's put them together into something useful.
 
-We'll use the excellent tool [Notion](https://www.seastone.io/r/notion/) for the implementation.
+We'll use the excellent tool [Notion](/r/notion/) for the implementation.
 
-I've got a database for all my books, with multiple views depending on what I want to do with them. For example, below is my process board, where I see which books I've finished reading but not yet processed (overlayed by the awesome [Fahrenheit 451](https://www.goodreads.com/book/show/13079982-fahrenheit-451), which has been processed).
+I've got a database for all my books, with multiple views depending on what I want to do with them. For example, below is my process board, where I see which books I've finished reading but not yet processed (overlayed by the awesome [Fahrenheit 451](/books/fahrenheit-451/), which has been processed).
 
 ![The list of my books in their various stages, along with a detailed view of Fahrenheit 451.](https://www.seastone.io/content/images/2023/05/notion-book-details.png)
 

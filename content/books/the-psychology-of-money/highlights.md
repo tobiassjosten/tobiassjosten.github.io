@@ -98,7 +98,7 @@
 
 > I think of my own money as barbelled. I take risks with one portion and am terrified with the other. This is not inconsistent, but the psychology of money would lead you to believe that it is. I just want to ensure I can remain standing long enough for my risks to pay off.
 
-> There is never a moment when you’re so right that you can bet every chip in front of you. ... You have to give yourself room for error. You have to plan on your plan not going according to plan.
+> There is never a moment when you’re so right that you can bet every chip in front of you. […] You have to give yourself room for error. You have to plan on your plan not going according to plan.
 
 > The End of History Illusion is what psychologists call the tendency for people to be keenly aware of how much they’ve changed in the past, but to underestimate how much their personalities, desires, and goals are likely to change in the future.
 

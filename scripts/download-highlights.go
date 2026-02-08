@@ -200,7 +200,8 @@ func outputHighlights(highlights []Highlight) {
 			fmt.Println()
 		}
 
-		fmt.Println(h.Text)
+		text := strings.ReplaceAll(h.Text, "...", "[…]")
+		fmt.Println(text)
 		if h.Note != "" {
 			fmt.Println("-", h.Note)
 		}

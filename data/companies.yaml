@@ -1,17 +1,36 @@
 companies:
-  - name: "Microsoft"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Microsoft"
-  - name: "Amazon"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Amazon"
-  - name: "Google"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Google"
-  - name: "Meta"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Meta"
-  - name: "Apple"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Apple"
-  - name: "Netflix"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Netflix"
-  - name: "Spotify"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Spotify"
-  - name: "Stripe"
-    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Stripe"
+  - name: "Stim"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Stim"
+
+  - name: "Redeye"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Redeye"
+
+  - name: "Passagen"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Passagen"
+
+  - name: "Greenpeace"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Greenpeace"
+
+  - name: "Unibet"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Unibet"
+
+  - name: "Samtrafiken"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Samtrafiken"
+
+  - name: "Hyper Island"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Hyper+Island"
+
+  - name: "Dagens Juridik"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Dagens+Juridik"
+
+  - name: "Affärsvärlden"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Affärsvärlden"
+
+  - name: "Fireball"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Fireball+Whisky"
+
+  - name: "KTH"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=KTH"
+
+  - name: "Medievärlden"
+    logo: "https://via.placeholder.com/200x80/F0F0F0/888?text=Medievärlden"

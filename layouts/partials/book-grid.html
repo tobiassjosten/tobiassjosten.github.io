@@ -2,7 +2,7 @@
 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
     {{ range . }}
         {{ $book := . }}
-        <div class="col">
+        <div class="col text-center">
             {{ partial "book-cover.html" (dict "book" $book) }}
         </div>
     {{ end }}

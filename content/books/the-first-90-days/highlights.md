@@ -42,9 +42,9 @@ Common traps for new leaders include the following:
 
 > Begin by thinking about your first day in the new job. What do you want to do by the end of that day? Then move to the first week. Then focus on the end of the first month, the second month, and finally the three-month mark. These plans will be sketchy, but the simple act of beginning to plan will help clear your head.
 
-> Accelerate your learning. You need to climb the learning curve as fast as you can in your new organization. This means understanding its markets, products, technologies, systems, and structures, as well as its culture and politics. ... You must be systematic and focused about deciding what you need to learn and how you will learn it most efficiently.
+> Accelerate your learning. You need to climb the learning curve as fast as you can in your new organization. This means understanding its markets, products, technologies, systems, and structures, as well as its culture and politics. […] You must be systematic and focused about deciding what you need to learn and how you will learn it most efficiently.
 
-> Match your strategy to the situation. Different types of situations require you to make significant adjustments in how you plan for and execute your transition. ... A clear diagnosis of the situation is an essential prerequisite for developing your action plan.
+> Match your strategy to the situation. Different types of situations require you to make significant adjustments in how you plan for and execute your transition. […] A clear diagnosis of the situation is an essential prerequisite for developing your action plan.
 
 > At the broadest level, preparing yourself means letting go of the past and embracing the imperatives of the new situation to give yourself a running start. It can be hard work, but it is essential.
 
@@ -74,7 +74,7 @@ Common traps for new leaders include the following:
 
 > Even in situations (such as turnarounds) when you have been brought in explicitly to import new ways of doing things, you still have to learn about the organization’s culture and politics to socialize and customize your approach.
 
-> Your learning agenda defines what you want to learn. Your learning plan defines how you will go about learning it. ... Your learning plan is a critical part of your overall 90-day plan. In fact, as you will discover later, learning should be a primary focus of your plan for your first 30 days on the job (unless, of course, there is a disaster in progress).
+> Your learning agenda defines what you want to learn. Your learning plan defines how you will go about learning it. […] Your learning plan is a critical part of your overall 90-day plan. In fact, as you will discover later, learning should be a primary focus of your plan for your first 30 days on the job (unless, of course, there is a disaster in progress).
 
 > The first question is, What kind of change am I being called upon to lead? Only by answering this question will you know how to match your strategy to the situation. The second question is, What kind of change leader am I? Here the answer has implications for how you should adjust your leadership style.
 
@@ -106,9 +106,9 @@ Common traps for new leaders include the following:
 
 > Your 90-day plan should be written, even if it consists only of bullet points. It should specify priorities and goals as well as milestones. Critically, you should share it with your boss and seek buy-in for it.
 
-> Whatever your own priorities, pinpoint what your boss cares about most, and aim for early wins in those areas. ... The most effective approach is to integrate your boss’s goals with your own efforts to get early wins. If this is impossible, look for early wins based solely on your boss’s priorities.
+> Whatever your own priorities, pinpoint what your boss cares about most, and aim for early wins in those areas. […] The most effective approach is to integrate your boss’s goals with your own efforts to get early wins. If this is impossible, look for early wins based solely on your boss’s priorities.
 
-> To begin to sketch out your plan, divide the 90 days into three blocks of 30 days. At the end of each block, you will have a review meeting with your boss. ... You should typically devote the first block of 30 days to learning and building personal credibility. ... Then you can proceed to develop a learning agenda and learning plan for yourself. Set weekly goals for yourself, and establish a personal discipline of weekly evaluation and planning.
+> To begin to sketch out your plan, divide the 90 days into three blocks of 30 days. At the end of each block, you will have a review meeting with your boss. […] You should typically devote the first block of 30 days to learning and building personal credibility. […] Then you can proceed to develop a learning agenda and learning plan for yourself. Set weekly goals for yourself, and establish a personal discipline of weekly evaluation and planning.
 
 > By the end of the first few months, you want your boss, your peers, and your subordinates to feel that something new, something good, is happening. Early wins excite and energize people and build your personal credibility.
 
@@ -126,11 +126,11 @@ Common traps for new leaders include the following:
 
 > The higher you climb in organizations, the more you take on the role of organizational architect, creating and aligning the key elements of the organizational system: the strategic direction, structure, core processes, and skill bases that provide the foundation for superior performance. No matter how charismatic you are as a leader, you cannot hope to do much if your organization is fundamentally out of alignment. You will feel as if you’re pushing a boulder uphill every day.
 
-> Your actions during your first few weeks inevitably will have a disproportionate impact, because they are as much about symbolism as about substance. Early actions often get transformed into stories, which can define you as hero or villain. ... How you introduce yourself to the organization, how you treat support staff, how you deal with small irritants—all these pieces of behavior can become the kernels of stories that circulate widely.
+> Your actions during your first few weeks inevitably will have a disproportionate impact, because they are as much about symbolism as about substance. Early actions often get transformed into stories, which can define you as hero or villain. […] How you introduce yourself to the organization, how you treat support staff, how you deal with small irritants—all these pieces of behavior can become the kernels of stories that circulate widely.
 
-> Simply blowing up the existing culture and starting over is rarely the right answer. ... If you send the message that there is nothing good about the existing organization and its culture, you will rob people of a key source of stability in times of change. ... The key is to identify both the good and the bad elements of the existing culture. Elevate and praise the good elements even as you seek to change the bad ones.
+> Simply blowing up the existing culture and starting over is rarely the right answer. […] If you send the message that there is nothing good about the existing organization and its culture, you will rob people of a key source of stability in times of change. […] The key is to identify both the good and the bad elements of the existing culture. Elevate and praise the good elements even as you seek to change the bad ones.
 
-> [A]ll your efforts to secure early wins could come to naught if you don’t pay attention to identifying ticking time bombs and preventing them from exploding in your face. ... This often happens because the new leader simply doesn’t look in the right places or ask the right questions.
+> [A]ll your efforts to secure early wins could come to naught if you don’t pay attention to identifying ticking time bombs and preventing them from exploding in your face. […] This often happens because the new leader simply doesn’t look in the right places or ask the right questions.
 
 > Few leaders get systematic training in organizational design. Because leaders typically have limited control over organizational design early in their careers, they learn little about it.
 
@@ -162,7 +162,7 @@ Common traps for new leaders include the following:
 
 > Establish clear norms about communication. This includes which communication channels will be used and how they will be employed. It also means having explicit agreements concerning responsiveness—for example, that urgent messages will be responded to within a specified time.
 
-> An inspiring vision has the following attributes: ... It taps into sources of inspiration. ... It makes people part of “the story.” ... It contains evocative language.
+> An inspiring vision has the following attributes: […] It taps into sources of inspiration. […] It makes people part of “the story.” […] It contains evocative language.
 
 > To succeed in your new role, you will need the support of people over whom you have no direct authority. You may have little or no relationship capital at the outset, especially if you’re onboarding into a new organization. So you will need to invest energy in building new networks. Start early.
 
@@ -178,7 +178,7 @@ Common traps for new leaders include the following:
 
 > Choice-shaping is about influencing how people perceive their alternatives.
 
-> Armed with deeper insight into the people you need to influence, you can think about how to apply classic influence techniques such as consultation, framing, choice-shaping, social influence, incrementalism, sequencing, and action-forcing events. Consultation promotes buy-in, and good consultation means engaging in active listening. ... Framing means carefully crafting your persuasive arguments on a person-by-person basis. ... Social influence is the impact of the opinions of others and the rules of the societies in which they live. ... Incrementalism refers to the notion that people can move in desired directions step-by-step when they wouldn’t go in a single leap. ... Sequencing means being strategic about the order in which you seek to influence people to build momentum in desired directions. ... Action-forcing events get people to stop deferring decisions, delaying, and avoiding commitment of scarce resources.
+> Armed with deeper insight into the people you need to influence, you can think about how to apply classic influence techniques such as consultation, framing, choice-shaping, social influence, incrementalism, sequencing, and action-forcing events. Consultation promotes buy-in, and good consultation means engaging in active listening. […] Framing means carefully crafting your persuasive arguments on a person-by-person basis. […] Social influence is the impact of the opinions of others and the rules of the societies in which they live. […] Incrementalism refers to the notion that people can move in desired directions step-by-step when they wouldn’t go in a single leap. […] Sequencing means being strategic about the order in which you seek to influence people to build momentum in desired directions. […] Action-forcing events get people to stop deferring decisions, delaying, and avoiding commitment of scarce resources.
 
 > It’s inevitable that your initial enthusiasm will wane as the excitement of taking on a new challenge wears off and the reality sets in of the challenges you face. It’s common for leaders to go into a valley three to six months after taking a new role.
 
@@ -196,4 +196,4 @@ Common traps for new leaders include the following:
 
 > The paradox of transition acceleration is that leaders in transition often feel too busy to learn and plan their transitions. They know they should be tapping into available resources and devoting time to planning their transitions, but the urgent demands of their new roles tend to crowd out this important work.
 
-> Success in accelerating everyone contributes directly to improving company performance. ... An acceleration system is therefore a key element of a high-performance organization.
+> Success in accelerating everyone contributes directly to improving company performance. […] An acceleration system is therefore a key element of a high-performance organization.
