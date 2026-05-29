@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
@@ -58,6 +59,10 @@ func stripSubtitle(title string) string {
 
 	if idx := strings.Index(title, " ("); idx != -1 {
 		return strings.TrimSpace(title[:idx])
+	}
+
+	if idx := strings.Index(title, "? "); idx != -1 {
+		return strings.TrimSpace(title[:idx+1])
 	}
 
 	return title
@@ -150,6 +155,53 @@ func readGoodreadsCSV(filename string) ([]GoodreadsBook, error) {
 	return books, nil
 }
 
+func deduplicateBooks(books []GoodreadsBook) []GoodreadsBook {
+	byTitle := make(map[string]GoodreadsBook)
+
+	for _, book := range books {
+		existing, found := byTitle[book.Title]
+		if !found {
+			byTitle[book.Title] = book
+			continue
+		}
+
+		existingID, _ := strconv.Atoi(existing.ID)
+		newID, _ := strconv.Atoi(book.ID)
+		if newID < existingID {
+			fmt.Printf("Duplicate title '%s': keeping ID %s over %s\n", book.Title, book.ID, existing.ID)
+			byTitle[book.Title] = book
+		} else {
+			fmt.Printf("Duplicate title '%s': keeping ID %s over %s\n", book.Title, existing.ID, book.ID)
+		}
+	}
+
+	result := make([]GoodreadsBook, 0, len(byTitle))
+	for _, book := range byTitle {
+		result = append(result, book)
+	}
+
+	return result
+}
+
+func warnSlugCollisions(books []GoodreadsBook) {
+	bySlug := make(map[string][]GoodreadsBook)
+
+	for _, book := range books {
+		bookSlug := slug.Make(book.Title)
+		bySlug[bookSlug] = append(bySlug[bookSlug], book)
+	}
+
+	for bookSlug, collisions := range bySlug {
+		if len(collisions) > 1 {
+			titles := make([]string, len(collisions))
+			for i, book := range collisions {
+				titles[i] = fmt.Sprintf("'%s' (ID: %s)", book.Title, book.ID)
+			}
+			fmt.Printf("WARNING: Slug collision '%s' for books: %s\n", bookSlug, strings.Join(titles, ", "))
+		}
+	}
+}
+
 func parseAuthors(authorString string) []string {
 	var authors []string
 
@@ -227,6 +279,11 @@ func downloadCover(book GoodreadsBook) error {
 		return fmt.Errorf("cover not available, %s: %d", imageURL, resp.StatusCode)
 	}
 
+	contentType := resp.Header.Get("Content-Type")
+	if !strings.HasPrefix(contentType, "image/") {
+		return fmt.Errorf("unexpected content type %q for %s", contentType, imageURL)
+	}
+
 	bookSlug := slug.Make(book.Title)
 
 	imagePath := filepath.Join("content/books", bookSlug, bookSlug+".jpg")
@@ -237,7 +294,8 @@ func downloadCover(book GoodreadsBook) error {
 	}
 	defer imageFile.Close()
 
-	if _, err := io.Copy(imageFile, resp.Body); err != nil {
+	const maxCoverBytes = 10 << 20
+	if _, err := io.Copy(imageFile, io.LimitReader(resp.Body, maxCoverBytes)); err != nil {
 		return fmt.Errorf("saving image: %w", err)
 	}
 
@@ -315,9 +373,11 @@ func checkIfNeedsUpdate(book GoodreadsBook, existing map[string]string) (bool, m
 		updates["rating"] = book.Rating
 	}
 
-	if existing["date"] == "" && book.DateRead != "" {
+	if book.DateRead != "" {
 		dateFormatted := strings.ReplaceAll(book.DateRead, "/", "-")
-		updates["date"] = dateFormatted
+		if existing["date"] != dateFormatted {
+			updates["date"] = dateFormatted
+		}
 	}
 
 	if book.DateRead == "" {
@@ -476,6 +536,9 @@ func main() {
 		os.Exit(1)
 	}
 
+	books = deduplicateBooks(books)
+	warnSlugCollisions(books)
+
 	fmt.Printf("Found %d books to potentially import\n", len(books))
 	fmt.Printf("Existing books: %d\n", len(existingBooks))
 	fmt.Printf("Existing authors: %d\n\n", len(existingAuthors))
@@ -510,8 +573,7 @@ func main() {
 				continue
 			}
 
-			fmt.Printf("[%d/%d] Updating: %s\n", i+1, len(books), book.Title)
-			fmt.Printf("  Slug: %s\n", bookSlug)
+			fmt.Printf("[%d/%d] Updating: %s (%s)\n", i+1, len(books), book.Title, bookSlug)
 
 			if err := updateBookFrontmatter(bookSlug, updates, removals); err != nil {
 				fmt.Printf("  ✗ Failed to update book: %v\n", err)
