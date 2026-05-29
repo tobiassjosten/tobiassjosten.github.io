@@ -66,6 +66,7 @@ I use a lot of assorted software to level up my cybernated life. Some are instal
 
 ### Apps for engineering
 
+- [Claude](https://claude.com/claude-code). My AI assistant of choice. I use Claude Code in the terminal to write most of my code, understand the code better, and explore architectural and design changes.
 - [GitHub](https://github.com/). Being an open-source developer at heart, a lot of the code I write or use lives in this coding community.
 - [Postman](https://www.postman.com/). When integrating with a new API my first step is usually to do some exploratory testing and Postman is my go-to for this. It's also an excellent way to build documentation for a team's applications.
 - [Google Authenticator](https://apps.apple.com/us/app/google-authenticator/id388497605). Cyber security is important in my work and two-factor authentication is a hygiene factor these days. This app makes it easy to achieve at least a minimum level of protection.
@@ -90,6 +91,7 @@ I use a lot of assorted software to level up my cybernated life. Some are instal
 - [Todoist](https://todoist.com/). I don't understand how others function without a to-do list (although I strongly suspect they only believe they do). Todoist helps me keep track of all the little things I need and want to do.
 - [Habitify](https://habitify.me/). Apart from tasks in my to-do list, I also have a set of habits I want to cultivate. Habitify helps me keep track of these and motivates me to keep going.
 - [One sec](https://one-sec.app/). This brilliantly simple app prevents me from mindlessly scrolling through social media (often).
+- [Hammerspoon](https://www.hammerspoon.org/). A powerful automation tool for macOS, in Lua. I mainly use it to script window management and to create custom keyboard shortcuts, but it can do so much more.
 - ~~[Trello](https://trello.com/). While my to-do list manages tasks and actions, Trello lets me take a step back to look at the big picture. This is how I keep up with all the projects I'm involved with and how I make sure I do both urgent and important things.~~ Has since been superseded by Todoist.
 
 ### Apps for creating
@@ -133,5 +135,6 @@ Being in good physical shape is important to me; so much so that I have [a fitne
 - [Terraform](https://www.terraform.io/). I'll cut off both my hands before I go back to the dark ages of manual server configuration. Having progressed through codifying and automating the provisioning with Ansible, Salt, Chef, and Puppet, I'm not all in on Terraform. (Although I suspect [Pulumi](https://www.pulumi.com/) could be the next step here.)
 - [UptimeRobot](https://uptimerobot.com/). A super simple tool that lets you know when there's a problem with your website. For professional use, I prefer [DataDog](https://www.datadoghq.com/) but, again, I like to keep personal projects as simple as possible.
 - [Mozilla Relay](https://relay.firefox.com/) lets me sign up to services without giving out my email address. Their handy Chrome extension makes it easy to generate a new proxy email for each new service I sign up to.
+- [Ntfy](https://ntfy.sh/) is a simple tool for sending notifications to my phone. I use it to get alerts when Claude needs my input, when a user signs up to a service of mine, when a server goes down, etc.
 
 Whew, that's a lot! If you're still interested in more of this, check out [the uses.tech website](https://uses.tech/) for others' pages with their tools and equipment.
