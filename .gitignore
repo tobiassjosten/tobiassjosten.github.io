@@ -7,3 +7,5 @@ settings.local.json
 .env.local
 
 goodreads_library_export.csv
+
+.playwright-mcp
