@@ -9,3 +9,6 @@ settings.local.json
 goodreads_library_export.csv
 
 .playwright-mcp
+
+.wrangler
+.hugo_build.lock
