@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting&hellip;</title>
+<meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+<meta name="robots" content="noindex">
+<script>window.location.replace({{ .Params.target | jsonify | safeJS }});</script>
+</head>
+<body>
+<p>Redirecting to <a href="{{ .Params.target }}">{{ .Params.target }}</a>&hellip;</p>
+</body>
+</html>
