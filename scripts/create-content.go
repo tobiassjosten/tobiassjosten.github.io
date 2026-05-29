@@ -5,9 +5,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"regexp"
-	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -21,13 +19,10 @@ type contentType struct {
 
 var contentTypes = []contentType{
 	{"article", "Create article (requires slug)", true},
-	{"newsletter", "Create newsletter (auto-dated/numbered)", false},
-	{"interview", "Create interview (auto-dated/numbered)", false},
 	{"book", "Create book review (requires slug)", true},
 	{"author", "Create author (requires slug)", true},
-	{"philosopher", "Create philosopher (requires slug)", true},
+	{"thinker", "Create thinker (requires slug)", true},
 	{"project", "Create project (requires slug)", true},
-	{"business", "Create business (requires slug)", true},
 	{"presentation", "Create presentation (requires slug)", true},
 }
 
@@ -78,7 +73,6 @@ func printUsage() {
 	fmt.Println()
 	fmt.Println("Examples:")
 	fmt.Println("  make new article my-article-slug")
-	fmt.Println("  make new newsletter")
 	fmt.Println("  make new book clean-code")
 }
 
@@ -150,20 +144,14 @@ func createContent(contentType, slug string) error {
 	switch contentType {
 	case "article":
 		return createArticle(slug)
-	case "newsletter":
-		return createNewsletter()
-	case "interview":
-		return createInterview()
 	case "book":
 		return createBook(slug)
 	case "author":
 		return createAuthor(slug)
-	case "philosopher":
-		return createPhilosopher(slug)
+	case "thinker":
+		return createThinker(slug)
 	case "project":
 		return createProject(slug)
-	case "business":
-		return createBusiness(slug)
 	case "presentation":
 		return createPresentation(slug)
 	default:
@@ -184,56 +172,6 @@ func createArticle(slug string) error {
 
 	fmt.Printf("✓ Created article: %s\n", filePath)
 	fmt.Println("  Remember to add <!--more--> separator")
-	return nil
-}
-
-func createNewsletter() error {
-	date := time.Now().Format("2006-01-02")
-
-	nextNum, err := findNextNumber("content/newsletters", `newsletter-(\d+)`)
-	if err != nil {
-		return fmt.Errorf("finding next newsletter number: %w", err)
-	}
-
-	filePath := fmt.Sprintf("content/newsletters/%s-newsletter-%d.md", date, nextNum)
-
-	if fileExists(filePath) {
-		return fmt.Errorf("newsletter already exists: %s", filePath)
-	}
-
-	if err := runHugoNew(filePath); err != nil {
-		return err
-	}
-
-	if err := replaceIssueNumber(filePath, nextNum); err != nil {
-		return fmt.Errorf("updating issue number: %w", err)
-	}
-
-	fmt.Printf("✓ Created newsletter #%d: %s\n", nextNum, filePath)
-	fmt.Println("  Update title and add <!--more--> separator")
-	return nil
-}
-
-func createInterview() error {
-	date := time.Now().Format("2006-01-02")
-
-	nextNum, err := findNextNumber("content/interviews", `interview-(\d+)`)
-	if err != nil {
-		return fmt.Errorf("finding next interview number: %w", err)
-	}
-
-	filePath := fmt.Sprintf("content/interviews/%s-interview-%d.md", date, nextNum)
-
-	if fileExists(filePath) {
-		return fmt.Errorf("interview already exists: %s", filePath)
-	}
-
-	if err := runHugoNew(filePath); err != nil {
-		return err
-	}
-
-	fmt.Printf("✓ Created interview #%d: %s\n", nextNum, filePath)
-	fmt.Println("  Fill in interviewee details and add <!--more--> separator")
 	return nil
 }
 
@@ -273,19 +211,19 @@ func createAuthor(slug string) error {
 	return nil
 }
 
-func createPhilosopher(slug string) error {
-	dirPath := fmt.Sprintf("content/philosophers/%s", slug)
+func createThinker(slug string) error {
+	dirPath := fmt.Sprintf("content/thinkers/%s", slug)
 	filePath := fmt.Sprintf("%s/index.md", dirPath)
 
 	if fileExists(dirPath) {
-		return fmt.Errorf("philosopher already exists: %s", dirPath)
+		return fmt.Errorf("thinker already exists: %s", dirPath)
 	}
 
 	if err := runHugoNew(filePath); err != nil {
 		return err
 	}
 
-	fmt.Printf("✓ Created philosopher: %s\n", filePath)
+	fmt.Printf("✓ Created thinker: %s\n", filePath)
 	fmt.Println("  Next steps:")
 	fmt.Printf("    1. Add portrait image (PNG) to %s/\n", dirPath)
 	fmt.Println("    2. Update image field in frontmatter")
@@ -310,23 +248,6 @@ func createProject(slug string) error {
 	return nil
 }
 
-func createBusiness(slug string) error {
-	dirPath := fmt.Sprintf("content/businesses/%s", slug)
-	filePath := fmt.Sprintf("%s/index.md", dirPath)
-
-	if fileExists(dirPath) {
-		return fmt.Errorf("business already exists: %s", dirPath)
-	}
-
-	if err := runHugoNew(filePath); err != nil {
-		return err
-	}
-
-	fmt.Printf("✓ Created business: %s\n", filePath)
-	fmt.Println("  Fill in description and project_url")
-	return nil
-}
-
 func createPresentation(slug string) error {
 	year := time.Now().Format("2006")
 	dirPath := fmt.Sprintf("content/presentations/%s-%s", year, slug)
@@ -345,32 +266,6 @@ func createPresentation(slug string) error {
 	return nil
 }
 
-func findNextNumber(dir, pattern string) (int, error) {
-	files, err := filepath.Glob(filepath.Join(dir, "*.md"))
-	if err != nil {
-		return 0, err
-	}
-
-	re := regexp.MustCompile(pattern)
-	var numbers []int
-
-	for _, file := range files {
-		matches := re.FindStringSubmatch(filepath.Base(file))
-		if len(matches) > 1 {
-			if num, err := strconv.Atoi(matches[1]); err == nil {
-				numbers = append(numbers, num)
-			}
-		}
-	}
-
-	if len(numbers) == 0 {
-		return 1, nil
-	}
-
-	sort.Ints(numbers)
-	return numbers[len(numbers)-1] + 1, nil
-}
-
 func fileExists(path string) bool {
 	_, err := os.Stat(path)
 	return err == nil
@@ -383,13 +278,3 @@ func runHugoNew(path string) error {
 	return cmd.Run()
 }
 
-func replaceIssueNumber(filePath string, issueNum int) error {
-	content, err := os.ReadFile(filePath)
-	if err != nil {
-		return err
-	}
-
-	updated := strings.Replace(string(content), "issue: 1", fmt.Sprintf("issue: %d", issueNum), 1)
-
-	return os.WriteFile(filePath, []byte(updated), 0644)
-}

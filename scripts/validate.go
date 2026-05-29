@@ -21,6 +21,7 @@ var allowedProperties = map[string]bool{
 	"currentlyReading":   true,
 	"featuredOnHomepage": true,
 	"series":             true,
+	"aliases":            true,
 }
 
 var allowedArticleProperties = map[string]bool{
@@ -64,8 +65,8 @@ type ArticleMetadata struct {
 	HasMoreMark bool
 }
 
-// PhilosopherMetadata represents parsed philosopher frontmatter
-type PhilosopherMetadata struct {
+// ThinkerMetadata represents parsed thinker frontmatter
+type ThinkerMetadata struct {
 	Path  string
 	Slug  string
 	Title string
@@ -89,12 +90,12 @@ type ValidationWarning struct {
 
 // ValidationContext holds all data needed for validation
 type ValidationContext struct {
-	Books        map[string]*BookMetadata        // slug -> metadata
-	Articles     map[string]*ArticleMetadata     // slug -> metadata
-	Philosophers map[string]*PhilosopherMetadata // slug -> metadata
-	Authors      map[string]bool                 // author slug -> exists
-	Errors       []ValidationError
-	Warnings     []ValidationWarning
+	Books    map[string]*BookMetadata    // slug -> metadata
+	Articles map[string]*ArticleMetadata // slug -> metadata
+	Thinkers map[string]*ThinkerMetadata // slug -> metadata
+	Authors  map[string]bool             // author slug -> exists
+	Errors   []ValidationError
+	Warnings []ValidationWarning
 }
 
 // parseFrontMatter parses YAML frontmatter from book content
@@ -244,8 +245,8 @@ func parseBookFile(path string) (*BookMetadata, error) {
 	return book, nil
 }
 
-// parsePhilosopherFile parses a single philosopher file
-func parsePhilosopherFile(path string) (*PhilosopherMetadata, error) {
+// parseThinkerFile parses a single thinker file
+func parseThinkerFile(path string) (*ThinkerMetadata, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("reading file: %w", err)
@@ -272,14 +273,14 @@ func parsePhilosopherFile(path string) (*PhilosopherMetadata, error) {
 		}
 	}
 
-	philosopher := &PhilosopherMetadata{
+	thinker := &ThinkerMetadata{
 		Path:  path,
 		Slug:  slug,
 		Title: title,
 		Books: books,
 	}
 
-	return philosopher, nil
+	return thinker, nil
 }
 
 // parseArticleFile parses a single article file
@@ -321,13 +322,13 @@ func parseArticleFile(path string) (*ArticleMetadata, error) {
 	return article, nil
 }
 
-// loadValidationContext loads all books, articles, philosophers, and authors
+// loadValidationContext loads all books, articles, thinkers, and authors
 func loadValidationContext() (*ValidationContext, error) {
 	ctx := &ValidationContext{
-		Books:        make(map[string]*BookMetadata),
-		Articles:     make(map[string]*ArticleMetadata),
-		Philosophers: make(map[string]*PhilosopherMetadata),
-		Authors:      make(map[string]bool),
+		Books:    make(map[string]*BookMetadata),
+		Articles: make(map[string]*ArticleMetadata),
+		Thinkers: make(map[string]*ThinkerMetadata),
+		Authors:  make(map[string]bool),
 	}
 
 	bookPaths, err := filepath.Glob("content/books/*/index.md")
@@ -349,7 +350,7 @@ func loadValidationContext() (*ValidationContext, error) {
 		ctx.Books[book.Slug] = book
 	}
 
-	articlePaths, err := filepath.Glob("content/articles/**.md")
+	articlePaths, err := filepath.Glob("content/articles/*.md")
 	if err != nil {
 		return nil, fmt.Errorf("finding article files: %w", err)
 	}
@@ -372,13 +373,13 @@ func loadValidationContext() (*ValidationContext, error) {
 		ctx.Articles[article.Slug] = article
 	}
 
-	philosopherPaths, err := filepath.Glob("content/philosophers/*/index.md")
+	thinkerPaths, err := filepath.Glob("content/thinkers/*/index.md")
 	if err != nil {
-		return nil, fmt.Errorf("finding philosopher files: %w", err)
+		return nil, fmt.Errorf("finding thinker files: %w", err)
 	}
 
-	for _, path := range philosopherPaths {
-		philosopher, err := parsePhilosopherFile(path)
+	for _, path := range thinkerPaths {
+		thinker, err := parseThinkerFile(path)
 		if err != nil {
 			// Add parsing error but continue
 			slug := filepath.Base(filepath.Dir(path))
@@ -390,7 +391,7 @@ func loadValidationContext() (*ValidationContext, error) {
 			})
 			continue
 		}
-		ctx.Philosophers[philosopher.Slug] = philosopher
+		ctx.Thinkers[thinker.Slug] = thinker
 	}
 
 	// Load all authors
@@ -709,16 +710,16 @@ func validateArticleProperties(ctx *ValidationContext) {
 	}
 }
 
-// validatePhilosopherBooks checks that philosopher book references are valid
-func validatePhilosopherBooks(ctx *ValidationContext) {
-	for _, philosopher := range ctx.Philosophers {
-		for _, bookSlug := range philosopher.Books {
+// validateThinkerBooks checks that thinker book references are valid
+func validateThinkerBooks(ctx *ValidationContext) {
+	for _, thinker := range ctx.Thinkers {
+		for _, bookSlug := range thinker.Books {
 			if _, exists := ctx.Books[bookSlug]; !exists {
 				ctx.Errors = append(ctx.Errors, ValidationError{
-					BookSlug:  philosopher.Slug,
-					FilePath:  philosopher.Path,
+					BookSlug:  thinker.Slug,
+					FilePath:  thinker.Path,
 					ErrorType: "INVALID_BOOK_REFERENCE",
-					Message:   fmt.Sprintf("Philosopher references non-existent book: '%s'", bookSlug),
+					Message:   fmt.Sprintf("Thinker references non-existent book: '%s'", bookSlug),
 				})
 			}
 		}
@@ -742,7 +743,7 @@ func validateBookMeta(ctx *ValidationContext) {
 func printResults(ctx *ValidationContext) {
 	fmt.Println("=== Content Validation ===")
 	fmt.Println()
-	fmt.Printf("Validating %d books, %d articles, and %d philosophers...\n", len(ctx.Books), len(ctx.Articles), len(ctx.Philosophers))
+	fmt.Printf("Validating %d books, %d articles, and %d thinkers...\n", len(ctx.Books), len(ctx.Articles), len(ctx.Thinkers))
 	fmt.Println()
 
 	if len(ctx.Errors) > 0 {
@@ -823,7 +824,7 @@ func main() {
 	validateBookMeta(ctx)
 	validateArticleMoreMarker(ctx)
 	validateArticleProperties(ctx)
-	validatePhilosopherBooks(ctx)
+	validateThinkerBooks(ctx)
 
 	// Print results
 	printResults(ctx)
