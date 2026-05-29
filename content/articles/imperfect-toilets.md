@@ -1,5 +1,5 @@
 ---
-title: "Imperfect toilets"
+title: "Imperfect Toilets"
 date: "2012-08-03"
 ---
 

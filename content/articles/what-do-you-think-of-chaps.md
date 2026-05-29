@@ -1,5 +1,5 @@
 ---
-title: "What do you think of Chaps?"
+title: "What Do You Think of Chaps?"
 date: "2014-04-18"
 ---
 

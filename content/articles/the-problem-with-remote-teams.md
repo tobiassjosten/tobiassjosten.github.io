@@ -1,5 +1,5 @@
 ---
-title: "The problem with remote teams"
+title: "The Problem with Remote Teams"
 date: "2014-09-22"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Instagram on the web"
+title: "Instagram on the Web"
 date: "2013-02-06"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Ask not what Drupal can do for you"
+title: "Ask Not What Drupal Can Do for You"
 date: "2012-08-03"
 ---
 

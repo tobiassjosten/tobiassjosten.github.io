@@ -1,5 +1,5 @@
 ---
-title: "Smartburk is live!"
+title: "Smartburk Is Live!"
 date: "2013-04-16"
 ---
 

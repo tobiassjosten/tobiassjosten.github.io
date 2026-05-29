@@ -1,5 +1,5 @@
 ---
-title: "Google+ and the walled social gardens"
+title: "Google+ and the Walled Social Gardens"
 date: "2011-06-29"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Comparing apple and apple pie"
+title: "Comparing Apple and Apple Pie"
 date: "2014-10-08"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Symfony workshop for aspiring hackers"
+title: "Symfony Workshop for Aspiring Hackers"
 date: "2012-03-27"
 ---
 

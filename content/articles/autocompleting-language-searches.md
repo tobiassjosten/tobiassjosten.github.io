@@ -1,5 +1,5 @@
 ---
-title: "Autocompleting language searches"
+title: "Autocompleting Language Searches"
 date: "2014-05-12"
 ---
 

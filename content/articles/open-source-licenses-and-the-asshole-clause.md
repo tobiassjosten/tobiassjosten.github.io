@@ -1,5 +1,5 @@
 ---
-title: "Open source licenses and the asshole clause"
+title: "Open Source Licenses and the Asshole Clause"
 date: "2012-04-26"
 ---
 

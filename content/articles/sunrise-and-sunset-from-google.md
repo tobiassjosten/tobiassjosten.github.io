@@ -1,5 +1,5 @@
 ---
-title: "Sunrise and sunset from Google"
+title: "Sunrise and Sunset from Google"
 date: "2013-05-13"
 ---
 

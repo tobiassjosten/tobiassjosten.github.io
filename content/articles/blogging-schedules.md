@@ -1,5 +1,5 @@
 ---
-title: "Blogging schedules"
+title: "Blogging Schedules"
 date: "2013-01-15"
 ---
 

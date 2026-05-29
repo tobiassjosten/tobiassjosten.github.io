@@ -1,5 +1,5 @@
 ---
-title: "By the flip of a coin"
+title: "By the Flip of a Coin"
 date: "2015-01-12"
 ---
 

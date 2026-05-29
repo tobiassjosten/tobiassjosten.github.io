@@ -1,5 +1,5 @@
 ---
-title: "Tracking with purpose"
+title: "Tracking with Purpose"
 date: "2014-06-05"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Charge your clients like a boss"
+title: "Charge Your Clients Like a Boss"
 date: "2014-07-10"
 ---
 

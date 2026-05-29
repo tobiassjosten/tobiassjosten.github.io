@@ -1,5 +1,5 @@
 ---
-title: "Experimental outbound marketing"
+title: "Experimental Outbound Marketing"
 date: "2014-10-27"
 ---
 

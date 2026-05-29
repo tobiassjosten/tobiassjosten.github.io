@@ -1,5 +1,5 @@
 ---
-title: "Zero multiplication"
+title: "Zero Multiplication"
 date: "2014-09-08"
 ---
 

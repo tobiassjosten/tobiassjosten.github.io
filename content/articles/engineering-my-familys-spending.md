@@ -1,5 +1,5 @@
 ---
-title: "Engineering my family's spending"
+title: "Engineering My Family's Spending"
 date: "2023-09-27"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Someone will test your code"
+title: "Someone Will Test Your Code"
 date: "2013-05-01"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Trading required for easy"
+title: "Trading Required for Easy"
 date: "2014-09-15"
 ---
 

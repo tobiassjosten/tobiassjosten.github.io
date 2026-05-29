@@ -1,5 +1,5 @@
 ---
-title: "Follow me on Bloglovin'"
+title: "Follow Me on Bloglovin'"
 date: "2013-03-17"
 ---
 

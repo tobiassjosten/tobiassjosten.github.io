@@ -1,5 +1,5 @@
 ---
-title: "Writing is learning is growing"
+title: "Writing Is Learning Is Growing"
 date: "2022-11-21"
 ---
 

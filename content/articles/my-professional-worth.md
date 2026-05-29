@@ -1,5 +1,5 @@
 ---
-title: "My professional worth"
+title: "My Professional Worth"
 date: "2014-04-03"
 ---
 

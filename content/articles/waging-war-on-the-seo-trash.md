@@ -1,5 +1,5 @@
 ---
-title: "Waging war on the SEO trash"
+title: "Waging War on the SEO Trash"
 date: "2012-01-19"
 ---
 

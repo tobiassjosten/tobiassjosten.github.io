@@ -1,5 +1,5 @@
 ---
-title: "Report MFA affiliate spam sites"
+title: "Report MFA Affiliate Spam Sites"
 date: "2013-01-17"
 ---
 

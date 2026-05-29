@@ -1,5 +1,5 @@
 ---
-title: "Shame on you, Loopia"
+title: "Shame on You, Loopia"
 date: "2012-05-27"
 ---
 

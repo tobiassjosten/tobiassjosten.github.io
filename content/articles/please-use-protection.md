@@ -1,5 +1,5 @@
 ---
-title: "Please use protection"
+title: "Please Use Protection"
 date: "2012-08-04"
 ---
 

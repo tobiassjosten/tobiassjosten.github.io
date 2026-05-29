@@ -1,5 +1,5 @@
 ---
-title: "Fixing Outlook's calendar export"
+title: "Fixing Outlook's Calendar Export"
 date: "2025-03-03"
 ---
 

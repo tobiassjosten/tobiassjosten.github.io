@@ -1,5 +1,5 @@
 ---
-title: "Off to new adventures"
+title: "Off to New Adventures"
 date: "2012-09-04"
 ---
 

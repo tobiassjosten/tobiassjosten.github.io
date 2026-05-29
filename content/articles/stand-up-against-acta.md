@@ -1,5 +1,5 @@
 ---
-title: "Stand up against ACTA"
+title: "Stand Up Against ACTA"
 date: "2012-01-31"
 ---
 

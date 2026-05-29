@@ -1,5 +1,5 @@
 ---
-title: "Refactor your AFK interface"
+title: "Refactor Your AFK Interface"
 date: "2015-12-01"
 ---
 

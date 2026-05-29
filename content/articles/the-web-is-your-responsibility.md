@@ -1,5 +1,5 @@
 ---
-title: "The web is your responsibility"
+title: "The Web Is Your Responsibility"
 date: "2012-02-11"
 ---
 

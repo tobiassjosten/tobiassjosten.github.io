@@ -1,5 +1,5 @@
 ---
-title: "So long and thanks for all the fish!"
+title: "So Long and Thanks for All the Fish!"
 date: "2011-05-25"
 ---
 

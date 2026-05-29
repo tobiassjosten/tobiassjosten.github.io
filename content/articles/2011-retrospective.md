@@ -1,5 +1,5 @@
 ---
-title: "2011 retrospective"
+title: "2011 Retrospective"
 date: "2011-12-31"
 ---
 

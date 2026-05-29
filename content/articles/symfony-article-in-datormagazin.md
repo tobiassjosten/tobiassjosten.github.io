@@ -1,5 +1,5 @@
 ---
-title: "Symfony article in Datormagazin"
+title: "Symfony Article in Datormagazin"
 date: "2010-11-09"
 ---
 
