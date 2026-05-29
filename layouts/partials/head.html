@@ -1,6 +1,39 @@
 <meta charset="utf-8">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+{{/* Shared metadata, computed once and reused across OG/Twitter/schema */}}
+{{ $pageTitle := cond .IsHome .Site.Title (printf "%s - %s" .Title .Site.Title) }}
+{{ $description := .Site.Params.description }}
+{{ with .Description }}
+    {{ $description = . }}
+{{ else }}
+    {{ with .Summary }}
+        {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
+    {{ end }}
+{{ end }}
+
+{{/* Resolve a share image: book cover, page resource, then site default */}}
+{{ $image := .Site.Params.image }}
+{{ $imageAlt := .Title }}
+{{ with .Params.image }}
+    {{ $resource := $.Resources.GetMatch . }}
+    {{ if $resource }}
+        {{ $image = $resource.Permalink }}
+        {{ if eq $.Type "books" }}{{ $imageAlt = printf "Book cover for %s" $.Title }}{{ end }}
+    {{ end }}
+{{ end }}
+
+{{/* Open Graph object type per content kind */}}
+{{ $ogType := "website" }}
+{{ if eq .Type "books" }}
+    {{ $ogType = "book" }}
+{{ else if eq .Type "authors" }}
+    {{ $ogType = "profile" }}
+{{ else if and (eq .Kind "page") (eq .Type "articles") }}
+    {{ $ogType = "article" }}
+{{ end }}
+
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $description }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,13 +43,39 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}"/>
 
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary">
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+{{ with $image }}
+<meta property="og:image" content="{{ . }}">
+<meta property="og:image:alt" content="{{ $imageAlt }}">
+{{ end }}
+{{ if eq $ogType "article" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ .Site.Params.author }}">
+{{ range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{ end }}
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="{{ with $image }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
-<meta name="twitter:domain" content="{{ .Site.Params.domain }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{ with $image }}
+<meta name="twitter:image" content="{{ . }}">
+<meta name="twitter:image:alt" content="{{ $imageAlt }}">
+{{ end }}
+
+<!-- Structured data -->
+{{ partial "schema.html" . }}
 
 <!-- License -->
 <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>

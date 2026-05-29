@@ -1,0 +1,89 @@
+{{/* schema.org JSON-LD structured data, emitted per page type */}}
+{{ $siteURL := .Site.BaseURL | absURL }}
+{{ $author := dict
+    "@type" "Person"
+    "name" .Site.Params.author
+    "url" $siteURL
+    "image" .Site.Params.image
+    "sameAs" (slice (printf "https://twitter.com/%s" .Site.Params.twitter))
+}}
+
+{{ $schema := dict }}
+
+{{ if .IsHome }}
+    {{ $schema = dict
+        "@context" "https://schema.org"
+        "@graph" (slice
+            (dict
+                "@type" "WebSite"
+                "url" $siteURL
+                "name" .Site.Title
+                "description" .Site.Params.description
+                "inLanguage" "en-US"
+                "publisher" $author
+            )
+            $author
+        )
+    }}
+{{ else if and (eq .Kind "page") (eq .Type "articles") }}
+    {{ $schema = dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" .Title
+        "description" (.Summary | plainify | htmlUnescape | strings.TrimSpace)
+        "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+        "author" $author
+        "publisher" $author
+        "url" .Permalink
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+        "inLanguage" "en-US"
+    }}
+{{ else if and (eq .Kind "page") (eq .Type "books") }}
+    {{ $authorNames := slice }}
+    {{ range .Params.authors }}
+        {{ $authorPage := $.Site.GetPage (printf "/authors/%s" .) }}
+        {{ with $authorPage }}
+            {{ $authorNames = $authorNames | append (dict "@type" "Person" "name" .Title "url" .Permalink) }}
+        {{ end }}
+    {{ end }}
+    {{ $book := dict
+        "@type" "Book"
+        "name" .Title
+        "url" .Permalink
+    }}
+    {{ with $authorNames }}{{ $book = merge $book (dict "author" .) }}{{ end }}
+    {{ $cover := .Resources.GetMatch .Params.image }}
+    {{ with $cover }}{{ $book = merge $book (dict "image" .Permalink) }}{{ end }}
+
+    {{ $review := dict
+        "@context" "https://schema.org"
+        "@type" "Review"
+        "itemReviewed" $book
+        "author" $author
+        "datePublished" (.Date.Format "2006-01-02")
+        "url" .Permalink
+    }}
+    {{ with .Params.rating }}
+        {{ $review = merge $review (dict "reviewRating" (dict
+            "@type" "Rating"
+            "ratingValue" .
+            "bestRating" 5
+            "worstRating" 1
+        )) }}
+    {{ end }}
+    {{ $body := .Content | plainify | htmlUnescape | strings.TrimSpace }}
+    {{ if gt (len $body) 0 }}{{ $review = merge $review (dict "reviewBody" $body) }}{{ end }}
+    {{ $schema = $review }}
+{{ else if and (eq .Kind "page") (eq .Type "authors") }}
+    {{ $schema = dict
+        "@context" "https://schema.org"
+        "@type" "Person"
+        "name" .Title
+        "url" .Permalink
+    }}
+{{ end }}
+
+{{ with $schema }}
+<script type="application/ld+json">{{ jsonify (dict "indent" "  ") . | safeJS }}</script>
+{{ end }}
