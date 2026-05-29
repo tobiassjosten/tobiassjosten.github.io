@@ -14,6 +14,8 @@ frontmatter:
 
 summaryLength: 50
 
+enableRobotsTXT: true
+
 markup:
   goldmark:
     renderer:
@@ -31,54 +33,32 @@ outputFormats:
     baseName: "feed"
 
 menu:
-  primary:
-    - name: "About"
-      url: "/about/"
-      weight: 1
-    - name: "Services"
-      url: "/services/"
-      weight: 2
-    - name: "Connect"
-      url: "/connect/"
-      weight: 2
-
-  secondary:
-    - name: "Connect with me"
-      url: "/connect/"
-      weight: 1
+  footer:
     - name: "Articles"
       url: "/articles/"
-      weight: 2
-    - name: "Current focus"
-      url: "/now/"
-      weight: 3
-    - name: "My toolbox"
-      url: "/uses/"
-      weight: 4
-    - name: "Newsletter"
-      url: "/newsletter/"
-      weight: 5
-    - name: "Resume"
-      url: "/resume/"
-      weight: 6
-    - name: "Services"
-      url: "/services/"
-      weight: 7
-    - name: "Speaking"
-      url: "/speaking/"
-      weight: 8
+      weight: 1
     - name: "Books"
       url: "/books/"
-      weight: 9
-    - name: "Businesses"
-      url: "/businesses/"
-      weight: 10
+      weight: 2
+    - name: "Thinkers"
+      url: "/thinkers/"
+      weight: 3
+    - name: "Projects"
+      url: "/projects/"
+      weight: 4
+    - name: "Connect"
+      url: "/connect/"
+      weight: 5
+    - name: "Using"
+      url: "/uses/"
+      weight: 6
+    - name: "Now"
+      url: "/now/"
+      weight: 7
 
 params:
-  description: "Web technician and open source aficionado"
+  description: "An engineer and entrepreneur, with a passion for hacking systems; technical, social, and economic."
   author: "Tobias Sjösten"
   twitter: "tobiassjosten"
-  ga_tracking_id: "UA-18939935-1"
-  ga_tracking_id_secondary: "UA-18939935-2"
-  domain: "vvv.tobiassjosten.net"
+  image: "https://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=1200"
   show_recent_posts: 3
