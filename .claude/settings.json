@@ -1,33 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Read(**)",
-      "Edit(**)",
-      "MultiEdit(**)",
-      "Write(**)",
-      "Glob(**)",
-      "Grep(**)",
-      "LS(**)",
-
-      "WebFetch(domain:localhost)",
-      "WebFetch(domain:127.0.0.1)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:gohugo.io)",
-      "WebFetch(domain:golang.org)",
-      "WebFetch(domain:pkg.go.dev)",
-      "WebFetch(domain:developer.mozilla.org)",
-      "WebFetch(domain:tobiassjosten.net)",
-      "WebFetch(domain:athlegan.com)",
-      "WebFetch(domain:seastone.io)",
-
-      "TodoRead(**)",
-      "TodoWrite(**)",
-
-      "Task(**)",
       "Bash(hugo:*)",
-
-      "Bash(go:*)",
-      "Bash(gofmt)",
 
       "Bash(awk:*)",
       "Bash(basename:*)",
@@ -87,7 +61,19 @@
       "Bash(printf:*)",
 
       "Bash(curl http://localhost:1313/*)",
-      "Bash(wget http://localhost:1313/*)"
+      "Bash(wget http://localhost:1313/*)",
+
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:127.0.0.1)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gohugo.io)",
+      "WebFetch(domain:golang.org)",
+      "WebFetch(domain:pkg.go.dev)",
+      "WebFetch(domain:developer.mozilla.org)",
+      "WebFetch(domain:tobiassjosten.net)",
+      "WebFetch(domain:athlegan.com)",
+      "WebFetch(domain:seastone.io)"
+
     ],
     "deny": [
       "Bash(sudo:*)",
