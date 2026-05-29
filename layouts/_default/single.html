@@ -11,32 +11,17 @@
         </time>
     </p>
 
-    <aside class="card my-5" itemscope itemtype="http://schema.org/Person">
-        <div class="card-body">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125"
-                         title="{{ .Site.Params.author }}"
-                         alt="Photo of {{ .Site.Params.author }}"
-                         class="rounded-circle img-fluid"
-                         itemprop="image">
-                </div>
-                <div class="col-md-7">
-                    <p class="mb-0">
-                        Written by <a href="/" rel="author" itemprop="url" itemprop="name">
-                            {{ .Site.Params.author }}
-                        </a>;
-                        a <span itemprop="jobTitle">web technician</span>
-                        and <span itemprop="jobTitle">open source aficionado</span>.
-                    </p>
-                </div>
-                <div class="col-md-3 text-center text-md-end">
-                    <a href="https://twitter.com/{{ .Site.Params.twitter }}"
-                       class="btn btn-primary btn-sm">
-                        Follow @{{ .Site.Params.twitter }}
-                    </a>
-                </div>
-            </div>
+    <aside class="author-bio my-5 mx-auto" itemscope itemtype="http://schema.org/Person">
+        <div class="d-flex align-items-center justify-content-center gap-3">
+            <img src="http://2.gravatar.com/avatar/04ce4aa9f079c590959ba7c47276549f?size=125"
+                 title="{{ .Site.Params.author }}"
+                 alt="Photo of {{ .Site.Params.author }}"
+                 class="rounded-circle"
+                 width="60" height="60"
+                 itemprop="image">
+            <p class="mb-0">
+                Written by <span rel="author" itemprop="name">{{ .Site.Params.author }}</span>
+            </p>
         </div>
     </aside>
 

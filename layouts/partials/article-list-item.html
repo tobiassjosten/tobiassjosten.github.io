@@ -1,11 +1,8 @@
-<article class="article-list-item mb-4 pb-4">
-    <h3 class="article-title h5 mb-2">
+<article class="article-list-item mt-4 mb-4">
+    <h3 class="article-title mb-1">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h3>
-    {{ with .Summary }}
-        <div class="article-summary mb-2">{{ . }}</div>
-    {{ end }}
-    <p class="article-date text-muted small mb-0">
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
-    </p>
+    <time class="article-date text-muted" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+    </time>
 </article>

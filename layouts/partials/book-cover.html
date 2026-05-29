@@ -1,5 +1,22 @@
 {{ with .book }}
 {{ $isReviewed := .Content }}
+{{ $authorNames := slice }}
+{{ with .Params.authors }}
+    {{ range $authorSlug := . }}
+        {{ $authorName := $authorSlug }}
+        {{ range where $.book.Site.Pages "Section" "authors" }}
+            {{ if and .File (eq (path.Base .File.Dir) $authorSlug) }}
+                {{ $authorName = .Title }}
+            {{ end }}
+        {{ end }}
+        {{ $authorNames = $authorNames | append $authorName }}
+    {{ end }}
+{{ end }}
+{{ $title := .Title }}
+{{ $tooltipText := $title }}
+{{ with $authorNames }}
+    {{ $tooltipText = printf "%s, by %s" $title (delimit . ", " " and ") }}
+{{ end }}
 <div class="book-cover">
     {{ if $.amazonLink }}
         {{ with .Params.amazonURL }}<a href="{{ . }}" rel="nofollow" data-clicktrack-category="Affiliate" data-clicktrack-label="Amazon">{{ end }}
@@ -13,30 +30,17 @@
             class="book-cover-image img-fluid shadow-sm"
             {{ if not $isReviewed }}style="filter: brightness(1.0) contrast(0.5) saturate(0.7)"{{ end }}
             alt="Book cover for {{ .Title }}"
+            data-bs-toggle="tooltip"
+            title="{{ $tooltipText }}"
             loading="lazy">
     {{ else }}
-    <div class="book-cover-placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start">
+    <div class="book-cover-placeholder shadow-sm d-flex flex-column justify-content-between p-3 float-start"
+         data-bs-toggle="tooltip" title="{{ $tooltipText }}">
         <div>
             <div class="placeholder-title fw-bold mb-2">{{ .Title }}</div>
-            {{ $bookAuthors := .Params.authors }}
-            {{ if gt (len $bookAuthors) 0 }}
-                {{ $authorNames := slice }}
-                {{ range $authorSlug := $bookAuthors }}
-                    {{ $authorName := $authorSlug }}
-                    {{ range where $.book.Site.Pages "Section" "authors" }}
-                        {{ if and .File (eq (path.Base .File.Dir) $authorSlug) }}
-                            {{ $authorName = .Title }}
-                        {{ end }}
-                    {{ end }}
-                    {{ $authorNames = $authorNames | append $authorName }}
-                {{ end }}
+            {{ with $authorNames }}
                 <div class="placeholder-author small">
-                    {{ range $i, $name := $authorNames }}
-                        {{ if gt $i 0 }}
-                            {{ if eq $i (sub (len $authorNames) 1) }} and {{ else }}, {{ end }}
-                        {{ end }}
-                        {{ $name }}
-                    {{ end }}
+                    {{ delimit . ", " " and " }}
                 </div>
             {{ end }}
         </div>

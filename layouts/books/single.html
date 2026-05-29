@@ -94,8 +94,10 @@
 
         {{ $highlights := .Resources.GetMatch "highlights.md" }}
         {{ if $highlights }}
-            <h2>My highlights</h2>
-            {{ $highlights.Content | .RenderString }}
+            <div class="book-highlights">
+                <h2>My highlights</h2>
+                {{ $highlights.Content | .RenderString }}
+            </div>
         {{ end }}
     </div>
 </article>
