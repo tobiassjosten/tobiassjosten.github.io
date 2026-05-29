@@ -1,10 +1,7 @@
 - Add book relations.
 - Move articles correctly to/from Tobiassjosten.net, Seastone.io, and Athlegan.com.
   - Sort through categories and tags (if the latter should remain).
-- Make sure to review the books feature on the homepage.
-- Look through templates for schema.org markup.
 - Go through all content types and make sure they have the right content, metadata, and representation in menus.
-- Decide on repository for article drafts.
 - Integrate with MailerLite, implement newsletter sign-up form, and fix old subscription links.
   - For example: #/portal/signup
 - Download images for articles migrated from seastone.io, and fix links in those articles too.
@@ -12,3 +9,4 @@
 - Handle drafts and scheduling posts.
 - Rewrite the book review for "Principles of Package Design".
 - Move images local to the articles.
+- Add my avatar and bio somewhere, for easy reference and reuse.
