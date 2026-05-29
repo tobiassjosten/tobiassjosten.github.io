@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="thinkers content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ $pending := slice }}
+    {{ $finished := slice }}
+    {{ range .Pages }}
+        {{ $entry := dict "page" . "birth_year" (int .Params.birth_date) }}
+        {{ if .Content }}
+            {{ $finished = $finished | append $entry }}
+        {{ else }}
+            {{ $pending = $pending | append $entry }}
+        {{ end }}
+    {{ end }}
+
+    {{ $pending = sort $pending "birth_year" "asc" }}
+    {{ $finished = sort $finished "birth_year" "asc" }}
+
+    {{ if $finished }}
+        <section class="mb-5">
+            <h2>Completed</h2>
+            {{ range $finished }}
+                {{ partial "thinker-row.html" .page }}
+            {{ end }}
+        </section>
+    {{ end }}
+
+    {{ if $pending }}
+        <section class="mb-5">
+            <h2>Pending</h2>
+            {{ range $pending }}
+                {{ partial "thinker-row.html" .page }}
+            {{ end }}
+        </section>
+    {{ end }}
+</section>
+{{ end }}
