@@ -1,16 +1,18 @@
 ---
-title: "Principles of Package Design"
+title: "Principles of PHP Package Design"
 authors:
   - "matthias-noback"
 date: "2014-08-13"
-amazonURL: "https://amzn.to/4pjX7bV"
-image: "principles-of-package-design.jpg"
+amazonURL: "https://amzn.to/49zb6Wz"
+image: "principles-of-php-package-design.jpg"
 rating: 5
+aliases:
+  - "/books/principles-of-package-design/"
 ---
 
-I'll start at the end and say that this is one of the most useful programming books I have ever read. [*Principles of Package Design*](/books/principles-of-package-design/buy/) should be required reading for anyone writing code for a living, independent of one's programming language.
+I'll start at the end and say that this is one of the most useful programming books I have ever read. Principles of PHP Package Design should be required reading for anyone writing code for a living, independent of one's programming language.
 
-[Matthias Noback](https://twitter.com/matthiasnoback) is a well known figure ([and blogger](http://php-and-symfony.matthiasnoback.nl/)) in the [Symfony world](/symfony/), where he's been pioneering the concept of [hexagonal architecture](http://hexagonal-symfony.eu/) and developing [some very cool libraries](http://simplebus.github.io/MessageBus/). So I have of course been looking forward to reading his book – **Principles of Package Design**.
+[Matthias Noback](https://twitter.com/matthiasnoback) is a well known figure ([and blogger](http://php-and-symfony.matthiasnoback.nl/)) in the [Symfony world](/symfony/), where he's been pioneering the concept of [hexagonal architecture](http://hexagonal-symfony.eu/) and developing [some very cool libraries](http://simplebus.github.io/MessageBus/). So I have of course been looking forward to reading his book.
 
 I was not disappointed, whatsoever.
 
@@ -21,7 +23,7 @@ Single responsibility, Open-closed, Liskov substitution, Interface segregation a
 I'm hit by how hands-on and pedagogic it is. Where some would focus on showing off their prowess, Matthias assumes nothing about your skill level and seems to genuinely want to teach the ins and outs of this subject. Anyone could pick this up and improve their OOP game a great deal.
 
 > And still every day there's something new to learn about class design, some old habit to drop, some new principle to apply.
-> - **Matthias Noback, Principles of Package Design**
+> - **Matthias Noback, Principles of PHP Package Design**
 
 ## Package Design
 
@@ -53,4 +55,4 @@ In another example we are shown two interdependent classes and taught how to unt
 
 I learned a lot reading this book and am already planning on re-reading it, as I'm sure there are more things to learn from it.
 
-If you are considering getting Principles of Package Design – stop right now and do it. I can't recommend it enough.
+If you are considering getting Principles of PHP Package Design – stop right now and do it. I can't recommend it enough.

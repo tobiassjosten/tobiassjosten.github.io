@@ -2,7 +2,7 @@
 title: "The 4-Hour Workweek"
 authors:
   - "timothy-ferriss"
-date: "2012-09-17"
+date: "2012-01-01"
 amazonURL: http://amzn.to/RzTYVk
 image: "the-4-hour-workweek.jpg"
 rating: 4
