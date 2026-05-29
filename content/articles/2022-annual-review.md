@@ -1,5 +1,5 @@
 ---
-title: "2022 annual review"
+title: "2022 Annual Review"
 date: "2023-01-02"
 ---
 
@@ -28,7 +28,7 @@ Let's start with the good stuff. Here are some of the highlights from the past y
 
 **I took up writing again.** After putting [my side project](https://athlegan.com/) on hold at the turn of the year, I haven't really had somewhere to publish anything. That changed on November 21st when I gave myself the birthday present of starting [Seastone.io](https://www.seastone.io/) as a new blog for things related to my job as an engineering manager.
 
-_Psst! You have_ [_subscribed to new posts_](#/portal/signup) _here, right?_
+_Psst! You have_ [_subscribed to new posts_](/subscribe/) _here, right?_
 
 **I bought my first car.** At the ripe age of 36, I got my driver's license in May 2021. With the excellent public transportation in Stockholm (which is [rated #3 in the world](https://www.bloomberg.com/news/articles/2022-11-21/these-cities-have-the-best-public-transit-systems)) I've never really seen the use of driving. Until I got kids with extracurricular activities… So this year I finally got my first car – a Kia Niro EV 2022!
 
@@ -94,4 +94,4 @@ With this retrospection complete, it's time to put it to use by looking forward 
 
 **I will publish a monthly post.** Starting [Seastone.io](https://www.seastone.io/) has already reinvigorated me and I fully intend to keep a regular writing practice, to share my thoughts on life in IT and what I learn as an engineering manager.
 
-Will you follow along? [Subscribe](#/portal/signup) and I'll let you know when the next post is up!
+Will you follow along? [Subscribe](/subscribe/) and I'll let you know when the next post is up!

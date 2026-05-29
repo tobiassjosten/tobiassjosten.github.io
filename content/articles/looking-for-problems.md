@@ -1,5 +1,5 @@
 ---
-title: "Looking for problems"
+title: "Looking for Problems"
 date: "2024-08-09"
 ---
 
@@ -79,4 +79,4 @@ After having done a few interviews already, I'm so grateful for Rob's and Giff's
 
 Armed with this, I continue to work through my list of gym owners, one by one, until I've learned exactly which problems are giving them hell. Then it's time for the fun part — to see if and how I can solve the problems!
 
-Curious to hear how that goes? [Subscribe (for free)](#/portal/signup) and I'll keep you updated!
+Curious to hear how that goes? [Subscribe (for free)](/subscribe/) and I'll keep you updated!

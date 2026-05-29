@@ -1,5 +1,5 @@
 ---
-title: "Exploring business ideas"
+title: "Exploring Business Ideas"
 date: "2024-06-25"
 ---
 
@@ -132,4 +132,4 @@ But first, of course, I have a set of hypotheses to prove: that I can build the 
 
 It's still early days and I'm still exploring possibilities, not wanting to get ahead of myself just yet. I'm having fun, learning A LOT, and the future potential is just a nice bonus at this stage.
 
-If you're curious about my progress, [subscribe (for free)](#/portal/signup) and I'll keep you updated!
+If you're curious about my progress, [subscribe (for free)](/subscribe/) and I'll keep you updated!

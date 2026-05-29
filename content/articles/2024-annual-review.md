@@ -7,7 +7,7 @@ This is my 9th public, annual retrospection, where I summarize the past year and
 
 <!--more-->
 
-_Previous years:_ [_2011_](https://vvv.tobiassjosten.net/personal/2011-retrospective/?ref=seastone.io)_,_ [_2012_](https://vvv.tobiassjosten.net/personal/2012-retrospective/?ref=seastone.io)_,_ [_2015_](https://www.athlegan.com/a-new-year?ref=seastone.io)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness?ref=seastone.io)_,_ [_2019_](https://www.athlegan.com/2019-summary?ref=seastone.io)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020?ref=seastone.io)_,_ [_2022_](https://www.seastone.io/2022)_,_ [_2023_](https://www.seastone.io/2023/)_._
+_Previous years:_ [_2011_](/articles/2011-retrospective/)_,_ [_2012_](/articles/2012-retrospective/)_,_ [_2015_](https://www.athlegan.com/a-new-year?ref=seastone.io)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness?ref=seastone.io)_,_ [_2019_](https://www.athlegan.com/2019-summary?ref=seastone.io)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020?ref=seastone.io)_,_ [_2022_](https://www.seastone.io/2022)_,_ [_2023_](https://www.seastone.io/2023/)_._
 
 This year, I'm using a less structured format than before. First I'll list [some highlights](#highlights-from-2024) from the previous year and then I'll outline [some plans](#plans-for-2025) for the coming year.
 
@@ -173,4 +173,4 @@ Instead, starting last year, I create more vague "intentions" for the year, like
 
 What I'm trying differently this year is the come up with a series of monthly challenges to make these intentions more concrete. I have found that daily reminders of what is important helps me stay consistent long-term, plus it's fun to challenge yourself. ;)
 
-Curious how I get on during 2025? [Subscribe](#/portal/signup) and I'll keep you updated!
+Curious how I get on during 2025? [Subscribe](/subscribe/) and I'll keep you updated!

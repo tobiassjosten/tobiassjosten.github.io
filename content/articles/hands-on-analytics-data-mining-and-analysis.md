@@ -1,5 +1,5 @@
 ---
-title: "Hands-on Analytics data mining and analysis"
+title: "Hands-on Analytics Data Mining and Analysis"
 date: "2011-09-24"
 ---
 
@@ -9,7 +9,7 @@ I am a big advocate for data driven decisions and I believe that, as a business,
 
 So when I started building [Smartburk](http://www.smartburk.se/) (swedish) I wanted to measure the potential interest in the service. I did so by putting up a splash page explaining the benefits of using Smartburk, accompanied by a signup form. This gives me a list of interested users I can communicate with for feedback and that is absolutely invaluable.
 
-For every signup I also trigger a [Google Analytics event](http://vvv.tobiassjosten.net/symfony/tracking-google-analytics-events-with-symfony). This allowed me to set up a goal within Analytics, to measure the conversion rate for all traffic. By cross referencing this with traffic sources it turns out that Twitter drives the best conversion rates by far and so I might already have some grounds for future campaigns.
+For every signup I also trigger a [Google Analytics event](/symfony/tracking-google-analytics-events-with-symfony). This allowed me to set up a goal within Analytics, to measure the conversion rate for all traffic. By cross referencing this with traffic sources it turns out that Twitter drives the best conversion rates by far and so I might already have some grounds for future campaigns.
 
 My next step was to segment this interest to see what kind of series that would be most interesting for Smartburk to target first.
 

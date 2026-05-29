@@ -2,4 +2,4 @@
 title: "Articles"
 ---
 
-Browse all articles or filter by topic using the tag cloud below.
+This is where I share sporadic thoughts and personal news. [Subscribe](/subscribe/) to be notified whenever I publish something new.

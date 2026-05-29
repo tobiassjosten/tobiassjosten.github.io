@@ -1,5 +1,5 @@
 ---
-title: "2023 annual review"
+title: "2023 Annual Review"
 date: "2024-01-03"
 ---
 
@@ -198,4 +198,4 @@ All in all, it's been another worthwhile year. Not despite my setbacks and diffi
 
 This coming year holds a lot of promise and I couldn't be more excited to get started. Professionally, personally, and by any other aspect, 2024 will be awesome.
 
-_Curious how I get on with my objectives this year?_ [_Subscribe now_](#/portal/signup) _and I'll keep you updated!_
+_Curious how I get on with my objectives this year?_ [_Subscribe now_](/subscribe/) _and I'll keep you updated!_

@@ -1,5 +1,5 @@
 ---
-title: "Podcast recording software"
+title: "Podcast Recording Software"
 date: "2024-02-12"
 ---
 
@@ -169,4 +169,4 @@ I still have a lot of procrasti… researching to do, before I've got all the pi
 
 Next up, I'm looking into podcasting tools for hosting and analytics!
 
-[_Subscribe (for free)_](#/portal/signup) _and you'll be the first to know when that article is out._
+[_Subscribe (for free)_](/subscribe/) _and you'll be the first to know when that article is out._
