@@ -1,6 +1,6 @@
 ---
 title: "Leaving the Best Job in the World"
-date: "2026-03-07"
+date: "2026-05-29"
 ---
 
 After eight years at [STIM](https://www.stim.se/en) — helping hundreds of thousands of music creators get paid for their work — I'm stepping down as Head of Software Engineering.
