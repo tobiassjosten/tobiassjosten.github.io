@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="books-section content">
+    <h1 class="title text-center">{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ $currentlyReading := where .Pages "Params.currentlyReading" true }}
+    {{ if $currentlyReading }}
+        <h2 class="h4 mt-4">Currently reading</h2>
+        {{ partial "book-grid.html" (dict "books" $currentlyReading) }}
+    {{ end }}
+
+    {{ $completedBooks := where .Pages "Params.currentlyReading" "!=" true }}
+    {{ $booksWithDate := where $completedBooks "Params.date" "!=" nil }}
+    {{ range $booksWithDate.GroupByDate "2006" }}
+        <h2 class="h4 mt-4">{{ .Key }}</h2>
+        {{ partial "book-grid.html" (dict "books" .Pages) }}
+    {{ end }}
+</section>
+{{ end }}
