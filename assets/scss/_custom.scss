@@ -371,6 +371,24 @@ footer {
           margin-right: 1em;
           margin-left: 1em;
         }
+
+        @media (max-width: 767px) {
+          font-size: 2.5rem;
+          text-align: left !important;
+
+          &::after,
+          &::before {
+            content: none;
+          }
+        }
+    }
+
+    @media (max-width: 767px) {
+      p.fs-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+      }
     }
   }
 
