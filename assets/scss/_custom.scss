@@ -23,6 +23,12 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  h1.title {
+    text-align: left !important;
+  }
+}
+
 h1 a,
 h2 a,
 h3 a,
