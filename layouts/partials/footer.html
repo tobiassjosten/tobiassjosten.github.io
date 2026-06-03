@@ -1,5 +1,5 @@
-<footer class="mt-5">
-    <div class="container py-5">
+<footer class="mt-md-5 mt-3">
+    <div class="container py-md-5 py-3">
         <div class="row g-4">
             <div class="col-md-6">
                 <p class="mb-1"><strong>{{ .Site.Params.author }}</strong></p>
@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-6 text-end">
+            <div class="col-md-3 col-6 text-md-end text-center">
                 <ul class="list-unstyled">
                     {{ $half := int (math.Ceil (div (len .Site.Menus.footer) 2.0)) }}
                     {{ range first $half .Site.Menus.footer }}
@@ -19,7 +19,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3 col-6 text-end">
+            <div class="col-md-3 col-6 text-md-end text-center">
                 <ul class="list-unstyled">
                     {{ range after $half .Site.Menus.footer }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
