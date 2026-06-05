@@ -1,6 +1,7 @@
 ---
-name: book-review
-description: Review books based on my perspective and ideas, and general information about the book. Use when the user asks to write a review for a specific book.
+name: review-book
+description: Write a book review based on my perspective and ideas, and general information about the book.
+user-invocable-only: true
 ---
 
 # Book review
@@ -43,7 +44,7 @@ Important: If there is an existing review in the index.md file, overwrite it com
 
 - Be specific and opinionated; avoid generic praise.
 
-- Use “you” and “your” to directly address the reader.
+- Use "you" and "your" to directly address the reader.
 
 - Emphasize why the ideas matter, not just what they are.
 
@@ -61,7 +62,7 @@ Important: If there is an existing review in the index.md file, overwrite it com
   - Avoid punchy aphorisms, balanced contrasts, and sentence pairs that resolve cleanly. Do not optimize for brevity or quotability.
   - Avoid metaphors and clichés.
   - Avoid "At its core, the book is" constructions.
-  - Avoid “X, not Y” constructions and clean rhetorical oppositions.
+  - Avoid "X, not Y" constructions and clean rhetorical oppositions.
   - Use simple language and straightforward sentence structures.
   - The text should sound like a thoughtful human explaining something to a peer, not summarizing for an audience.
 
