@@ -23,8 +23,8 @@ jobs:
           hugo-version: latest
           extended: true
 
-      - name: Validate content
-        run: go run scripts/validate.go
+      - name: Validate site
+        run: go test ./tests/...
 
       - name: Build site
         run: |

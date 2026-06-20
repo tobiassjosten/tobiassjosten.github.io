@@ -17,7 +17,7 @@ deploy:
 .PHONY: validate
 validate:
 	@echo "validating site"
-	@go run scripts/validate.go
+	@go test ./tests/...
 
 .PHONY: highlights
 highlights:

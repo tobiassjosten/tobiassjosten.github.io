@@ -1,14 +1,17 @@
-package main
+package tests
 
 import (
 	"fmt"
 	"os"
 	"path/filepath"
 	"regexp"
-	"sort"
 	"strconv"
 	"strings"
 )
+
+// This file ports the content-authoring rules previously enforced by
+// scripts/validate.go. The loaders and validators read the source under
+// content/; they are exercised as subtests from content_test.go.
 
 var allowedProperties = map[string]bool{
 	"title":              true,
@@ -38,26 +41,26 @@ var requiredArticleProperties = []string{
 type BookMetadata struct {
 	Path               string
 	Slug               string
-	AllProperties      map[string]string // raw properties from frontmatter
+	AllProperties      map[string]string
 	Title              string
 	Authors            []string
 	Date               string
 	AmazonURL          string
 	Image              string
-	RelatedBooksRaw    string // raw value to detect bracket syntax
+	RelatedBooksRaw    string
 	RelatedBooks       []string
 	Rating             string
 	CurrentlyReading   bool
 	FeaturedOnHomepage bool
-	Content            string // content body after frontmatter
-	HasContent         bool   // whether book has non-empty content
+	Content            string
+	HasContent         bool
 }
 
 // ArticleMetadata represents parsed article content
 type ArticleMetadata struct {
 	Path        string
 	Slug        string
-	Properties  map[string]string // raw properties from frontmatter
+	Properties  map[string]string
 	Title       string
 	Date        string
 	Draft       bool
@@ -90,24 +93,21 @@ type ValidationWarning struct {
 
 // ValidationContext holds all data needed for validation
 type ValidationContext struct {
-	Books    map[string]*BookMetadata    // slug -> metadata
-	Articles map[string]*ArticleMetadata // slug -> metadata
-	Thinkers map[string]*ThinkerMetadata // slug -> metadata
-	Authors  map[string]bool             // author slug -> exists
+	Books    map[string]*BookMetadata
+	Articles map[string]*ArticleMetadata
+	Thinkers map[string]*ThinkerMetadata
+	Authors  map[string]bool
 	Errors   []ValidationError
 	Warnings []ValidationWarning
 }
 
-// parseFrontMatter parses YAML frontmatter from book content
-// Adapted from refine_book_frontmatter.go
+// parseFrontMatter parses YAML frontmatter from content.
 func parseFrontMatter(content string) (map[string]string, error) {
-	// Split front matter from content
 	parts := strings.SplitN(content, "---", 3)
 	if len(parts) < 3 {
 		return nil, fmt.Errorf("invalid front matter format")
 	}
 
-	// Parse front matter into key-value pairs
 	fm := make(map[string]string)
 	lines := strings.Split(strings.TrimSpace(parts[1]), "\n")
 
@@ -121,19 +121,15 @@ func parseFrontMatter(content string) (map[string]string, error) {
 			continue
 		}
 
-		// Check if this is a continuation of a multiline value
 		if inMultilineValue {
 			if strings.HasPrefix(trimmed, "-") {
-				// Part of array - remove prefix, trim whitespace and quotes
 				item := strings.TrimSpace(strings.TrimPrefix(trimmed, "-"))
 				item = strings.Trim(item, "\"")
 				multilineValue = append(multilineValue, item)
 			} else if strings.Contains(trimmed, ":") {
-				// New key, save previous multiline value
 				fm[currentKey] = strings.Join(multilineValue, ",")
 				inMultilineValue = false
 				multilineValue = nil
-				// Process new key below
 			}
 		}
 
@@ -142,26 +138,20 @@ func parseFrontMatter(content string) (map[string]string, error) {
 			key := strings.TrimSpace(parts[0])
 			value := strings.TrimSpace(parts[1])
 
-			// Handle arrays
 			if strings.HasPrefix(value, "[") && strings.HasSuffix(value, "]") {
-				// Inline array like [a, b, c] - store as-is to detect bracket syntax
 				fm[key] = value
 			} else if value == "" {
-				// Start of multiline value (like authors:, relatedBooks:)
 				currentKey = key
 				inMultilineValue = true
 				multilineValue = []string{}
 			} else if value == "null" {
-				// Null value
 				fm[key] = value
 			} else {
-				// Regular key-value
 				fm[key] = strings.Trim(value, "\"")
 			}
 		}
 	}
 
-	// Save last multiline value if any
 	if inMultilineValue {
 		fm[currentKey] = strings.Join(multilineValue, ",")
 	}
@@ -169,7 +159,6 @@ func parseFrontMatter(content string) (map[string]string, error) {
 	return fm, nil
 }
 
-// parseBookFile parses a single book file
 func parseBookFile(path string) (*BookMetadata, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
@@ -183,7 +172,6 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		return nil, fmt.Errorf("parsing frontmatter: %w", err)
 	}
 
-	// Extract content body after frontmatter
 	parts := strings.SplitN(contentStr, "---", 3)
 	bodyContent := ""
 	hasContent := false
@@ -207,9 +195,7 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		HasContent:    hasContent,
 	}
 
-	// Parse authors array
 	if authorsRaw, exists := fm["authors"]; exists && authorsRaw != "" {
-		// Multiline format - split by comma
 		for _, a := range strings.Split(authorsRaw, ",") {
 			a = strings.TrimSpace(a)
 			if a != "" {
@@ -218,12 +204,9 @@ func parseBookFile(path string) (*BookMetadata, error) {
 		}
 	}
 
-	// Parse relatedBooks
 	if relatedBooksRaw, exists := fm["relatedBooks"]; exists && relatedBooksRaw != "" {
 		book.RelatedBooksRaw = relatedBooksRaw
-		// Check for bracket syntax
 		if !strings.HasPrefix(relatedBooksRaw, "[") {
-			// Multiline format - split by comma
 			for _, b := range strings.Split(relatedBooksRaw, ",") {
 				b = strings.TrimSpace(b)
 				if b != "" {
@@ -231,10 +214,8 @@ func parseBookFile(path string) (*BookMetadata, error) {
 				}
 			}
 		}
-		// If bracket syntax, RelatedBooks remains empty (will be caught by validation)
 	}
 
-	// Parse boolean flags
 	if cr, exists := fm["currentlyReading"]; exists && cr == "true" {
 		book.CurrentlyReading = true
 	}
@@ -245,24 +226,19 @@ func parseBookFile(path string) (*BookMetadata, error) {
 	return book, nil
 }
 
-// parseThinkerFile parses a single thinker file
 func parseThinkerFile(path string) (*ThinkerMetadata, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("reading file: %w", err)
 	}
 
-	contentStr := string(content)
-
-	fm, err := parseFrontMatter(contentStr)
+	fm, err := parseFrontMatter(string(content))
 	if err != nil {
 		return nil, fmt.Errorf("parsing frontmatter: %w", err)
 	}
 
 	slug := filepath.Base(filepath.Dir(path))
-	title := fm["title"]
 
-	// Parse books array
 	var books []string
 	if booksRaw, exists := fm["books"]; exists && booksRaw != "" {
 		for _, b := range strings.Split(booksRaw, ",") {
@@ -273,17 +249,14 @@ func parseThinkerFile(path string) (*ThinkerMetadata, error) {
 		}
 	}
 
-	thinker := &ThinkerMetadata{
+	return &ThinkerMetadata{
 		Path:  path,
 		Slug:  slug,
-		Title: title,
+		Title: fm["title"],
 		Books: books,
-	}
-
-	return thinker, nil
+	}, nil
 }
 
-// parseArticleFile parses a single article file
 func parseArticleFile(path string) (*ArticleMetadata, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
@@ -292,23 +265,17 @@ func parseArticleFile(path string) (*ArticleMetadata, error) {
 
 	contentStr := string(content)
 
-	// Split front matter from content
 	parts := strings.SplitN(contentStr, "---", 3)
 	if len(parts) < 3 {
 		return nil, fmt.Errorf("invalid front matter format")
 	}
 
-	// Parse all properties from frontmatter
 	properties, _ := parseFrontMatter(contentStr)
-
-	// Get slug from filename
 	slug := strings.TrimSuffix(filepath.Base(path), ".md")
 
-	// Check for <!--more--> in content body
 	bodyContent := parts[2]
-	hasMoreMark := strings.Contains(bodyContent, "<!--more-->")
 
-	article := &ArticleMetadata{
+	return &ArticleMetadata{
 		Path:        path,
 		Slug:        slug,
 		Properties:  properties,
@@ -316,13 +283,12 @@ func parseArticleFile(path string) (*ArticleMetadata, error) {
 		Date:        properties["date"],
 		Draft:       properties["draft"] == "true",
 		Content:     strings.TrimSpace(bodyContent),
-		HasMoreMark: hasMoreMark,
-	}
-
-	return article, nil
+		HasMoreMark: strings.Contains(bodyContent, "<!--more-->"),
+	}, nil
 }
 
-// loadValidationContext loads all books, articles, thinkers, and authors
+// loadValidationContext loads all books, articles, thinkers, and authors from
+// the content/ source tree. The working directory must be the project root.
 func loadValidationContext() (*ValidationContext, error) {
 	ctx := &ValidationContext{
 		Books:    make(map[string]*BookMetadata),
@@ -335,7 +301,6 @@ func loadValidationContext() (*ValidationContext, error) {
 	if err != nil {
 		return nil, fmt.Errorf("finding book files: %w", err)
 	}
-
 	for _, path := range bookPaths {
 		book, err := parseBookFile(path)
 		if err != nil {
@@ -354,12 +319,10 @@ func loadValidationContext() (*ValidationContext, error) {
 	if err != nil {
 		return nil, fmt.Errorf("finding article files: %w", err)
 	}
-
 	for _, path := range articlePaths {
 		if filepath.Base(path) == "_index.md" {
 			continue
 		}
-
 		article, err := parseArticleFile(path)
 		if err != nil {
 			ctx.Errors = append(ctx.Errors, ValidationError{
@@ -377,14 +340,11 @@ func loadValidationContext() (*ValidationContext, error) {
 	if err != nil {
 		return nil, fmt.Errorf("finding thinker files: %w", err)
 	}
-
 	for _, path := range thinkerPaths {
 		thinker, err := parseThinkerFile(path)
 		if err != nil {
-			// Add parsing error but continue
-			slug := filepath.Base(filepath.Dir(path))
 			ctx.Errors = append(ctx.Errors, ValidationError{
-				BookSlug:  slug,
+				BookSlug:  filepath.Base(filepath.Dir(path)),
 				FilePath:  path,
 				ErrorType: "PARSE_ERROR",
 				Message:   fmt.Sprintf("Failed to parse: %v", err),
@@ -394,24 +354,19 @@ func loadValidationContext() (*ValidationContext, error) {
 		ctx.Thinkers[thinker.Slug] = thinker
 	}
 
-	// Load all authors
 	authorDirs, err := filepath.Glob("content/authors/*")
 	if err != nil {
 		return nil, fmt.Errorf("finding author directories: %w", err)
 	}
-
 	for _, dir := range authorDirs {
-		// Check if it's a directory
 		if info, err := os.Stat(dir); err == nil && info.IsDir() {
-			slug := filepath.Base(dir)
-			ctx.Authors[slug] = true
+			ctx.Authors[filepath.Base(dir)] = true
 		}
 	}
 
 	return ctx, nil
 }
 
-// addError adds a validation error
 func (ctx *ValidationContext) addError(book *BookMetadata, errorType, message string) {
 	ctx.Errors = append(ctx.Errors, ValidationError{
 		BookSlug:  book.Slug,
@@ -421,7 +376,6 @@ func (ctx *ValidationContext) addError(book *BookMetadata, errorType, message st
 	})
 }
 
-// addWarning adds a validation warning
 func (ctx *ValidationContext) addWarning(book *BookMetadata, message string) {
 	ctx.Warnings = append(ctx.Warnings, ValidationWarning{
 		BookSlug: book.Slug,
@@ -430,7 +384,6 @@ func (ctx *ValidationContext) addWarning(book *BookMetadata, message string) {
 	})
 }
 
-// validateAllowedProperties checks that only allowed properties exist
 func validateAllowedProperties(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
 		for key := range book.AllProperties {
@@ -442,14 +395,12 @@ func validateAllowedProperties(ctx *ValidationContext) {
 	}
 }
 
-// validateAuthors checks that authors exist
 func validateAuthors(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
 		if len(book.Authors) == 0 {
 			ctx.addError(book, "MISSING_AUTHOR", "Missing required 'author' or 'authors' field")
 			continue
 		}
-
 		for _, authorSlug := range book.Authors {
 			if !ctx.Authors[authorSlug] {
 				ctx.addError(book, "INVALID_AUTHOR",
@@ -459,10 +410,8 @@ func validateAuthors(ctx *ValidationContext) {
 	}
 }
 
-// validateUniqueTitles checks that all titles are unique
 func validateUniqueTitles(ctx *ValidationContext) {
-	titleMap := make(map[string][]string) // title -> []slugs
-
+	titleMap := make(map[string][]string)
 	for _, book := range ctx.Books {
 		if book.Title == "" {
 			ctx.addError(book, "MISSING_TITLE", "Missing required 'title' field")
@@ -470,12 +419,10 @@ func validateUniqueTitles(ctx *ValidationContext) {
 		}
 		titleMap[book.Title] = append(titleMap[book.Title], book.Slug)
 	}
-
 	for title, slugs := range titleMap {
 		if len(slugs) > 1 {
 			for _, slug := range slugs {
-				book := ctx.Books[slug]
-				ctx.addError(book, "DUPLICATE_TITLE",
+				ctx.addError(ctx.Books[slug], "DUPLICATE_TITLE",
 					fmt.Sprintf("Title '%s' is used by multiple books: %s",
 						title, strings.Join(slugs, ", ")))
 			}
@@ -483,29 +430,22 @@ func validateUniqueTitles(ctx *ValidationContext) {
 	}
 }
 
-// validateUniqueAmazonURLs checks that all Amazon URLs are unique
-// and that books with content have an Amazon URL
 func validateUniqueAmazonURLs(ctx *ValidationContext) {
-	urlMap := make(map[string][]string) // url -> []slugs
-
+	urlMap := make(map[string][]string)
 	for _, book := range ctx.Books {
 		if book.AmazonURL == "" {
-			// Only require amazonURL if book has actual content
 			if book.HasContent {
 				ctx.addError(book, "MISSING_AMAZON_URL",
 					"Missing required 'amazonURL' field for book with content")
 			}
 			continue
 		}
-
 		urlMap[book.AmazonURL] = append(urlMap[book.AmazonURL], book.Slug)
 	}
-
 	for url, slugs := range urlMap {
 		if len(slugs) > 1 {
 			for _, slug := range slugs {
-				book := ctx.Books[slug]
-				ctx.addError(book, "DUPLICATE_AMAZON_URL",
+				ctx.addError(ctx.Books[slug], "DUPLICATE_AMAZON_URL",
 					fmt.Sprintf("Amazon URL '%s' is used by multiple books: %s",
 						url, strings.Join(slugs, ", ")))
 			}
@@ -513,24 +453,19 @@ func validateUniqueAmazonURLs(ctx *ValidationContext) {
 	}
 }
 
-// validateImageFiles checks that image files exist
 func validateImageFiles(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
 		if book.Image == "" {
 			ctx.addError(book, "MISSING_IMAGE", "Missing required 'image' field")
 			continue
 		}
-
-		bookDir := filepath.Dir(book.Path)
-		imagePath := filepath.Join(bookDir, book.Image)
-
+		imagePath := filepath.Join(filepath.Dir(book.Path), book.Image)
 		info, err := os.Stat(imagePath)
 		if os.IsNotExist(err) {
 			ctx.addError(book, "MISSING_IMAGE_FILE",
 				fmt.Sprintf("Image file '%s' not found in book directory", book.Image))
 			continue
 		}
-
 		if info.Size() < 100 {
 			ctx.addError(book, "IMAGE_FILE_TOO_SMALL",
 				fmt.Sprintf("Image file '%s' is suspiciously small (%d bytes)", book.Image, info.Size()))
@@ -538,20 +473,14 @@ func validateImageFiles(ctx *ValidationContext) {
 	}
 }
 
-// validateReadingStatus checks rating/date vs currentlyReading logic
 func validateReadingStatus(ctx *ValidationContext) {
 	datePattern := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
-
 	for _, book := range ctx.Books {
 		if book.CurrentlyReading {
-			// If currentlyReading, date and rating can be null/empty
 			continue
 		}
-
-		// Not currently reading - must have both rating and valid date
 		hasValidDate := book.Date != "" && book.Date != "null" && datePattern.MatchString(book.Date)
 		hasValidRating := false
-
 		if book.Rating != "" && book.Rating != "null" {
 			if rating, err := strconv.Atoi(book.Rating); err == nil && rating >= 1 && rating <= 5 {
 				hasValidRating = true
@@ -560,7 +489,6 @@ func validateReadingStatus(ctx *ValidationContext) {
 					fmt.Sprintf("Rating must be an integer between 1-5, got '%s'", book.Rating))
 			}
 		}
-
 		if !hasValidDate {
 			ctx.addError(book, "INVALID_READING_STATUS",
 				"Book is not currentlyReading but missing valid date (YYYY-MM-DD format)")
@@ -572,10 +500,8 @@ func validateReadingStatus(ctx *ValidationContext) {
 	}
 }
 
-// validateBooleanFlags checks that boolean flags are only true
 func validateBooleanFlags(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
-		// Check for explicit false values (should have been removed)
 		if val, exists := book.AllProperties["currentlyReading"]; exists && val == "false" {
 			ctx.addError(book, "INVALID_BOOLEAN",
 				"Property 'currentlyReading' should not be explicitly set to false (omit instead)")
@@ -587,32 +513,24 @@ func validateBooleanFlags(ctx *ValidationContext) {
 	}
 }
 
-// validateRelatedBooks checks relatedBooks format and references
 func validateRelatedBooks(ctx *ValidationContext) {
 	for _, book := range ctx.Books {
-		// Check for bracket syntax
 		if book.RelatedBooksRaw != "" && strings.HasPrefix(book.RelatedBooksRaw, "[") {
 			ctx.addError(book, "INVALID_RELATED_BOOKS_FORMAT",
 				"relatedBooks uses bracket syntax []. Use multiline YAML format instead (one per line with '  - ')")
 			continue
 		}
-
-		// Check that referenced books exist
 		for _, relatedSlug := range book.RelatedBooks {
 			if _, exists := ctx.Books[relatedSlug]; !exists {
 				ctx.addError(book, "INVALID_RELATED_BOOK",
 					fmt.Sprintf("Related book '%s' does not exist", relatedSlug))
 			}
 		}
-
-		// Warn if related books don't refer back (bidirectional check)
 		for _, relatedSlug := range book.RelatedBooks {
 			relatedBook, exists := ctx.Books[relatedSlug]
 			if !exists {
-				continue // Already reported as error above
+				continue
 			}
-
-			// Check if relatedBook refers back to this book
 			hasBackReference := false
 			for _, backSlug := range relatedBook.RelatedBooks {
 				if backSlug == book.Slug {
@@ -620,7 +538,6 @@ func validateRelatedBooks(ctx *ValidationContext) {
 					break
 				}
 			}
-
 			if !hasBackReference {
 				ctx.addWarning(book,
 					fmt.Sprintf("Related book '%s' does not reference back to '%s'",
@@ -630,22 +547,18 @@ func validateRelatedBooks(ctx *ValidationContext) {
 	}
 }
 
-// validateUnusedAuthors checks for authors with no books referencing them
 func validateUnusedAuthors(ctx *ValidationContext) {
 	referencedAuthors := make(map[string]bool)
-
 	for _, book := range ctx.Books {
 		for _, authorSlug := range book.Authors {
 			referencedAuthors[authorSlug] = true
 		}
 	}
-
 	for authorSlug := range ctx.Authors {
 		if !referencedAuthors[authorSlug] {
-			authorPath := filepath.Join("content/authors", authorSlug)
 			ctx.Errors = append(ctx.Errors, ValidationError{
 				BookSlug:  authorSlug,
-				FilePath:  authorPath,
+				FilePath:  filepath.Join("content/authors", authorSlug),
 				ErrorType: "UNUSED_AUTHOR",
 				Message:   fmt.Sprintf("Author '%s' has no books referencing them", authorSlug),
 			})
@@ -653,7 +566,6 @@ func validateUnusedAuthors(ctx *ValidationContext) {
 	}
 }
 
-// validateArticleMoreMarker checks that articles have <!--more--> marker
 func validateArticleMoreMarker(ctx *ValidationContext) {
 	for _, article := range ctx.Articles {
 		if !article.HasMoreMark {
@@ -661,16 +573,15 @@ func validateArticleMoreMarker(ctx *ValidationContext) {
 				BookSlug:  article.Slug,
 				FilePath:  article.Path,
 				ErrorType: "MISSING_MORE_MARKER",
-				Message:   fmt.Sprintf("Article is missing <!--more--> separator for summary generation"),
+				Message:   "Article is missing <!--more--> separator for summary generation",
 			})
 		}
 	}
 }
 
-// validateArticleProperties checks that articles have valid frontmatter properties
 func validateArticleProperties(ctx *ValidationContext) {
+	datePattern := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
 	for _, article := range ctx.Articles {
-		// Check for invalid properties
 		for prop := range article.Properties {
 			if !allowedArticleProperties[prop] {
 				ctx.Errors = append(ctx.Errors, ValidationError{
@@ -681,8 +592,6 @@ func validateArticleProperties(ctx *ValidationContext) {
 				})
 			}
 		}
-
-		// Check for required properties
 		for _, prop := range requiredArticleProperties {
 			value := article.Properties[prop]
 			if value == "" || value == "null" {
@@ -694,23 +603,17 @@ func validateArticleProperties(ctx *ValidationContext) {
 				})
 			}
 		}
-
-		// Validate date format (if present)
-		if article.Date != "" {
-			datePattern := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
-			if !datePattern.MatchString(article.Date) {
-				ctx.Errors = append(ctx.Errors, ValidationError{
-					BookSlug:  article.Slug,
-					FilePath:  article.Path,
-					ErrorType: "INVALID_DATE_FORMAT",
-					Message:   fmt.Sprintf("Article has invalid date format: %s (expected YYYY-MM-DD)", article.Date),
-				})
-			}
+		if article.Date != "" && !datePattern.MatchString(article.Date) {
+			ctx.Errors = append(ctx.Errors, ValidationError{
+				BookSlug:  article.Slug,
+				FilePath:  article.Path,
+				ErrorType: "INVALID_DATE_FORMAT",
+				Message:   fmt.Sprintf("Article has invalid date format: %s (expected YYYY-MM-DD)", article.Date),
+			})
 		}
 	}
 }
 
-// validateThinkerBooks checks that thinker book references are valid
 func validateThinkerBooks(ctx *ValidationContext) {
 	for _, thinker := range ctx.Thinkers {
 		for _, bookSlug := range thinker.Books {
@@ -723,114 +626,5 @@ func validateThinkerBooks(ctx *ValidationContext) {
 				})
 			}
 		}
-	}
-}
-
-// validateBookMeta runs all validations
-func validateBookMeta(ctx *ValidationContext) {
-	validateAllowedProperties(ctx)
-	validateAuthors(ctx)
-	validateUnusedAuthors(ctx)
-	validateUniqueTitles(ctx)
-	validateUniqueAmazonURLs(ctx)
-	validateImageFiles(ctx)
-	validateReadingStatus(ctx)
-	validateBooleanFlags(ctx)
-	validateRelatedBooks(ctx)
-}
-
-// printResults prints validation results
-func printResults(ctx *ValidationContext) {
-	fmt.Println("=== Content Validation ===")
-	fmt.Println()
-	fmt.Printf("Validating %d books, %d articles, and %d thinkers...\n", len(ctx.Books), len(ctx.Articles), len(ctx.Thinkers))
-	fmt.Println()
-
-	if len(ctx.Errors) > 0 {
-		fmt.Println("ERRORS FOUND:")
-		fmt.Println()
-
-		// Sort errors by book slug for consistent output
-		sort.Slice(ctx.Errors, func(i, j int) bool {
-			if ctx.Errors[i].BookSlug == ctx.Errors[j].BookSlug {
-				return ctx.Errors[i].ErrorType < ctx.Errors[j].ErrorType
-			}
-			return ctx.Errors[i].BookSlug < ctx.Errors[j].BookSlug
-		})
-
-		for _, err := range ctx.Errors {
-			fmt.Printf("[%s] %s\n", err.ErrorType, err.BookSlug)
-			fmt.Printf("  %s\n", err.FilePath)
-			fmt.Printf("  → %s\n", err.Message)
-			fmt.Println()
-		}
-	}
-
-	if len(ctx.Warnings) > 0 {
-		fmt.Println("WARNINGS:")
-		fmt.Println()
-
-		// Sort warnings by book slug
-		sort.Slice(ctx.Warnings, func(i, j int) bool {
-			return ctx.Warnings[i].BookSlug < ctx.Warnings[j].BookSlug
-		})
-
-		for _, warn := range ctx.Warnings {
-			fmt.Printf("[NON_RECIPROCAL_RELATION] %s\n", warn.BookSlug)
-			fmt.Printf("  %s\n", warn.FilePath)
-			fmt.Printf("  → %s\n", warn.Message)
-			fmt.Println()
-		}
-	}
-
-	// Print summary
-	fmt.Println("=== Summary ===")
-	fmt.Printf("Total books: %d\n", len(ctx.Books))
-
-	// Count unique books with errors
-	booksWithErrors := make(map[string]bool)
-	for _, err := range ctx.Errors {
-		booksWithErrors[err.BookSlug] = true
-	}
-	fmt.Printf("Books with errors: %d\n", len(booksWithErrors))
-
-	// Count unique books with warnings
-	booksWithWarnings := make(map[string]bool)
-	for _, warn := range ctx.Warnings {
-		booksWithWarnings[warn.BookSlug] = true
-	}
-	fmt.Printf("Books with warnings: %d\n", len(booksWithWarnings))
-
-	fmt.Printf("Total errors: %d\n", len(ctx.Errors))
-	fmt.Printf("Total warnings: %d\n", len(ctx.Warnings))
-	fmt.Println()
-
-	if len(ctx.Errors) > 0 {
-		fmt.Println("✗ VALIDATION FAILED")
-	} else {
-		fmt.Println("✓ VALIDATION PASSED")
-	}
-}
-
-func main() {
-	// Load validation context
-	ctx, err := loadValidationContext()
-	if err != nil {
-		fmt.Printf("Error loading validation context: %v\n", err)
-		os.Exit(1)
-	}
-
-	// Run validations
-	validateBookMeta(ctx)
-	validateArticleMoreMarker(ctx)
-	validateArticleProperties(ctx)
-	validateThinkerBooks(ctx)
-
-	// Print results
-	printResults(ctx)
-
-	// Exit with appropriate code
-	if len(ctx.Errors) > 0 {
-		os.Exit(1)
 	}
 }

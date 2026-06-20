@@ -32,15 +32,22 @@ hugo --environment production \
 ```
 
 ```bash
-hugo mod tidy
-hugo mod verify
+go mod tidy
+go mod verify
 ```
 
-Run the following commands to verify that the content is valid:
+Run the test suite to verify the whole site — it builds the site into a temp
+directory and asserts business requirements against both the rendered output
+(internal links resolve, every book renders a cover) and the content source
+(frontmatter rules, cross-reference integrity). It needs `hugo` on `PATH`.
 
 ```bash
-go run scripts/validate.go
+go test ./tests/...
 ```
+
+Each requirement is a `Test*`/subtest under `tests/`. Add a new one by adding a
+test function there; read built pages with the `htmlPages`/`parsePage` helpers
+or the loaded `ctx` content tree.
 
 ## Content
 
@@ -56,4 +63,4 @@ Content lives under `content/` and is grouped by type. Each type has its own sec
 
 Images related to a specific piece of content live in the same bundle directory (e.g. `content/books/<slug>/<slug>.jpg`). Hugo resolves them via `.Resources.GetMatch`.
 
-`scripts/validate.go` enforces required frontmatter (e.g. `amazonURL` on book reviews with content) and cross-reference integrity (e.g. a thinker's `books:` entries must resolve to real book slugs). Run it before committing content changes.
+The `tests/` suite enforces required frontmatter (e.g. `amazonURL` on book reviews with content) and cross-reference integrity (e.g. a thinker's `books:` entries must resolve to real book slugs), alongside the rendered-output checks. Run `go test ./tests/...` before committing content changes.

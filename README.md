@@ -14,10 +14,11 @@ hugo --environment production \
      --printPathWarnings
 ```
 
-Validate content:
+Validate the whole site (builds it and asserts internal links resolve, covers
+render, and content frontmatter is valid):
 
 ```bash
-go run scripts/validate.go
+go test ./tests/...
 ```
 
 See `CLAUDE.md` for the content model and conventions.
