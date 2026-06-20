@@ -65,6 +65,10 @@ func stripSubtitle(title string) string {
 		return strings.TrimSpace(title[:idx+1])
 	}
 
+	if idx := strings.Index(title, "! "); idx != -1 {
+		return strings.TrimSpace(title[:idx+1])
+	}
+
 	return title
 }
 
