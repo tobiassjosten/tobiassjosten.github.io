@@ -6,13 +6,9 @@ This is a [Now](https://nownownow.com/about) page. It outlines a few things I'm 
 
 *Last updated {{< last-updated >}}.*
 
-- At work, we're pushing forward with the migration away from our old IBM systems, and I'm working diligently on the architecture of the new systems, trying to fit all the pieces together and making the puzzle work, both acceptably during the transition and excellently once we're done.
+- I recently [left the best job in the world](/articles/leaving-stim/), in order to focus on building and growing my own businesses. Since June, I'm spending half my time doing consultancy work and the other half building my own products. So far, it feels like I'm on exactly the right trajectory.
 
-- During evenings and weekends, I'm working with an organization to help improve their tech, as a way to boost their business. Things are shaping up nicely, and I'm excited to share more about this project soon.
-
-- I love my new schedule, where I wake up early to get my training done and go to bed early to read substantially. This discipline is slowly becoming second nature.
-
-- I'm diving deep into the world of Domain-Driven Design, and I'm hoping to share a lot of my thoughts once I've had a chance to organize everything.
+- I've doubled down on my BJJ training and also started coaching my kids' classes. While my grappling is improving noticeably from this, my lifting and strength have taken a hit. I'm not sure how to balance these two, but I'm enjoying the process of trying to figure it out.
 
 ## Currently reading
 
