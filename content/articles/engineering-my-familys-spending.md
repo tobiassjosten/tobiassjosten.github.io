@@ -3,7 +3,7 @@ title: "Engineering My Family's Spending"
 date: "2023-09-27"
 ---
 
-One of the areas for improvement I brought up in my [2022 review](/2022-annual-review/) was finances. I have very specific goals for my family's financial future and, in order to reach those goals, we'll have to optimize three aspects of our finances: earning, spending, and investing.
+One of the areas for improvement I brought up in my [2022 review](/articles/2022-annual-review/) was finances. I have very specific goals for my family's financial future and, in order to reach those goals, we'll have to optimize three aspects of our finances: earning, spending, and investing.
 
 <!--more-->
 

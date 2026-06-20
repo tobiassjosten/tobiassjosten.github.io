@@ -3,7 +3,7 @@ title: "Symfony Intro at DrupalCamp Stockholm"
 date: "2013-03-15"
 ---
 
-A week ago today I got up on stage at [DrupalCamp Stockholm 2013](/events/drupalcamp-stockholm-2013/) and held my first ever presentation. The topic was [Symfony](/symfony/) basics and the future of [PHP](/php/) and [Drupal](/drupal/).
+A week ago today I got up on stage at [DrupalCamp Stockholm 2013](/articles/drupalcamp-stockholm-2013/) and held my first ever presentation. The topic was Symfony basics and the future of PHP and Drupal.
 
 <!--more-->
 

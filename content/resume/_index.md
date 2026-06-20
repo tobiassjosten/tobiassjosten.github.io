@@ -31,4 +31,4 @@ Computer Science and Software Engineering background with continuous learning an
 
 ---
 
-For a detailed resume or CV, please [contact me](/contact/).
+For a detailed resume or CV, please [contact me](/connect/).

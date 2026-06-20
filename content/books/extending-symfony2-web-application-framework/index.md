@@ -10,7 +10,7 @@ rating: 3
 
 The introduction of **Extending Symfony2** (Web Application Framework, phew) explains that it's for developers *"already using Symfony2 and PHP"* and its online description says you are expected to *"have a good understanding of how Symfony works"*. I can attest to its truth — it's definitely not for newcomers to Symfony2.
 
-Having [worked in Symfony2 almost daily](/symfony/) for nearly three years though, I figured most would be healthy repetition and so I was excited when I actually picked up a few new things. I think this goes to show the skill and wealth of experience of it's author; **Sébastien Armand**. Thanks mate!
+Having worked in Symfony2 almost daily for nearly three years though, I figured most would be healthy repetition and so I was excited when I actually picked up a few new things. I think this goes to show the skill and wealth of experience of it's author; **Sébastien Armand**. Thanks mate!
 
 Throughout *Extending Symfony2*, [Sébastien](http://khep.in/) takes us through building an example website for organizing meetups. It's well thought out to serve as a base to iteratively build upon with the six chapters; Services and Listeners, Commands and Templates, Forms, Security, Doctrine and Sharing Your Extensions.
 

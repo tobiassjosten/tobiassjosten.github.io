@@ -15,7 +15,7 @@ rating: 4
 
 The second chapter is what I felt was the gem of this book — *test-driven development*. It goes through the why, what and how to test your code. Even complex cases are discussed and we are shown examples of how to mock integrations with other network services.
 
-Moving on to the next part, we are introduced to templates and representation, with libraries like Smarty and PHPTAL. Sadly there is no mention of [Twig](/twig/), which shows the age of the book. To offset that though, PHP In Action goes through a secret technology crush of mine; XSLT.
+Moving on to the next part, we are introduced to templates and representation, with libraries like Smarty and PHPTAL. Sadly there is no mention of Twig, which shows the age of the book. To offset that though, PHP In Action goes through a secret technology crush of mine; XSLT.
 
 Lastly comes the chapter on database management. You learn how to safely construct dynamic queries, how to *avoid SQL injection* and how to optimize your database queries. We are introduced to the Table Data Gateway and Active Record patterns, which both are good to know. I do miss an introduction to the Unit of Work pattern however.
 

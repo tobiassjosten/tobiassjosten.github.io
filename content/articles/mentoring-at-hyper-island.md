@@ -7,7 +7,7 @@ Today I was invited by [Mia Jung](https://twitter.com/miajung) to visit [Hyper I
 
 <!--more-->
 
-The topic of today was [integrating with Google Analytics](/google-analytics/), something I have done my fair amount of work with. Though I wish I would have known more about cross-domain tracking specifically, as that seemed to be a big hurdle.
+The topic of today was integrating with Google Analytics, something I have done my fair amount of work with. Though I wish I would have known more about cross-domain tracking specifically, as that seemed to be a big hurdle.
 
 I also caught a short lesson on HTML basics and it was interesting to listen to questions from people learning this for the very first time. I quite enjoyed watching them realize how they could structure tags and attributes to craft the web pages to their liking.
 

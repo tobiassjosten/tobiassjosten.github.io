@@ -3,7 +3,7 @@ title: "Google Webmaster Help"
 date: "2012-11-01"
 ---
 
-As a hobbyist [search engine optimizer](/seo/) I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP.
+As a hobbyist search engine optimizer I do not feel like investing a lot of time into doing my own experiments to see what works and what does not, in terms of climbing the SERP.
 
 <!--more-->
 
@@ -13,7 +13,7 @@ Related, there is one resource I feel sticks out: [Google's own Webmaster Help](
 
 I love its format! The videos are about 2 minutes long, which everyone with some interest can afford, and their structure is around answering one specific question each. It helps that the questions are exactly the newbie kind that I would ask myself and they are given really clear answers.
 
-They way I follow *Google Webmaster Help* is by subscribing to [the RSS feed](http://gdata.youtube.com/feeds/base/users/GoogleWebmasterHelp/uploads?alt=rss&amp;v=2&amp;orderby=published). The feed does suffer from some [bad accessibility](/internet/rss-accessibility-no-excuses/), in that you can not play the videos from it, but you get enough information to decide whether to click through or not.
+They way I follow *Google Webmaster Help* is by subscribing to [the RSS feed](http://gdata.youtube.com/feeds/base/users/GoogleWebmasterHelp/uploads?alt=rss&amp;v=2&amp;orderby=published). The feed does suffer from some [bad accessibility](https://www.seastone.io/rss-accessibility-no-excuses), in that you can not play the videos from it, but you get enough information to decide whether to click through or not.
 
 ## SEO news
 

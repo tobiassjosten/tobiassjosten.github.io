@@ -3,7 +3,7 @@ title: "2012 Retrospective"
 date: "2012-12-31"
 ---
 
-Following up on [last years retrospective](/personal/2011-retrospective/) I thought it would be fun and useful to mull over what has passed and look ahead on what is yet to come. This year however I will deviate from the scrum sprint retrospective framework.
+Following up on [last years retrospective](/articles/2011-retrospective/) I thought it would be fun and useful to mull over what has passed and look ahead on what is yet to come. This year however I will deviate from the scrum sprint retrospective framework.
 
 <!--more-->
 
@@ -11,19 +11,19 @@ Forgive the egocentricity and please tag along for *my highlights of 2012*!
 
 ## What stands out from the year?
 
-I try to learn a new major technology each year and for 2012 this happened to become [Haskell](/haskell/). I was reading the book Seven Languages In Seven Weeks when I came across the programming language. There and then I fell in love — truly a beautiful language!
+I try to learn a new major technology each year and for 2012 this happened to become Haskell. I was reading the book Seven Languages In Seven Weeks when I came across the programming language. There and then I fell in love — truly a beautiful language!
 
-[This blog](/blog/) is not the only place where I publish my writing. I have written for printed magazines before too and in 2012 two of my articles were published in [the New Relic blog](http://blog.newrelic.com/).
+[This blog](/articles/) is not the only place where I publish my writing. I have written for printed magazines before too and in 2012 two of my articles were published in [the New Relic blog](http://blog.newrelic.com/).
 
 Following an amazingly awesome vacation in Vietnam and Cambodia I was horrified to see the resulting beach photos of myself. Shortly thereafter I was weighing my food, hitting the gym and grinding the tracks. Eight months later and 15 kilo less, I am still hooked and glad to have made this my new lifestyle.
 
-Professionally I took another big leap when [I left my nice gig](/personal/off-to-new-adventures/) (and wonderful colleagues!) at Unibet. Since September I have been living life as a "*web entrepreneur*", where I build my own products and services, hoping to make a living from them sometime.
+Professionally I took another big leap when [I left my nice gig](/articles/off-to-new-adventures/) (and wonderful colleagues!) at Unibet. Since September I have been living life as a "*web entrepreneur*", where I build my own products and services, hoping to make a living from them sometime.
 
-I attended [Symfony Live](/symfony/symfony-live-2012-paris/) in Paris, where I learned a lot about [my favorite web framework](/symfony/) and met a bunch of cool people. The latter [Music Hack Day](/events/music-hack-day-reykjavik-2012/) in Iceland was also really inspirational.
+I attended [Symfony Live](/articles/symfony-live-2012-paris/) in Paris, where I learned a lot about my favorite web framework and met a bunch of cool people. The latter [Music Hack Day](/articles/music-hack-day-reykjavik-2012/) in Iceland was also really inspirational.
 
 As I began working out more seriously I also started blogging about my [training and vegetarian nutrition](http://vvv.vegout.se/). When I later on shifted gears towards fighting I branched out to a [Mixed Martial Arts blog](http://vvv.tvekamp.se/). My post-consulting life gave rise to a third, [business and entreprenur blog](http://interversum.se/) and I have a fifth upcoming [travelling blog](http://vvv.vagabonden.se/). Writing is just really fun!
 
-In November I was asked to [mentor a group of students](/events/mentoring-at-hyper-island/) at [Hyper Island](http://www.hyperisland.com/). I had a lot of fun bouncing ideas with them and get see their projects coming to life.
+In November I was asked to [mentor a group of students](/articles/mentoring-at-hyper-island/) at [Hyper Island](http://www.hyperisland.com/). I had a lot of fun bouncing ideas with them and get see their projects coming to life.
 
 My startup project for [tracking tv-series](http://www.smartburk.se/) finally went beta!
 

@@ -7,7 +7,7 @@ Being worth a certain value does not equate to being payed the same amount. But 
 
 <!--more-->
 
-There is an important distinction to be made between your [professional worth](/development/my-professional-worth/) and your *professional price*. Basically, being worth a certain value != being payed a certain sum.
+There is an important distinction to be made between your [professional worth](/articles/my-professional-worth/) and your *professional price*. Basically, being worth a certain value != being payed a certain sum.
 
 I first made this connection when working my only "real job". Employed by a consultancy firm I developed websites for clients and was payed what I thought was a decent salary. Until I found out how much we were charging our clients.
 

@@ -7,7 +7,7 @@ Another year has passed and it's time for my annual review! As usual, I reflect 
 
 <!--more-->
 
-_Previous years:_ [_2011_](/2011-retrospective/)_,_ [_2012_](/2012-retrospective/)_,_ [_2015_](https://www.athlegan.com/a-new-year)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness)_,_ [_2019_](https://www.athlegan.com/2019-summary)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020)_,_ [_2022_](/2022-annual-review/)_._
+_Previous years:_ [_2011_](/articles/2011-retrospective/)_,_ [_2012_](/articles/2012-retrospective/)_,_ [_2015_](https://www.athlegan.com/a-new-year)_,_ [_2016_](https://www.athlegan.com/one-year-vegan-fitness)_,_ [_2019_](https://www.athlegan.com/2019-summary)_,_ [_2020_](https://www.athlegan.com/good-riddance-2020)_,_ [_2022_](/articles/2022-annual-review/)_._
 
 1.  What went well this year?
 2.  What didn’t go so well this year?
@@ -132,7 +132,7 @@ Of course, I don't claim any sort of expertise from this stint but I understand 
 
 Plowing through [Rich Dad, Poor Dad](/books/rich-dad-poor-dad/), [The Richest Man in Babylon](/books/the-richest-man-in-babylon/), and [The Psychology of Money](/books/the-psychology-of-money/), made me view the world slightly different, in terms of building wealth and growing rich.
 
-This, in turn, helped me tweak [my framework for handling personal finances](/engineering-my-familys-spending/), which has already led to a more rapid growth.
+This, in turn, helped me tweak [my framework for handling personal finances](/articles/engineering-my-familys-spending/), which has already led to a more rapid growth.
 
 ### I learned how to produce, publish, and market
 

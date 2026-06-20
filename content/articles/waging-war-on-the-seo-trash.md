@@ -3,7 +3,7 @@ title: "Waging War on the SEO Trash"
 date: "2012-01-19"
 ---
 
-Click around some on my blog and you will find *a lot* of spam comments. I am periodically deleting them but they keep pouring in. Probably because I believe in a living Internet with a lot of cross linking, and so I am giving my commenters [delicious dofollow backlinks](/internet/rel-nofollow-is-killing-the-internet).
+Click around some on my blog and you will find *a lot* of spam comments. I am periodically deleting them but they keep pouring in. Probably because I believe in a living Internet with a lot of cross linking, and so I am giving my commenters [delicious dofollow backlinks](https://www.seastone.io/rel-nofollow-is-killing-the-internet).
 
 <!--more-->
 

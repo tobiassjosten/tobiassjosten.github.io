@@ -15,9 +15,9 @@ I hired my first employee, [Joakim Lundberg](https://twitter.com/jockelund).
 
 I left and sold off [Kollegorna](http://www.kollegorna.se/), the web bureau I started two years ago.
 
-I started consulting full time for [Unibet](https://www.unibet.com/) to help them with their [Drupal](/drupal) based multisite platform.
+I started consulting full time for [Unibet](https://www.unibet.com/) to help them with their Drupal based multisite platform.
 
-I invested more time and effort in [Symfony](/symfony) and helped start our [Swedish community](http://www.symfony.se/).
+I invested more time and effort in Symfony and helped start our [Swedish community](http://www.symfony.se/).
 
 I committed to completing and launching [Smartburk](http://www.smartburk.se/).
 

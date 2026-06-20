@@ -3,7 +3,7 @@ title: "Tracking with Purpose"
 date: "2014-06-05"
 ---
 
-Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances with [Tink](https://www.tink.se/), use one of many phone apps to oversee your nutrition or register for [Google Analytics](/google-analytics/) to monitor your website traffic.
+Modern technology enables a lot of really cool tracking possibilities. You can easily keep score of your personal finances with [Tink](https://www.tink.se/), use one of many phone apps to oversee your nutrition or register for Google Analytics to monitor your website traffic.
 
 <!--more-->
 

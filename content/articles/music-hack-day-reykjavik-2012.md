@@ -13,11 +13,11 @@ Our project for *Music Hack Day* is called [Songbrew](http://www.songbrew.com/) 
 
 ## The tech stack
 
-We want Songbrew to exist in a wide array of channels; like the web, smartphones, music players, etc. For that reason we are building the core in [a HTTP API](/api/), which will then be consumed by our different clients.
+We want Songbrew to exist in a wide array of channels; like the web, smartphones, music players, etc. For that reason we are building the core in a HTTP API, which will then be consumed by our different clients.
 
-This API will be built on [Symfony2](/symfony/), hosted by [Pagoda Box](https://pagodabox.com/) and will use [Redis](/redis/) for persistance.
+This API will be built on Symfony2, hosted by [Pagoda Box](https://pagodabox.com/) and will use Redis for persistance.
 
-We will start with a web application client, built as a single-page-app with heavy [JavaScript](/) focus. Me and Viktor have both been eyeing [Backbone.js](http://backbonejs.org/) and so that is a given foundation, along with [jQuery](/jquery/) for utility. For templating we will be using the excellent [Handlebars.js](http://handlebarsjs.com/) library and everything will be made modular and nice using [RequireJS](http://requirejs.org/).
+We will start with a web application client, built as a single-page-app with heavy [JavaScript](/) focus. Me and Viktor have both been eyeing [Backbone.js](http://backbonejs.org/) and so that is a given foundation, along with jQuery for utility. For templating we will be using the excellent [Handlebars.js](http://handlebarsjs.com/) library and everything will be made modular and nice using [RequireJS](http://requirejs.org/).
 
 This web application client will also live on Pagoda Box but with [CloudFlare](https://www.cloudflare.com/) for edge-side delivery. We are thinking all requests will result in the same static HTML, JavaScript and CSS files being served, with routing and logic then kicking in on the client side.
 

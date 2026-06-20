@@ -7,7 +7,7 @@ I often [rave and rant](https://twitter.com/tobiassjosten) about the shortcoming
 
 <!--more-->
 
-Truth be told however, [the Drupal project](/drupal) has given me *so much* over the years. I am literally living my dream much thanks to the software and community that is Drupal.
+Truth be told however, the Drupal project has given me *so much* over the years. I am literally living my dream much thanks to the software and community that is Drupal.
 
 So when I recently got an email from [Lizz Trudeau](https://association.drupal.org/user/52049) of the [Drupal Association](https://association.drupal.org/), asking for support, I did not hesitate to renew my membership. And I think *you should too*.
 

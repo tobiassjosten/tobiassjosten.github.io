@@ -29,7 +29,7 @@ Review existing codebases for quality, performance, and security improvements.
 
 ## Let's Work Together
 
-Interested in working together? [Contact me](/contact/) to discuss your project and how I can help.
+Interested in working together? [Contact me](/connect/) to discuss your project and how I can help.
 
 ---
 

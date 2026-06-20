@@ -8,7 +8,7 @@ image: "the-4-hour-workweek.jpg"
 rating: 4
 ---
 
-This is one of the most inspirational books I have read. In fact, The 4-Hour Workweek is part of [why I quit](/tobias/off-to-new-adventures) my well-payed, comfortable daytime job to seek an alternative lifestyle. You have been warned!
+This is one of the most inspirational books I have read. In fact, The 4-Hour Workweek is part of [why I quit](/articles/off-to-new-adventures/) my well-payed, comfortable daytime job to seek an alternative lifestyle. You have been warned!
 
 The basic premise of The 4-Hour Workweek is *early retirement*. Tim argues that the norm of working like crazy until your "golden days" and then quit abruptly, is an absurd approach to life. Why postpone living life when you can take control and create a more balanced lifestyle?
 

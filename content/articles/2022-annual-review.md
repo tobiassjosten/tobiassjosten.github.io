@@ -3,7 +3,7 @@ title: "2022 Annual Review"
 date: "2023-01-02"
 ---
 
-I've been doing public, annual reviews for over a decade. First on my old tech blog ([2011](/2011-retrospective/), [2012](/2012-retrospective/)) and then on my fitness side project ([2015](https://www.athlegan.com/a-new-year), [2016](https://www.athlegan.com/one-year-vegan-fitness), [2019](https://www.athlegan.com/2019-summary), [2020](https://www.athlegan.com/good-riddance-2020)). While it hasn't been super consistent, with half the years missing, I do enjoy the process of reviewing and I find it beneficial. So here's another one, looking back at 2022.
+I've been doing public, annual reviews for over a decade. First on my old tech blog ([2011](/articles/2011-retrospective/), [2012](/articles/2012-retrospective/)) and then on my fitness side project ([2015](https://www.athlegan.com/a-new-year), [2016](https://www.athlegan.com/one-year-vegan-fitness), [2019](https://www.athlegan.com/2019-summary), [2020](https://www.athlegan.com/good-riddance-2020)). While it hasn't been super consistent, with half the years missing, I do enjoy the process of reviewing and I find it beneficial. So here's another one, looking back at 2022.
 
 <!--more-->
 

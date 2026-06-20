@@ -21,7 +21,7 @@ I'm available for conference talks, meetup presentations, and technical workshop
 
 ## Upcoming Engagements
 
-Currently available for speaking opportunities. [Contact me](/contact/) if you'd like to invite me to speak at your event.
+Currently available for speaking opportunities. [Contact me](/connect/) if you'd like to invite me to speak at your event.
 
 ## Invite Me to Speak
 
@@ -31,4 +31,4 @@ I'm interested in speaking at:
 - Company tech talks
 - Workshops and training sessions
 
-Topics can be tailored to your audience and event. Reach out via my [contact page](/contact/) to discuss potential speaking opportunities.
+Topics can be tailored to your audience and event. Reach out via my [contact page](/connect/) to discuss potential speaking opportunities.

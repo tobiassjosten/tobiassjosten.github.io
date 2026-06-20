@@ -3,7 +3,7 @@ title: "DrupalCamp Göteborg 2013"
 date: "2013-05-21"
 ---
 
-May 25th will see the second ever *DrupalCamp Göteborg* and I will attend it. Following my talk at [DrupalCamp Stockholm 2013](/events/drupalcamp-stockholm-2013/), where I gave [an introduction to Symfony](/events/symfony-intro-at-drupalcamp-stockholm/), this time around I have been invited to hold the keynote.
+May 25th will see the second ever *DrupalCamp Göteborg* and I will attend it. Following my talk at [DrupalCamp Stockholm 2013](/articles/drupalcamp-stockholm-2013/), where I gave [an introduction to Symfony](/articles/symfony-intro-at-drupalcamp-stockholm/), this time around I have been invited to hold the keynote.
 
 <!--more-->
 

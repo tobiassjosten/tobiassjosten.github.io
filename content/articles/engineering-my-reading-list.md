@@ -58,7 +58,7 @@ As I'm reading a book, I highlight mentions of other books. Similarly to recomme
 
 I loved [The Dip](/books/the-dip/) and [Principles](/books/principles/) enough to give them both a five-star review. Each delivered a powerful concept that still stays with me today. Yet, one of them managed this in 80 pages and the other took 593 pages.
 
-Less isn't always more but, all other things being equal, I'd rather read the shorter book, so that I have more time to process the contents and [write about its ideas](/writing-learning-growing/).
+Less isn't always more but, all other things being equal, I'd rather read the shorter book, so that I have more time to process the contents and [write about its ideas](/articles/writing-learning-growing/).
 
 ## The algorithm
 
