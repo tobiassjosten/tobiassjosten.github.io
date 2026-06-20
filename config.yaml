@@ -1,5 +1,5 @@
 baseURL: "https://vvv.tobiassjosten.net"
-languageCode: "en-us"
+locale: "en-us"
 title: "Tobias Sjösten"
 
 frontmatter:
