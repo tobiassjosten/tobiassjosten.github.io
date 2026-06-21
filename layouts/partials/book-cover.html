@@ -26,7 +26,9 @@
 
     {{ $image := .Resources.GetMatch .Params.image }}
     {{ if $image }}
+    {{ if gt $image.Height 600 }}{{ $image = $image.Resize "x600" }}{{ end }}
     <img src="{{ $image.RelPermalink }}"
+            width="{{ $image.Width }}" height="{{ $image.Height }}"
             class="book-cover-image img-fluid shadow-sm"
             {{ if not $isReviewed }}style="filter: brightness(1.0) contrast(0.5) saturate(0.7)"{{ end }}
             alt="Book cover for {{ .Title }}"
