@@ -6,4 +6,5 @@ date: "2023-09-09"
 amazonURL: ""
 image: "shadows-of-treachery.jpg"
 rating: 4
+series: "The Horus Heresy"
 ---

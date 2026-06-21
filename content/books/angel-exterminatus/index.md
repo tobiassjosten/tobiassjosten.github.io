@@ -6,4 +6,5 @@ date: "2023-10-12"
 amazonURL: ""
 image: "angel-exterminatus.jpg"
 rating: 5
+series: "The Horus Heresy"
 ---

@@ -6,4 +6,5 @@ date: "2020-10-07"
 amazonURL: ""
 image: "fulgrim.jpg"
 rating: 2
+series: "The Horus Heresy"
 ---

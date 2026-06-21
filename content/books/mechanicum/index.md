@@ -6,4 +6,5 @@ date: "2021-04-18"
 amazonURL: ""
 image: "mechanicum.jpg"
 rating: 4
+series: "The Horus Heresy"
 ---
