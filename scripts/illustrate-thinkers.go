@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"encoding/base64"
@@ -10,8 +10,6 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
-
-	"github.com/joho/godotenv"
 )
 
 type ImageRequest struct {
@@ -35,21 +33,17 @@ type ErrorResponse struct {
 	} `json:"error"`
 }
 
-func init() {
-	_ = godotenv.Load(".env.local", ".env")
-}
-
-func main() {
+// IllustrateThinkers generates a portrait for every thinker missing its image,
+// using the OpenAI image API (requires OPENAI_API_KEY).
+func IllustrateThinkers(args []string) error {
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {
-		fmt.Fprintln(os.Stderr, "Error: OPENAI_API_KEY not set")
-		os.Exit(1)
+		return fmt.Errorf("OPENAI_API_KEY not set")
 	}
 
 	thinkerPaths, err := filepath.Glob("content/thinkers/*/index.md")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error finding thinkers: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("finding thinkers: %w", err)
 	}
 
 	fmt.Printf("Found %d thinkers\n\n", len(thinkerPaths))
@@ -92,6 +86,8 @@ func main() {
 	fmt.Printf("Generated: %d\n", generated)
 	fmt.Printf("Skipped (already exists): %d\n", skipped)
 	fmt.Printf("Failed: %d\n", failed)
+
+	return nil
 }
 
 func parseFrontmatter(path string) (title, image string, err error) {

@@ -21,11 +21,11 @@ validate:
 
 .PHONY: highlights
 highlights:
-	@go run scripts/download-highlights.go $(filter-out highlights,$(MAKECMDGOALS))
+	@go run . download-highlights $(filter-out highlights,$(MAKECMDGOALS))
 
 .PHONY: new
 new:
-	@go run scripts/create-content.go $(filter-out new,$(MAKECMDGOALS))
+	@go run . create-content $(filter-out new,$(MAKECMDGOALS))
 
 %:
 	@:

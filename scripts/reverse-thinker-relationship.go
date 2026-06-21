@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"fmt"
@@ -20,7 +20,10 @@ type ThinkerInfo struct {
 	Books []string
 }
 
-func main() {
+// ReverseThinkerRelationship is a one-off migration: it reads the thinkers
+// listed on each book, writes the reverse (books per thinker) into the thinker
+// files, and removes the thinkers property from the books.
+func ReverseThinkerRelationship(args []string) error {
 	fmt.Println("=== Reverse Book-Thinker Relationship ===")
 	fmt.Println()
 
@@ -28,8 +31,7 @@ func main() {
 	fmt.Println("Step 1: Finding books with thinkers property...")
 	books, err := findBooksWithThinkers()
 	if err != nil {
-		fmt.Printf("Error finding books: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("finding books: %w", err)
 	}
 
 	fmt.Printf("Found %d books with thinkers property\n", len(books))
@@ -49,23 +51,21 @@ func main() {
 
 	// Step 4: Update thinker files
 	fmt.Println("\nStep 4: Updating thinker files...")
-	err = updateThinkerFiles(thinkerBooks)
-	if err != nil {
-		fmt.Printf("Error updating thinkers: %v\n", err)
-		os.Exit(1)
+	if err := updateThinkerFiles(thinkerBooks); err != nil {
+		return fmt.Errorf("updating thinkers: %w", err)
 	}
 
 	// Step 5: Remove thinkers property from books
 	fmt.Println("\nStep 5: Removing thinkers property from books...")
-	err = removeThinkersFromBooks(books)
-	if err != nil {
-		fmt.Printf("Error updating books: %v\n", err)
-		os.Exit(1)
+	if err := removeThinkersFromBooks(books); err != nil {
+		return fmt.Errorf("updating books: %w", err)
 	}
 
 	fmt.Println("\n=== Migration Complete ===")
 	fmt.Printf("Updated %d thinker files\n", len(thinkerBooks))
 	fmt.Printf("Updated %d book files\n", len(books))
+
+	return nil
 }
 
 func findBooksWithThinkers() ([]BookInfo, error) {

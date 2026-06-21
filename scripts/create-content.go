@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"bufio"
@@ -12,8 +12,8 @@ import (
 )
 
 type contentType struct {
-	name        string
-	description string
+	name         string
+	description  string
 	requiresSlug bool
 }
 
@@ -26,19 +26,23 @@ var contentTypes = []contentType{
 	{"presentation", "Create presentation (requires slug)", true},
 }
 
-func main() {
-	args := os.Args[1:]
-
+// CreateContent scaffolds a new content file of the given type (and slug) via
+// `hugo new`. With no arguments it prompts interactively for both.
+func CreateContent(args []string) error {
 	var selectedType string
 	var slug string
 
 	if len(args) == 0 {
-		selectedType = promptContentType()
+		var err error
+		selectedType, err = promptContentType()
+		if err != nil {
+			return err
+		}
 	} else {
 		selectedType = args[0]
 		if !isValidContentType(selectedType) {
 			printUsage()
-			os.Exit(1)
+			return fmt.Errorf("invalid content type: %s", selectedType)
 		}
 	}
 
@@ -51,20 +55,15 @@ func main() {
 		}
 
 		if err := validateSlug(slug); err != nil {
-			fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-			fmt.Fprintf(os.Stderr, "Usage: make new %s <slug>\n", selectedType)
-			os.Exit(1)
+			return fmt.Errorf("%w\nUsage: go run . create-content %s <slug>", err, selectedType)
 		}
 	}
 
-	if err := createContent(selectedType, slug); err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
-	}
+	return createContent(selectedType, slug)
 }
 
 func printUsage() {
-	fmt.Println("Usage: make new <type> [slug]")
+	fmt.Println("Usage: go run . create-content <type> [slug]")
 	fmt.Println()
 	fmt.Println("Content types:")
 	for _, ct := range contentTypes {
@@ -72,11 +71,11 @@ func printUsage() {
 	}
 	fmt.Println()
 	fmt.Println("Examples:")
-	fmt.Println("  make new article my-article-slug")
-	fmt.Println("  make new book clean-code")
+	fmt.Println("  go run . create-content article my-article-slug")
+	fmt.Println("  go run . create-content book clean-code")
 }
 
-func promptContentType() string {
+func promptContentType() (string, error) {
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Println("Select content type:")
@@ -89,16 +88,14 @@ func promptContentType() string {
 	input = strings.TrimSpace(input)
 
 	if num, err := strconv.Atoi(input); err == nil && num >= 1 && num <= len(contentTypes) {
-		return contentTypes[num-1].name
+		return contentTypes[num-1].name, nil
 	}
 
 	if isValidContentType(input) {
-		return input
+		return input, nil
 	}
 
-	fmt.Fprintf(os.Stderr, "Invalid content type: %s\n", input)
-	os.Exit(1)
-	return ""
+	return "", fmt.Errorf("invalid content type: %s", input)
 }
 
 func promptSlug(contentType string) string {
@@ -277,4 +274,3 @@ func runHugoNew(path string) error {
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
 }
-

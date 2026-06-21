@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"encoding/csv"
@@ -7,15 +7,6 @@ import (
 	"path/filepath"
 	"strings"
 )
-
-type GoodreadsBook struct {
-	ID          string
-	Title       string
-	Author      string
-	Rating      string
-	DateRead    string
-	Bookshelves string
-}
 
 func parseFrontMatter(content string) (map[string]string, error) {
 	parts := strings.SplitN(content, "---", 3)
@@ -41,7 +32,7 @@ func parseFrontMatter(content string) (map[string]string, error) {
 	return fm, nil
 }
 
-func loadExistingBooks() (map[string]bool, error) {
+func loadExistingBookTitles() (map[string]bool, error) {
 	existingTitles := make(map[string]bool)
 
 	bookPaths, err := filepath.Glob("content/books/*/index.md")
@@ -69,7 +60,7 @@ func loadExistingBooks() (map[string]bool, error) {
 	return existingTitles, nil
 }
 
-func readGoodreadsCSV(filename string) ([]GoodreadsBook, error) {
+func readAnalysisCSV(filename string) ([]GoodreadsBook, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, fmt.Errorf("opening CSV file: %w", err)
@@ -157,19 +148,23 @@ func bookExists(title string, existingBooks map[string]bool) bool {
 	return false
 }
 
-func main() {
+// AnalyzeGoodreads lists books from a Goodreads export that are not yet present
+// under content/books/. The CSV path defaults to goodreads_library_export.csv
+// and can be overridden by the first argument.
+func AnalyzeGoodreads(args []string) error {
 	csvFile := "goodreads_library_export.csv"
-
-	existingBooks, err := loadExistingBooks()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error loading existing books: %v\n", err)
-		os.Exit(1)
+	if len(args) > 0 {
+		csvFile = args[0]
 	}
 
-	goodreadsBooks, err := readGoodreadsCSV(csvFile)
+	existingBooks, err := loadExistingBookTitles()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error reading Goodreads CSV: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("loading existing books: %w", err)
+	}
+
+	goodreadsBooks, err := readAnalysisCSV(csvFile)
+	if err != nil {
+		return fmt.Errorf("reading Goodreads CSV: %w", err)
 	}
 
 	fmt.Printf("=== Books from Goodreads Not Yet in content/books/ ===\n\n")
@@ -200,4 +195,6 @@ func main() {
 	fmt.Printf("Books already in content/books/: %d\n", len(goodreadsBooks)-missingCount-filteredCount)
 	fmt.Printf("Books filtered (empty Bookshelves or Date Read): %d\n", filteredCount)
 	fmt.Printf("Books missing from content/books/: %d\n", missingCount)
+
+	return nil
 }

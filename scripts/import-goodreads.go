@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"encoding/csv"
@@ -16,12 +16,15 @@ import (
 	"github.com/gosimple/slug"
 )
 
+// GoodreadsBook is a single row from a Goodreads CSV export. Bookshelves is
+// only populated by the analysis command.
 type GoodreadsBook struct {
-	ID       string
-	Title    string
-	Author   string
-	Rating   string
-	DateRead string
+	ID          string
+	Title       string
+	Author      string
+	Rating      string
+	DateRead    string
+	Bookshelves string
 }
 
 func isDigitsOnly(s string) bool {
@@ -72,7 +75,7 @@ func stripSubtitle(title string) string {
 	return title
 }
 
-func loadExistingBooks() (map[string]bool, error) {
+func loadExistingBookSlugs() (map[string]bool, error) {
 	existingTitles := make(map[string]bool)
 
 	bookPaths, err := filepath.Glob("content/books/*/index.md")
@@ -104,7 +107,7 @@ func loadExistingAuthors() (map[string]bool, error) {
 	return existingAuthors, nil
 }
 
-func readGoodreadsCSV(filename string) ([]GoodreadsBook, error) {
+func readImportCSV(filename string) ([]GoodreadsBook, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, fmt.Errorf("opening CSV file: %w", err)
@@ -230,7 +233,7 @@ func parseAuthors(authorString string) []string {
 	return []string{strings.TrimSpace(authorString)}
 }
 
-func createAuthor(authorName string) error {
+func writeImportedAuthor(authorName string) error {
 	authorSlug := slug.Make(authorName)
 
 	authorDir := filepath.Join("content/authors", authorSlug)
@@ -466,7 +469,7 @@ func updateBookFrontmatter(bookSlug string, updates map[string]string, removals 
 	return nil
 }
 
-func createBook(book GoodreadsBook) error {
+func writeImportedBook(book GoodreadsBook) error {
 	bookSlug := slug.Make(book.Title)
 
 	// Parse multiple authors from author string
@@ -517,27 +520,31 @@ func createBook(book GoodreadsBook) error {
 	return nil
 }
 
-func main() {
+// ImportGoodreads imports books, authors and cover images from a Goodreads
+// export. The CSV path defaults to goodreads_library_export.csv and can be
+// overridden by the first argument.
+func ImportGoodreads(args []string) error {
 	csvFile := "goodreads_library_export.csv"
+	if len(args) > 0 {
+		csvFile = args[0]
+	}
 
-	fmt.Println("=== Goodreads Import Tool ===\n")
+	fmt.Println("=== Goodreads Import Tool ===")
+	fmt.Println()
 
-	existingBooks, err := loadExistingBooks()
+	existingBooks, err := loadExistingBookSlugs()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error loading existing books: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("loading existing books: %w", err)
 	}
 
 	existingAuthors, err := loadExistingAuthors()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error loading existing authors: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("loading existing authors: %w", err)
 	}
 
-	books, err := readGoodreadsCSV(csvFile)
+	books, err := readImportCSV(csvFile)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error reading Goodreads CSV: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("reading Goodreads CSV: %w", err)
 	}
 
 	books = deduplicateBooks(books)
@@ -610,7 +617,7 @@ func main() {
 		for j, authorName := range authorNames {
 			authorSlug := authorSlugs[j]
 			if !existingAuthors[authorSlug] {
-				if err := createAuthor(authorName); err != nil {
+				if err := writeImportedAuthor(authorName); err != nil {
 					fmt.Printf("  ✗ Failed to create author %s: %v\n", authorName, err)
 					continue
 				}
@@ -625,7 +632,7 @@ func main() {
 			authorsCreated += bookAuthorsCreated
 		}
 
-		if err := createBook(book); err != nil {
+		if err := writeImportedBook(book); err != nil {
 			fmt.Printf("  ✗ Failed to create book: %v\n", err)
 			continue
 		}
@@ -650,4 +657,6 @@ func main() {
 	fmt.Printf("Books skipped (no changes): %d\n", skipped)
 	fmt.Printf("Authors created: %d\n", authorsCreated)
 	fmt.Printf("Covers failed: %d\n", coversFailed)
+
+	return nil
 }

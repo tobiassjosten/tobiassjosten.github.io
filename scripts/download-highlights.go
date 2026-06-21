@@ -1,4 +1,4 @@
-package main
+package scripts
 
 import (
 	"bufio"
@@ -30,36 +30,37 @@ type Highlight struct {
 	Note     string `json:"note"`
 }
 
-func main() {
-	bookID, err := getBookID()
+// DownloadHighlights prints the Readwise highlights for a book, sorted by
+// location. The book ID is taken from the first argument or prompted for.
+func DownloadHighlights(args []string) error {
+	bookID, err := getBookID(args)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
+		return err
 	}
 
 	if err := validateBookID(bookID); err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
+		return err
 	}
 
 	token := getAccessToken()
 
 	highlights, err := fetchHighlights(bookID, token)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error fetching highlights: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("fetching highlights: %w", err)
 	}
 
 	if len(highlights) == 0 {
 		fmt.Fprintf(os.Stderr, "No highlights found for book %s\n", bookID)
-		os.Exit(0)
+		return nil
 	}
 
 	outputHighlights(highlights)
+
+	return nil
 }
 
-func getBookID() (string, error) {
-	if args := os.Args[1:]; len(args) > 0 {
+func getBookID(args []string) (string, error) {
+	if len(args) > 0 {
 		return args[0], nil
 	}
 
@@ -104,7 +105,7 @@ func getAccessToken() string {
 
 func buildAPIURL(bookID, cursor string) string {
 	return fmt.Sprintf(
-		"https://readwise.io/api/v2/export/?includeDeleted=true&ids=%s&pageCursor=%s",
+		"https://readwise.io/api/v2/export/?ids=%s&pageCursor=%s",
 		bookID, cursor,
 	)
 }
