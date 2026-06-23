@@ -93,7 +93,7 @@
         {{ end }}
 
         {{ $highlights := .Resources.GetMatch "highlights.md" }}
-        {{ if $highlights }}
+        {{ if and (gt (len $content) 0) $highlights }}
             <div class="book-highlights">
                 <h2>My highlights</h2>
                 {{ $highlights.Content | .RenderString }}
