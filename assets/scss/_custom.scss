@@ -619,6 +619,15 @@ footer {
   }
 }
 
+.authors-index {
+  column-width: 14rem;
+  column-gap: 2rem;
+
+  li {
+    break-inside: avoid;
+  }
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

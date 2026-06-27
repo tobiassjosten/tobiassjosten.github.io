@@ -3,5 +3,13 @@
     <h1 class="title text-center">{{ .Title }}</h1>
 
     {{ .Content }}
+
+    {{ with .Pages.ByTitle }}
+        <ul class="list-unstyled authors-index">
+            {{ range . }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    {{ end }}
 </section>
 {{ end }}
