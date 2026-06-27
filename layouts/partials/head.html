@@ -2,13 +2,31 @@
 
 {{/* Shared metadata, computed once and reused across OG/Twitter/schema */}}
 {{ $pageTitle := cond .IsHome .Site.Title (printf "%s - %s" .Title .Site.Title) }}
-{{ $description := .Site.Params.description }}
-{{ with .Description }}
-    {{ $description = . }}
-{{ else }}
-    {{ with .Summary }}
-        {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
-    {{ end }}
+{{/* Resolve a meta description per page. Never fall back to the site-wide
+     default off the homepage — emit a build error instead, so empty pages
+     surface rather than shipping an irrelevant description. */}}
+{{ $description := "" }}
+{{ if or .IsHome (eq .Kind "404") }}
+    {{ $description = .Site.Params.description }}
+{{ else if .Description }}
+    {{ $description = .Description }}
+{{ else if .Summary }}
+    {{ $description = .Summary | plainify | htmlUnescape | strings.TrimSpace | truncate 157 "…" }}
+{{ else if and (eq .Kind "page") (eq .Type "authors") }}
+    {{ $description = printf "Books by %s that I've read and reviewed." .Title }}
+{{ else if and (eq .Kind "page") (eq .Type "thinkers") }}
+    {{ $description = printf "Exploring the ideas of %s through the books of theirs I've read." .Title }}
+{{ else if and (eq .Kind "page") (eq .Type "books") }}
+    {{ $description = printf "%s — a book on my reading list." .Title }}
+{{ else if eq .Kind "term" }}
+    {{ $description = printf "Content tagged “%s”." .Title }}
+{{ else if eq .Kind "taxonomy" }}
+    {{ $description = printf "Browse content by %s." (.Title | lower) }}
+{{ else if eq .Kind "section" }}
+    {{ $description = printf "%s — %s." .Title .Site.Title }}
+{{ end }}
+{{ if not $description }}
+    {{ errorf "Missing meta description for %q (kind=%q type=%q) — add a `description` to its frontmatter or give it body content." .Permalink .Kind .Type }}
 {{ end }}
 
 {{/* Resolve a share image: book cover, page resource, then site default */}}
