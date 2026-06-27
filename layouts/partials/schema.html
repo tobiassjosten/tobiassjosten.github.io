@@ -56,25 +56,30 @@
     {{ $cover := .Resources.GetMatch .Params.image }}
     {{ with $cover }}{{ $book = merge $book (dict "image" .Permalink) }}{{ end }}
 
-    {{ $review := dict
-        "@context" "https://schema.org"
-        "@type" "Review"
-        "itemReviewed" $book
-        "author" $author
-        "datePublished" (.Date.Format "2006-01-02")
-        "url" .Permalink
-    }}
-    {{ with .Params.rating }}
-        {{ $review = merge $review (dict "reviewRating" (dict
-            "@type" "Rating"
-            "ratingValue" .
-            "bestRating" 5
-            "worstRating" 1
-        )) }}
+    {{ if .Params.rating }}
+        {{/* A rated, written review: emit a Review wrapping the book. */}}
+        {{ $review := dict
+            "@context" "https://schema.org"
+            "@type" "Review"
+            "itemReviewed" $book
+            "author" $author
+            "datePublished" (.Date.Format "2006-01-02")
+            "url" .Permalink
+            "reviewRating" (dict
+                "@type" "Rating"
+                "ratingValue" .Params.rating
+                "bestRating" 5
+                "worstRating" 1
+            )
+        }}
+        {{ $body := .Content | plainify | htmlUnescape | strings.TrimSpace }}
+        {{ if gt (len $body) 0 }}{{ $review = merge $review (dict "reviewBody" $body) }}{{ end }}
+        {{ $schema = $review }}
+    {{ else }}
+        {{/* No rating yet (e.g. currently reading): emit a plain Book so we
+             don't produce an invalid Review with an empty date and no rating. */}}
+        {{ $schema = merge (dict "@context" "https://schema.org") $book }}
     {{ end }}
-    {{ $body := .Content | plainify | htmlUnescape | strings.TrimSpace }}
-    {{ if gt (len $body) 0 }}{{ $review = merge $review (dict "reviewBody" $body) }}{{ end }}
-    {{ $schema = $review }}
 {{ else if and (eq .Kind "page") (eq .Type "authors") }}
     {{ $schema = dict
         "@context" "https://schema.org"
