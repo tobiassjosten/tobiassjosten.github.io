@@ -13,6 +13,6 @@ Tickets are 498 SEK a pop (~$78/€58) and that includes every session you can m
 
 *Seats are limited*, so I would recommend [getting yours today](http://www.symfony.se/november-camp/#row7)!
 
-If your company is interested in sponsoring the event and get some really nice visibility, send us an email at [symfonyse@gmail.com](mailto:symfonyse@gmail.com).
+If your company is interested in sponsoring the event and get some really nice visibility, send us an email at &lt;outdated&gt;.
 
 Oh, and even if you are not coming yourself (sure you are!) please help us spread the word. Tweet it, blog it, share it on Facebook — any help is really appreciated!

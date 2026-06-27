@@ -17,4 +17,4 @@ The problem with our current toolbox is that it relies entirely on someone initi
 
 I care a lot about this lifestyle and I genuinely feel that it's the best way to operate for a lot of us. That's why I will roll up my sleeves and do my best to solve this problem. I have a plan for a solution and am already working with a handful of teams to help them work better together, remotely.
 
-Are you part of a team with at least one remote worker? Are you struggling with this problem as well and want to join in fixing it? Ping me at <tobias@teametry.com> and let's make remote teamwork even better!
+Are you part of a team with at least one remote worker? Are you struggling with this problem as well and want to join in fixing it? Ping me at &lt;outdated&gt; and let's make remote teamwork even better!
